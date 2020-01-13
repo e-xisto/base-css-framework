@@ -1,0 +1,267 @@
+// Variables
+
+$font-header-color: black;
+$font-text-color: map-get($grayscale, dark);
+
+
+// Headings
+
+h1, h2, h3, h4, h5, h6, 
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	color: $font-header-color;
+	margin-top: 0;
+	margin-bottom: $base-space-size;
+	line-height: 1.2;
+}
+
+
+h1, .h1 {
+	font-size: pow($font-scale-factor, 4) * 1em;	
+}
+
+h2, .h2 {
+	font-size: pow($font-scale-factor, 3) * 1em;
+}
+
+h3, .h3 {
+	font-size: pow($font-scale-factor, 2) * 1em;
+}
+
+h4, .h4 {
+	font-size: pow($font-scale-factor, 1) * 1em;
+}
+
+h5, .h5 {
+	font-size: 1.25em;
+	line-height: 1.1;
+}
+
+h6, .h6 {
+	font-size: 1em;
+	line-height: 1.1;
+}
+
+// Paragraphs
+
+p {
+	color: $font-text-color;
+	font-family: $font-family-sans-serif;
+	font-size: 1em;
+	margin-top: 0;
+	margin-bottom: $base-space-size;
+	line-height: 1.5;
+}
+
+.bolder,
+.text-bolder { font-weight: $font-weight-bolder !important; }
+
+strong,
+.bold,
+.strong,
+.text-bold { font-weight: $font-weight-bold !important; }
+
+.text-normal,
+.normal { font-weight: $font-weight-normal !important; }
+
+.text-lighter,
+.light { font-weight: $font-weight-light !important; }
+
+
+.text-xs, .text-size-xs { font-size: 12px; }
+.text-sm, .text-size-sm { font-size: 14px; }
+.text-md, .text-size-md { font-size: 16px; }
+.text-lg, .text-size-lg { font-size: 18px; }
+.text-xl, .text-size-xl { font-size: 24px; }
+.text-xxl, .text-size-xxl { font-size: 30px; }
+
+// Links
+
+a {
+	text-decoration: underline;
+
+	&:hover,
+	&:focus {
+	}
+}
+
+
+h1 a, .h1 a,
+h2 a, .h2 a,
+h3 a, .h3 a,
+h4 a, .h4 a,
+h5 a, .h5 a,
+h6 a, .h6 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+// Lists
+
+ul, ol {
+	padding-left: 30px;
+	margin-bottom: 15px;
+
+	li {
+		margin-bottom: 5px;
+	}
+
+	& ol,
+	& ul {
+		margin-top: 5px;
+		margin-bottom: 10px;
+	}
+}
+
+ol ol li {
+	list-style-type: lower-alpha;
+}
+
+ol ol ol li {
+	list-style-type: lower-roman;
+}
+
+.list-unstyled {
+	padding-left: 0;
+	list-style: none;
+}
+
+.list-inline {
+	padding-left: 0;
+	margin-left: -5px;
+	list-style: none;
+}
+
+.list-inline > li {
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+
+
+// Type display classes
+
+.display-1 {
+	
+}
+
+.display-2 {
+
+}
+
+.display-3 {
+
+}
+
+hr {
+    border: none;
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
+	margin-top: -1px;
+
+	&.alt1 {
+		border-bottom: 2px dashed rgba(0, 0, 0, .1);
+		margin-top: -2px;
+	}
+
+	&.alt2 {
+		border: 0;
+	    height: 1px;
+	    background-image: -webkit-linear-gradient(left, #f0f0f0, #999, #f0f0f0);
+	    background-image: -moz-linear-gradient(left, #f0f0f0, #999, #f0f0f0);
+	    background-image: -ms-linear-gradient(left, #f0f0f0, #999, #f0f0f0);
+	    background-image: -o-linear-gradient(left, #f0f0f0, #999, #f0f0f0);
+	}
+}
+
+
+small,
+.small {
+	font-size: 0.75em;
+}
+
+sub,
+sup {
+    font-size: x-small;
+	line-height: 0;
+	margin-left: 1em/4;
+	position: relative;
+}
+
+sup {
+	top: 0;
+}
+
+sub {
+	bottom: 1px;
+}
+
+mark, 
+.mark {
+	$mark-colors: (
+		blue: #5BC0EB,
+		yellow: #FDE74C,
+		green: #9BC53D,
+		orange: #FA7921,
+		pink: #EF4880
+	);
+
+	background-color: map-get( $mark-colors, yellow);
+	@include color-contrast(map-get($mark-colors, yellow));
+}
+
+del {}
+
+s {}
+
+ins {}
+
+
+blockquote, hr, pre, ol, ul, dl, table, fieldset, figure, address, form {
+	margin-bottom: $base-space-size;
+}
+
+blockquote {
+	padding-left: 1em;
+	border-left: 4px solid rgba(0, 0, 0, .1);
+	font-style: italic;
+	color: rgba($font-text-color, .65);
+	& p {
+    	margin-bottom: .5rem;
+	}
+}
+
+pre, code, samp, var, kbd {
+	font-family: Consolas, Monaco, 'Courier New', monospace;
+}
+
+code {
+	display: block;
+	background: map-get($grayscale, light);
+	color: rgba($font-text-color, .85);
+	padding: 15px;
+}
+
+pre {
+    padding: 15px;
+}
+
+pre,
+pre code {
+    background: map-get($grayscale, light);
+	padding: 0;
+	top: 0;
+    display: block;
+    line-height: 1.2;
+    color: rgba($font-text-color, .85);
+	overflow: none;
+	white-space: pre-wrap;
+}
+
+abbr {
+	text-decoration: underline;
+	text-decoration: underline dotted;
+	cursor: help;
+	border-bottom: 0;
+}
+

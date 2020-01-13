@@ -1,0 +1,99 @@
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+
+	<!-- Canvas slider -->
+	<div class="offcanvas offcanvas-slide-left offcanvas-noscroll bg-success" id="slider-left">
+		<h3 class="text-white">Canvas Slide LEFT o</h3>
+		<a class="btn btn-rounded btn-block mt-lg" data-action="offcanvas" data-target="slider-left">cerrar</a>
+	</div>
+	<div class="offcanvas offcanvas-slide-right bg-primary" id="slider-right">
+		<h3 class="text-white">Canvas Slide RIGHT</h3>
+		<a class="btn btn-rounded btn-block mt-lg" data-action="offcanvas" data-target="slider-right">cerrar</a>
+	</div>
+	<div class="offcanvas offcanvas-slide-top bg-primary" id="slider-top">
+		<h3 class="text-white">Canvas Slide TOP</h3>
+		<a class="btn btn-rounded btn-block mt-lg" data-action="offcanvas" data-target="slider-top">cerrar</a>
+	</div>
+	<div class="offcanvas offcanvas-slide-bottom bg-primary" id="slider-bottom">
+		<h3 class="text-white">Canvas Slide BOTTOM</h3>
+		<a class="btn btn-rounded btn-block mt-lg" data-action="offcanvas" data-target="slider-bottom">cerrar</a>
+	</div>
+
+	<!-- Canvas push -->
+	<div class="offcanvas offcanvas-push-left offcanvas-noclick bg-primary" id="push-left">
+		<h3 class="text-white">Canvas Push LEFT noclick</h3>
+		<a class="btn btn-rounded btn-block mt-lg" data-action="offcanvas" data-target="push-left">cerrar</a>
+	</div>
+	<div class="offcanvas offcanvas-push-right bg-primary" id="push-right">
+		<h3 class="text-white">Canvas Push RIGHT</h3>
+		<a class="btn btn-rounded btn-block mt-lg" data-action="offcanvas" data-target="push-right">cerrar</a>
+	</div>
+	<div class="offcanvas offcanvas-push-top bg-primary" id="push-top">
+		<h3 class="text-white">Canvas Push TOP</h3>
+		<a class="btn btn-rounded btn-block mt-lg" data-action="offcanvas" data-target="push-top">cerrar</a>
+	</div>
+	<div class="offcanvas offcanvas-push-bottom bg-primary" id="push-bottom">
+		<h3 class="text-white">Canvas Push BOTTOM</h3>
+		<a class="btn btn-rounded btn-block mt-lg" data-action="offcanvas" data-target="push-bottom">cerrar</a>
+	</div>
+
+	<!-- Canvas modal faded -->
+	<div class="offcanvas offcanvas-modal-faded bg-danger" id="modal-faded">
+		<h3 class="text-white">Canvas Push LEFT</h3>
+		<a class="btn btn-rounded btn-block mt-lg" data-action="offcanvas" data-target="modal-faded">cerrar</a>
+	</div>
+
+	<style>
+		#modal-faded { width: 100%; height: 100%;}
+	</style>
+
+
+	<div class="offcanvas-wrap">
+
+		<div class="container mt-lg">
+
+			<div class="row">
+				<div class="col-md-3">
+					<a href="javascript:alert('no se ejecuta')'" class="btn btn-outlined-success btn-block" data-action="offcanvas" data-target="slider-left">Canvas slide LEFT noscroll</a>
+					<button type="button" onclick="alert('sí se ejecuta')" class="btn btn-outlined-success btn-block" data-action="offcanvas" data-target="slider-left">Canvas slide LEFT noscroll</button>
+				</div>
+				<div class="col-md-3">
+					<a class="btn btn-outlined-success btn-block" data-action="offcanvas" data-target="slider-right">Canvas slide RIGHT</a>
+				</div>
+				<div class="col-md-3">
+					<a class="btn btn-outlined-success btn-block" data-action="offcanvas" data-target="slider-top">Canvas slide TOP</a>
+				</div>
+				<div class="col-md-3">
+					<a class="btn btn-outlined-success btn-block" data-action="offcanvas" data-target="slider-bottom">Canvas slide BOTTOM</a>
+				</div>
+			</div>
+
+			<div class="row mt-md">
+				<div class="col-md-3">
+					<a class="btn btn-outlined-primary btn-block" data-action="offcanvas" data-target="push-left">Canvas push LEFT</a>
+				</div>
+				<div class="col-md-3">
+					<a class="btn btn-outlined-primary btn-block" data-action="offcanvas" data-target="push-right">Canvas push RIGHT</a>
+				</div>
+				<div class="col-md-3">
+					<a class="btn btn-outlined-primary btn-block" data-action="offcanvas" data-target="push-top">Canvas push TOP</a>
+				</div>
+				<div class="col-md-3">
+					<a class="btn btn-outlined-primary btn-block" data-action="offcanvas" data-target="push-bottom">Canvas push BOTTOM</a>
+				</div>
+			</div>
+
+			<div class="row mt-md">
+				<div class="col-md-3">
+					<a class="btn btn-outlined-danger btn-block" data-action="offcanvas" data-target="modal-faded">Canvas modal FADED</a>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+{% endblock %}

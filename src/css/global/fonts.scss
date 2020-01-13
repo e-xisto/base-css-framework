@@ -1,0 +1,60 @@
+
+// Google Fonts
+// https://fonts.google.com
+
+// Type Scale Resources
+// http://type-scale.com
+// https://www.gridlover.net/try
+// Ver vídeo: https://youtu.be/dkpuahY9bl4?t=15m23s
+// https://www.modularscale.com
+
+// Helps for pairs Google Fonts together
+// https://fontpair.co
+
+// Webfont generator
+// https://www.fontsquirrel.com 
+
+
+
+// Google Fonts imports
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900');
+
+// Fonts families variables
+$font-size-base: 16px;
+
+// Recomended Scale factors:
+// - Minor Second (1.067)
+// - Major Second (1.125)
+// - Minor Third (1.200)
+// - Mayor Third (1.250)
+// - Perfect Fourth (1.333)
+// - Augmented Fourth (1.414)
+// - Perfect Fifth (1.500)
+// - Goldel Ratio (1.618)
+$font-scale-factor: 1.33; //Perfect Fourth 
+
+$font-family-base: 'Lato', sans-serif;
+$font-family-sans-serif: 'Lato', sans-serif;
+$font-family-serif: 'Merriweather', serif;
+
+$font-weight-bolder: 900;
+$font-weight-bold: 700;
+$font-weight-normal: 400;
+$font-weight-light: 300;
+
+html {
+	font-size: $font-size-base;
+	font-family: $font-family-base;
+}
+
+// @include breakpoint(xs) { html { font-size: 1.1rem; } }
+
+// @include breakpoint(sm) { html { font-size: 1.2rem; } }
+
+// @include breakpoint(md) { html { font-size: 1.4rem; } }
+
+// @include breakpoint-up(lg) { html { font-size: 1.6rem; } }
+
+
+

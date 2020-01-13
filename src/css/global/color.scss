@@ -1,0 +1,67 @@
+// Google, but for colors
+// https://picular.co
+
+// The super fast color schemes generator!
+// https://coolors.co
+
+// Adobe Color CC
+// https://color.adobe.com
+
+// ColorBox
+// https://www.colorbox.io
+
+// Colormind
+//http://colormind.io
+
+// Color Designer
+//https://colordesigner.io
+
+	$color-primary-dk: #031B4D;
+	$color-primary: #0069FF;
+	$color-primary-lt: #D7E9FF;
+	$color-secondary-dk: #005754;
+	$color-secondary: #00D7D2;
+	$color-secondary-lt: #7CDEDA;
+	$color-success: #15CD72;
+	$color-warning: #F5B024;
+	$color-danger: #ED4F32;
+	$color-info: #1FC1EF;
+
+	$color-black: #000;
+	$color-dark: #37454C;
+	$color-midtone: #838A8D;
+	$color-gray: #C0C4C5;
+	$color-light: #ECEDEE;
+	$color-bright: #F9FAFB;
+	$color-white: #F9FAFB;
+
+$colors: (
+	// Primary Color
+	primary-dk: #031B4D,
+	primary: #0069FF,
+	primary-lt: #D7E9FF,
+	// Secondary Color
+	secondary-dk: #005754,
+	secondary: #00D7D2,
+	secondary-lt: #7CDEDA,
+	// System Colors
+	success: #15CD72,
+	warning: #F5B024,
+	danger: #ED4F32,
+	info: #1FC1EF
+);
+
+$grayscale: (
+	black: #000,
+	dark: #37454C,
+	midtone: #838A8D,
+	gray: #C0C4C5,
+	light: #ECEDEE,
+	bright: #F9FAFB,
+	white: #F9FAFB
+);
+
+
+@include colors($colors);
+@include colors($grayscale);
+

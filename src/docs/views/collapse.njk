@@ -1,0 +1,38 @@
+
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+<div class="container mt-xxl">
+	<div class="row center">
+		<div class="col-md-4">
+
+			<div id="parent">
+				<a href="" class="btn btn-block btn-primary mb-md active" data-action="collapse" data-target="id-elemento"><strong>inner tag</strong> Collapse 1</a>
+
+				<div id="id-elemento" data-parent="parent" class="collapse mb-md show">
+					Elemento 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe molestias aliquam. Reprehenderit nulla veniam magnam delectus?
+				</div>
+
+				<a href="" class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento2">Collapse 2</a>
+
+				<div id="id-elemento2" data-parent="parent"  class="collapse mb-md">
+					Elemento 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe molestias aliquam. Reprehenderit nulla veniam magnam delectus?
+				</div>
+
+				<a href="" class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento3">Collapse 3</a>
+
+				<div id="id-elemento3" data-parent="parent" class="collapse mb-md">
+					Elemento 3: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe molestias aliquam. Reprehenderit nulla veniam magnam delectus?
+				</div>
+
+				<a href="" class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento4">Collapse independiente</a>
+
+				<div id="id-elemento4" class="collapse mb-md">
+					Independiente: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe molestias aliquam. Reprehenderit nulla veniam magnam delectus?
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+{% endblock %}

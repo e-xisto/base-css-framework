@@ -1,0 +1,17 @@
+// Breakpoints
+
+$media-xs: 767px;
+$media-sm: 768px;
+$media-md: 992px;
+$media-lg: 1200px;
+
+
+$breakpoints: (
+	xs: $media-xs,
+	sm: $media-sm,
+	md: $media-md,
+	lg: $media-lg
+);
+
+// Tamaño de espacio base utilizado para margenes y padding
+$base-space-size: 1rem;

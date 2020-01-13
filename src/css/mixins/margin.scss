@@ -1,0 +1,76 @@
+@mixin margins($pos: "", $modif: "") {
+
+	@if ($pos == "x") {
+
+		.m#{$pos}-none 	{ margin-left: 0 !important; margin-right: 0 !important; }
+		.m#{$pos}-xs 	{ margin-left: $base-space-size * 0.500 !important; margin-right: $base-space-size * 0.500 !important; }
+		.m#{$pos}-sm 	{ margin-left: $base-space-size * 0.750 !important; margin-right: $base-space-size * 0.750 !important; }
+		.m#{$pos}-md 	{ margin-left: $base-space-size * 1.000 !important; margin-right: $base-space-size * 1.000 !important; }
+		.m#{$pos}-lg 	{ margin-left: $base-space-size * 1.250 !important; margin-right: $base-space-size * 1.250 !important; }
+		.m#{$pos}-xl	{ margin-left: $base-space-size * 1.500 !important; margin-right: $base-space-size * 1.500 !important; }
+		.m#{$pos}-xxl	{ margin-left: $base-space-size * 2.500 !important; margin-right: $base-space-size * 2.500 !important; }
+
+		@each $break, $value in $breakpoints {
+			
+			@include breakpoint($break) {
+				.m#{$pos}-#{$break}-none { margin-left: 0 !important; margin-right: 0 !important; }
+				.m#{$pos}-#{$break}-xs 	 { margin-left: $base-space-size * 0.500 !important; margin-right: $base-space-size * 0.500 !important; }
+				.m#{$pos}-#{$break}-sm 	 { margin-left: $base-space-size * 0.750 !important; margin-right: $base-space-size * 0.750 !important; }
+				.m#{$pos}-#{$break}-md 	 { margin-left: $base-space-size * 1.000 !important; margin-right: $base-space-size * 1.000 !important; }
+				.m#{$pos}-#{$break}-lg 	 { margin-left: $base-space-size * 1.250 !important; margin-right: $base-space-size * 1.250 !important; }
+				.m#{$pos}-#{$break}-xl	 { margin-left: $base-space-size * 1.500 !important; margin-right: $base-space-size * 1.500 !important; }
+				.m#{$pos}-#{$break}-xxl	 { margin-left: $base-space-size * 2.500 !important; margin-right: $base-space-size * 2.500 !important; }
+			}
+			
+		}
+
+	} @else if ($pos == "y") {
+
+		.m#{$pos}-none 	{ margin-top: 0 !important; margin-bottom: 0 !important; }
+		.m#{$pos}-xs 	{ margin-top: $base-space-size * 0.500 !important; margin-bottom: $base-space-size * 0.500 !important; }
+		.m#{$pos}-sm 	{ margin-top: $base-space-size * 0.750 !important; margin-bottom: $base-space-size * 0.750 !important; }
+		.m#{$pos}-md 	{ margin-top: $base-space-size * 1.000 !important; margin-bottom: $base-space-size * 1.000 !important; }
+		.m#{$pos}-lg 	{ margin-top: $base-space-size * 1.250 !important; margin-bottom: $base-space-size * 1.250 !important; }
+		.m#{$pos}-xl	{ margin-top: $base-space-size * 1.500 !important; margin-bottom: $base-space-size * 1.500 !important; }
+		.m#{$pos}-xxl	{ margin-top: $base-space-size * 2.500 !important; margin-bottom: $base-space-size * 2.500 !important; }
+
+		@each $break, $value in $breakpoints {
+			
+			@include breakpoint($break) {
+				.m#{$pos}-#{$break}-none { margin-top: 0 !important; margin-bottom: 0 !important; }
+				.m#{$pos}-#{$break}-xs 	 { margin-top: $base-space-size * 0.500 !important; margin-bottom: $base-space-size * 0.500 !important; }
+				.m#{$pos}-#{$break}-sm 	 { margin-top: $base-space-size * 0.750 !important; margin-bottom: $base-space-size * 0.750 !important; }
+				.m#{$pos}-#{$break}-md 	 { margin-top: $base-space-size * 1.000 !important; margin-bottom: $base-space-size * 1.000 !important; }
+				.m#{$pos}-#{$break}-lg 	 { margin-top: $base-space-size * 1.250 !important; margin-bottom: $base-space-size * 1.250 !important; }
+				.m#{$pos}-#{$break}-xl	 { margin-top: $base-space-size * 1.500 !important; margin-bottom: $base-space-size * 1.500 !important; }
+				.m#{$pos}-#{$break}-xxl	 { margin-top: $base-space-size * 2.500 !important; margin-bottom: $base-space-size * 2.500 !important; }
+			}
+			
+		}
+
+	} @else {
+
+		.m#{$pos}-none 	{ margin#{$modif}: 0 !important; }
+		.m#{$pos}-xs 	{ margin#{$modif}: $base-space-size * 0.500 !important; }
+		.m#{$pos}-sm 	{ margin#{$modif}: $base-space-size * 0.750 !important; }
+		.m#{$pos}-md 	{ margin#{$modif}: $base-space-size * 1.000 !important; }
+		.m#{$pos}-lg 	{ margin#{$modif}: $base-space-size * 1.250 !important; }
+		.m#{$pos}-xl	{ margin#{$modif}: $base-space-size * 1.500 !important; }
+		.m#{$pos}-xxl	{ margin#{$modif}: $base-space-size * 2.500 !important; }
+		
+		@each $break, $value in $breakpoints {
+			
+			@include breakpoint($break) {
+				.m#{$pos}-#{$break}-none 	{ margin#{$modif}: 0 !important; }
+				.m#{$pos}-#{$break}-xs 		{ margin#{$modif}: $base-space-size * 0.500 !important; }
+				.m#{$pos}-#{$break}-sm 		{ margin#{$modif}: $base-space-size * 0.750 !important; }
+				.m#{$pos}-#{$break}-md 		{ margin#{$modif}: $base-space-size * 1.000 !important; }
+				.m#{$pos}-#{$break}-lg 		{ margin#{$modif}: $base-space-size * 1.250 !important; }
+				.m#{$pos}-#{$break}-xl		{ margin#{$modif}: $base-space-size * 1.500 !important; }
+				.m#{$pos}-#{$break}-xxl		{ margin#{$modif}: $base-space-size * 2.500 !important; }
+			}
+
+		}
+	}
+}
+

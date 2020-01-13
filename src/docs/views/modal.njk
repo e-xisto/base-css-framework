@@ -1,0 +1,131 @@
+
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+
+<div class="conteiner">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<a onclick="console.log('demo 1')" class="btn btn-outlined-secondary btn-md btn-block mt-xxl" data-action="modal-open" data-target="modal-demo-1">Modal</a>
+
+			<button class="btn btn-outlined-secondary btn-md btn-block mt-xxl" data-action="modal-open" data-target="modal-demo-2">Modal noclick velo</button>
+
+			<a onclick="console.log('demo 3')" class="btn btn-outlined-secondary btn-md btn-block mt-xxl" data-action="modal-open" data-target="modal-demo-3">Modal</a>
+
+			<a onclick="abrirModal()" class="btn btn-outlined-secondary btn-md btn-block mt-xxl mb-xxl">Abrir por js</a>
+
+			<div class="form-input">
+				<label for="nombre">Parámetro nombre</label>
+				<input type="text" name="nombre" id="nombre" value="Test">
+			</div>
+			<a onclick="abrirModalParams()" class="btn btn-outlined-secondary btn-md btn-block">Abrir modal parametrizada</a>
+			<a onclick="abrirModalParamsCallback()" class="btn btn-outlined-secondary btn-md btn-block">Abrir modal parametrizada con callback</a>
+		</div>
+	</div>
+</div>
+
+
+	<div class="modal" id="modal-demo-1">
+
+		<div class="modal-content">
+			<div class="modal-close" data-action="modal-close" data-target="modal-demo-1"><img src="/images/cerrar-gris.svg"></div>
+			<!-- <div class="modal-close" data-action="modal-close" data-target="modal-demo-1">&times;</div> -->
+			<div class="modal-header">
+				<h3>Título de la modal</h3>
+			</div>
+			<div class="modal-body">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo. Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-1">Cancelar</a>
+				<a href="" class="btn btn-success btn-xs-block btn-sm-block">Aceptar</a>
+			</div>
+		</div>
+
+	</div>
+
+
+	<div class="modal modal-noclick" id="modal-demo-2">
+
+		<div class="modal-content">
+			<div class="modal-close" data-action="modal-close" data-target="modal-demo-2">&times;</div>
+			<div class="modal-header">
+				<h3>Título de la modal</h3>
+			</div>
+			<div class="modal-body">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo. Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-2">Cancelar</a>
+				<a href="" class="btn btn-success btn-xs-block btn-sm-block">Aceptar</a>
+			</div>
+		</div>
+
+	</div>
+
+
+	<div class="modal modal-noclick" id="modal-demo-3">
+
+		<div class="modal-content w50">
+			<div class="modal-close" data-action="modal-close" data-target="modal-demo-3">&times;</div>
+			<div class="modal-header">
+				<h3>Título de la modal</h3>
+			</div>
+			<div class="modal-body">
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo. Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?</p>
+				<button onclick="console.log('onclick')" class="btn btn-outlined-secondary btn-md btn-block mt-xxl" data-action="modal-open" data-target="modal-demo-1">Modal</button>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-3">Cancelar</a>
+				<a href="" class="btn btn-success btn-xs-block btn-sm-block">Múltiples modales</a>
+			</div>
+		</div>
+
+	</div>
+
+
+	<div class="modal" id="modal-demo-param">
+
+		<div class="modal-content">
+			<div class="modal-close" data-action="modal-close" data-target="modal-demo-param">&times;</div>
+			<div class="modal-header">
+				<h3>Título de la modal paramétrizada</h3>
+			</div>
+			<div class="modal-body">
+				{% raw %}
+				<p>Hola {{nombre}},</p>
+
+				<p>
+					¿Qué tal {{nombre}}? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo. Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?
+				</p>
+				{% endraw %}
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-param">Cancelar</a>
+				<a href="" class="btn btn-success btn-xs-block btn-sm-block">Aceptar</a>
+			</div>
+		</div>
+
+	</div>
+
+	<script>
+
+		function abrirModal() {
+			Modal.open('modal-demo-1');
+		}
+
+		function abrirModalParams() {
+			var nombre = document.getElementById('nombre').value;
+			Modal.open('modal-demo-param', { nombre: nombre });
+		}
+
+		function abrirModalParamsCallback() {
+			var nombre = document.getElementById('nombre').value;
+			Modal.open('modal-demo-param', { nombre: nombre }, function(data) {
+				alert(nombre);
+			});
+		}
+
+	</script>
+
+{% endblock %}

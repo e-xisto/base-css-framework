@@ -1,0 +1,166 @@
+// - Tamaños de botón sm normal md lg (4 tamaños)
+// - Colores automáticos con colores definidos
+// - Botón normal 
+// - Solo borde (Outlined)
+// - Invertido (Inverted)
+// - Rounded
+// - Grupo de botones
+// - Boton con icono
+// - Clases con button y con btn
+// - Comportamiento como bloque pro breakpoint
+// - Aplicado a a y button
+// - Estados normal, hover, focus, active, loading, static, disabled
+// - Mixin make-button()
+
+
+// Variables boton por defecto
+
+$button-background-color: map-get($grayscale, light);
+
+$button-border-width: 1px;
+$button-border-radius: 4px;
+$button-border-color: $button-background-color;
+
+$button-font-size: 1rem;
+$button-font-weight: normal;
+$button-font-color: map-get($grayscale, dark);
+$button-font-family: $font-family-base;
+
+$button-padding-x: 1em;
+$button-padding-y: 1em / $font-scale-factor;
+$button-height: 42px;
+
+$button-hover-background-color: darken($button-background-color, 7%);
+$button-hover-border-color: $button-hover-background-color;
+$button-hover-font-color: $button-font-color;
+
+$button-active-background-color: lighten($button-background-color, 2%);
+$button-active-border-color: lighten($button-background-color, 2%);
+$button-active-font-color: $button-font-color;
+
+$button-focus-color: map-get($grayscale, light);
+
+.btn,
+.button {
+	display: inline-block;
+
+	color: $button-font-color;
+	background-color: $button-background-color;
+	border: $button-border-width solid $button-border-color;
+	border-radius: $button-border-radius;
+
+	font-size: $button-font-size;
+	font-weight: $button-font-weight;
+	line-height: 1em;
+	height: $button-height;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;	
+
+	padding: $button-padding-y $button-padding-x;
+	
+	justify-content: center;
+	vertical-align: middle;
+	user-select: none;
+	cursor: pointer;
+
+	transition: color .3s ease-in-out,
+				background-color .3s ease-in-out,
+				border-color .3s ease-in-out, 
+				box-shadow .3s ease-in-out;
+
+	&:not([disabled]):not(.disabled):hover {
+		color: $button-hover-font-color;
+		background-color: $button-hover-background-color;
+		border-color: $button-hover-border-color;
+	}
+
+	&:focus {
+		outline: 0px;
+		box-shadow: 0 0 0 3px darken($button-focus-color, 10%);	
+
+		&:hover:active {
+			box-shadow: none;
+		}
+	}
+
+	&:not([disabled]):not(.disabled):active,
+  	&:not([disabled]):not(.disabled).active	{
+		color: $button-active-font-color;
+		background-color: $button-active-background-color;
+		border-color: $button-active-border-color;
+	}
+
+	&[disabled], 
+	&.disabled {
+		opacity: 0.5;
+		box-shadow: none;
+		cursor: default;
+	}
+
+	// Sizes
+
+	&.btn-sm,
+	&.button-sm {
+		font-size: 1em / $font-scale-factor;
+		height: round($button-height / $font-scale-factor);
+	}
+
+	&.btn-md,
+	&.button-md {
+		font-size: 1em * $font-scale-factor;
+		height: round($button-height * $font-scale-factor);
+	}
+
+	&.btn-lg,
+	&.button-lg {
+		font-size: 1em * $font-scale-factor * $font-scale-factor;
+		height: round($button-height * $font-scale-factor * $font-scale-factor);
+	}
+
+	&.btn-outline, 
+	&.btn-outlined {
+		@include make-button-variant($button-font-color, transparent, $button-font-color, #fff, $button-font-color, $button-font-color);
+	}
+
+	&.btn-round, 
+	&.btn-rounded {
+		border-radius: 2em;
+	}
+
+	&.btn-block {
+		width: 100%;
+	}
+	
+	@each $break, $value in $breakpoints {
+		&.btn-#{$break}-block {
+			@include breakpoint($break) {
+				width: 100%;
+			}
+		}
+	}	
+}
+
+// Color Variants
+.btn,
+.button {
+
+	@each $color, $value in $colors {
+		&.btn-#{$color} {
+			@include make-button-variant(#fff, $value, $value);
+		}
+
+		&.btn-outline-#{$color},
+		&.btn-outlined-#{$color} {
+			@include make-button-variant($value, transparent, $value, #fff, $value, $value);
+		}
+
+		&.btn-round-#{$color},
+		&.btn-rounded-#{$color} {
+			border-radius: 2em;
+			@include make-button-variant($value, transparent, $value, #fff, $value, $value);
+		}
+	}
+}
+
+
