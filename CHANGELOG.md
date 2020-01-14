@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Scripts `npm run dev` y `npm run build`.
 - Variables para definición de colores.
 - Plantilla muestra colores.
+- Definida layout para documentación
 
 ### Changed
 - Nueva estructura de carpetas y organización de archivos.
@@ -21,6 +22,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Actualizado mixin colores para cargar variables CSS.
 
 ### Fixed
+- Revisadas las utilidades flex
+
 ### Security
 ### Removed
 ### Deprecated
