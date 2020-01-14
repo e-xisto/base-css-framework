@@ -9,7 +9,7 @@ console.log(templates)
 const templatesHtmlPlugin = templates.map ( (template) => {
 	return new HtmlWebpackPlugin({
 		customData: { title: 'BASE CSS', lista: [ "guia.html", "sandbox.html", "..." ] },
-		filename: __dirname + `/../../dist/docs/${template.replace("njk", "html")}`,
+		filename: __dirname + `/../../docs/${template.replace("njk", "html")}`,
 		template: __dirname + `/views/${template}`
 	})
 });

@@ -1,14 +1,15 @@
 {
 	"name": "base-css-framework",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Base CSS Framework & Styleguide",
 	"scripts": {
 		"dev": "npx npm-run-all --serial dev:del dev:webpack",
-		"build": "npx npm-run-all --serial prod:del prod:webpack",
-		"dev:del": "rimraf dist",
+		"build": "npx npm-run-all --serial prod:del prod:webpack prod:copy",
+		"dev:del": "rimraf dist && rimraf docs",
 		"dev:webpack": "nodemon --watch ./src/html/ --exec 'webpack-dev-server --mode=development'",
-		"prod:del": "rimraf dist",
-		"prod:webpack": "npx webpack --mode=production"
+		"prod:del": "rimraf dist && rimraf docs",
+		"prod:webpack": "npx webpack --mode=production",
+		"prod:copy": "npx copyfiles -f dist/css/base.css docs/css && npx copyfiles -f dist/js/base.js docs/js"
 	},
 	"repository": {
 		"type": "git",
@@ -31,6 +32,7 @@
 	},
 	"devDependencies": {
 		"copy-webpack-plugin": "^5.1.1",
+		"copyfiles": "^2.1.1",
 		"css-loader": "^1.0.0",
 		"extract-loader": "^3.0.0",
 		"file-loader": "^2.0.0",

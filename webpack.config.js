@@ -18,14 +18,15 @@ module.exports = {
 
 	output: {
 		filename: 'js/base.js',
-		path: path.resolve(__dirname, './dist')
+		path: path.resolve(__dirname, './dist'),
+		publicPath: "./"
 	},
 
 	devServer: {
-		 index: 'docs/index.html',
-		contentBase: [path.resolve(__dirname, './dist'),path.resolve(__dirname, './dist/docs')],
+		index: '../docs/index.html',
+		contentBase: [path.resolve(__dirname, './dist/'),path.resolve(__dirname, './docs')],
 		compress: false,
-		// writeToDisk: true,
+		writeToDisk: true,
 		port: 8888
 	},
 
@@ -105,7 +106,7 @@ module.exports = {
 			chunkFilename: "[id].css"
 		}),
 		new CopyPlugin([
-			{ from: 'src/docs/images', to: 'docs/images' },
+			{ from: 'src/docs/images', to: '../docs/images' }
 		])		
 
 	// ],
