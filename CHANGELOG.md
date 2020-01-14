@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Configuración de nuevo repositorio de proyecto.
 - Scripts `npm run dev` y `npm run build`.
+- Variables para definición de colores.
+- Plantilla muestra colores.
 
 ### Changed
 - Nueva estructura de carpetas y organización de archivos.
@@ -16,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Cambio nombre carpeta `src/html` por `src/docs`.
 - Cambio configuración del Webpack Dev Server.
 - Configuración carpeta `/docs` para generar Github Pages.
+- Actualizado mixin colores para cargar variables CSS.
 
 ### Fixed
 ### Security

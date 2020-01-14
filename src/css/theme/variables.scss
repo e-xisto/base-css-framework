@@ -1,4 +1,4 @@
-// Breakpoints
+// Breakpoints para las diferentes resoluciones
 
 $media-xs: 767px;
 $media-sm: 768px;
@@ -14,4 +14,48 @@ $breakpoints: (
 );
 
 // Tamaño de espacio base utilizado para margenes y padding
-$base-space-size: 1rem;
+$base-space-size: 15px;
+
+//
+// COLORS
+//
+
+// Color primario
+
+$color-primary-dk: #0E5989;
+$color-primary-md: #186CA4;
+$color-primary: #3099DC;
+$color-primary-lt: #6EB6E9;
+$color-primary-br: #93CBF1;
+
+// Color secundario
+
+$color-secondary-dk: #5D1B2C;
+$color-secondary-md: #D13B62;
+$color-secondary: #FF4877;
+$color-secondary-lt: #FF8AA8;
+$color-secondary-br: #FFDDE6;
+
+// Colores personalizados
+
+$color-custom-1: #E2E2E2;
+$color-custom-2: #E2E2E2;
+$color-custom-3: #E2E2E2;
+$color-custom-4: #E2E2E2;
+
+// Colores de sistema
+
+$color-success: #15CD72;
+$color-warning: #F5B024;
+$color-danger: #ED4F32;
+$color-info: #1FC1EF;
+
+// Colores para escala de grises
+
+$color-black: #000;
+$color-dark: #222121;
+$color-midtone: #404040;
+$color-gray: #5D5D5D;
+$color-light: #ADADAD;
+$color-bright: #E3E3E3;
+$color-white: #FFFFFF;
