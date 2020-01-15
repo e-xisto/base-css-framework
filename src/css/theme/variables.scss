@@ -18,6 +18,15 @@ $breakpoints: (
 	lg: $media-lg
 );
 
+// =========================================================
+//   SPACING
+// 
+// - Espacio base utilizado para cálculos de spacings
+// 
+// =========================================================
+
+// Tamaño de espacio base utilizado para margenes y padding
+$base-space-size: 15px;
 
 // =========================================================
 //   COLOR
@@ -95,5 +104,3 @@ $grid-container-width-xs: 100%;
 
 // _*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
 
-// Tamaño de espacio base utilizado para margenes y padding
-$base-space-size: 15px;
