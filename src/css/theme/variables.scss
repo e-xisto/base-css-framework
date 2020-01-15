@@ -1,10 +1,15 @@
-// Breakpoints para las diferentes resoluciones
+// =========================================================
+//   BREACKPOINTS
+// 
+// - Breakpoints para las diferentes resoluciones
+// 
+// =========================================================
 
+// Breakpoints para las diferentes resoluciones
 $media-xs: 767px;
 $media-sm: 768px;
 $media-md: 992px;
 $media-lg: 1200px;
-
 
 $breakpoints: (
 	xs: $media-xs,
@@ -13,15 +18,19 @@ $breakpoints: (
 	lg: $media-lg
 );
 
-// Tamaño de espacio base utilizado para margenes y padding
-$base-space-size: 15px;
 
-//
-// COLORS
-//
+// =========================================================
+//   COLOR
+// 
+// - Color primario
+// - Color secundario
+// - Colores personalizados
+// - Color para avisos de sistema
+// - Escala de grises
+// 
+// =========================================================
 
 // Color primario
-
 $color-primary-dk: #0E5989;
 $color-primary-md: #186CA4;
 $color-primary: #3099DC;
@@ -29,7 +38,6 @@ $color-primary-lt: #6EB6E9;
 $color-primary-br: #93CBF1;
 
 // Color secundario
-
 $color-secondary-dk: #5D1B2C;
 $color-secondary-md: #D13B62;
 $color-secondary: #FF4877;
@@ -37,21 +45,18 @@ $color-secondary-lt: #FF8AA8;
 $color-secondary-br: #FFDDE6;
 
 // Colores personalizados
-
 $color-custom-1: #fc5185;
 $color-custom-2: #364f6b;
 $color-custom-3: #43dde6;
 $color-custom-4: #f0f0f0;
 
-// Colores de sistema
-
+// Colores para avisos de sistema
 $color-success: #61bb46;
 $color-warning: #fdb827;
 $color-danger: #e03a3e;
 $color-info: #009ddc;
 
-// Colores para escala de grises
-
+// Escala de grises
 $color-black: #000;
 $color-dark: #555555;
 $color-midtone: #777777;
@@ -59,3 +64,36 @@ $color-gray: #999999;
 $color-light: #bbbbbb;
 $color-bright: #dddddd;
 $color-white: #FFFFFF;
+
+
+// =========================================================
+//   GRID
+// 
+// - Número de columnas total del Grid
+// - Espacio entre columnas
+// - Tamaños del contenedor según los diferentes $breakpoints
+// 
+// =========================================================
+
+// Número de columnas total del Grid
+$grid-total-cols: 12;
+
+// Espacio entre columnas del Grid
+$grid-column-gutter: 30px;
+
+// Espacio entre columnas para Mobile
+$grid-column-gutter-xs: 15px;
+
+// Tamaños del contenedor según los diferentes $breakpoints
+$grid-container-width-lg: 1140px;
+$grid-container-width-md: 940px;
+$grid-container-width-sm: 720px;
+$grid-container-width-xs: 100%;
+
+
+
+
+// _*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
+
+// Tamaño de espacio base utilizado para margenes y padding
+$base-space-size: 15px;

@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Revisadas las utilidades flex
+- [build 0.0.5] Revisado el componente grid
 
 ### Security
 ### Removed

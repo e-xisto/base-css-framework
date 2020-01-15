@@ -1,16 +1,4 @@
 
-// Variables
-
-$grid-total-cols: 12;
-$grid-column-gutter: 30px;
-$grid-container-width-lg: 1140px;
-$grid-container-width-md: 940px;
-$grid-container-width-sm: 720px;
-$grid-container-width-xs: 100%;
-
-
-// Container
-
 .container {
 	max-width: 100%;
 	margin-left: auto;
@@ -30,31 +18,25 @@ $grid-container-width-xs: 100%;
 	box-sizing: border-box;
 }
 
-
-// Row
-
 .row {
-	box-sizing: border-box;
-	// display: -ms-flexbox;
-	// display: box;
 	display: flex;
-	-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
+	flex-wrap: wrap;
+	box-sizing: border-box;
 
 	&.reverse { flex-direction: row-reverse; }
 	&.no-wrap { flex-wrap: nowrap; }
 
 	// Vertical alignment
-	&.top { align-items: flex-start; }
-	&.middle { align-items: center; }
-	&.bottom { align-items: flex-end; }
+	&.align-top { align-items: flex-start; }
+	&.align-middle { align-items: center; }
+	&.align-bottom { align-items: flex-end; }
 
 	// Horizontal distribution
-	&.start { justify-content: flex-start; }
-	&.center { justify-content: center; }
-	&.end { justify-content: flex-end; }
-	&.arround { justify-content: space-around; }
-	&.between { justify-content: space-between; }
+	&.justify-start { justify-content: flex-start; }
+	&.justify-center { justify-content: center; }
+	&.justify-end { justify-content: flex-end; }
+	&.justify-arround { justify-content: space-around; }
+	&.justify-between { justify-content: space-between; }
 
 	&.no-gutters {
 		margin-right: 0;
@@ -68,29 +50,47 @@ $grid-container-width-xs: 100%;
 	}	
 }
 
-
-// Columns
-
 .col,
 [class*="col-"] {
 	width: 100%;
 	box-sizing: border-box;
 	padding-left: ($grid-column-gutter / 2);
 	padding-right: ($grid-column-gutter / 2);
+	
+	@media (max-width: $media-xs) {
+		padding-left: ($grid-column-gutter-xs / 2);
+		padding-right: ($grid-column-gutter-xs / 2);
+	}
 
 	& .row {
 		margin-left: -($grid-column-gutter / 2);
 		margin-right: -($grid-column-gutter / 2);
+
+		@media (max-width: $media-xs) {
+			padding-left: ($grid-column-gutter-xs / 2);
+			padding-right: ($grid-column-gutter-xs / 2);
+		}
 	}
 
 	// Vertical alignment
-	&.top { align-self: flex-start; }
-	&.middle { align-self: center; }
-	&.bottom { align-self: flex-end; }
+	&.align-top { align-self: flex-start; }
+	&.align-middle { align-self: center; }
+	&.align-bottom { align-self: flex-end; }
 
-	// Change order
-	&.last { order: 100 !important; }
-	&.first { order: -1 !important; }
+	&.order-first {}
+	&.order-last {}
+
+	// Fijamos el order de las columnas dentro de un row
+	@for $i from 1 through $grid-total-cols {
+		&:nth-child(#{$i}) { order: #{$i} }
+	}
+	// Si el row tiene más de 12 columnas fijamos el order
+	&:nth-child(n+12) { order: 13 }
+
+	// Order by breakpoint (.order-[xs|sm|md|lg]-[1...12}
+	@each $break, $value in $breakpoints {
+		@include grid-column-order($break)
+	}
 }
 
 .col {

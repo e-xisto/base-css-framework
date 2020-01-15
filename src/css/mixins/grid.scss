@@ -27,6 +27,18 @@
 	}
 }
 
+@mixin grid-column-order($breakpoint) {
+		
+	@include breakpoint($breakpoint) {
+		@for $i from 1 through $grid-total-cols {
+			&.order-#{$breakpoint}-#{$i} { order: #{$i} !important; }
+		}
+		
+		&.order-#{$breakpoint}-last { order: 100 !important; }
+		&.order-#{$breakpoint}-first { order: -1 !important; }
+	}
+}
+
 
 // Custom Grid Child
 

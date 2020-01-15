@@ -90,6 +90,8 @@ $grayscale: (
 	white: $color-white
 );
 
+// Generación de helpers classes:
+// .text-color, .bg-color y .border-color
+
 @include colors($colors);
 @include colors($grayscale);
-
