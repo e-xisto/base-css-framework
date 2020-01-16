@@ -8,6 +8,38 @@
 
 
 // Text
+.text-xxs, .text-size-xxs 	{ font-size: $text-size-xxs; line-height: 1.5; }
+.text-xs, .text-size-xs 	{ font-size: $text-size-xs; line-height: 1.5; }
+.text-sm, .text-size-sm 	{ font-size: $text-size-sm; line-height: 1.5; }
+.text-md, .text-size-md 	{ font-size: $text-size-md; line-height: 1.5; }
+.text-lg, .text-size-lg 	{ font-size: $text-size-lg; line-height: 1.5; }
+.text-xl, .text-size-xl 	{ font-size: $text-size-xl; line-height: 1.5; }
+.text-xxl, .text-size-xxl 	{ font-size: $text-size-xxl; line-height: 1.333; }
+
+@include breakpoint(xs) {
+	.text-xxs, .text-size-xxs 	{ font-size: $text-size-xxs-mobile; }
+	.text-xs, .text-size-xs 	{ font-size: $text-size-xs-mobile; }
+	.text-sm, .text-size-sm 	{ font-size: $text-size-sm-mobile; }
+	.text-md, .text-size-md 	{ font-size: $text-size-md-mobile; }
+	.text-lg, .text-size-lg 	{ font-size: $text-size-lg-mobile; }
+	.text-xl, .text-size-xl 	{ font-size: $text-size-xl-mobile; }
+	.text-xxl, .text-size-xxl 	{ font-size: $text-size-xxl-mobile; }
+}
+
+.text-bolder,
+.bolder { font-weight: $font-weight-bolder !important; }
+
+.text-bold,
+strong, .bold, .strong { font-weight: $font-weight-bold !important; }
+
+.text-normal,
+.normal { font-weight: $font-weight-normal !important; }
+
+.text-lighter,
+.light { font-weight: $font-weight-light !important; }
+
+.text-thin,
+.thin { font-weight: $font-weight-thin !important; }
 
 .text-right {text-align: right;}
 .text-left {text-align: left;}
@@ -28,6 +60,23 @@
 .text-preline {white-space: pre-line;}
 .text-pre {white-space: pre;}
 
+
+.list-unstyled {
+	padding-left: 0;
+	list-style: none;
+}
+
+.list-inline {
+	padding-left: 0;
+	margin-left: -5px;
+	list-style: none;
+}
+
+.list-inline > li {
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+}
 
 // Visible or Hidden 
 

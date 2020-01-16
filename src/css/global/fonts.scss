@@ -14,47 +14,23 @@
 // Webfont generator
 // https://www.fontsquirrel.com 
 
-
-
-// Google Fonts imports
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900');
-
-// Fonts families variables
-$font-size-base: 16px;
-
-// Recomended Scale factors:
-// - Minor Second (1.067)
-// - Major Second (1.125)
-// - Minor Third (1.200)
-// - Mayor Third (1.250)
-// - Perfect Fourth (1.333)
-// - Augmented Fourth (1.414)
-// - Perfect Fifth (1.500)
-// - Goldel Ratio (1.618)
-$font-scale-factor: 1.33; //Perfect Fourth 
-
-$font-family-base: 'Lato', sans-serif;
-$font-family-sans-serif: 'Lato', sans-serif;
-$font-family-serif: 'Merriweather', serif;
-
-$font-weight-bolder: 900;
-$font-weight-bold: 700;
-$font-weight-normal: 400;
-$font-weight-light: 300;
-
-html {
-	font-size: $font-size-base;
-	font-family: $font-family-base;
+:root {
+	--font-size-base: #{$font-size-base};
+	--font-family-base: #{$font-family-base};
+	--font-family-sans-serif: #{$font-family-sans-serif};
+	--font-family-serif: #{$font-family-serif};
+	
+	--paragraph-font-family: #{$text-paragraph-font-family};
+	--display-font-family: #{$text-display-font-family};
+	--h1-font-family: #{$text-h1-font-family};
+	--h2-font-family: #{$text-h2-font-family};
+	--h3-font-family: #{$text-h3-font-family};
+	--h4-font-family: #{$text-h4-font-family};
+	--h5-font-family: #{$text-h5-font-family};
+	--h6-font-family: #{$text-h6-font-family};
 }
 
-// @include breakpoint(xs) { html { font-size: 1.1rem; } }
-
-// @include breakpoint(sm) { html { font-size: 1.2rem; } }
-
-// @include breakpoint(md) { html { font-size: 1.4rem; } }
-
-// @include breakpoint-up(lg) { html { font-size: 1.6rem; } }
-
-
-
+html {
+	font-size: var(--font-size-base);
+	font-family: var(--font-family-base);
+}

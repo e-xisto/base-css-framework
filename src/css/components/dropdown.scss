@@ -29,6 +29,7 @@
 	}
 }
 
+
 .dropdown-item {
 	display: block;
 	width: 100%;
@@ -38,7 +39,7 @@
 	font-size: 1em;
 	text-align: left; 
 	padding: 0.5em 1em;
-	color: $font-text-color;
+	color: $text-color;
 	text-decoration: none;
 	background-color: transparent;
 	border: 0; 
@@ -48,6 +49,7 @@
 		color: #fff;
 	}
 }
+
 .dropdown-item.active {}
 .dropdown-item.disabled {}
 

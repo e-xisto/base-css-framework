@@ -8,7 +8,7 @@ $input-border-color: map-get($grayscale, gray);
 $input-font-size: 1rem;
 $input-font-weight: normal;
 $input-font-color: map-get($grayscale, dark);
-$input-font-family: $font-family-base;
+$input-font-family: val(--font-family-base);
 
 $input-height: 42px;
 $input-padding-x: 1rem;
@@ -25,7 +25,7 @@ $input-placeholder-color: map-get($grayscale, gray);
 $label-font-size: 1rem;
 $label-font-weight: bold;
 $label-font-color: map-get($grayscale, dark);
-$label-font-family: $font-family-base;
+$label-font-family: val(--font-family-base);
 
 form {
 

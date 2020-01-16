@@ -1,6 +1,6 @@
 
 
-@mixin font($font-family: $font-family-base, $size: 1em, $line-height: 1.2, $color: inherit, $weight: normal, $style: normal) {
+@mixin font($font-family: val(--font-family-base), $size: 1em, $line-height: 1.2, $color: inherit, $weight: normal, $style: normal) {
     color: $color;
     font-size: $size;
     font-style:  $style;

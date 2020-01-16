@@ -76,6 +76,157 @@ $color-white: #FFFFFF;
 
 
 // =========================================================
+//   FONTS
+// 
+// - Tamaño de fuenta base
+// 
+// =========================================================
+
+// $font-size-base: 16px;
+// $font-scale-factor: 1.33;
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900');
+
+$font-family-sans-serif: 'Lato', sans-serif;
+$font-family-serif: 'Merriweather', serif;
+
+$font-family-base: 'Lato', sans-serif;
+$font-size-base: 16px;
+
+// TODO: Eliminar esta variable
+$font-scale-factor: 1.33;
+
+$font-weight-bolder: 900;
+$font-weight-bold: 700;
+$font-weight-normal: 400;
+$font-weight-light: 300;
+$font-weight-thin: 100;
+
+
+// =========================================================
+//   TEXT
+// 
+// - Color texto y encabezados
+// - Párrafos
+// - Enlaces
+// - Display
+// - Encabezados
+// - Listas
+// - Variantes de tamaños estándares
+// 
+// =========================================================
+
+// Colores por defecto para texto y encabezados
+$text-color: $color-dark;
+$text-header-color: $color-black;
+
+// Párrafos
+$text-paragraph-font-size: 16px;
+$text-paragraph-line-height: 24px;
+$text-paragraph-font-family: $font-family-sans-serif;
+$text-paragraph-color: $text-color;
+$text-paragraph-margin-top: 0px;
+$text-paragraph-margin-bottom: $base-space-size;
+$text-paragraph-text-transform: none;
+
+// Enlaces
+$text-link-color: $color-primary;
+$text-link-color-hover: $color-primary;
+$text-link-decoration: underline;
+$text-link-decoration-hover: underline;
+$text-link-font-weight: $font-weight-normal;
+
+// Display
+$text-display-font-size: 56px;
+$text-display-line-height: 60px;
+$text-display-font-size-mobile: 48px;
+$text-display-line-height-mobile: 50px;
+$text-display-font-family: $font-family-sans-serif;
+$text-display-color: $text-header-color;
+$text-display-margin-top: 0px;
+$text-display-margin-bottom: $base-space-size * 2;
+$text-display-text-transform: none;
+
+// Encabezados
+$text-h1-font-size: 40px;
+$text-h1-line-height: 50px;
+$text-h1-font-size-mobile: 32px;
+$text-h1-line-height-mobile: 40px;
+$text-h1-font-family: $font-family-sans-serif;
+$text-h1-color: $text-header-color;
+$text-h1-margin-top: $base-space-size * 2;
+$text-h1-margin-bottom: $base-space-size;
+$text-h1-text-transform: none;
+
+$text-h2-font-size: 32px;
+$text-h2-line-height: 40px;
+$text-h2-font-size-mobile: 26px;
+$text-h2-line-height-mobile: 32px;
+$text-h2-font-family: $font-family-sans-serif;
+$text-h2-color: $text-header-color;
+$text-h2-margin-top: $base-space-size * 2;
+$text-h2-margin-bottom: $base-space-size;
+$text-h2-text-transform: none;
+
+$text-h3-font-size: 24px;
+$text-h3-line-height: 30px;
+$text-h3-font-size-mobile: 22px;
+$text-h3-line-height-mobile: 28px;
+$text-h3-font-family: $font-family-sans-serif;
+$text-h3-color: $text-header-color;
+$text-h3-margin-top: $base-space-size * 2;
+$text-h3-margin-bottom: $base-space-size;
+$text-h3-text-transform: none;
+
+$text-h4-font-size: 20px;
+$text-h4-line-height: 25px;
+$text-h4-font-family: $font-family-sans-serif;
+$text-h4-color: $text-header-color;
+$text-h4-margin-top: $base-space-size * 2;
+$text-h4-margin-bottom: $base-space-size;
+$text-h4-text-transform: none;
+
+$text-h5-font-size: 16px;
+$text-h5-line-height: 20px;
+$text-h5-font-family: $font-family-sans-serif;
+$text-h5-color: $text-header-color;
+$text-h5-margin-top: 0px;
+$text-h5-margin-bottom: $base-space-size;
+$text-h5-text-transform: none;
+
+$text-h6-font-size: 14px;
+$text-h6-line-height: 17.5px;
+$text-h6-font-family: $font-family-sans-serif;
+$text-h6-color: $text-header-color;
+$text-h6-margin-top: 0px;
+$text-h6-margin-bottom: $base-space-size;
+$text-h6-text-transform: none;
+
+// Listas
+$text-list-margin-bottom: $base-space-size;
+$text-list-padding-left: $base-space-size * 2;
+
+// Variantes de tamaños estándares
+$text-size-xxs:	10px;
+$text-size-xs: 	12px;
+$text-size-sm: 	14px;
+$text-size-md:	16px;
+$text-size-lg: 	20px;
+$text-size-xl: 	24px;
+$text-size-xxl:	32px;
+
+// Variantes de tamaños estándares en mobile
+$text-size-xxs-mobile: 	10px;
+$text-size-xs-mobile: 	12px;
+$text-size-sm-mobile: 	14px;
+$text-size-md-mobile:	16px;
+$text-size-lg-mobile: 	18px;
+$text-size-xl-mobile:	22px;
+$text-size-xxl-mobile: 	26px;
+
+
+// =========================================================
 //   GRID
 // 
 // - Número de columnas total del Grid
@@ -102,5 +253,8 @@ $grid-container-width-xs: 100%;
 
 
 
+
+
 // _*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
+
 

@@ -24,7 +24,7 @@ $button-border-color: $button-background-color;
 $button-font-size: 1rem;
 $button-font-weight: normal;
 $button-font-color: map-get($grayscale, dark);
-$button-font-family: $font-family-base;
+$button-font-family: val(--font-family-base);
 
 $button-padding-x: 1em;
 $button-padding-y: 1em / $font-scale-factor;

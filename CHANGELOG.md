@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Variables para definición de colores.
 - Plantilla muestra colores.
 - Definida layout para documentación
+- [build 0.0.7] Incluidas las variables para los elementos contenido texto
+
 
 ### Changed
 - Nueva estructura de carpetas y organización de archivos.
@@ -20,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Cambio configuración del Webpack Dev Server.
 - Configuración carpeta `/docs` para generar Github Pages.
 - Actualizado mixin colores para cargar variables CSS.
+- [build 0.0.7] Se divide el elemento text en diferentes archivos
 
 ### Fixed
 - Revisadas las utilidades flex

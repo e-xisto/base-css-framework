@@ -1,0 +1,22 @@
+ul, ol {
+	padding-left: 30px;
+	margin-bottom: 15px;
+
+	li {
+		margin-bottom: 5px;
+	}
+
+	& ol,
+	& ul {
+		margin-top: 5px;
+		margin-bottom: 10px;
+	}
+}
+
+ol ol li {
+	list-style-type: lower-alpha;
+}
+
+ol ol ol li {
+	list-style-type: lower-roman;
+}

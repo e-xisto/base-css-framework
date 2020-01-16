@@ -1,0 +1,12 @@
+
+blockquote {
+	padding-left: 1em;
+	border-left: 4px solid rgba(0, 0, 0, .1);
+	font-style: italic;
+	margin-bottom: $base-space-size;
+	color: rgba($text-color, .65);
+
+	& p {
+    	margin-bottom: .5rem;
+	}
+}
