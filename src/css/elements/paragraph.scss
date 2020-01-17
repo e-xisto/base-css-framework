@@ -3,7 +3,7 @@ p {
 	color: $text-paragraph-color;
 	font-size: $text-paragraph-font-size;
 	line-height: $text-paragraph-line-height;
-	font-family: var(--paragraph-font-family);
+	font-family: $text-paragraph-font-family;
 	margin-top: $text-paragraph-margin-top;
 	margin-bottom: $text-paragraph-margin-bottom;
 	text-transform: $text-paragraph-text-transform;
@@ -81,7 +81,7 @@ pre, code, samp, var, kbd {
 code {
 	display: block;
 	background: map-get($grayscale, light);
-	color: rgba($text-color, .85);
+	color: var(--text-color);
 	padding: 15px;
 }
 
@@ -96,7 +96,7 @@ pre code {
 	top: 0;
     display: block;
     line-height: 1.2;
-    color: rgba($text-color, .85);
+    color: var(--text-color);
 	overflow: none;
 	white-space: pre-wrap;
 }

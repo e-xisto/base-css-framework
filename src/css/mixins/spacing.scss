@@ -167,32 +167,32 @@
 
 	} @else {
 
-		.p#{$pos}-none 	{ margin#{$modif}: 0 !important; }
-		.p#{$pos}-xxxs 	{ margin#{$modif}: $base-space-size * 0.125 !important; }
-		.p#{$pos}-xxs 	{ margin#{$modif}: $base-space-size * 0.250 !important; }
-		.p#{$pos}-xs 	{ margin#{$modif}: $base-space-size * 0.500 !important; }
-		.p#{$pos}-sm 	{ margin#{$modif}: $base-space-size * 0.666 !important; }
-		.p#{$pos}-md 	{ margin#{$modif}: $base-space-size * 1.000 !important; }
-		.p#{$pos}-lg 	{ margin#{$modif}: $base-space-size * 1.333 !important; }
-		.p#{$pos}-xl	{ margin#{$modif}: $base-space-size * 2.000 !important; }
-		.p#{$pos}-xxl	{ margin#{$modif}: $base-space-size * 2.666 !important; }
-		.p#{$pos}-xxxl	{ margin#{$modif}: $base-space-size * 4.000 !important; }
-		.p#{$pos}-xxxxl	{ margin#{$modif}: $base-space-size * 8.000 !important; }
+		.p#{$pos}-none 	{ padding#{$modif}: 0 !important; }
+		.p#{$pos}-xxxs 	{ padding#{$modif}: $base-space-size * 0.125 !important; }
+		.p#{$pos}-xxs 	{ padding#{$modif}: $base-space-size * 0.250 !important; }
+		.p#{$pos}-xs 	{ padding#{$modif}: $base-space-size * 0.500 !important; }
+		.p#{$pos}-sm 	{ padding#{$modif}: $base-space-size * 0.666 !important; }
+		.p#{$pos}-md 	{ padding#{$modif}: $base-space-size * 1.000 !important; }
+		.p#{$pos}-lg 	{ padding#{$modif}: $base-space-size * 1.333 !important; }
+		.p#{$pos}-xl	{ padding#{$modif}: $base-space-size * 2.000 !important; }
+		.p#{$pos}-xxl	{ padding#{$modif}: $base-space-size * 2.666 !important; }
+		.p#{$pos}-xxxl	{ padding#{$modif}: $base-space-size * 4.000 !important; }
+		.p#{$pos}-xxxxl	{ padding#{$modif}: $base-space-size * 8.000 !important; }
 		
 		@each $break, $value in $breakpoints {
 			
 			@include breakpoint($break) {
-				.p#{$pos}-#{$break}-none 	{ margin#{$modif}: 0 !important; }
-				.p#{$pos}-#{$break}-xxs 	{ margin#{$modif}: $base-space-size * 0.125 !important; }
-				.p#{$pos}-#{$break}-xxs 	{ margin#{$modif}: $base-space-size * 0.250 !important; }
-				.p#{$pos}-#{$break}-xs 		{ margin#{$modif}: $base-space-size * 0.500 !important; }
-				.p#{$pos}-#{$break}-sm 		{ margin#{$modif}: $base-space-size * 0.666 !important; }
-				.p#{$pos}-#{$break}-md 		{ margin#{$modif}: $base-space-size * 1.000 !important; }
-				.p#{$pos}-#{$break}-lg 		{ margin#{$modif}: $base-space-size * 1.333 !important; }
-				.p#{$pos}-#{$break}-xl		{ margin#{$modif}: $base-space-size * 2.000 !important; }
-				.p#{$pos}-#{$break}-xxl		{ margin#{$modif}: $base-space-size * 2.666 !important; }
-				.p#{$pos}-#{$break}-xxxl	{ margin#{$modif}: $base-space-size * 4.000 !important; }
-				.p#{$pos}-#{$break}-xxxl	{ margin#{$modif}: $base-space-size * 8.000 !important; }
+				.p#{$pos}-#{$break}-none 	{ padding#{$modif}: 0 !important; }
+				.p#{$pos}-#{$break}-xxs 	{ padding#{$modif}: $base-space-size * 0.125 !important; }
+				.p#{$pos}-#{$break}-xxs 	{ padding#{$modif}: $base-space-size * 0.250 !important; }
+				.p#{$pos}-#{$break}-xs 		{ padding#{$modif}: $base-space-size * 0.500 !important; }
+				.p#{$pos}-#{$break}-sm 		{ padding#{$modif}: $base-space-size * 0.666 !important; }
+				.p#{$pos}-#{$break}-md 		{ padding#{$modif}: $base-space-size * 1.000 !important; }
+				.p#{$pos}-#{$break}-lg 		{ padding#{$modif}: $base-space-size * 1.333 !important; }
+				.p#{$pos}-#{$break}-xl		{ padding#{$modif}: $base-space-size * 2.000 !important; }
+				.p#{$pos}-#{$break}-xxl		{ padding#{$modif}: $base-space-size * 2.666 !important; }
+				.p#{$pos}-#{$break}-xxxl	{ padding#{$modif}: $base-space-size * 4.000 !important; }
+				.p#{$pos}-#{$break}-xxxl	{ padding#{$modif}: $base-space-size * 8.000 !important; }
 			}
 
 		}
