@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Plantilla muestra colores.
 - Definida layout para documentación.
 - [build 0.0.7] Incluidas las variables para los elementos contenido texto.
+- [build 0.0.9] Añadido plugin prismjs para Syntax Highlighting.
 
 
 ### Changed
