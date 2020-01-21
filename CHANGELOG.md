@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- [build 0.1.1] Revisión de elemento embed tamaño por defecto 16/9.
+
 
 ## [0.1.0] - 2020-01-20
 
