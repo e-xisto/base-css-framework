@@ -70,8 +70,8 @@ $color-black: #000;
 $color-dark: #555555;
 $color-midtone: #777777;
 $color-gray: #999999;
-$color-light: #bbbbbb;
-$color-bright: #dddddd;
+$color-light: #dbdbdb;
+$color-bright: #f5f5f5;
 $color-white: #FFFFFF;
 
 
@@ -235,6 +235,129 @@ $text-size-xxl-mobile: 	26px;
 
 
 // =========================================================
+//   BUTTONS
+// 
+// - Botón por defecto
+// - Tamaños
+// - Primary
+// - Secondary
+// - Link
+// 
+// =========================================================
+
+
+// Botón por defecto (default)
+
+$button-font-size: $font-size-base;
+$button-font-weight: normal;
+$button-font-color: var(--dark);
+$button-font-family: val(--font-family-base);
+
+$button-border-width: 1px;
+$button-border-radius: 4px;
+$button-border-color: var(--bright);
+
+$button-padding-x: $base-space-size * 2;
+$button-padding-y: 10px;
+$button-height: 38px; // Suma font-size + padding-y + border-width
+
+$button-background-color: var(--bright);
+
+$button-hover-font-color: $button-font-color;
+$button-hover-background-color: var(--light);
+$button-hover-border-color: $button-hover-background-color;
+
+$button-active-font-color: $button-font-color;
+$button-active-background-color: var(--light);
+$button-active-border-color: var(--light);
+
+$button-focus-color: var(--light);		
+
+$button-text-decoration: none;
+$button-hover-text-decoration: none;
+
+$button-transition: all .25s ease-in;
+
+// Tamaños 
+
+$button-sm-font-size: 14px;
+$button-sm-padding-y: 6px;
+$button-sm-height: 28px;
+
+$button-md-font-size: 18px;
+$button-md-padding-y: 14px;
+$button-md-height: 48px;
+
+$button-lg-font-size: 20px;
+$button-lg-padding-y: 18px;
+$button-lg-height: 58px;
+
+// Primary
+
+$button-primary-font-weight: normal;
+$button-primary-font-color: var(--white);
+
+$button-primary-border-color: var(--primary);
+$button-primary-background-color: var(--primary);
+
+$button-primary-hover-font-color: var(--white);
+$button-primary-hover-background-color: var(--primary-md);
+$button-primary-hover-border-color: var(--primary-md);
+
+$button-primary-active-font-color: var(--white);
+$button-primary-active-background-color: var(--primary-lt);
+$button-primary-active-border-color: var(--primary-lt);
+
+$button-primary-focus-color: var(--primary-br);		
+
+$button-primary-text-decoration: none;
+$button-primary-hover-text-decoration: none;
+
+// Secondary
+
+$button-secondary-font-weight: normal;
+$button-secondary-font-color: var(--white);
+
+$button-secondary-border-color: var(--secondary);
+$button-secondary-background-color: var(--secondary);
+
+$button-secondary-hover-font-color: var(--white);
+$button-secondary-hover-background-color: var(--secondary-md);
+$button-secondary-hover-border-color: var(--secondary-md);
+
+$button-secondary-active-font-color: var(--white);
+$button-secondary-active-background-color: var(--secondary-lt);
+$button-secondary-active-border-color: var(--secondary-lt);
+
+$button-secondary-focus-color: var(--secondary-br);		
+
+$button-secondary-text-decoration: none;
+$button-secondary-hover-text-decoration: none;
+
+// Link
+
+$button-link-font-weight: $text-link-font-weight;
+$button-link-font-color: $text-link-color;
+
+$button-link-border-color: transparent;
+$button-link-background-color: transparent;
+
+$button-link-hover-font-color: $text-link-color-hover;
+$button-link-hover-background-color: transparent;
+$button-link-hover-border-color: transparent;
+
+$button-link-active-font-color: $text-link-color-hover;
+$button-link-active-background-color: transparent;
+$button-link-active-border-color: transparent;
+
+$button-link-focus-color: var(--bright);		
+
+$button-link-text-decoration: $text-link-decoration;
+$button-link-hover-text-decoration: $text-link-decoration-hover;
+
+
+
+// =========================================================
 //   GRID
 // 
 // - Número de columnas total del Grid
@@ -257,8 +380,6 @@ $grid-container-width-lg: 1140px;
 $grid-container-width-md: 940px;
 $grid-container-width-sm: 720px;
 $grid-container-width-xs: 100%;
-
-
 
 
 

@@ -4,7 +4,7 @@ a {
 	font-weight: $text-link-font-weight;
 
 	&:hover,
-	&:focus {
+	&:not(.btn):focus {
 		color: $text-link-color-hover;
 		text-decoration: $text-link-decoration-hover;
 	}

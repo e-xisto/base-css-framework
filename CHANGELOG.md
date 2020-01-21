@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - [build 0.1.1] Revisión de elemento embed tamaño por defecto 16/9.
+- [build 0.1.2] Revisión completa de elemento button tamaño.
+- [build 0.1.2] Revisión mixin make-button-varaiant().
+
+### Added
+- [build 0.1.2] Variables para definición de botones.
 
 
 ## [0.1.0] - 2020-01-20

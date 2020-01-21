@@ -3,12 +3,12 @@
 	$background-color,
 	$border-color,
 	$hover-font-color: $font-color,
-	$hover-background-color: darken($background-color, 7%),
-	$hover-border-color: darken($border-color, 7%),
-	$active-font-color: lighten($font-color, 2%),
-	$active-background-color: lighten($background-color, 2%),
-	$active-border-color: lighten($border-color, 2%),
-	$focus-color: rgba($background-color, 0.4)
+	$hover-background-color: $background-color,
+	$hover-border-color: $border-color,
+	$active-font-color: $font-color,
+	$active-background-color: $background-color,
+	$active-border-color: $border-color,
+	$focus-color: $background-color
 	) {
 
 	color: $font-color;
@@ -21,14 +21,12 @@
 		border-color: $hover-border-color;
 	}
 
-	&:focus {
-		box-shadow: 0 0 0 3px darken($focus-color, 10%);	
-	}
+	&:focus { box-shadow: 0 0 0 2px $focus-color; }
 
 	&:not([disabled]):not(.disabled):active,
-	&:not([disabled]):not(.disabled).active	{
+  	&:not([disabled]):not(.disabled).active	{
 		color: $active-font-color;
 		background-color: $active-background-color;
 		border-color: $active-border-color;
-	}	
+	}
 }
