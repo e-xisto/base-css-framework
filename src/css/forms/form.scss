@@ -1,32 +1,4 @@
 
-$input-background-color: #fff;
-
-$input-border-width: 1px;
-$input-border-radius: 4px;
-$input-border-color: map-get($grayscale, gray);
-
-$input-font-size: 1rem;
-$input-font-weight: normal;
-$input-font-color: map-get($grayscale, dark);
-$input-font-family: val(--font-family-base);
-
-$input-height: 42px;
-$input-padding-x: 1rem;
-$input-padding-y: 1em / $font-scale-factor;
-$input-line-height: 1em;
-
-$input-focus-background-color: lighten(map-get($colors, warning), 40%);
-$input-focus-border-color: $input-focus-background-color;
-$input-focus-font-color: $input-font-color;
-$input-focus-shadow-color: map-get($grayscale, light);
-
-$input-placeholder-color: map-get($grayscale, gray);
-
-$label-font-size: 1rem;
-$label-font-weight: bold;
-$label-font-color: map-get($grayscale, dark);
-$label-font-family: val(--font-family-base);
-
 form {
 
 	.valid-feedback {
@@ -132,334 +104,162 @@ form.was-validated {
 	}
 }
 
-.form-input,
-.form-label,
-.form-select,
-.form-textarea {
-	width: auto;
-	margin-bottom: $base-space-size;
 
-	label {
-		display: inline-block;
-		color: $label-font-color;
-		font-size: $label-font-size;
-		font-weight: $label-font-weight;
-		font-family: $label-font-family;
-		margin-bottom: $base-space-size / pow($font-scale-factor, 3)
-	}
 
-	input,
-	select,
-	textarea {
-		display: block;
-  		width: 100%;
-  		color: $input-font-color;
-  		font-size: $input-font-size;
-  		background-color: $input-background-color;
-  		line-height: 1em;
-		height: $input-height;
-  		padding: $input-padding-y $input-padding-x;
-		border-radius: $input-border-radius;
-  		border: $input-border-width solid $input-border-color;		
-  		background-clip: padding-box;
 
-		transition: color .3s ease-in-out,
-					background-color .3s ease-in-out,
-					border-color .3s ease-in-out, 
-					box-shadow .2s ease-out;	
 
-		&::placeholder {
-			color: $input-placeholder-color;
-			opacity: 1;
-		}
 
-		&:focus {
-			outline: 0px;
-			box-shadow: 0px 0px 0px 3px darken($input-focus-shadow-color, 10%);
-			background-color: $input-focus-background-color;
-			color: $input-focus-font-color;
-			border-color: $input-focus-border-color;
-			z-index: 100; // Mantiene el box-shadow sobre el resto de elementos
+// .form-input,
+// .form-label,
+// .form-select,
+// .form-textarea {
+// 	width: auto;
+// 	margin-bottom: $base-space-size;
 
-			&:hover:active {
-				box-shadow: none;
-			}
-		}
+// 	label {
+// 		display: inline-block;
+// 		color: $label-font-color;
+// 		font-size: $label-font-size;
+// 		font-weight: $label-font-weight;
+// 		font-family: $label-font-family;
+// 		margin-bottom: $base-space-size / pow($font-scale-factor, 3)
+// 	}
 
-		&.disabled,
-		&:disabled {
-			opacity: 0.35;
-			cursor: not-allowed;
-		}
+// 	input,
+// 	select,
+// 	textarea {
+// 		display: block;
+//   		width: 100%;
+//   		color: $input-font-color;
+//   		font-size: $input-font-size;
+//   		background-color: $input-background-color;
+//   		line-height: 1em;
+// 		height: $input-height;
+//   		padding: $input-padding-y $input-padding-x;
+// 		border-radius: $input-border-radius;
+//   		border: $input-border-width solid $input-border-color;		
+//   		background-clip: padding-box;
 
-		&.readonly,
-		&[readonly] {
-			color: $input-font-color;
-			background-color: map-get($grayscale, light);
-			cursor: not-allowed;
+// 		transition: color .3s ease-in-out,
+// 					background-color .3s ease-in-out,
+// 					border-color .3s ease-in-out, 
+// 					box-shadow .2s ease-out;	
 
-			&:focus {
-				box-shadow: none;
-				background-color: map-get($grayscale, light);
-				color: $input-focus-font-color;
-				border-color: $input-border-color;
+// 		&::placeholder {
+// 			color: $input-placeholder-color;
+// 			opacity: 1;
+// 		}
 
-				&:hover:active { box-shadow: none; }
-			}
-		}		
-	}
+// 		&:focus {
+// 			outline: 0px;
+// 			box-shadow: 0px 0px 0px 3px darken($input-focus-shadow-color, 10%);
+// 			background-color: $input-focus-background-color;
+// 			color: $input-focus-font-color;
+// 			border-color: $input-focus-border-color;
+// 			z-index: 100; // Mantiene el box-shadow sobre el resto de elementos
 
-	small {
-		color: map-get($grayscale, midtone)
-	}
+// 			&:hover:active {
+// 				box-shadow: none;
+// 			}
+// 		}
 
-	&.form-sm,
-	&.form-size-sm {
+// 		&.disabled,
+// 		&:disabled {
+// 			opacity: 0.35;
+// 			cursor: not-allowed;
+// 		}
 
-		input,
-		select {
-			font-size: 1em / $font-scale-factor;
-			height: round($input-height / $font-scale-factor); 
-		}		
-	}
+// 		&.readonly,
+// 		&[readonly] {
+// 			color: $input-font-color;
+// 			background-color: map-get($grayscale, light);
+// 			cursor: not-allowed;
 
-	&.form-lg,
-	&.form-size-lg {
+// 			&:focus {
+// 				box-shadow: none;
+// 				background-color: map-get($grayscale, light);
+// 				color: $input-focus-font-color;
+// 				border-color: $input-border-color;
 
-		input,
-		select {		
-			font-size: 1em * $font-scale-factor;
-			height: round($input-height * $font-scale-factor); 
-		}
-	}
+// 				&:hover:active { box-shadow: none; }
+// 			}
+// 		}		
+// 	}
+
+// 	small {
+// 		color: $color-midtone;
+// 	}
+
+// 	// &.form-sm,
+// 	// &.form-size-sm {
+
+// 	// 	input,
+// 	// 	select {
+// 	// 		font-size: 1em / $font-scale-factor;
+// 	// 		height: round($input-height / $font-scale-factor); 
+// 	// 	}		
+// 	// }
+
+// 	// &.form-lg,
+// 	// &.form-size-lg {
+
+// 	// 	input,
+// 	// 	select {		
+// 	// 		font-size: 1em * $font-scale-factor;
+// 	// 		height: round($input-height * $font-scale-factor); 
+// 	// 	}
+// 	// }
 	
 
-	> [class^="icons-"],
-	> [class*=" icons-"] {
-		width: 100%;
-		position: relative;
+// 	// > [class^="icons-"],
+// 	// > [class*=" icons-"] {
+// 	// 	width: 100%;
+// 	// 	position: relative;
 		
-		input { padding-left: $base-space-size * 2.5; }
+// 	// 	input { padding-left: $base-space-size * 2.5; }
 		
-		&:not(:first-child):not(:last-child) input {
-			border-left: none !important;
-			border-right: none !important;
-			border-radius: 0  !important;
-		}
+// 	// 	&:not(:first-child):not(:last-child) input {
+// 	// 		border-left: none !important;
+// 	// 		border-right: none !important;
+// 	// 		border-radius: 0  !important;
+// 	// 	}
 
-		&:first-child:last-child input {
-			border-radius: $input-border-radius  !important;
-			border: $input-border-width solid $input-border-color  !important;
-		}
+// 	// 	&:first-child:last-child input {
+// 	// 		border-radius: $input-border-radius  !important;
+// 	// 		border: $input-border-width solid $input-border-color  !important;
+// 	// 	}
 
-		&:first-child input {
-			border-right: none  !important;
-			border-top-right-radius: 0  !important;
-			border-bottom-right-radius: 0  !important;	
-		}
+// 	// 	&:first-child input {
+// 	// 		border-right: none  !important;
+// 	// 		border-top-right-radius: 0  !important;
+// 	// 		border-bottom-right-radius: 0  !important;	
+// 	// 	}
 
-		&:last-child input {
-			border-left: none  !important;
-			border-top-left-radius: 0  !important;
-			border-bottom-left-radius: 0  !important;	
-		}			
-	}
+// 	// 	&:last-child input {
+// 	// 		border-left: none  !important;
+// 	// 		border-top-left-radius: 0  !important;
+// 	// 		border-bottom-left-radius: 0  !important;	
+// 	// 	}			
+// 	// }
 
-	> [class^="icons-"]:before,
-	> [class*=" icons-"]:before { 
-		font-size: 1.5em; 
-		left: 8px;
-		margin-left: 0;
-		margin-right: 0;
-		position: absolute;
-		z-index: 300;
-		height: 100%;
-		line-height: $input-height;
-		color: map-get($grayscale, midtone);
-	}	
+// 	// > [class^="icons-"]:before,
+// 	// > [class*=" icons-"]:before { 
+// 	// 	font-size: 1.5em; 
+// 	// 	left: 8px;
+// 	// 	margin-left: 0;
+// 	// 	margin-right: 0;
+// 	// 	position: absolute;
+// 	// 	z-index: 300;
+// 	// 	height: 100%;
+// 	// 	line-height: $input-height;
+// 	// 	color: map-get($grayscale, midtone);
+// 	// }	
 
-}
-
-.form-input {
-
-	input {
-		height: $input-height; 
-	}
-
-	.valid {}
-	.invalid {}
-
-	.input-group {
-		display: flex;
-		
-		input {
-
-			&:not(:first-child):not(:last-child) {
-				border-left: none;
-				border-right: none;
-				border-radius: 0;
-			}
-
-			&:first-child:last-child {
-				border-radius: $input-border-radius;
-				border: $input-border-width solid $input-border-color;
-			}
-
-			&:first-child {
-				border-right: none;
-				border-top-right-radius: 0;
-				border-bottom-right-radius: 0;	
-			}
-
-			&:last-child {
-				border-left: none;
-				border-top-left-radius: 0;
-				border-bottom-left-radius: 0;	
-			}		
-		}
-
-		.text {
-			font-size: $input-font-size;
-			color: $input-font-color;
-			background-color: map-get($grayscale, light);
-			line-height: $input-height ;
-			height: $input-height;
-			padding: 0 $input-padding-x / $font-scale-factor;
-			border-radius: $input-border-radius;
-			border: $input-border-width solid $input-border-color;
-			white-space: nowrap;
-
-			[class^="icons-"]:before,
-			[class*=" icons-"]:before { 
-				font-size: 1.15em; 
-			}
-
-			+ .text,
-			+ .btn, + .button {
-				border-left: none;
-			}
-
-			&:not(:first-child):not(:last-child) {
-				border-radius: 0;
-			}
-
-			&:first-child {
-				border-top-right-radius: 0;
-				border-bottom-right-radius: 0;	
-			}
-
-			&:last-child {
-				border-top-left-radius: 0;
-				border-bottom-left-radius: 0;	
-			}	
-		}	
-
-		.icon {
-
-		}			
-
-		.btn,
-		.button {
-
-			+ .text,
-			+ .btn, + .button {
-				border-left: none;
-			}			
-
-			&:not(:first-child):not(:last-child) {
-				border-radius: 0;
-			}
-
-			&:first-child {
-				border-top-right-radius: 0;
-				border-bottom-right-radius: 0;	
-			}
-
-			&:last-child {
-				border-top-left-radius: 0;
-				border-bottom-left-radius: 0;	
-			}	
-		}
-	}
+// }
 
 
-	&.form-sm .input-group,
-	&.form-size-sm .input-group {
-
-		.text {
-			font-size: 1em / $font-scale-factor;
-			height: round($input-height / $font-scale-factor); 	
-			line-height: round($input-height / $font-scale-factor) ;
-		}
-
-		.btn,
-		.button {
-			font-size: 1em / $font-scale-factor;
-			height: round($input-height / $font-scale-factor); 	
-			line-height: 1;
-		}
-	}
-
-	&.form-lg .input-group,
-	&.form-size-lg .input-group {
-
-		.text {
-			font-size: 1em * $font-scale-factor;
-			height: round($input-height * $font-scale-factor); 	
-			line-height: round($input-height * $font-scale-factor) ;
-		}
-
-		.btn,
-		.button {
-			font-size: 1em * $font-scale-factor;
-			height: round($input-height * $font-scale-factor); 	
-			line-height: 1;
-		}
-	}		
-}
 
 
-.form-select {
-
-	select {
-		position: relative;
-
-		// Error con alto línea en Firefox
-		padding: 0 $input-padding-x;
-
-		// Eliminar la apariencia por defecto del navegador
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		appearance: none;
-
-		// Caret personalizado
-		padding-right: 35px !important;
-		background: #fff url('data:image/svg+xml;utf8,<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="select" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="angle-arrow-down" transform="translate(0.000000, 5.000000)" fill="#000000"><path d="M23.7542737,1.47461053 L22.5522526,0.272673684 C22.3920842,0.112168421 22.2075789,0.0321684211 21.9989895,0.0321684211 C21.7909053,0.0321684211 21.6064842,0.112168421 21.4463158,0.272673684 L11.9971368,9.72134737 L2.54837895,0.272926316 C2.38812632,0.112421053 2.20370526,0.0324210526 1.99536842,0.0324210526 C1.78694737,0.0324210526 1.60252632,0.112421053 1.44235789,0.272926316 L0.240505263,1.47494737 C0.08,1.63511579 0,1.81953684 0,2.02795789 C0,2.23621053 0.0802526316,2.42063158 0.240505263,2.5808 L11.4441263,13.7846737 C11.6042947,13.9449263 11.7888,14.0250105 11.9971368,14.0250105 C12.2054737,14.0250105 12.3896421,13.9449263 12.5497263,13.7846737 L23.7542737,2.5808 C23.9144421,2.42054737 23.9940211,2.23612632 23.9940211,2.02795789 C23.9940211,1.81953684 23.9144421,1.63511579 23.7542737,1.47461053 Z" id="Path"></path></g></g></svg>');
-		background-repeat: no-repeat;
-		background-position: right 10px center;
-		background-size: 15px;
-
-		// Eliminar la línea de puntos en firefox
-		&:-moz-focusring {
-			color: transparent;
-			text-shadow: 0 0 0 #7A8587;
-		}
-
-		&:focus::-ms-value {
-			color: $input-font-color;
-			background-color: #fff;
-		}		
-	}
-}
-
-.form-textarea {
-	
-	textarea {
-  		line-height: 1.5em;
-		height: auto;
-		resize: none;			
-	}
-}
 
 
 .form-check,
@@ -552,6 +352,8 @@ form.was-validated {
 		cursor: not-allowed;
     }
 
+
+
 	&.form-sm,
 	&.form-size-sm {
 
@@ -599,100 +401,9 @@ form.was-validated {
 	}		
 }
 
-.form-switch {
-	@extend .form-check;
-
-    label {
-        padding-left: 50px;
-
-        // Elemento móvil
-        &:after {
-            position: absolute;
-            content: '';
-            top: 1px;
-            left: 2px;
-            width: 22px;
-            height: 22px;
-            background: #fff;
-            border-radius: 90px;
-            transition: 0.2s;
-            background: #fff;
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        // Fondo
-        &:before {
-            position: absolute;
-            content: '';
-            cursor: pointer;
-            left: 0;
-            top: 0;
-            width: 40px;
-            height: 24px;
-            background: #D8D8D8;
-            border-radius: 100px;
-            margin: 0;
-        }
-    }
-
-    input:checked + label {
-        color: $color-success;
-
-        &:after {
-            left: calc(40px - 2px);
-            transform: translateX(-100%);
-        }
-
-        &:before {background: $color-success;}
-    }
 
 
-	&.form-sm,
-	&.form-size-sm {
 
-		label {
-			font-size: 1em / $font-scale-factor;
-        	line-height: 15px;
-        	padding-left: 50px;
-
-			&:after {
-				position: absolute;
-				content: '';
-				top: 1px;
-				left: 2px;
-				width: 16px;
-				height: 16px;
-				background: #fff;
-				border-radius: 90px;
-				transition: 0.2s;
-				background: #fff;
-				opacity: 1;
-				transform: translateX(0);
-			}	
-
-			&:before {
-				position: absolute;
-				content: '';
-				cursor: pointer;
-				left: 0;
-				top: 0;
-				width: 40px;
-				height: 18px;
-				background: #D8D8D8;
-				border-radius: 100px;
-				margin: 0;
-			}			
-		}	
-
-		input:checked + label:after {
-            transform: translateX(-100%);
-        }
-	}	
-
-}
-
-.form-file {}
 
 
 
