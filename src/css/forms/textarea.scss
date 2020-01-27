@@ -74,4 +74,15 @@
 		margin-top: $base-space-size / 3;
 		line-height: 1;
 	}
+
+	// Sizes
+
+	&.form-sm,
+	&.form-size-sm { textarea { font-size: $form-input-sm-font-size; } }
+
+	&.form-md,
+	&.form-size-md { textarea { font-size: $form-input-md-font-size; } }
+
+	&.form-lg,
+	&.form-size-lg { textarea { font-size: $form-input-lg-font-size; } }	
 }

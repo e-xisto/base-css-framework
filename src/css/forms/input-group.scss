@@ -17,8 +17,8 @@
 			}
 
 			&:first-child:last-child {
-				border-radius: $input-border-radius;
-				border: $input-border-width solid $input-border-color;
+				border-radius: $form-input-border-radius;
+				border: $form-input-border-width solid $form-input-border-color;
 			}
 
 			&:first-child {
@@ -35,14 +35,14 @@
 		}
 
 		.text {
-			font-size: $input-font-size;
-			color: $input-font-color;
+			font-size: $form-input-font-size;
+			color: $form-input-font-color;
 			background-color: map-get($grayscale, light);
-			line-height: $input-height ;
-			height: $input-height;
-			padding: 0 $input-padding-x / $font-scale-factor;
-			border-radius: $input-border-radius;
-			border: $input-border-width solid $input-border-color;
+			line-height: $form-input-height ;
+			height: $form-input-height;
+			padding: 0 $form-input-padding-x / $font-scale-factor;
+			border-radius: $form-input-border-radius;
+			border: $form-input-border-width solid $form-input-border-color;
 			white-space: nowrap;
 
 			[class^="icons-"]:before,
@@ -104,14 +104,14 @@
 
 		.text {
 			font-size: 1em / $font-scale-factor;
-			height: round($input-height / $font-scale-factor); 	
-			line-height: round($input-height / $font-scale-factor) ;
+			height: round($form-input-height / $font-scale-factor); 	
+			line-height: round($form-input-height / $font-scale-factor) ;
 		}
 
 		.btn,
 		.button {
 			font-size: 1em / $font-scale-factor;
-			height: round($input-height / $font-scale-factor); 	
+			height: round($form-input-height / $font-scale-factor); 	
 			line-height: 1;
 		}
 	}
@@ -121,14 +121,14 @@
 
 		.text {
 			font-size: 1em * $font-scale-factor;
-			height: round($input-height * $font-scale-factor); 	
-			line-height: round($input-height * $font-scale-factor) ;
+			height: round($form-input-height * $font-scale-factor); 	
+			line-height: round($form-input-height * $font-scale-factor) ;
 		}
 
 		.btn,
 		.button {
 			font-size: 1em * $font-scale-factor;
-			height: round($input-height * $font-scale-factor); 	
+			height: round($form-input-height * $font-scale-factor); 	
 			line-height: 1;
 		}
 	}		

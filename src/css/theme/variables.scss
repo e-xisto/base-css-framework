@@ -422,49 +422,75 @@ $form-input-transition: all .25s ease-in;
 
 $form-select-caret-color: "000000";
 
+// Check
 
+$form-check-font-color: $form-label-font-color;
+$form-check-font-size: $form-label-font-size;
+$form-check-font-weigth: normal;
 
-//  --------------------------------------------------------------
-//  --------------------------------------------------------------
-//  --------------------------------------------------------------
-//  --------------------------------------------------------------
-//  --------------------------------------------------------------
+$form-check-color: "333333";
+$form-check-background-color: transparent;
+$form-check-border-color: $form-input-border-color;
+$form-check-border-radius: 4px;
 
-$input-background-color: #fff;
+$form-check-hover-border-color: $form-input-hover-border-color;
 
-$input-border-width: 1px;
-$input-border-radius: 4px;
-$input-border-color: $color-gray;
+$form-check-checked-font-color: var(--black);
+$form-check-checked-background-color: var(--bright);
+$form-check-checked-border-color: $form-input-border-color;
 
-$input-font-size: 1rem;
-$input-font-weight: normal;
-$input-font-color: $color-dark;
-$input-font-family: val(--font-family-base);
+// Radio
 
-$input-height: 42px;
-$input-padding-x: 1rem;
-$input-padding-y: 1em / $font-scale-factor;
-$input-line-height: 1em;
+$form-radio-font-color: $form-label-font-color;
+$form-radio-font-size: $form-label-font-size;
+$form-radio-font-weigth: normal;
 
-$input-focus-background-color: $color-warning;
-$input-focus-border-color: $input-focus-background-color;
-$input-focus-font-color: $input-font-color;
-$input-focus-shadow-color: $color-light;
+$form-radio-color: "000000";
+$form-radio-background-color: transparent;
+$form-radio-border-color: $form-input-border-color;
+$form-radio-border-radius: 4px;
 
-$input-placeholder-color: $color-gray;
+$form-radio-hover-border-color: $form-input-hover-border-color;
 
-$label-font-size: 1rem;
-$label-font-weight: bold;
-$label-font-color: $color-dark;
-$label-font-family: val(--font-family-base);
+$form-radio-checked-font-color: var(--black);
+$form-radio-checked-background-color: var(--bright);
+$form-radio-checked-border-color: $form-input-border-color;
 
+// Switch
 
-//  --------------------------------------------------------------
-//  --------------------------------------------------------------
-//  --------------------------------------------------------------
-//  --------------------------------------------------------------
-//  --------------------------------------------------------------
+$form-switch-font-color: $form-label-font-color;
+$form-switch-font-size: $form-label-font-size;
+$form-switch-font-weigth: normal;
 
+$form-switch-color: #ffffff;
+$form-switch-background-color: var(--light);
+$form-switch-border-radius: 4px;
+
+$form-switch-hover-background-color: var(--gray);
+
+$form-switch-checked-font-color: var(--black);
+$form-switch-checked-background-color: var(--success);
+
+// File
+
+$form-file-button-font-color: $button-font-color;
+$form-file-button-background-color: $button-background-color;
+$form-file-button-hover-font-color: $button-hover-font-color;
+$form-file-button-hover-background-color: $button-hover-background-color;
+
+// Tamaños sm, md y lg
+
+$form-input-sm-font-size: $button-sm-font-size;
+$form-input-sm-padding-y: $button-sm-padding-y;
+$form-input-sm-height: $button-sm-height; // Suma font-size + padding-y + border-width
+
+$form-input-md-font-size: $button-md-font-size;
+$form-input-md-padding-y: $button-md-padding-y;
+$form-input-md-height: $button-md-height; // Suma font-size + padding-y + border-width
+
+$form-input-lg-font-size: $button-lg-font-size;
+$form-input-lg-padding-y: $button-lg-padding-y;
+$form-input-lg-height: $button-lg-height; // Suma font-size + padding-y + border-width
 
 // =========================================================
 //   GRID

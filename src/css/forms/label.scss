@@ -1,7 +1,8 @@
 
 .form-input,
 .form-select,
-.form-textarea {
+.form-textarea,
+.form-file {
 
 	label {
 		display: inline-block;
@@ -12,4 +13,9 @@
 		font-family: $form-label-font-family;
 		margin-bottom: $form-label-margin-bottom;
 	}
+
+	// Sizes
+
+	&.form-sm,
+	&.form-size-sm { label { font-size: $form-input-sm-font-size; } }	
 }

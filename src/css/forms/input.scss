@@ -74,4 +74,36 @@
 		margin-top: $base-space-size / 3;
 		line-height: 1;
 	}
+
+	// Sizes
+
+	&.form-sm,
+	&.form-size-sm {
+		
+		input {
+			font-size: $form-input-sm-font-size;
+			height: $form-input-sm-height;
+			padding: $form-input-sm-padding-y $form-input-padding-x;		
+		}
+	}
+
+	&.form-md,
+	&.form-size-md {
+		
+		input {
+			font-size: $form-input-md-font-size;
+			height: $form-input-md-height;
+			padding: $form-input-md-padding-y $form-input-padding-x;		
+		}
+	}
+
+	&.form-lg,
+	&.form-size-lg {
+		
+		input {
+			font-size: $form-input-lg-font-size;
+			height: $form-input-lg-height;
+			padding: $form-input-lg-padding-y $form-input-padding-x;		
+		}
+	}
 }

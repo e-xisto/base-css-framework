@@ -13,10 +13,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [build 0.1.3] Revisión elemento input.
 - [build 0.1.3] Revisión elemento select.
 - [build 0.1.3] Revisión elemento textarea.
+- [build 0.1.4] Revisión elementos check, option y switch.
 
 ### Added
 - [build 0.1.2] Variables para definición de botones.
 - [build 0.1.3] Variables para definición de formularios.
+- [build 0.1.4] Maquetación elemento file personalizado.
 
 
 ## [0.1.0] - 2020-01-20
