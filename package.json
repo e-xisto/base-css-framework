@@ -1,6 +1,6 @@
 {
 	"name": "base-css-framework",
-	"version": "0.1.4",
+	"version": "0.1.0",
 	"description": "Base CSS Framework & Styleguide",
 	"scripts": {
 		"dev": "npx npm-run-all --serial dev:del dev:webpack",
