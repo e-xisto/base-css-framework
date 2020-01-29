@@ -516,6 +516,31 @@ $grid-container-width-md: 940px;
 $grid-container-width-sm: 720px;
 $grid-container-width-xs: 100%;
 
+// =========================================================
+//   DROPDOWN
+// 
+// =========================================================
+
+$dropdown-menu-background-color: var(--white);
+$dropdown-menu-padding-y: 10px;
+$dropdown-menu-margin-top: 5px;
+$dropdown-menu-border-color: $form-input-border-color;
+$dropdown-menu-border-radius: $form-input-border-radius;
+$dropdown-menu-box-shadow: 0 0 15px 5px rgba($color-gray, 0.2);
+
+$dropdown-menu-item-font-size: $form-input-font-size;
+$dropdown-menu-item-font-color: var(--gray);
+$dropdown-menu-item-font-weight: normal;
+$dropdown-menu-item-text-decoration: none;
+$dropdown-menu-item-padding-x: 15px;
+$dropdown-menu-item-padding-y: $base-space-size / 2;
+
+$dropdown-menu-item-hover-font-color: var(--gray);
+$dropdown-menu-item-hover-font-weight: normal;
+$dropdown-menu-item-hover-background-color: var(--bright);
+$dropdown-menu-item-hover-text-decoration: none;
+
+$dropdown-menu-item-disabled-font-color: var(--light);
 
 
 

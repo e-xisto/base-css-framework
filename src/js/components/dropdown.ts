@@ -36,7 +36,7 @@ function toggle(container: Element, button: Element) {
 
 	let menus = container.getElementsByClassName('dropdown-menu');
 	Array.from(menus).forEach((menu) => {
-		if (menu.classList.contains('show')) hide(container, button, menu);
+		if (menu.classList.contains('active')) hide(container, button, menu);
 		else show(container, button, menu);
 	});
 }
@@ -47,7 +47,7 @@ function show(container: Element, button: Element, menu: Element) {
 	hideActive();
 
 	button.classList.add('active');
-	menu.classList.add('show');
+	menu.classList.add('active');
 
 	activeDropdown.container = container;
 	activeDropdown.button = button;
@@ -57,7 +57,7 @@ function show(container: Element, button: Element, menu: Element) {
 function hide(container: Element, button: Element, menu: Element) {
 
 	button.classList.remove('active');
-	menu.classList.remove('show');
+	menu.classList.remove('active');
 
 	activeDropdown = {};
 }
