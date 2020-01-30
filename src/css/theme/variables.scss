@@ -544,6 +544,39 @@ $dropdown-menu-item-disabled-font-color: var(--light);
 
 
 
+// =========================================================
+//   MODAL
+// 
+// =========================================================
+
+$modal-background-color: rgba(0,0,0,0.70);
+
+$modal-content-background-color: var(--white);
+$modal-content-margin-top: $base-space-size * 2;
+$modal-content-padding: 20px;
+$modal-content-border-color: $form-input-border-color;
+$modal-content-border-radius: 4px;
+$modal-content-width: 640px;
+
+$modal-sm-content-width: 480px;
+$modal-md-content-width: 780px;
+$modal-lg-content-width: 900px;
+
+$modal-header-border-color: $form-input-border-color;
+$modal-header-background-color: var(--white);
+
+$modal-footer-border-color: $form-input-border-color;
+$modal-footer-background-color: var(--white);
+
+$modal-title-font-size: $text-size-lg;
+$modal-title-line-height: 1;
+$modal-title-font-weight: bold;
+$modal-title-font-family: $font-family-base;
+
+$modal-close-color: var(--light);
+$modal-close-hover-color: var(--gray);
+
+
 // _*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
 
 

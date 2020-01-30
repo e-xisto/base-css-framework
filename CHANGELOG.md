@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [build 0.1.4] Revisión elementos check, option y switch.
 - [build 0.1.6] Revisión componente dropdown.
 - [build 0.1.7] Revisión componente collapse.
+- [build 0.1.8] Revisión componente modal.
 
 ### Added
 - [build 0.1.2] Variables para definición de botones.
