@@ -1,0 +1,106 @@
+
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+
+	<h1>Carousel</h1>
+
+
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+
+	<h3>Carousel</h3>
+
+	<div class="swiper-container swiper-carosusel">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
+			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 6</h4></div>
+		</div>		
+		<div class="swiper-pagination swiper-carosusel-pagination"></div>
+	</div>
+
+	<script>
+
+
+		var mySwiper = new Swiper('.swiper-carosusel', {
+			slidesPerView: 3,
+			spaceBetween: 30,
+			centeredSlides: true,
+			pagination: {
+				el: '.swiper-carosusel-pagination',
+				clickable: true,
+			},		
+		});
+	</script>	
+
+
+	<h3>Carousel freemode</h3>
+
+	<div class="swiper-container swiper-fade">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
+			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 6</h4></div>
+		</div>
+		<div class="swiper-pagination swiper-fade-pagination"></div>
+	</div>
+
+	<script>
+
+
+		var mySwiper = new Swiper('.swiper-fade', {
+			slidesPerView: 3,
+			spaceBetween: 30,
+			centeredSlides: true,
+			freeMode: true,
+			pagination: {
+				el: '.swiper-fade-pagination',
+				clickable: true,
+			},			
+		});
+	</script>	
+
+	<h3>Carousel coverflow</h3>
+
+	<div class="swiper-container swiper-coverflow">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
+			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 6</h4></div>
+		</div>
+		<div class="swiper-pagination swiper-coverflow-pagination"></div>
+	</div>
+
+	<script>
+
+
+		var mySwiper = new Swiper('.swiper-coverflow', {
+			effect: 'coverflow',
+			grabCursor: true,
+			centeredSlides: true,
+			slidesPerView: 'auto',
+			coverflowEffect: {
+				rotate: 50,
+				stretch: 0,
+				depth: 100,
+				modifier: 1,
+				slideShadows : false,
+			},
+			pagination: {
+				el: '.swiper-coverflow-pagination',
+			},			
+		});
+	</script>	
+
+
+{% endblock %}

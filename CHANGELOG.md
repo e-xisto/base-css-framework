@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [build 0.1.3] Variables para definición de formularios.
 - [build 0.1.4] Maquetación elemento file personalizado.
 - [build 0.1.5] Librería de iconos.
+- [build 0.1.9] Se incluyen ejemplos de slider con swiperjs.
 
 
 ## [0.1.0] - 2020-01-20

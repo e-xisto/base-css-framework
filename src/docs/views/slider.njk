@@ -1,0 +1,129 @@
+
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+
+	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+	<h1>Slider</h1>
+
+	<h3>Simple slider</h3>
+
+	<div class="swiper-container swiper-simple">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+			<div class="swiper-slide bg-gray"><h4 class="m-none">Slider 3</h4></div>
+		</div>
+	</div>
+
+	<script>
+		var mySwiper = new Swiper ('.swiper-simple')
+	</script>
+  
+	<h3>Slider con navegación</h3>
+
+	<div class="swiper-container swiper-navigation">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
+			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
+		</div>
+		<div class="swiper-button-next swiper-navigation-next"></div>
+		<div class="swiper-button-prev swiper-navigation-prev"></div>		
+		<div class="swiper-pagination swiper-navigation-pagination"></div>
+	</div>
+
+	<script>
+		var mySwiper = new Swiper ('.swiper-navigation', {
+			loop: true,
+			pagination: {
+				el: '.swiper-navigation-pagination',
+				dynamicBullets: true,
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-navigation-next',
+				prevEl: '.sswiper-navigation-prev',
+			},	
+		});
+	</script>
+
+	<h3>Slider con paginación</h3>
+
+	<div class="swiper-container swiper-pages">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
+			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
+		</div>
+		<div class="swiper-button-next swiper-pages-next"></div>
+		<div class="swiper-button-prev swiper-pages-prev"></div>		
+		<div class="swiper-pagination swiper-pages-pagination"></div>
+	</div>
+
+	<script>
+		var mySwiper = new Swiper ('.swiper-pages', {
+			pagination: {
+				el: '.swiper-pages-pagination',
+				type: 'fraction',
+			},
+			navigation: {
+				nextEl: '.swiper-pages-next',
+				prevEl: '.swiper-pages-prev',
+			},	
+		});
+	</script>
+
+	<h3>Slider con fade</h3>
+
+	<div class="swiper-container swiper-fade">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
+			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
+		</div>
+		<div class="swiper-button-next swiper-fade-next"></div>
+		<div class="swiper-button-prev swiper-fade-prev"></div>		
+	</div>
+
+	<script>
+		var mySwiper = new Swiper ('.swiper-fade', {
+			effect: 'fade',
+			navigation: {
+				nextEl: '.swiper-fade-next',
+				prevEl: '.swiper-fade-prev',
+			},	
+		});
+	</script>
+
+	<h3>Simple Vertical</h3>
+
+	<div class="swiper-container swiper-vertical">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+			<div class="swiper-slide bg-gray"><h4 class="m-none">Slider 3</h4></div>
+		</div>
+
+		<div class="swiper-pagination swiper-vertical-pagination"></div>
+	</div>
+
+	<script>
+		var mySwiper = new Swiper ('.swiper-vertical', {
+			direction: 'vertical',
+			pagination: {
+				el: '.swiper-vertical-pagination',
+				clickable: true,
+			},
+		});
+	</script>	
+
+
+{% endblock %}
