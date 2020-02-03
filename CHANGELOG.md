@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - (build 0.1.10) Se añade Terser-webpack-plugin a la configuración de Webpack.
+- (build 0.1.11) Responsive tables.
 
 ### Changed
 - (build 0.1.10) Revisión función inicialización Slider y ejemplos.

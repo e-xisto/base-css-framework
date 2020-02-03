@@ -578,7 +578,7 @@ $modal-close-hover-color: var(--gray);
 
 
 // =========================================================
-//   Slider
+//   SLIDER
 // 
 // =========================================================
 
@@ -599,6 +599,19 @@ $offcanvas-background-color: $color-dark;
 $offcanvas-padding: 1.5rem;
 $offcanvas-backdrop-background-color: rgba(#000, 0.4);
 $offcanvas-zindex: 1000;
+
+
+// =========================================================
+//   TABLE
+// 
+// =========================================================
+
+$table-head-background-color: var(--dark);
+$table-head-font-color: var(--white);
+$table-cell-padding: 1em 0.5em;
+$table-cell-background-color: var(--white);
+$table-border-color: var(--light);
+
 
 // _*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
 

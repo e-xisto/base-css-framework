@@ -96,6 +96,8 @@
 }
 
 .offcanvas-wrap {
+	height: 100%;
+	width: 100%;
 	transition-property: transform, bottom, top, right, left;
 	transition-duration: .4s;
 	transition-timing-function: ease-in-out;
