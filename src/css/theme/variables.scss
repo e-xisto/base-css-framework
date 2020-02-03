@@ -588,6 +588,18 @@ $slider-bullet-active-color: $color-midtone;
 $slider-navigation-color: $color-gray;
 $slider-navigation-size: 30px;
 
+// =========================================================
+//   OFFCANVAS MENU
+// 
+// =========================================================
+
+$offcanvas-width: 300px;
+$offcanvas-height: auto;
+$offcanvas-background-color: $color-dark;
+$offcanvas-padding: 1.5rem;
+$offcanvas-backdrop-background-color: rgba(#000, 0.4);
+$offcanvas-zindex: 1000;
+
 // _*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
 
 

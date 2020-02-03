@@ -1,9 +1,4 @@
-$offcanvas-width: 300px;
-$offcanvas-height: auto;
-$offcanvas-background-color: $color-dark;
-$offcanvas-padding: 1.5rem;
-$offcanvas-backdrop-background-color: rgba(#000, 0.4);
-$offcanvas-zindex: 999;
+
 
 .offcanvas {
 	position: fixed;
@@ -12,10 +7,10 @@ $offcanvas-zindex: 999;
 	left: 0;
 	width: $offcanvas-width;
 	height: 100%;
-	overflow-y: scroll;
+	overflow-y: auto;
 	background: $offcanvas-background-color;
 	padding: $offcanvas-padding;
-	z-index: $offcanvas-zindex;
+	z-index: $offcanvas-zindex + 10;
 	transition-property: transform, bottom, top, right, left, opacity, visibility;
 	transition-duration: .4s;
 	transition-timing-function: ease-in-out;
@@ -51,6 +46,8 @@ $offcanvas-zindex: 999;
 	&.offcanvas-slide-left,
 	&.offcanvas-push-left {
 		max-width: 100%;
+		right: auto;
+		left: 0;
 		transform: translateX(-100%);
 		visibility: hidden;
 
@@ -65,14 +62,16 @@ $offcanvas-zindex: 999;
 		width: 100%;
 		height: $offcanvas-height;
 		max-height: 100%;
+		left: 0;
+		right: 0;
+		top: 0;
 		bottom: auto;
-		left: auto;
-		top: -100%;
+		transform: translateY(-100%);
 		visibility: hidden;
 
 		&.show {
-			top: 0;
 			visibility: visible;
+			transform: translateY(0%);
 		}
 	}
 
@@ -81,14 +80,17 @@ $offcanvas-zindex: 999;
 		width: 100%;
 		height: $offcanvas-height;
 		max-height: 100%;
-		bottom: -100%;
+		bottom: 0;
+		left: 0;
+		right: 0;
 		top: auto;
-		left: auto;
+		bottom: 0;
+		transform: translateY(100%);
 		visibility: hidden;
 
 		&.show {
-			bottom: 0;
 			visibility: visible;
+			transform: translateY(0%);
 		}
 	}
 }
@@ -100,7 +102,7 @@ $offcanvas-zindex: 999;
 }
 
 .offcanvas-backdrop {
-	position: absolute;
+	position: fixed;
 	content: "";
 	display: block;
 	top:0;
