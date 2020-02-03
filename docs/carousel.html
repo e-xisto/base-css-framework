@@ -125,6 +125,8 @@
 			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 6</h4></div>
 		</div>		
 		<div class="swiper-pagination swiper-carosusel-pagination"></div>
+		<div class="swiper-button-next swiper-carosusel-next"></div>
+		<div class="swiper-button-prev swiper-carosusel-prev"></div>		
 	</div>
 
 	<script>
@@ -138,6 +140,58 @@
 				el: '.swiper-carosusel-pagination',
 				clickable: true,
 			},		
+			navigation: {
+				nextEl: '.swiper-carosusel-next',
+				prevEl: '.swiper-carosusel-prev',
+			},						
+		});
+	</script>	
+
+	<h3>Carousel breakpoints</h3>
+
+	<div class="swiper-container swiper-carosusel-breakpoints">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
+			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
+			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 6</h4></div>
+		</div>		
+		<div class="swiper-pagination swiper-carosusel-breakpoints-pagination"></div>
+		<div class="swiper-button-next swiper-carosusel-breakpoints-next"></div>
+		<div class="swiper-button-prev swiper-carosusel-breakpoints-prev"></div>		
+	</div>
+
+	<script>
+
+
+		var mySwiper = new Swiper('.swiper-carosusel-breakpoints', {
+			slidesPerView: 2,
+			spaceBetween: 15,
+			centeredSlides: true,
+			pagination: {
+				el: '.swiper-carosusel-breakpoints-pagination',
+				clickable: true,
+			},		
+			navigation: {
+				nextEl: '.swiper-carosusel-breakpoints-next',
+				prevEl: '.swiper-carosusel-breakpoints-prev',
+			},	
+			breakpoints: {
+				640: {
+					slidesPerView: 2,
+					spaceBetween: 10,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1024: {
+					slidesPerView: 4,
+					spaceBetween: 30,
+				},
+			}						
 		});
 	</script>	
 

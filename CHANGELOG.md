@@ -6,24 +6,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+
+## [0.1.1] - 2020-02-03
+
 ### Changed
-- [build 0.1.1] Revisión de elemento embed tamaño por defecto 16/9.
-- [build 0.1.2] Revisión completa de elemento button tamaño.
-- [build 0.1.2] Revisión mixin make-button-varaiant().
-- [build 0.1.3] Revisión elemento input.
-- [build 0.1.3] Revisión elemento select.
-- [build 0.1.3] Revisión elemento textarea.
-- [build 0.1.4] Revisión elementos check, option y switch.
-- [build 0.1.6] Revisión componente dropdown.
-- [build 0.1.7] Revisión componente collapse.
-- [build 0.1.8] Revisión componente modal.
+- Revisión de elemento embed tamaño por defecto 16/9.
+- Revisión completa de elemento button tamaño.
+- Revisión mixin make-button-varaiant().
+- Revisión elemento input.
+- Revisión elemento select.
+- Revisión elemento textarea.
+- Revisión elementos check, option y switch.
+- Revisión componente dropdown.
+- Revisión componente collapse.
+- Revisión componente modal.
+- Revisión ejemplos sliders.
 
 ### Added
-- [build 0.1.2] Variables para definición de botones.
-- [build 0.1.3] Variables para definición de formularios.
-- [build 0.1.4] Maquetación elemento file personalizado.
-- [build 0.1.5] Librería de iconos.
-- [build 0.1.9] Se incluyen ejemplos de slider con swiperjs.
+- Variables para definición de botones.
+- Variables para definición de formularios.
+- Maquetación elemento file personalizado.
+- Librería de iconos.
+- Se incluyen ejemplos de slider con swiperjs.
 
 
 ## [0.1.0] - 2020-01-20

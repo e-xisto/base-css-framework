@@ -21,7 +21,7 @@
 		var mySwiper = new Swiper ('.swiper-simple')
 	</script>
   
-	<h3>Slider con navegación</h3>
+	<h3>Slider con navegación y loop</h3>
 
 	<div class="swiper-container swiper-navigation">
 		<div class="swiper-wrapper">
@@ -38,7 +38,12 @@
 
 	<script>
 		var mySwiper = new Swiper ('.swiper-navigation', {
+			autoHeight: true,
 			loop: true,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},			
 			pagination: {
 				el: '.swiper-navigation-pagination',
 				dynamicBullets: true,
@@ -46,7 +51,37 @@
 			},
 			navigation: {
 				nextEl: '.swiper-navigation-next',
-				prevEl: '.sswiper-navigation-prev',
+				prevEl: '.swiper-navigation-prev',
+			},	
+		});
+	</script>
+
+	<h3>Slider con imágenes autoheight</h3>
+
+	<div class="swiper-container swiper-autoheight">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
+			<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
+			<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
+			<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
+			<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
+		</div>
+		<div class="swiper-button-next swiper-autoheight-next"></div>
+		<div class="swiper-button-prev swiper-autoheight-prev"></div>		
+		<div class="swiper-pagination swiper-autoheight-pagination"></div>
+	</div>
+
+	<script>
+		var mySwiper = new Swiper ('.swiper-autoheight', {
+			autoHeight: true,
+			pagination: {
+				el: '.swiper-autoheight-pagination',
+				dynamicBullets: true,
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-autoheight-next',
+				prevEl: '.swiper-autoheight-prev',
 			},	
 		});
 	</script>
@@ -68,6 +103,7 @@
 
 	<script>
 		var mySwiper = new Swiper ('.swiper-pages', {
+			autoHeight: true,
 			pagination: {
 				el: '.swiper-pages-pagination',
 				type: 'fraction',
@@ -95,6 +131,7 @@
 
 	<script>
 		var mySwiper = new Swiper ('.swiper-fade', {
+			autoHeight: true,
 			effect: 'fade',
 			navigation: {
 				nextEl: '.swiper-fade-next',
