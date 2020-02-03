@@ -110,9 +110,6 @@
 	<h1>Carousel</h1>
 
 
-<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-
-
 	<h3>Carousel</h3>
 
 	<div class="swiper-container swiper-carosusel">
@@ -124,28 +121,11 @@
 			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
 			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 6</h4></div>
 		</div>		
-		<div class="swiper-pagination swiper-carosusel-pagination"></div>
-		<div class="swiper-button-next swiper-carosusel-next"></div>
-		<div class="swiper-button-prev swiper-carosusel-prev"></div>		
+		<div class="swiper-pagination"></div>
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>		
 	</div>
 
-	<script>
-
-
-		var mySwiper = new Swiper('.swiper-carosusel', {
-			slidesPerView: 3,
-			spaceBetween: 30,
-			centeredSlides: true,
-			pagination: {
-				el: '.swiper-carosusel-pagination',
-				clickable: true,
-			},		
-			navigation: {
-				nextEl: '.swiper-carosusel-next',
-				prevEl: '.swiper-carosusel-prev',
-			},						
-		});
-	</script>	
 
 	<h3>Carousel breakpoints</h3>
 
@@ -158,42 +138,10 @@
 			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
 			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 6</h4></div>
 		</div>		
-		<div class="swiper-pagination swiper-carosusel-breakpoints-pagination"></div>
-		<div class="swiper-button-next swiper-carosusel-breakpoints-next"></div>
-		<div class="swiper-button-prev swiper-carosusel-breakpoints-prev"></div>		
+		<div class="swiper-pagination"></div>
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>		
 	</div>
-
-	<script>
-
-
-		var mySwiper = new Swiper('.swiper-carosusel-breakpoints', {
-			slidesPerView: 2,
-			spaceBetween: 15,
-			centeredSlides: true,
-			pagination: {
-				el: '.swiper-carosusel-breakpoints-pagination',
-				clickable: true,
-			},		
-			navigation: {
-				nextEl: '.swiper-carosusel-breakpoints-next',
-				prevEl: '.swiper-carosusel-breakpoints-prev',
-			},	
-			breakpoints: {
-				640: {
-					slidesPerView: 2,
-					spaceBetween: 10,
-				},
-				768: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1024: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			}						
-		});
-	</script>	
 
 
 	<h3>Carousel freemode</h3>
@@ -207,23 +155,10 @@
 			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
 			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 6</h4></div>
 		</div>
-		<div class="swiper-pagination swiper-fade-pagination"></div>
+		<div class="swiper-pagination"></div>
 	</div>
 
-	<script>
 
-
-		var mySwiper = new Swiper('.swiper-fade', {
-			slidesPerView: 3,
-			spaceBetween: 30,
-			centeredSlides: true,
-			freeMode: true,
-			pagination: {
-				el: '.swiper-fade-pagination',
-				clickable: true,
-			},			
-		});
-	</script>	
 
 	<h3>Carousel coverflow</h3>
 
@@ -236,27 +171,86 @@
 			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
 			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 6</h4></div>
 		</div>
-		<div class="swiper-pagination swiper-coverflow-pagination"></div>
+		<div class="swiper-pagination"></div>
 	</div>
 
+
 	<script>
+		document.addEventListener("DOMContentLoaded", function() {
 
 
-		var mySwiper = new Swiper('.swiper-coverflow', {
-			effect: 'coverflow',
-			grabCursor: true,
-			centeredSlides: true,
-			slidesPerView: 'auto',
-			coverflowEffect: {
-				rotate: 50,
-				stretch: 0,
-				depth: 100,
-				modifier: 1,
-				slideShadows : false,
-			},
-			pagination: {
-				el: '.swiper-coverflow-pagination',
-			},			
+			var mySwiper = Slider('.swiper-carosusel', {
+				slidesPerView: 3,
+				spaceBetween: 30,
+				centeredSlides: true,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},		
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},						
+			});
+
+			var mySwiper = Slider('.swiper-carosusel-breakpoints', {
+				slidesPerView: 2,
+				spaceBetween: 15,
+				centeredSlides: true,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},		
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},	
+				breakpoints: {
+					640: {
+						slidesPerView: 2,
+						spaceBetween: 10,
+					},
+					768: {
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+					1024: {
+						slidesPerView: 4,
+						spaceBetween: 30,
+					},
+				}						
+			});
+
+			var mySwiper = Slider('.swiper-fade', {
+				slidesPerView: 3,
+				spaceBetween: 30,
+				centeredSlides: true,
+				freeMode: true,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},			
+			});
+
+			var mySwiper = Slider('.swiper-coverflow', {
+				effect: 'coverflow',
+				grabCursor: true,
+				centeredSlides: true,
+				slidesPerView: 'auto',
+				coverflowEffect: {
+					rotate: 50,
+					stretch: 0,
+					depth: 100,
+					modifier: 1,
+					slideShadows : false,
+				},
+				pagination: {
+					el: '.swiper-pagination',
+				},			
+			});			
+
+
+			
 		});
 	</script>	
 

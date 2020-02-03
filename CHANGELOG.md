@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- (build 0.1.10) Se añade Terser-webpack-plugin a la configuración de Webpack.
+
+### Changed
+- (build 0.1.10) Revisión función inicialización Slider y ejemplos.
+
+### Removed
+- (build 0.1.10) Eliminar UglifyJS-webpack-plugin.
 
 
 ## [0.1.1] - 2020-02-03

@@ -4,6 +4,7 @@ import modal from './components/modal';
 import offcanvas from './components/offcanvas';
 import collapse from './components/collapse';
 import ellipsis from './components/ellipsis';
+import slider from './components/slider';
 // import parallax from './components/parallax';
 
 dropdown.init();
@@ -12,4 +13,5 @@ modal.init();
 offcanvas.init();
 collapse.init();
 ellipsis.init();
+slider.init();
 // parallax.init();
