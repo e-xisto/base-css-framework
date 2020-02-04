@@ -1,0 +1,30 @@
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Tooltips</h1>
+			</div>
+			<div class="col-md-12 mt-xxl">
+
+				<p>Basado en wenk <a href="https://github.com/tiaanduplessis/wenk">https://github.com/tiaanduplessis/wenk</a></p>
+
+				<p class="mb-md"><span data-tooltip="This is a tooltip!">Ejemplo tooltip default</span></p>
+				
+				<p class="mb-md"><span data-tooltip="This is a tooltip!" data-tooltip-pos="bottom">Ejemplo tooltip posición bajo </span><p>
+				<p class="mb-md"><span data-tooltip="This is a tooltip!" data-tooltip-pos="right">Ejemplo tooltip posición derecha</span><p>
+				<p class="mb-md"><span data-tooltip="This is a tooltip!" data-tooltip-pos="left">Ejemplo tooltip posición izquierda</span><p>
+					
+				<p class="mb-md"><span data-tooltip="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, iure! Dolore aliquam sequi." data-tooltip-length="small">Ejemplo tooltip tamaño pequeño</span><p>
+				<p class="mb-md"><span data-tooltip="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, iure! Dolore aliquam sequi." data-tooltip-length="medium">Ejemplo tooltip tamaño medio</span><p>
+				<p class="mb-md"><span data-tooltip="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, iure! Dolore aliquam sequi." data-tooltip-length="large">Ejemplo tooltip tamaño grande</span><p>
+				<p class="mb-md"><span data-tooltip="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, iure! Dolore aliquam sequi." data-tooltip-length="fit">Ejemplo tooltip tamaño ajustado al elemento</span><p>
+
+				<p class="mb-md"><span data-tooltip="This is a tooltip!" data-tooltip-theme="light" data-tooltip-pos="left">Ejemplo tooltip theme light</span><p>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

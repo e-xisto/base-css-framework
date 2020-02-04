@@ -613,6 +613,27 @@ $table-cell-background-color: var(--white);
 $table-border-color: var(--light);
 
 
+// =========================================================
+//   TOOLTIP
+// 
+// =========================================================
+
+$tooltip-font-size: $text-size-sm;
+$tooltip-dark-font-color: #fff;
+$tooltip-dark-background-color: rgba(#222222, .8);
+$tooltip-dark-border-color: $tooltip-dark-background-color;
+$tooltip-light-font-color: $text-color;
+$tooltip-light-background-color: rgba(#ffffff, .8);
+$tooltip-light-border-color: var(--light);
+$tooltip-length-small: 80px;
+$tooltip-length-medium: 150px;
+$tooltip-length-large: 260px;
+
+
+
+
+
+
 // _*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
 
 
