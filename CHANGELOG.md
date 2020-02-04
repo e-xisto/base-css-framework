@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - (build 0.1.11) Responsive tables.
 - (build 0.1.12) Se añade la opción de parallax con video background.
 - (build 0.1.13) Componente tooltip.
+- (build 0.1.14) Componente alert.
 
 ### Changed
 - (build 0.1.10) Revisión función inicialización Slider y ejemplos.
