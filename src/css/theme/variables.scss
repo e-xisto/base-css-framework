@@ -63,7 +63,7 @@ $color-custom-4: #f0f0f0;
 $color-success: #61bb46;
 $color-warning: #fdb827;
 $color-danger: #e03a3e;
-$color-info: #009ddc;
+$color-info: #3099dc;
 
 // Escala de grises
 $color-black: #000;
@@ -629,7 +629,16 @@ $tooltip-length-small: 80px;
 $tooltip-length-medium: 150px;
 $tooltip-length-large: 260px;
 
+// =========================================================
+//   ALERTS
+// 
+// =========================================================
 
+$alert-padding-y: $base-space-size;
+$alert-padding-x: $base-space-size * 2;
+$alert-margin-bottom: $base-space-size;
+$alert-border-radius: 4px;
+$alert-border-width: 1px;
 
 
 
