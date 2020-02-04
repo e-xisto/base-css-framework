@@ -5,7 +5,7 @@ import offcanvas from './components/offcanvas';
 import collapse from './components/collapse';
 import ellipsis from './components/ellipsis';
 import slider from './components/slider';
-// import parallax from './components/parallax';
+import parallax from './components/parallax';
 
 dropdown.init();
 tabs.init();
@@ -14,4 +14,4 @@ offcanvas.init();
 collapse.init();
 ellipsis.init();
 slider.init();
-// parallax.init();
+parallax.init();

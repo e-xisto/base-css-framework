@@ -9,9 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - (build 0.1.10) Se añade Terser-webpack-plugin a la configuración de Webpack.
 - (build 0.1.11) Responsive tables.
+- (build 0.1.12) Se añade la opción de parallax con video background.
 
 ### Changed
 - (build 0.1.10) Revisión función inicialización Slider y ejemplos.
+- (build 0.1.12) Revisión componente parallax.
 
 ### Removed
 - (build 0.1.10) Eliminar UglifyJS-webpack-plugin.
