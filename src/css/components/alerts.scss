@@ -8,6 +8,7 @@
 	border-radius: $alert-border-radius;
 	line-height: 1.5;
 	overflow: hidden;
+	
 
 	* { margin-top: 0px; }
 	hr { margin-bottom: $base-space-size; }
@@ -15,7 +16,7 @@
 	&.hide {
 		pointer-events: none;
 		animation-name: fade;
-    	animation-duration: 0.5s;
+    	animation-duration: 0.8s;
 		animation-fill-mode: forwards;
 	}
 }
@@ -23,11 +24,14 @@
 @keyframes fade {
 	0% {
 		opacity: 1;
+		height: auto;
 	}
 
 	100% {
 		opacity: 0;
-		height: 0;
+		// height: 0;
+		// max-height: 0px;
+		// margin-bottom: 0;
 	}
 }
 

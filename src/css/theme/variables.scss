@@ -641,6 +641,32 @@ $alert-border-radius: 4px;
 $alert-border-width: 1px;
 
 
+// =========================================================
+//   TABS
+// 
+// =========================================================
+
+$tabs-border-color: var(--light);
+$tabs-background-color: var(--white);
+
+$tabs-item-font-color: var(--gray);
+$tabs-item-font-weight: normal;
+$tabs-item-font-size: $text-size-md;
+$tabs-item-padding-x: 2em;
+$tabs-item-padding-y: 1em;
+$tabs-item-margin: $base-space-size / 2;
+$tabs-item-background-color: var(--bright);
+$tabs-item-border-color: $tabs-item-background-color;
+$tabs-item-border-radius: 4px;
+
+$tabs-item-hover-font-color: var(--dark);
+$tabs-item-hover-background-color: darken($color-bright, 2%);
+$tabs-item-hover-border-color: darken($color-bright, 2%);
+
+$tabs-item-active-font-color: var(--dark);
+$tabs-item-active-font-weight: bold;
+
+
 
 
 // _*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*

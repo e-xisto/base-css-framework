@@ -7,7 +7,8 @@
 	left: 0;
 	width: $offcanvas-width;
 	height: 100%;
-	overflow-y: auto;
+	max-height: 100%;
+	overflow-y: scroll;
 	background: $offcanvas-background-color;
 	padding: $offcanvas-padding;
 	z-index: $offcanvas-zindex + 10;
