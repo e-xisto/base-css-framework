@@ -7,19 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- (build 0.1.10) Se añade Terser-webpack-plugin a la configuración de Webpack.
-- (build 0.1.11) Responsive tables.
-- (build 0.1.12) Se añade la opción de parallax con video background.
-- (build 0.1.13) Componente tooltip.
-- (build 0.1.14) Componente alert.
+- Se añade Terser-webpack-plugin a la configuración de Webpack.
+- Responsive tables.
+- Se añade la opción de parallax con video background.
+- Componente tooltip.
+- Componente alert.
 
 ### Changed
-- (build 0.1.10) Revisión función inicialización Slider y ejemplos.
-- (build 0.1.12) Revisión componente parallax.
+- Revisión función inicialización Slider y ejemplos.
+- Revisión componente parallax.
 
 ### Removed
-- (build 0.1.10) Eliminar UglifyJS-webpack-plugin.
+- Eliminar UglifyJS-webpack-plugin.
 
+### Fixed
+- Stop video al cerrar modal con video
 
 ## [0.1.1] - 2020-02-03
 
