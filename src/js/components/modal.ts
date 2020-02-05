@@ -96,6 +96,14 @@ function hide(target?: string | null) {
 	if (element) {
 		element.classList.remove('show');
 		document.body.classList.remove('noscroll');
+		if (element.classList.contains('modal-video')) {
+			let iframe = element.querySelector('iframe');
+			if (iframe) {
+				let src = iframe.getAttribute('src')
+				iframe.setAttribute('src', '');
+				iframe.setAttribute('src', src || '');
+			}
+		}
 	}
 }
 
