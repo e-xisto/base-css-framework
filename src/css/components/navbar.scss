@@ -1,0 +1,122 @@
+.navbar {
+	position: relative;
+	width: 100%;
+	background: #cccccc;
+	padding: 0 $navbar-padding-x;
+	border-radius: $navbar-border-radius;
+}
+
+.navbar-content {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	height: $navbar-height;
+
+	@include breakpoint-down(sm) {
+		display: block;
+		position: absolute;
+		
+		.navbar-left,
+		.navbar-center,
+		.navbar-right { display: block;}
+		
+	}	
+}
+
+.navbar-responsive {
+	display: none;
+	height: $navbar-responsive-height;
+
+	@include breakpoint-down(sm) {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.navbar-left,
+.navbar-center,
+.navbar-right {
+	display: flex;
+	align-items: center;
+	max-width: 80%;
+	height: 100%;
+}
+
+.navbar-left {
+	order: 1;
+	justify-content: flex-start;
+}
+
+.navbar-center {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.navbar-right {
+	order: 3;
+	justify-content: flex-end;
+}
+
+.navbar-item a:not(.btn) {
+	display: inline-block;
+	line-height: $navbar-height;
+	height: 100%;
+	white-space: nowrap;
+	background: transparent;
+	color: blue;
+	padding: 0 $navbar-item-padding-x;
+
+	&:hover { background: pink; }
+}
+
+.navbar-item span, 
+.navbar-item a.btn {
+	margin: 0 $navbar-item-padding-x;
+}
+
+
+.navbar-dropdown {
+	position: relative;
+
+	&:hover .navbar-dropdown-toogle { background: pink; }
+
+	.navbar-dropdown-toogle {
+		display: inline-block;
+		line-height: $navbar-height;
+		height: 100%;
+		white-space: nowrap;
+		background: transparent;
+		color: blue;
+		padding: 0 $navbar-item-padding-x;
+
+		&:hover { background: pink; }
+	}
+
+	.navbar-dropdown-menu {
+		display: none;
+		position: absolute;
+		list-style: none;
+		margin: 0;
+		padding: 10px 0px;
+		background: $navbar-dropdown-menu-background-color;
+
+		&.navbar-dropdown-menu-right { right: 0; }
+	}
+
+	.navbar-dropdown-item {
+		background: transparent;
+		margin: 0;
+		padding: $navbar-dropdown-item-padding-y $navbar-dropdown-item-padding-x;
+		white-space: nowrap;
+
+		a { display: block; }
+
+		&:hover {
+			background: red;
+		}
+	}
+	
+	&:hover .navbar-dropdown-menu { display: block; }
+}

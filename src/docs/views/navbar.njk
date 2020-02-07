@@ -1,0 +1,66 @@
+
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Navbar</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+
+				<nav class="navbar">
+
+					<div class="navbar-responsive">
+						<div class="navbar-left">
+							<a href="" class="navbar-item">Item 1</a>
+						</div>
+						<div class="navbar-center">
+							<div class="navbar-logo">Log</div>			
+						</div>
+						<div class="navbar-right">
+							<div class="navbar-burguer">buguer</div>
+						</div>
+					</div>
+
+					<div class="navbar-content">
+						<div class="navbar-left">
+							<div class="navbar-item"><a href="">Item 1</a></div>
+							<div class="navbar-item"><a href=""><div class="icon-facebook"></div></a></div>
+							<div class="navbar-item"><span>texto normal</span></div>
+							<div class="navbar-item"><a href="" class="btn btn-primary btn-rounded">Item 3</a></div>							
+						</div>
+						<div class="navbar-center">
+							<div class="navbar-logo">Logo</div>
+						</div>
+						<div class="navbar-right">
+							<div class="navbar-item"><a href="">Item 1</a></div>
+							<div class="navbar-item"><a href="">Item 1</a></div>
+							<div class="navbar-dropdown">
+								<a href="" class="navbar-dropdown-toogle">Dropdown</a>
+								<ul class="navbar-dropdown-menu navbar-dropdown-menu-right">
+									<li class="navbar-dropdown-item"><a href="">Dropdown Item 1</a></li>
+									<li class="navbar-dropdown-item"><a href="">Dropdown Item 2</a></li>
+									<li class="navbar-dropdown-item"><a href="">Dropdown Item 3</a></li>
+									<li class="navbar-dropdown-item"><a href="">Dropdown Item 4</a></li>
+								</ul>
+							</div>
+							<div class="navbar-item"><a href="" class="btn btn-primary btn-rounded">Item 3</a></div>							
+						</div>
+					</div>
+
+				</nav>
+
+			</div>
+		</div>
+	</div>
+
+	
+
+
+
+
+{% endblock %}

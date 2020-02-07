@@ -667,6 +667,28 @@ $tabs-item-active-font-color: var(--dark);
 $tabs-item-active-font-weight: bold;
 
 
+// =========================================================
+//   NAVBAR
+// 
+// =========================================================
+
+$navbar-height: 65px;
+$navbar-border-radius: 4px;
+$navbar-padding-x: $base-space-size;
+
+$navbar-responsive-height: 45px;
+
+$navbar-item-font-color: red;
+$navbar-item-font-size: 18px;
+$navbar-item-line-height: 18px;
+$navbar-item-text-decoration: none;
+$navbar-item-padding-x: 10px;
+$navbar-item-background-color: red;
+
+$navbar-dropdown-menu-background-color: var(--light);
+
+$navbar-dropdown-item-padding-x: $navbar-item-padding-x;
+$navbar-dropdown-item-padding-y: $base-space-size / 2;
 
 
 // _*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
