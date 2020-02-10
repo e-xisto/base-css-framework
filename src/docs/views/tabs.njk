@@ -24,36 +24,6 @@
 				</div>
 			</div> -->
 
-			<script>
-
-				const tabs = document.querySelector('.tabs')
-				
-				const tabsItems = tabs.querySelectorAll('.tabs-item')
-
-				let tabItemsHTML = ""
-				
-				tabsItems.forEach(function(element) {
-					let href = element.getAttribute('href');
-					let text = element.innerText;
-					let elementHTML = `<li class="dropdown-item"><a href="${href}">${text}</a></li>`
-					tabItemsHTML += elementHTML
-				})
-
-				const menu = document.createElement('div')
-				menu.className = "tabs-menu"
-
-				let menuHTML = `
-				<div class="dropdown">
-					<a class="dropdown-toggle"><i class="icon-menu"></i></a>
-					<ul class="dropdown-menu dropdown-menu-right">${tabItemsHTML}</ul>
-				</div>
-				`
-
-				menu.innerHTML = menuHTML
-				tabs.appendChild(menu)
-			
-			</script>
-
 			<div class="tabs-content">
 				<div class="tabs-panel show" id="uno">
 					<h4 class="mt-none">Contenido tab uno</h4>

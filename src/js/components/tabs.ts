@@ -11,7 +11,56 @@ function init() {
 			show(item);
 		}
 	});
+
+	createResponsiveMenu();
+
 }
+
+
+function createResponsiveMenu() {
+
+	const tabs = document.getElementsByClassName('tabs-reponsive');
+	Array.from(tabs).forEach((tab: Element) => {
+		const tabsItems = tab.querySelectorAll('.tabs-item');
+
+		const menu = document.createElement('div')
+		menu.classList.add("tabs-menu");
+
+		const dropdown = document.createElement('div');
+		dropdown.classList.add('dropdown');
+		menu.append(dropdown);
+
+		// <a class="dropdown-toggle"><i class="icon-menu"></i></a>
+		const toggle = document.createElement('a');
+		toggle.classList.add('dropdown-toggle');
+		const icon = document.createElement('i');
+		icon.classList.add('icon-menu');
+		toggle.append(icon);
+		dropdown.append(toggle);
+
+		const ul = document.createElement('ul');
+		ul.classList.add('dropdown-menu');
+		ul.classList.add('dropdown-menu-right');
+		dropdown.append(ul);
+
+		tabsItems.forEach(function(element) {
+			let li = document.createElement('li');
+			li.classList.add('dropdown-item');
+			let a = document.createElement('a');
+			a.innerHTML = element.innerHTML;
+			a.setAttribute('href', element.getAttribute('href') || '');
+			li.append(a);
+
+			a.addEventListener('click', (event) => {
+				active(element);
+				show(element);
+			});
+			ul.append(li);
+		});
+		tab.append(menu);
+	});
+}
+
 
 function isHash(id: string | null): boolean {
 
