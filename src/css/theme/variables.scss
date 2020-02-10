@@ -675,6 +675,7 @@ $tabs-item-active-font-weight: bold;
 $navbar-height: 65px;
 $navbar-border-radius: 4px;
 $navbar-padding-x: $base-space-size;
+$navbar-background-color: #efefef;
 
 $navbar-responsive-height: 45px;
 
@@ -689,6 +690,14 @@ $navbar-dropdown-menu-background-color: var(--light);
 
 $navbar-dropdown-item-padding-x: $navbar-item-padding-x;
 $navbar-dropdown-item-padding-y: $base-space-size / 2;
+
+$navbar-burger-width: 25px;
+$navbar-burger-height: 45px;
+$navbar-burger-bar-height: 2px;
+$navbar-burger-bar-margin: 5px;
+$navbar-burger-bar-color: black;
+$navbar-burger-bar-border-radius: 10px;
+
 
 
 // _*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*

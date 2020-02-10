@@ -134,9 +134,15 @@
 							<div class="navbar-logo">Log</div>			
 						</div>
 						<div class="navbar-right">
-							<div class="navbar-burguer">buguer</div>
+							<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content').classList.toggle('open')">
+								<div class="navbar-burger-bar"></div>
+								<div class="navbar-burger-bar"></div>
+								<div class="navbar-burger-bar"></div>
+							</div>
 						</div>
 					</div>
+
+
 
 					<div class="navbar-content">
 						<div class="navbar-left">
@@ -152,7 +158,7 @@
 							<div class="navbar-item"><a href="">Item 1</a></div>
 							<div class="navbar-item"><a href="">Item 1</a></div>
 							<div class="navbar-dropdown">
-								<a href="" class="navbar-dropdown-toogle">Dropdown</a>
+								<a href="javascript:void()" class="navbar-dropdown-toogle" onclick="document.querySelector('.navbar-dropdown-menu').classList.toggle('open')">Dropdown</a>
 								<ul class="navbar-dropdown-menu navbar-dropdown-menu-right">
 									<li class="navbar-dropdown-item"><a href="">Dropdown Item 1</a></li>
 									<li class="navbar-dropdown-item"><a href="">Dropdown Item 2</a></li>

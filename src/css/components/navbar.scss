@@ -1,7 +1,7 @@
 .navbar {
 	position: relative;
 	width: 100%;
-	background: #cccccc;
+	background: $navbar-background-color;
 	padding: 0 $navbar-padding-x;
 	border-radius: $navbar-border-radius;
 }
@@ -14,13 +14,74 @@
 	height: $navbar-height;
 
 	@include breakpoint-down(sm) {
-		display: block;
+		display: none;
 		position: absolute;
-		
+		left: 0;
+		right: 0;
+		top: $navbar-responsive-height;
+		width: 100%;
+		height: auto;
+		background: #cecece;
+		overflow: hidden;
+		padding: $base-space-size $base-space-size;
+
+
 		.navbar-left,
 		.navbar-center,
-		.navbar-right { display: block;}
-		
+		.navbar-right {
+			display: block;
+			position: static;
+			max-width: 100%;
+			transform: none;
+			width: 100%;
+
+			.navbar-item a:not(.btn) {
+				line-height: 1;
+				white-space: nowrap;
+				background: transparent;
+				color: blue;
+				padding: $navbar-item-padding-x;
+				width: 100%;
+
+				&:hover { background: pink; }
+			}
+
+			.navbar-item span {
+				margin: 0;
+				padding: $navbar-item-padding-x;
+				display: block;
+				
+			}
+
+			.navbar-item a.btn {
+				display: block;
+				margin: $navbar-item-padding-x;
+			}			
+
+			.navbar-dropdown {
+				position: relative;
+
+				&:hover .navbar-dropdown-toogle { background: pink; }
+
+				.navbar-dropdown-toogle {
+					line-height: 1;
+					white-space: nowrap;
+					background: transparent;
+					color: blue;
+					padding: $navbar-item-padding-x;
+					width: 100%;
+
+					&:hover { background: pink; }
+				}
+
+				.navbar-dropdown-menu.open {
+					position: static;
+				}
+			}			
+		}
+		&.open {
+			display: block;
+		}
 	}	
 }
 
@@ -103,6 +164,8 @@
 		background: $navbar-dropdown-menu-background-color;
 
 		&.navbar-dropdown-menu-right { right: 0; }
+
+		&.open { display: block; }
 	}
 
 	.navbar-dropdown-item {
@@ -117,6 +180,38 @@
 			background: red;
 		}
 	}
-	
-	&:hover .navbar-dropdown-menu { display: block; }
 }
+
+.navbar-burger {
+
+	// https://codepen.io/vineethtr/pen/VYRzaV/
+
+	height: $navbar-burger-height;
+	width: $navbar-burger-width;
+	position: relative;
+	margin: 0;
+	padding-top: ($navbar-burger-height - (($navbar-burger-bar-height * 3) + ($navbar-burger-bar-margin * 2))) / 2;
+	transition: all .3s;
+	cursor: pointer;	
+
+	.navbar-burger-bar {
+		position: relative;
+		height: $navbar-burger-bar-height;
+		width: 100%;
+		display: block;
+		margin-bottom: $navbar-burger-bar-margin;
+		background-color: $navbar-burger-bar-color;
+		border-radius: 10px;
+		transition: all .3s;	
+	}
+
+	&.open {
+
+		.navbar-burger-bar {
+			&:nth-of-type(1){ transform: translateY($navbar-burger-bar-height + $navbar-burger-bar-margin) rotate(45deg); }
+			&:nth-of-type(2){ opacity: 0; }
+			&:nth-of-type(3){ transform: translateY(-$navbar-burger-bar-height - $navbar-burger-bar-margin) rotate(-45deg); }
+		}	  
+	}
+}
+
