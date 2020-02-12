@@ -115,45 +115,72 @@
 						<div class="content-container">
 							
 
-	<!-- <h1>Hello world!!</h1>
-	<ul>
-	
-		<li><a href="guia.html">guia.html</a></li>
-	
-		<li><a href="sandbox.html">sandbox.html</a></li>
-	
-		<li><a href="...">...</a></li>
-	
-	</ul> -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Navbar</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
 
-<h1>Ejemplos:</h1>
+				<nav class="navbar">
 
-<ul>
-	<li><a href="alerts.html">Alerts</a></li>
-	<li><a href="botones.html">Botones</a></li>
-	<li><a href="carousel.html">Carousel</a></li>
-	<li><a href="colors.html">Colores</a></li>
-	<li><a href="collapse.html">Collapse</a></li>
-	<li><a href="contenidos.html">Contenidos</a></li>
-	<li><a href="dropdown.html">Dropdown</a></li>
-	<li><a href="embed.html">Embed</a></li>
-	<li><a href="flex.html">Flex</a></li>
-	<li><a href="formularios.html">Formularios</a></li>
-	<li><a href="grid.html">Grid</a></li>
-	<li><a href="iconos.html">Iconos</a></li>
-	<li><a href="modal.html">Modal</a></li>
-	<li><a href="navbar.html">Navbar</a></li>
-	<li><a href="offcanvas.html">Offcanvas</a></li>
-	<li><a href="parallax.html">Parallax</a></li>
-	<li><a href="slider.html">Slider</a></li>
-	<li><a href="spacing.html">Espacios</a></li>
-	<li><a href="table.html">Table</a></li>
-	<li><a href="tabs.html">Tabs</a></li>
-	<li><a href="text.html">Text</a></li>
-	<li><a href="tipografia.html">Tipografías</a></li>
-	<li><a href="tooltips.html">Tooltips</a></li>
-	<li><a href="utilidades.html">Utilidades</a></li>
-</ul>
+					<div class="navbar-responsive">
+						<div class="navbar-left">
+							<div class="navbar-logo">
+								<img src="//ximg.es/150x30/dedede/aaa&text=LOGO" alt="">
+							</div>	
+						</div>
+						<div class="navbar-center">
+							<!-- <span>Menu</span>	 -->
+						</div>
+						<div class="navbar-right">
+							<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content').classList.toggle('open')">
+								<div class="navbar-burger-bar"></div>
+								<div class="navbar-burger-bar"></div>
+								<div class="navbar-burger-bar"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="navbar-content open">
+						<div class="navbar-left">
+							<div class="navbar-logo hidden-xs hidden-sm">
+								<img src="//ximg.es/150x40/dedede/aaa&text=LOGO" alt="">
+							</div>						
+						</div>
+						<div class="navbar-center">
+						</div>
+						<div class="navbar-right">
+							<div class="navbar-link hidden-xs hidden-sm"><a href=""><div class="icon-facebook"></div></a></div>
+							<div class="navbar-link hidden-xs hidden-sm mr-xl"><a href=""><div class="icon-twitter"></div></a></div>
+							<div class="navbar-link"><a href="">Item 1</a></div>
+							<!-- <div class="navbar-item"><span>texto normal</span></div> -->
+							<div class="navbar-link"><a href="">Item 2</a></div>
+							<div class="navbar-dropdown">
+								<a href="javascript:void()" class="navbar-dropdown-toogle" onclick="document.querySelector('.navbar-dropdown').classList.toggle('open')">Item 3 <i class="icon-chevron-down"></i></a>
+								<ul class="navbar-dropdown-menu navbar-dropdown-menu-right">
+									<li class="navbar-dropdown-item"><a href="">Dropdown Item 1</a></li>
+									<li class="navbar-dropdown-item"><a href="">Dropdown Item 2</a></li>
+									<li class="navbar-dropdown-item"><a href="">Dropdown</a></li>
+									<li class="navbar-dropdown-item"><a href="">Dropdown Item 4</a></li>
+								</ul>
+							</div>
+							<div class="navbar-item hidden-md hidden-lg mt-md">
+									<a href="" class="display-inline-block text-gray"><i class="icon-facebook text-xxl"></i></a>
+									<a href="" class="display-inline-block ml-md text-gray"><i class="icon-twitter text-xxl"></i></a>
+							</div>
+							<div class="navbar-button hidden-sm hidden-lg"><a href="" class="btn btn-primary btn-rounded btn-outlined btn-block">Item 3</a></div>							
+						</div>
+					</div>
+
+				</nav>
+
+			</div>
+		</div>
+	</div>
+
 
 
 						</div>			

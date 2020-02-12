@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Se añade la opción de parallax con video background.
 - Componente tooltip.
 - Componente alert.
+- Componente navbar.
 
 ### Changed
 - Revisión función inicialización Slider y ejemplos.
