@@ -4,6 +4,10 @@
 	background: $navbar-background-color;
 	padding: 0 $navbar-padding-x;
 	border-radius: $navbar-border-radius;
+
+	@include breakpoint-down(sm) {
+		background: $navbar-responsive-background-color;
+	}
 }
 
 .navbar-content {
@@ -12,19 +16,23 @@
 	justify-content: space-between;
 	align-items: stretch;
 	height: $navbar-height;
+	font-size: $navbar-item-font-size;
+	color: $navbar-item-font-color;
+	text-decoration: $navbar-item-text-decoration;
+	font-weight: $navbar-item-font-weight;
+	padding: $navbar-responsive-menu-padding-y 0;
 
 	@include breakpoint-down(sm) {
 		display: none;
 		position: absolute;
+		overflow: hidden;
 		left: 0;
 		right: 0;
 		top: $navbar-responsive-height;
-		width: 100%;
 		height: auto;
-		background: #cecece;
-		overflow: hidden;
-		padding: $base-space-size $base-space-size;
+		background: $navbar-responsive-menu-background-color;
 
+		&.open { display: block; }
 
 		.navbar-left,
 		.navbar-center,
@@ -34,54 +42,7 @@
 			max-width: 100%;
 			transform: none;
 			width: 100%;
-
-			.navbar-item a:not(.btn) {
-				line-height: 1;
-				white-space: nowrap;
-				background: transparent;
-				color: blue;
-				padding: $navbar-item-padding-x;
-				width: 100%;
-
-				&:hover { background: pink; }
-			}
-
-			.navbar-item span {
-				margin: 0;
-				padding: $navbar-item-padding-x;
-				display: block;
-				
-			}
-
-			.navbar-item a.btn {
-				display: block;
-				margin: $navbar-item-padding-x;
-			}			
-
-			.navbar-dropdown {
-				position: relative;
-
-				&:hover .navbar-dropdown-toogle { background: pink; }
-
-				.navbar-dropdown-toogle {
-					line-height: 1;
-					white-space: nowrap;
-					background: transparent;
-					color: blue;
-					padding: $navbar-item-padding-x;
-					width: 100%;
-
-					&:hover { background: pink; }
-				}
-
-				.navbar-dropdown-menu.open {
-					position: static;
-				}
-			}			
-		}
-		&.open {
-			display: block;
-		}
+		}		
 	}	
 }
 
@@ -111,6 +72,7 @@
 
 .navbar-center {
 	position: absolute;
+	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
 }
@@ -120,66 +82,127 @@
 	justify-content: flex-end;
 }
 
-.navbar-item a:not(.btn) {
-	display: inline-block;
-	line-height: $navbar-height;
-	height: 100%;
-	white-space: nowrap;
-	background: transparent;
-	color: blue;
+.navbar-logo {
+
+	img { display: block;}
+}
+
+.navbar-item {
+	color: $navbar-item-link-color;
+	font-size: $navbar-item-font-size;
+	font-weight: $navbar-item-font-weight;
+	text-decoration: $navbar-item-text-decoration !important;
 	padding: 0 $navbar-item-padding-x;
 
-	&:hover { background: pink; }
+	@include breakpoint-down(sm) {			
+		display: block;
+		color: $navbar-responsive-item-link-color;
+		font-size: $navbar-responsive-item-font-size;
+		font-weight: $navbar-responsive-item-font-weight;
+		text-decoration: $navbar-responsive-item-text-decoration !important;
+		padding: $navbar-responsive-item-padding-y $navbar-responsive-item-padding-x;
+	}
 }
 
-.navbar-item span, 
-.navbar-item a.btn {
+.navbar-link a:not(.btn),
+.navbar-dropdown-toogle {
+	display: inline-block;
+	line-height: $navbar-height;
+	color: $navbar-item-link-color;
+	font-size: $navbar-item-font-size;
+	font-weight: $navbar-item-font-weight;
+	text-decoration: $navbar-item-text-decoration !important;
+	padding: 0 $navbar-item-padding-x;
+	background: $navbar-item-background-color;
+	white-space: nowrap;
+
+	&:hover,
+	&:focus {
+		color: $navbar-item-hover-link-color !important;
+		background: $navbar-item-hover-background-color;
+		outline: 0px;
+	}
+
+	@include breakpoint-down(sm) {
+		line-height: 1;
+		color: $navbar-responsive-item-link-color;
+		font-size: $navbar-responsive-item-font-size;
+		font-weight: $navbar-responsive-item-font-weight;
+		text-decoration: $navbar-responsive-item-text-decoration !important;
+		padding: $navbar-responsive-item-padding-y $navbar-responsive-item-padding-x;
+		background: $navbar-responsive-item-background-color;
+		width: 100%;
+
+		&:hover,
+		&:focus{
+			color: $navbar-responsive-item-hover-link-color !important;
+			background: $navbar-responsive-item-hover-background-color;
+		}
+	}
+}
+
+.navbar-button {
 	margin: 0 $navbar-item-padding-x;
-}
 
+	@include breakpoint-down(sm) {			
+		display: block;
+		margin: $navbar-responsive-item-padding-y $navbar-responsive-item-padding-x;
+	}
+}
 
 .navbar-dropdown {
 	position: relative;
 
-	&:hover .navbar-dropdown-toogle { background: pink; }
-
-	.navbar-dropdown-toogle {
-		display: inline-block;
-		line-height: $navbar-height;
-		height: 100%;
-		white-space: nowrap;
-		background: transparent;
-		color: blue;
-		padding: 0 $navbar-item-padding-x;
-
-		&:hover { background: pink; }
+	&.open .navbar-dropdown-toogle {
+		color: $navbar-dropdown-menu-font-color !important;
+		background: $navbar-dropdown-menu-background-color !important;
 	}
 
-	.navbar-dropdown-menu {
-		display: none;
-		position: absolute;
-		list-style: none;
-		margin: 0;
-		padding: 10px 0px;
-		background: $navbar-dropdown-menu-background-color;
+	&.open .navbar-dropdown-menu { display: block; }
+}
 
-		&.navbar-dropdown-menu-right { right: 0; }
+.navbar-dropdown-menu {
+	display: none;
+	position: absolute;
+	list-style: none;
+	margin: 0;
+	padding: $navbar-dropdown-menu-padding-y 0px;
+	color: $navbar-dropdown-menu-font-color;
+	font-size: $navbar-dropdown-menu-font-size;
+	font-weight: $navbar-dropdown-menu-font-weight;
+	background: $navbar-dropdown-menu-background-color;
 
-		&.open { display: block; }
+	&.navbar-dropdown-menu-right { right: 0; }
+
+	@include breakpoint-down(sm) {
+		position: static;
+		padding: $navbar-responsive-dropdown-menu-padding-y 0px;
+		color: $navbar-responsive-dropdown-menu-font-color;
+		font-size: $navbar-responsive-dropdown-menu-font-size;
+		font-weight: $navbar-responsive-dropdown-menu-font-weight;
+		background: $navbar-responsive-dropdown-menu-background-color;		
+	}
+}
+
+.navbar-dropdown-item {
+	margin: 0;
+	background: transparent;
+	padding: $navbar-dropdown-menu-item-padding-y $navbar-dropdown-menu-item-padding-x;
+	white-space: nowrap;
+
+	a {
+		display: block;
+		color: $navbar-dropdown-menu-font-color !important;
+		text-decoration: $navbar-dropdown-menu-text-decoration !important;
 	}
 
-	.navbar-dropdown-item {
-		background: transparent;
-		margin: 0;
-		padding: $navbar-dropdown-item-padding-y $navbar-dropdown-item-padding-x;
-		white-space: nowrap;
-
-		a { display: block; }
-
-		&:hover {
-			background: red;
-		}
+	&:hover {
+		background: $navbar-dropdown-menu-hover-background-color;
 	}
+
+	@include breakpoint-down(sm) {
+		padding: $navbar-responsive-dropdown-menu-item-padding-y $navbar-responsive-dropdown-menu-item-padding-x;
+	}	
 }
 
 .navbar-burger {
