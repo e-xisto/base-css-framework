@@ -1,11 +1,15 @@
 const path = require('path');
-const CopyPlugin = require('copy-webpack-plugin');
+const copydir = require('copy-dir');
 
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const NunjucksWebpackPlugin = require("nunjucks-webpack-plugin");
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const ExtraWatchWebpackPlugin = require('extra-watch-webpack-plugin');
+const EventHooksPlugin = require('event-hooks-webpack-plugin');
 
-const templatesHtmlPlugin = require("./src/docs/templates");
+const nunjucksTemplates = require("./src/docs/templates");
 
 module.exports = {
 
@@ -20,14 +24,6 @@ module.exports = {
 		filename: 'js/base.js',
 		path: path.resolve(__dirname, './dist'),
 		publicPath: "./"
-	},
-
-	devServer: {
-		index: '../docs/index.html',
-		contentBase: [path.resolve(__dirname, './dist/'),path.resolve(__dirname, './docs')],
-		compress: false,
-		writeToDisk: true,
-		port: 8888
 	},
 
 	module: {
@@ -46,19 +42,7 @@ module.exports = {
 				test: /\.tsx?$/,
 				loader: 'ts-loader',
 				exclude: /node_modules/,
-			},			
-
-			{
-				test: /\.(njk|nunjucks|html|tpl|tmpl)$/,
-				use: [
-					{
-						loader: 'nunjucks-isomorphic-loader',
-						query: {
-							root: [path.resolve(__dirname, 'src/docs')]
-						}
-					}
-				]
-			},			
+			},				
 
 			{
 				test: /\.(gif|png|jpe?g|svg)$/i,
@@ -90,10 +74,11 @@ module.exports = {
 
 	optimization: {
 		minimize: true,
-		minimizer: [new TerserPlugin({
+		minimizer: [
+			new TerserPlugin({
 				cache: true,
 				parallel: true,
-				sourceMap: true // set to true if you want JS source maps
+				sourceMap: false // set to true if you want JS source maps
 			}),
 			new OptimizeCSSAssetsPlugin({})
 		]
@@ -104,12 +89,25 @@ module.exports = {
 			filename: "css/[name].css",
 			chunkFilename: "[id].css"
 		}),
-		new CopyPlugin([
-			{ from: 'src/docs/images', to: '../docs/images' }
-		])		
-
-	// ],
-	].concat(templatesHtmlPlugin),
+		new NunjucksWebpackPlugin({
+			templates: nunjucksTemplates
+		}),
+		new BrowserSyncPlugin({
+			host: 'localhost',
+			port: 3000,
+			server: { baseDir: ['docs'] }
+		}),
+		new ExtraWatchWebpackPlugin({
+			dirs: ['src']
+		}),
+		new EventHooksPlugin({
+			'done': (compilation, done) => {
+				copydir('dist/js', 'docs/js', {cover: false});
+				copydir('dist/css', 'docs/css', {cover: true});
+				copydir('src/docs/images', 'docs/images', {cover: false});
+			}
+		}),									
+	],
 
 	resolve: {
 		extensions: [".tsx", ".ts", ".js", ".css", ".scss"],
