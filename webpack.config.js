@@ -9,7 +9,22 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const ExtraWatchWebpackPlugin = require('extra-watch-webpack-plugin');
 const EventHooksPlugin = require('event-hooks-webpack-plugin');
 
+const nunjucks = require('nunjucks');
+const markdown = require('nunjucks-markdown');
+const marked = require('marked');
+
 const nunjucksTemplates = require("./src/docs/templates");
+
+// Configure Nunjucks Enviroment for Markdown Render tag
+// https://github.com/zephraph/nunjucks-markdown
+const env = nunjucks.configure({
+	autoescape: false,
+	noCache: true,
+	trimBlocks: true,
+	lstripBlocks: true
+});
+
+markdown.register(env, marked);
 
 module.exports = {
 
@@ -78,7 +93,8 @@ module.exports = {
 			new TerserPlugin({
 				cache: true,
 				parallel: true,
-				sourceMap: false // set to true if you want JS source maps
+				sourceMap: true, // set to true if you want JS source maps
+				extractComments: false
 			}),
 			new OptimizeCSSAssetsPlugin({})
 		]
@@ -90,7 +106,8 @@ module.exports = {
 			chunkFilename: "[id].css"
 		}),
 		new NunjucksWebpackPlugin({
-			templates: nunjucksTemplates
+			templates: nunjucksTemplates,
+			configure: env
 		}),
 		new BrowserSyncPlugin({
 			host: 'localhost',

@@ -13,16 +13,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Componente tooltip.
 - Componente alert.
 - Componente navbar.
+- Renderizado de markdown en documentación.
 
 ### Changed
 - Revisión función inicialización Slider y ejemplos.
 - Revisión componente parallax.
+- Actualización de configuración webpack (event-hooks, nunjucks-plugin, browsersync).
+- Optimización scripts package.json eliminando webpack-dev-server y copia de archivos.
+- Se optimiza la carga de plantillas nunjucks y contexto de variables.
 
 ### Removed
 - Eliminar UglifyJS-webpack-plugin.
+- Se elimina la carga de plantillas con HtmlWebpackPlugin y nunjucks-isomorphic-loader.
 
 ### Fixed
-- Stop video al cerrar modal con video
+- Stop video al cerrar modal con video.
+- Eliminar creación de archivo base.js.LICENCE.txt (TerserPlugin extractComments option).
 
 ## [0.1.1] - 2020-02-03
 
