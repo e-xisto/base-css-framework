@@ -18,49 +18,16 @@
 
 	html, body { height: 100%;}
 
-	.color-sample {
-		border-radius: 3px;
-		margin-bottom: 30px;
-		background: #f0f0f0;
-	}
-
-	.color-sample-block {
-		border-radius: 3px;
-		display: block;
-		width: 100%;
-		height: 100px;
-		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
-		transition: all 0.2s;
-	}
-
-	.color-sample-block:hover {
-		box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
-		transform: scale(1.008);
-	}
-
-	.color-sample-text {
-		padding: 15px;
-		color: var(--midtone);
-	}
-
-	.menu-top {
-		height: 65px;
-		background: #1B1F23;
-	}
-
-	.menu-aside {
-		width: 260px;
-		min-height: 100%;
-		background: #FAFBFC;
-		border-right: 1px solid #E1E4E8;
-	}
-
-	@media (max-width: 1220px) {
-		.menu-aside { display: none; }
+	.view-port {
+		display: flex;
+		height: 100%;
+		padding-top: 65px;
 	}
 
 	.content {
 		max-width: 100%;
+		overflow-y: scroll;
+		flex-grow: 1;
 	}
 
 	.content-container {
@@ -70,9 +37,100 @@
 		margin: auto;
 	}
 
-	@media (max-width: 768px) {
-		.content-container { padding: 15px; }
+		@media (max-width: 768px) {
+			.content-container { padding: 15px; }
+		}
+
+	.menu-top {
+		position: fixed;
+		/* display: none; */
+		width: 100%;
+		height: 65px;
+		background: #1B1F23;
 	}
+
+	.menu-aside {
+		width: 260px;
+		height: 100%;
+		flex-shrink: 0;
+		background: #FAFBFC;
+		border-right: 1px solid #E1E4E8;
+		padding-top: 20px;
+		overflow-y: scroll;
+	}
+
+		.menu-aside ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}			
+
+		.menu-aside ul li {
+			padding: 25px;
+			margin-bottom: 0px;
+			border-bottom: 1px solid #E1E4E8;
+		}					
+		.menu-aside ul li a {
+			font-size: 16px;
+			line-height: 24px;
+			font-weight: bold;
+			text-decoration: none;
+			color: var(--black);
+		}
+
+		.menu-aside ul li a:hover { text-decoration: underline; }					
+		
+		.menu-aside ul li ul {
+			margin-top: 10px;
+		}					
+
+		.menu-aside ul li ul li {
+			border: none;
+			padding: 5px;
+			padding-left: 0px; 
+			margin: 0;
+		}	
+
+		.menu-aside ul li ul li.active a {
+			color: var(--black);
+			font-weight: bold;
+			pointer-events: none;
+		}
+
+		.menu-aside ul li ul li a {
+			font-size: 14px;
+			font-weight: normal;
+			color: var(--primary);
+		}
+
+		@media (max-width: 1220px) {
+			.menu-aside { display: none; }
+		}
+
+	.color-sample {
+		border-radius: 3px;
+		margin-bottom: 30px;
+		background: #f0f0f0;
+	}
+
+		.color-sample-block {
+			border-radius: 3px;
+			display: block;
+			width: 100%;
+			height: 100px;
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+			transition: all 0.2s;
+		}
+
+		.color-sample-block:hover {
+			box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+			transform: scale(1.008);
+		}
+
+		.color-sample-text {
+			padding: 15px;
+			color: var(--midtone);
+		}
 
 	.code-toolbar button {
 		color: #ccc !important;
@@ -85,29 +143,189 @@
 		cursor: pointer;
 	}
 
-	.code-toolbar button:hover {
-		color: #aaa !important;
-	}
+		.code-toolbar button:hover {
+			color: #aaa !important;
+		}
 
-	pre {
-		background: #FAFBFC !important;
-	}
+		pre {
+			background: #FAFBFC !important;
+		}
 
-	code {
-		font-size: 14px !important;
-		line-height: 1.5 !important;
-	}
+		code {
+			font-size: 14px !important;
+			line-height: 1.5 !important;
+		}
 
 </style>		
 
 		<div class="offcanvas-wrap">
 
-			<div class="flex column" style="min-height: 100%;">
-				<div class="menu-top">menu top</div>
-				<div class="flex flex-item stretch">
-					<div class="menu-aside">menu aside</div>
-					<div class="content flex-item stretch">
-						<div class="content-container">
+			<div class="menu-top">menu top</div>
+			<div class="view-port">
+				<div class="menu-aside">
+<ul>
+	<li>
+		<a href="getting-started.html">Empezar a trabajar</a>
+		<ul>
+			<li  >
+				<a href="getting-started.html">Introducción</a>
+			</li>	
+			<li  >
+				<a href="install.html">Instalación</a>
+			</li>	
+			<li  >
+				<a href="folder-contents.html">Contenidos</a>
+			</li>	
+			<li  >
+				<a href="theming.html">Theming</a>
+			</li>	
+		</ul>
+	</li>
+	<li>
+		<a href="layout.html">Layout</a>
+		<ul>
+			<li  >
+				<a href="layout.html">Visión general</a>
+			</li>	
+			<li  >
+				<a href="grid.html">Grid</a>
+			</li>	
+			<li  >
+				<a href="grid-util.html">Utilidades</a>
+			</li>	
+		</ul>
+	</li>
+	<li>
+		<a href="color.html">Contenidos</a>
+		<ul>
+			<li  >
+				<a href="color.html">Color</a>
+			</li>	
+			<li  >
+				<a href="tipography.html">Tipografía</a>
+			</li>	
+			<li  >
+				<a href="text.html">Texto</a>
+			</li>	
+			<li  >
+				<a href="buttons.html">Botones</a>
+			</li>	
+			<li  >
+				<a href="lists.html">Listas</a>
+			</li>	
+			<li  >
+				<a href="tables.html">Tablas</a>
+			</li>	
+			<li  >
+				<a href="images.html">Imágenes</a>
+			</li>	
+			<li  >
+				<a href="icons.html">Iconos</a>
+			</li>	
+			<li  >
+				<a href="embed.html">Embeds</a>
+			</li>	
+		</ul>
+	</li>
+	<li>
+		<a href="forms.html">Formularios</a>
+		<ul>
+			<li  >
+				<a href="forms.html">Introducción</a>
+			</li>	
+			<li  >
+				<a href="input.html">Input</a>
+			</li>	
+			<li  >
+				<a href="select.html">Select</a>
+			</li>	
+			<li  >
+				<a href="check-radio-switch.html">Check y Radio</a>
+			</li>	
+			<li  >
+				<a href="textarea.html">Textarea</a>
+			</li>	
+			<li  >
+				<a href="input-group.html">Input Group</a>
+			</li>	
+			<li  >
+				<a href="file.html">File</a>
+			</li>	
+		</ul>
+	</li>
+	<li>
+		<a href="alert.html">Componentes</a>
+		<ul>
+			<li  >
+				<a href="alert.html">Alerts</a>
+			</li>	
+			<li  >
+				<a href="collapse.html">Collapse</a>
+			</li>	
+			<li  >
+				<a href="dropdown.html">Dropdown</a>
+			</li>	
+			<li  >
+				<a href="modal.html">Modal</a>
+			</li>	
+			<li  >
+				<a href="navbar.html">Navbar</a>
+			</li>	
+			<li  >
+				<a href="offcanvas.html">Offcanvas</a>
+			</li>	
+			<li  >
+				<a href="parallax.html">Parallax</a>
+			</li>	
+			<li  >
+				<a href="slider.html">Slider</a>
+			</li>	
+			<li  >
+				<a href="tabs.html">Tabs</a>
+			</li>	
+		</ul>
+	</li>
+	<li>
+		<a href="spacing.html">Utilidades</a>
+		<ul>
+			<li  >
+				<a href="spacing.html">Spacing</a>
+			</li>	
+			<li  >
+				<a href="visible.html">Visible</a>
+			</li>	
+			<li  >
+				<a href="sizes.html">Sizes</a>
+			</li>	
+			<li  >
+				<a href="shadow.html">Shadow</a>
+			</li>	
+			<li  >
+				<a href="position.html">Position</a>
+			</li>	
+			<li  >
+				<a href="flex.html">Flex</a>
+			</li>	
+			<li  >
+				<a href="display.html">display</a>
+			</li>	
+			<li  >
+				<a href="border.html">Border</a>
+			</li>	
+			<li  >
+				<a href="animations.html">Animations</a>
+			</li>	
+			<li  >
+				<a href="other-utils.html">Otras</a>
+			</li>	
+			<li  >
+				<a href="mixins.html">Mixins</a>
+			</li>	
+		</ul>
+	</li>
+</ul>				</div>
+				<div class="content">
+					<div class="content-container">
 
 
 	<h1>Slider</h1>

@@ -1,8 +1,7 @@
 const fs = require('fs');
 
-let templates = fs.readdirSync(__dirname + '/views/');
-
-const menu = { items: ['uno', 'dos', 'tres']};
+const menu = require('./menu.js')
+const templates = fs.readdirSync(__dirname + '/views/');
 
 const context = { menu }
 

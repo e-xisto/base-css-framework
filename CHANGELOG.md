@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Componente alert.
 - Componente navbar.
 - Renderizado de markdown en documentación.
+- Configurar Google Chrome como navegador por defecto en Browsersync.
+- Carga menú de contenidos en documentación.
 
 ### Changed
 - Revisión función inicialización Slider y ejemplos.
@@ -21,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Actualización de configuración webpack (event-hooks, nunjucks-plugin, browsersync).
 - Optimización scripts package.json eliminando webpack-dev-server y copia de archivos.
 - Se optimiza la carga de plantillas nunjucks y contexto de variables.
+- Estilos plantilla de documentación.
 
 ### Removed
 - Eliminar UglifyJS-webpack-plugin.
@@ -29,6 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Stop video al cerrar modal con video.
 - Eliminar creación de archivo base.js.LICENCE.txt (TerserPlugin extractComments option).
+
 
 ## [0.1.1] - 2020-02-03
 

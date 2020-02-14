@@ -110,6 +110,7 @@ module.exports = {
 			configure: env
 		}),
 		new BrowserSyncPlugin({
+			browser: "google chrome",
 			host: 'localhost',
 			port: 3000,
 			server: { baseDir: ['docs'] }
