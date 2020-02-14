@@ -43,10 +43,55 @@
 
 	.menu-top {
 		position: fixed;
-		/* display: none; */
+		display: flex;
+		padding: 0px 20px;
+		justify-content: space-between;
 		width: 100%;
 		height: 65px;
 		background: #1B1F23;
+	}
+
+	.menu-top-logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+
+	.menu-top-logo img {
+	 	display: inline-block;
+		height: 30px;
+	}
+
+	.menu-top-logo span {
+		color: var(--midtone);
+		margin-left: 15px;
+		margin-top: 15px;
+	}
+
+	.menu-top-menu {
+	}
+
+	.menu-top-menu ul {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.menu-top-menu ul li {
+		padding-top: 15px;
+		margin-bottom: 0;
+		margin-right: 20px;
+	}
+
+	.menu-top-menu ul li a {
+		font-size: 16px;
+		text-decoration: none;
+		color: var(--light);
 	}
 
 	.menu-aside {
@@ -55,7 +100,6 @@
 		flex-shrink: 0;
 		background: #FAFBFC;
 		border-right: 1px solid #E1E4E8;
-		padding-top: 20px;
 		overflow-y: scroll;
 	}
 
@@ -160,7 +204,19 @@
 
 		<div class="offcanvas-wrap">
 
-			<div class="menu-top">menu top</div>
+			<div class="menu-top">
+<div class="menu-top-logo">
+	<img src="/images/logo.svg" alt="base: CSS & Style Guide Framework">
+	<span>CSS & Style Guide Framework</span>
+</div>
+
+<div class="menu-top-menu">
+	<ul>
+		<li><a href="changelog.html">Novedades</a></li>
+		<li><a href="guide.html">Guía</a></li>
+		<li><a href="about.html">About</a></li>
+	</ul>
+</div>			</div>
 			<div class="view-port">
 				<div class="menu-aside">
 <ul>
@@ -199,7 +255,7 @@
 		<a href="color.html">Contenidos</a>
 		<ul>
 			<li  >
-				<a href="color.html">Color</a>
+				<a href="colors.html">Color</a>
 			</li>	
 			<li  >
 				<a href="tipography.html">Tipografía</a>
@@ -281,7 +337,13 @@
 				<a href="slider.html">Slider</a>
 			</li>	
 			<li  >
+				<a href="carousel.html">Carousel</a>
+			</li>	
+			<li  >
 				<a href="tabs.html">Tabs</a>
+			</li>	
+			<li  >
+				<a href="tooltips.html">Tooltips</a>
 			</li>	
 		</ul>
 	</li>
@@ -326,45 +388,6 @@
 </ul>				</div>
 				<div class="content">
 					<div class="content-container">
-
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12 mb-md">
-			<a href="" class="btn btn-kaka">Primary</a>
-			<a href="" class="btn btn-primary">Primary</a>
-			<a href="" class="btn btn-secondary">Secondary</a>
-			<a href="" class="btn btn-link">link</a>
-		</div>
-		<div class="col-md-12 mb-md">
-			<a href="" class="btn btn-outlined">Botón A</a>
-			<button class="btn">Botón Button</button>
-		</div>
-		<div class="col-md-12 mb-md">
-			<a href="" class="btn btn-primary btn-lg">Botón LG</a>
-			<a href="" class="btn btn-md">Botón MD</a>
-			<a href="" class="btn">Botón Normal</a>
-			<button class="btn btn-sm">Botón SM</button>
-		</div>
-		<div class="col-md-12 mb-md">
-			<a href="" class="btn btn-danger btn-outlined active">Danger</a>
-			<a href="" class="btn btn-warning btn-outlined">Warning</a>
-			<a href="" class="btn btn-success">Success</a>
-			<a href="" class="btn btn-info btn-outlined btn-rounded btn-lg">Info</a>
-		</div>
-		<div class="col-md-12 mb-md">
-			<button href="" class="btn" disabled>Botón disabled</button>
-			<a class="btn disabled">Botón class disabled</a>
-		</div>		
-		<div class="col-md-3 mb-md">
-			<a href="" class="btn btn-block mb-sm">Botón block adasdsadsad</a>
-			<a class="btn btn-xs-block">Botón block xs asdsadsad dsad asd</a>
-		</div>		
-		<div class="col-md-12 mb-md">
-			<a href="" class="btn btn-rounded">Botón rounded</a>
-			<a class="btn btn-outlined">Botón outlined</a>
-		</div>		
-	</div>
-</div>
 
 						</div>			
 					</div>

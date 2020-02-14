@@ -85,11 +85,11 @@ $color-white: #FFFFFF;
 // $font-size-base: 16px;
 // $font-scale-factor: 1.33;
 
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
 
-$font-family-sans-serif: 'Lato', sans-serif;
-$font-family-serif: 'Merriweather', serif;
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$font-family-serif: serif;
 
 $font-family-base: 'Lato', sans-serif;
 $font-size-base: 16px;

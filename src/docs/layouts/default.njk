@@ -21,10 +21,12 @@
 
 		<div class="offcanvas-wrap">
 
-			<div class="menu-top">menu top</div>
+			<div class="menu-top">
+				{% include "../partials/top.njk" %}
+			</div>
 			<div class="view-port">
 				<div class="menu-aside">
-					{% include "../layouts/aside.njk" %}
+					{% include "../partials/aside.njk" %}
 				</div>
 				<div class="content">
 					<div class="content-container">

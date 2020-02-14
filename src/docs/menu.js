@@ -45,7 +45,7 @@ const menu = [
 		submenu: [
 			{
 				title: "Color",
-				link: "color.html"
+				link: "colors.html"
 			},
 			{
 				title: "Tipografía",
@@ -152,8 +152,16 @@ const menu = [
 				link: "slider.html"
 			},
 			{
+				title: "Carousel",
+				link: "carousel.html"
+			},
+			{
 				title: "Tabs",
 				link: "tabs.html"
+			},
+			{
+				title: "Tooltips",
+				link: "tooltips.html"
 			},
 		]
 	},	
