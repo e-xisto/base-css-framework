@@ -3,4 +3,65 @@
 
 {% block content %}
 
+{% markdown %}
+
+# Instalación
+
+Para comenzar a utilizar Base CSS en tu proyecto puedes optar por tres diferentes opciones: Cargar los archivos necesarios desde un CDN, utilizar el gestor de paquetes NPM o descargar directamente el código fuente desde Github. 
+
+### Carga de archivos desde CDN
+
+Copia y pega la hoja de estilo en el <head> antes de todos los demás estilos para cargar nuestro CSS.
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/e-xisto/base-css-framework/dist/css/base.css">
+```
+
+Varios de nuestros componentes requieren del uso de Javascript para funcionar. Copia y pega la siguiente etiqueta &lt;script&gt; al final de todas tus páginas, justo antes de la etiqueta de cierre &lt;/body&gt;.
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/e-xisto/base-css-framework/dist/js/base.js"></script>
+```
+
+#### Plantilla básica de inicio
+
+Así se vería un plantilla básica configurada con la carga de archivos necesarios para comenzar a utilizar Base CSS:
+
+```html
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/e-xisto/base-css-framework/dist/css/base.css">
+
+    <title>Hola, mundo!</title>
+</head>
+
+<body>
+    <h1>Hola, mundo!</h1>
+
+    <!-- Base JavaScript -->
+    <script src="https://cdn.jsdelivr.net/gh/e-xisto/base-css-framework/dist/js/base.js"></script>
+</body>
+
+</html>
+```
+
+### Usar NPM
+
+
+### Descargar código fuente desde Github
+
+Si necesitas personalizar el framework, conocer cómo está desarrollado o realizar una aportación solo tienes que acceder al repositorio en Github.
+
+[https://github.com/e-xisto/base-css-framework](https://github.com/e-xisto/base-css-framework)
+
+
+
+{% endmarkdown %}
+
 {% endblock %}
