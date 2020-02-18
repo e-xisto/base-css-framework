@@ -399,49 +399,52 @@
 </ul>				</div>
 				<div class="content">
 					<div class="content-container">
-<div class="container">
-	<h1>Texto ellipsis</h1>
-	<div class="row" id="cols">
-		<div class="col-md-3">
-			<p class="ellipsis" data-ellipsis-height="70">Anim amet ullamco cillum minim proident esse. Reprehenderit commodo ut eu non fugiat consectetur mollit
-				excepteur in id proident est dolor elit. Qui laborum veniam nostrud nisi dolore consectetur in reprehenderit
-				nostrud sit elit ad laboris pariatur. Sunt dolore voluptate ut reprehenderit. Tempor laborum minim aliqua
-				minim ad consequat exercitation pariatur. Aliquip nostrud ad veniam officia. Magna ad ullamco aliquip amet
-				ad sunt dolore nulla <span>mollit sunt proident id</span> voluptate.</p>
-		</div>
-		<div class="col-md-3">
-			<p class="ellipsis" data-ellipsis-height="150" data-ellipsis="10">Anim amet ullamco cillum minim proident esse. Reprehenderit commodo ut eu non fugiat consectetur mollit
-				excepteur in id proident est dolor elit. Qui laborum veniam nostrud nisi dolore consectetur in reprehenderit
-				nostrud sit elit ad laboris pariatur. Sunt dolore voluptate ut reprehenderit. Tempor laborum minim aliqua
-				minim ad consequat exercitation pariatur. Aliquip nostrud ad veniam officia. Magna ad ullamco aliquip amet
-				ad sunt dolore nulla <span>mollit sunt proident id</span> voluptate.</p>
-		</div>
-		<div class="col-md-3">
-			<p class="ellipsis" data-ellipsis="4">Anim amet ullamco cillum minim proident esse. Reprehenderit commodo ut eu non fugiat consectetur mollit
-				excepteur in id proident est dolor elit. Qui laborum veniam nostrud nisi dolore consectetur in reprehenderit
-				nostrud sit elit ad laboris </p>
-		</div>
-		<div class="col-md-3">
-			<p class="ellipsis" data-ellipsis="2">Anim amet ullamco cillum minim proident esse. Reprehenderit commodo ut eu non fugiat consectetur mollit
-				excepteur in id proident est dolor elit. Qui laborum veniam nostrud nisi dolore consectetur in reprehenderit
-				nostrud sit elit ad laboris </p>
-		</div>
-	</div>
-	<button type="button" onclick="addBlock()" class="btn">Añadir bloque</button>
-</div>
+
+<h1 id="introducción">Introducción</h1>
+<p>Base CSS es un framework Open Source para el desarrollo y prototipado de aplicaciones web.</p>
+<p>Nuestro objetivo es crear un sistema que nos permita construir interfaces y experiencias de usuario coherentes de forma rápida y sencilla, pero con la suficiente flexibilidad para soportar el amplio espectro de tipos de sitios web que desarrollamos.</p>
+<p>Base CSS está construido con un enfoque orientado a sistematizar y normalizar, que nos ayude a agilizar los procesos de diseño y maquetación de nuestras interfaces, al mismo tiempo que aseguramos que nuestros estilos son consistentes entre sí independientemente del proyecto donde se aplican.</p>
+<h3 id="herencia-de-otros-frameworks">Herencia de otros frameworks</h3>
+<p>Nos encanta experimentar y utilizar nuevos frameworks CSS. Hemos probado muchos:  <a href="https://getbootstrap.com" target="_blank">Bootstrap</a>,  <a href="https://get.foundation" target="_blank">Foundation</a>, <a href="https://bulma.io" target="_blank">Bulma</a>, <a href="https://getuikit.com" target="_blank">UIKit</a>, <a href="https://semantic-ui.com" target="_blank">Semantic UI</a>, <a href="https://tailwindcss.com" target="_blank">Tailwind CSS</a>, <a href="https://minicss.org" target="_blank">MiniCSS</a> y una larguísima lista de frameworks experimentales.</p>
+<p>Cada uno de estos frameworks tienen aspectos que nos encantan y otros que simplemente detestamos.</p>
+<p>Durante años hemos utilizamos Bootstrap como nuestro framework de cabecera. Es el que mejor se adaptó a nuestra forma de trabajar y su Grid a 12 columnas nos encandiló desde el principio. Llegamos a organizar todo nuestro flujo de trabajo de maquetación de interfaces para aplicar de forma sistemática este popular framework en todos nuestros proyectos.</p>
+<p>Al final, tras una larga experiencia, nos dimos cuenta de dos inconvenientes que nos obligaron a volver a cambiar nuestra forma de hacer las cosas.</p>
+<p>Por un lado, comprobamos que empleábamos más tiempo en reescribir los estilos de Bootstrap para adaptarlos a la guía de estilos de cada proyecto que si lo hubiéramos escrito todo desde cero, si usar el framework.</p>
+<p>Por otra parte, al lanzar la versión 4 de Bootstrap, descubrimos que se habían modificado aspectos esenciales del Grid y eliminado algunas clases de ayuda que teníamos ya adheridas a nuestro ADN. Esto nos provocó mucha incomodidad y una gran sensación de dependencia.</p>
+<p>En definitiva, decidimos dejar a un lado Bootstrap y apostar por montar nuestro propio framework, manteniendo lo que nos gustaba de Bootstrap y añadiendo nuevos componentes construidos desde nuestra propia experiencia.</p>
+<p>Por este motivo podrás encontrar multitud de similitudes de este framework con los que hemos citado anteriormente. Podríamos decir que este framework surge de un proceso de mezcla o mestizaje entre diferentes herramientas, siempre basado en la experiencia y con el único propósito de encontrar la solución que mejor se adapta a nuestras propias necesidades.</p>
+<h3 id="reusable-y-flexible">Reusable y flexible</h3>
+<p>Los estilos y elementos que forman el framework pueden ser mezclados y combinados para lograr muchos diseños diferentes. Simplemente reutilizando y organizando las piezas que ya hemos predefinido.</p>
+<p>Estos estilos se organizan en las siguientes categorías:</p>
+<ul>
+<li><strong>Globales:</strong> Aquellos estilos comunes y que afectan al resto de estilos del framework definiendo su aspecto y grado inicial de personalización. Estamos hablando de tipografías, colores y normalizado o reset inicial.</li>
+<li><strong>Grid:</strong> Predefinen el sistema de layout o rejilla que vamos a utilizar para estructurar nuestro contenido. Incluye elementos contenedor, filas, columnas y las clases necesarias para generar su comportamiento responsive.</li>
+<li><strong>Elementos:</strong> Definen el estilo de los contenidos: Encabezados, textos, botones, tablas, iconos y otros elementos HTML básicos como enlaces, imágenes, listas o citas.</li>
+<li><strong>Componentes:</strong> Los componentes son una abstracción de diferentes patrones de diseño y uso muy frecuentes. Son pequeñas piezas que encapsulan estilo + layout + comportamiento y que podemos aplicar a nuestros desarrollos de forma rápida sin necesidad de incluir programación o código adicional. Entre los componentes podemos encontrar ventanas modales, menús offcanvas, sliders, tooltips, dropdowns...</li>
+<li><strong>Formularios:</strong> Elementos utilizados exclusivamente para la creación de formularios: inputs, selects, options, textareas... y utilidades adicionales para definir el estilo de la validación de formularios.</li>
+<li><strong>Utilidades:</strong> Conjunto de clases que ayudan a resolver de forma muy concreta aspectos relacionados con bordes, espaciado, posición, tamaños, visibilidad, texto... </li>
+</ul>
+<p>La flexibilidad del framework tiene que ver con su capacidad para poder ser personalizado.</p>
+<p>Todos los elementos y componentes que lo forman pueden ser modificados en estilo simplemente modificando una colección de variables. Añadiéndose así la opción de modificar radicalmente su aspecto actuando sobre tipografías, colores, espaciado y tamaños.</p>
+<p>El objetivo es poder crear interfaces y diseños muy diferentes, a la medida de cada proyecto, únicamente combinando unos pocos componentes de forma adecuada y personalizando sus variables o estilos más básicos.</p>
+<h3 id="mejora-continua">Mejora continua</h3>
+<p>Aunque llevamos varios años aplicando los principales elementos y componentes de este framework a nuestros proyectos. No ha sido hasta enero de 2020 cuando hemos decidido estructurar mejor la herramienta, documentarla, versionarla y compartirla haciéndola pública.</p>
+<p>Este framework se encuentra en proceso de mejora continua, en constante actualización y revisión. Garantizando así que se adapta a nuestras necesidades presentes y futuras.</p>
+<p>Si crees que puedes ayudar a mejorarlo te invitamos a que nos envíes tu contribución.</p>
+<!-- TODO: Enlace a contribución -->
 
 
-<script>
 
-	function addBlock() {
-		document.getElementById('cols').innerHTML += `<div class="col-md-3"><p class="ellipsis" data-ellipsis-height="70">Anim amet ullamco cillum minim proident esse. Reprehenderit commodo ut eu non fugiat consectetur mollit
-				excepteur in id proident est dolor elit. Qui laborum veniam nostrud nisi dolore consectetur in reprehenderit
-				nostrud sit elit ad laboris pariatur. Sunt dolore voluptate ut reprehenderit. Tempor laborum minim aliqua
-				minim ad consequat exercitation pariatur. Aliquip nostrud ad veniam officia. Magna ad ullamco aliquip amet
-				ad sunt dolore nulla <span>mollit sunt proident id</span> voluptate.</p></div>`;
-	}
 
-</script>
+
+
+
+
+
+
+
+
+
 
 						</div>			
 					</div>
