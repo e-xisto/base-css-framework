@@ -1,5 +1,5 @@
 {
-	"name": "base-css-framework",
+	"name": "@e-xisto/base-css-framework",
 	"version": "0.1.1",
 	"description": "Base CSS Framework & Styleguide",
 	"scripts": {
