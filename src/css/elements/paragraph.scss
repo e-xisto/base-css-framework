@@ -79,14 +79,15 @@ pre, code, samp, var, kbd {
 }
 
 code {
-	display: block;
-	background: map-get($grayscale, light);
+	background: map-get($grayscale, bright);
 	color: var(--text-color);
-	padding: 15px;
+	padding: 2px 5px;
+	border-radius: 4px;
 }
 
 pre {
     padding: 15px;
+	border-radius: 4px;
 }
 
 pre,

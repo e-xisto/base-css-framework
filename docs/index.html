@@ -162,6 +162,23 @@
 			.menu-aside { display: none; }
 		}
 
+	.demo {
+		border: 1px solid #F6F8FA;
+		padding: 10px;
+	}
+
+	.demo .row {
+		background: #F6F8FA;
+	}
+
+	.demo [class^='col'] div {
+		padding: 15px;
+		border: 1px dashed var(--primary-br);
+		margin-top: 2px;
+		margin-bottom: 2px;
+		color: var(--midtone);
+	}
+
 	.color-sample {
 		border-radius: 3px;
 		margin-bottom: 30px;
@@ -189,8 +206,8 @@
 
 	.code-toolbar button {
 		color: #ccc !important;
-		background: #eee !important;
-		border: 1px solid #eee !important;	
+		background: none !important;
+		border: 1px #ccc solid !important;	
 		padding: 5px !important;
 		margin-right: 10px;
 		margin-top: 10px;
@@ -199,16 +216,19 @@
 	}
 
 		.code-toolbar button:hover {
-			color: #aaa !important;
+			color: white !important;
+			background: var(--primary) !important;
+			border-color: var(--primary) !important;	
 		}
 
 		pre {
-			background: #FAFBFC !important;
+			background: #F6F8FA !important;
 		}
 
 		code {
 			font-size: 14px !important;
 			line-height: 1.5 !important;
+			background: #F6F8FA;
 		}
 
 </style>		

@@ -162,6 +162,23 @@
 			.menu-aside { display: none; }
 		}
 
+	.demo {
+		border: 1px solid #F6F8FA;
+		padding: 10px;
+	}
+
+	.demo .row {
+		background: #F6F8FA;
+	}
+
+	.demo [class^='col'] div {
+		padding: 15px;
+		border: 1px dashed var(--primary-br);
+		margin-top: 2px;
+		margin-bottom: 2px;
+		color: var(--midtone);
+	}
+
 	.color-sample {
 		border-radius: 3px;
 		margin-bottom: 30px;
@@ -189,8 +206,8 @@
 
 	.code-toolbar button {
 		color: #ccc !important;
-		background: #eee !important;
-		border: 1px solid #eee !important;	
+		background: none !important;
+		border: 1px #ccc solid !important;	
 		padding: 5px !important;
 		margin-right: 10px;
 		margin-top: 10px;
@@ -199,16 +216,19 @@
 	}
 
 		.code-toolbar button:hover {
-			color: #aaa !important;
+			color: white !important;
+			background: var(--primary) !important;
+			border-color: var(--primary) !important;	
 		}
 
 		pre {
-			background: #FAFBFC !important;
+			background: #F6F8FA !important;
 		}
 
 		code {
 			font-size: 14px !important;
 			line-height: 1.5 !important;
+			background: #F6F8FA;
 		}
 
 </style>		
@@ -400,23 +420,34 @@
 				<div class="content">
 					<div class="content-container">
 
-<h1>Grid</h1>
-
-<div class="ul">
-	<li>Conteiner: Tamaños por breakpoint y fluid</li>
-	<li>Rows: alineación horizontal y vertical, reverse, no-wrap y nogutter</li>
-	<li>Cols: tamaño auto, tamaño por columnas, alineación vertical, offset, order, incluir un row, gutter para xs diferente</li>
-	<li>Veriables</li>
-</div>
-
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-xs-3 bg-secondary"><span class="block bg-primary text-white">Column 1</span></div>
-		<div class="col-xs-3 bg-secondary"><span class="block bg-primary text-white">Column 2</span></div>
-		<div class="col-xs-3 bg-secondary"><span class="block bg-primary text-white">Column 3</span></div>
-		<div class="col-xs-3 bg-secondary"><span class="block bg-primary text-white">Column 4</span></div>
-	</div>
-</div>
+<h1 id="grid">Grid</h1>
+<h3 id="contenedores-container">Contenedores (.container)</h3>
+<ul>
+<li>tabla tamaños</li>
+<li>Container fluid</li>
+<li>Ver opción de meter clase nuevas BS 4 container-md</li>
+<li>No anidar dos contenedores</li>
+<li>Variables breakpoints (mixins)</li>
+<li>Variables modificar contenedor</li>
+<li>Ejemplos</li>
+</ul>
+<h3 id="filas-row">Filas (.row)</h3>
+<ul>
+<li>Alineación vertical</li>
+<li>Distribución horizontal</li>
+<li>no-gutter</li>
+<li>reverse</li>
+<li>no-wrap</li>
+<li>Anidamiento de filas</li>
+</ul>
+<h3 id="columnas-col">Columnas (.col)</h3>
+<ul>
+<li>Tamaños</li>
+<li>responsive</li>
+<li>Alineamiento vertical</li>
+<li>Offset</li>
+<li>Order</li>
+</ul>
 
 						</div>			
 					</div>

@@ -3,4 +3,134 @@
 
 {% block content %}
 
+{% markdown %}
+
+# Contenidos
+
+Base CSS incluye, dentro de su estructura en carpetas, los archivos finales ya precompilados listos para su uso y distribución y el código fuente.
+
+Los contenidos se organizan en carpetas de la siguiente forma:
+
+```AsciiDoc
+base-css/
+├── dist/     # Archivos finales para distribución
+│   ├── css/
+│   │   └── base.css
+│   └── js/
+│       └── base.js
+├── docs/     # Documentación
+│   ├── css/
+│   ├── images/
+│   ├── js/
+│   ├── index.html
+│   └── ...
+├── src/	  # Código fuente
+│   ├── css/
+│   │   ├── assets/          # Assets utilizados en la guía de estilos
+│   │   ├── components/      # Componentes (offcanvas, collapse, tabs, navbar...)
+│   │   ├── elements/        # Elementos de contenido (heads, paragraphs, buttons...)
+│   │   ├── forms/           # Elementos para creación de formularios
+│   │   ├── global/          # Estilos comunes (color, fonts y reset)
+│   │   ├── grid/            # Componente rejilla a 12 columnas
+│   │   ├── mixins/          # Mixins y funciones de ayuda
+│   │   ├── theme/           # Variables de configuración del tema
+│   │   ├── utilities/       # Conjunto de utilidades (spacing, visible, text, position...)
+│   │   └── base.scss
+│   ├── docs/
+│   │   ├── images/          # Imágenes, recursos o assets
+│   │   ├── layouts/         # Layout y estilos personalizados
+│   │   ├── partials/        # Elementos comunes a del layout
+│   │   ├── views/           # Plantillas contenido de documentación
+│   │   ├── menu.js          # Definición de menús de navegación
+│   │   ├── template.js      # Carga plantillas documentación
+└── └── js/
+        ├── components/      # Código javascript para componentes
+        ├── types/           # Tipos para typescript
+        └── base.ts
+```
+
+### Archivos precompilados
+
+El framework proporciona una versión del CSS y Javascript precompilada y minificada lista para su uso directo en tu proyecto.
+
+Dentro de la carpeta `/dist` se encuentran los archivos `css/base.css` y `js/base.js`.
+
+Para instalar estos archivos en tu proyecto sigue las [instrucciones de instalación](install.html).
+
+Algunos de los componentes utilizan código y librerías externas al framework que en deberán ser añadidas opcionalmente a tu proyecto.
+
+### Código fuente
+
+#### CSS
+
+Todos los documentos CSS del framework se organizan en diferentes carpetas según su tipo dentro de la carpeta `/css`.
+
+El archivo `base.scss` es el encargado de importar todas las dependencias CSS del framework y está configurado como punto de entrada en la herramienta de precompilado (webpack).
+
+A su vez, cada carpeta contine un archivo `_all.scss` donde se declaran todas las importaciones de los elementos o componenetes que contiene.
+
+La carpeta `/theme` contiene únicamente un archivo de variables donde se puede modificar el aspecto de elementos y componentes actuando sobre tipografías, colores, espaciado y tamaños. Dentro de la carpeta `/theme` se deben incluir los documentos CSS que redefinan o sobreescriben los componentes originales. 
+
+De esta forma, el código fuente del framework siempre permanecerán sin cambios y solo los documentos dentro de `/theme` serán los que se modifiquen según las necesidades de personalización de nuestro proyecto.
+
+En la carpeta `/assets` almacenamos los recursos y complementos que necesita nuestro framework. Por defecto únicamente se incluye una tipografía personalizada con una colección de iconos.
+
+
+#### Javascript
+
+La programación necesaria para cada componenete se encuentra en la carpeta `/js`.
+
+En la carpeta `/components` se organiza el código de cada componente por archivos. Cada archivo corresponde con un componente del framework.
+
+Se ha utilizado `typescript` para la programación de los componentes. Para su transpilado se utiliza como punto de entrada el archivo `base.ts`.
+
+Dentro del archivo `base.ts` se realiza la importación e inicialización de cada componente.
+
+La carpeta `/types` es necesaria para la correcta definición de tipos en `typescript`.
+
+
+#### Documentación
+
+La carpeta `/docs` contiene el código fuente necesario para la generación de esta documentación.
+
+Dentro de `/views` se almacenan las diferentes plantillas que generan los documentos `html` de la documentación.
+
+El archivo `menu.js` exporta una variable donde se definen las opciones de menú y sus enlaces.
+
+Con `templates.js` se automatiza la lectura y renderizado de todas las plantillas incluidas en `/views`. 
+Básicamente lee todos los archivos que contiene la carpeta y definie un archivo de configuración que importa el plugin `nunjucks-webpack-plugin` para renderizar las plantillas.
+
+
+### Instrucciones comandos desarrollo
+
+Si descargas el código fuente del framework dispondrás de dos comandos para trabajar con él.
+
+##### Comando de desarrollo
+
+```shell
+npm run dev
+```
+
+Ejecutando este comando en la terminal se ejecuta el entorno de desarrollo.
+
+Este entorno abrirá un navegador con la vista de la documentación que se actualizará con cualquier modificación realizada sobre el código fuente.
+
+Para realizar pruebas y test existe un archivo `/src/docs/views/sandbox.njk` donde únicamente se carga el CSS y JS del framework independientemente.
+
+Este documento es accesible en [localhost:3000/sandbox.html](sandbox.html)
+
+
+##### Comando de build
+
+```shell
+npm run build
+```
+
+Con este comando se genera toda la documentación y los archivos precompilados para su distribución.
+
+La ejecución de este comando es siempre necesaria antes de la generación de una nueva versión del framework.
+
+
+{% endmarkdown %}
+
 {% endblock %}
