@@ -16,6 +16,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Renderizado de markdown en documentación.
 - Configurar Google Chrome como navegador por defecto en Browsersync.
 - Carga menú de contenidos en documentación.
+- Documentación introducción, instalación, contenidos y layout.
+- Se añade plantilla sandbox.html para realizar test y pruebas.
 
 ### Changed
 - Revisión función inicialización Slider y ejemplos.
@@ -24,6 +26,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Optimización scripts package.json eliminando webpack-dev-server y copia de archivos.
 - Se optimiza la carga de plantillas nunjucks y contexto de variables.
 - Estilos plantilla de documentación.
+- Comportamiento responsive de heading y paragraph.
+- Modificada la tipografía base por "Nunito Sans".
+- Revisada las proporciones en la utilidad spacing.
+
 
 ### Removed
 - Eliminar UglifyJS-webpack-plugin.

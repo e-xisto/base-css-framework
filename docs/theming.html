@@ -419,46 +419,17 @@
 </ul>				</div>
 				<div class="content">
 					<div class="content-container">
-<div class="container mt-xxl">
-	<div class="row center">
-		<div class="col-md-6">
-			<div id="parent">
-				<a href="" class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento"><strong>inner tag</strong> Collapse 1</a>
 
-				<div id="id-elemento" data-parent="parent" class="collapse mb-md show">
-					Elemento 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe molestias aliquam. Reprehenderit nulla veniam magnam delectus?
-					<div class="row">
-						<div class="col-md-6">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, tempore quibusdam! Facilis doloribus tenetur quod possimus sed. Illo eum impedit, delectus odio, mollitia eaque vel illum aliquid, deserunt placeat laborum!
-						</div>
-						<div class="col-md-6">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, tempore quibusdam! Facilis doloribus tenetur quod possimus sed. Illo eum impedit, delectus odio, mollitia eaque vel illum aliquid, deserunt placeat laborum!
-						</div>
-					</div>
-				</div>
+<h1 id="theming">Theming</h1>
+<p>Por ejemplo, si queremos redefinir el componente <code>tabs.scss</code> lo primero que haremos será hacer una copia del componente a la carpeta <code>/theme</code>, 
+a continuación comentaremos la línea donde se realiza la importación de este componenete en <code>/components/_all.scss</code> y añadiremos un comando <code>@import &#39;./theme/tabs&#39;;</code> dentro del archivo <code>base.scss</code>.</p>
+<p>TODO:</p>
+<ul>
+<li>Instrucciones para cambiar variables</li>
+<li>Organización de variables (listado por bloques)</li>
+<li>Instrucciones para sobreescribir compentes o elementos dentro de la carpeta theme</li>
+</ul>
 
-				<a href="" class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento2">Collapse 2</a>
-
-				<div id="id-elemento2" data-parent="parent"  class="collapse mb-md">
-					Elemento 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe molestias aliquam. Reprehenderit nulla veniam magnam delectus?
-				</div>
-
-				<a href="" class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento3">Collapse 3</a>
-
-				<div id="id-elemento3" data-parent="parent" class="collapse mb-md">
-					Elemento 3: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe molestias aliquam. Reprehenderit nulla veniam magnam delectus?
-				</div>
-
-				<a href="" class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento4">Collapse independiente</a>
-
-				<div id="id-elemento4" class="collapse mb-md">
-					Independiente: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe molestias aliquam. Reprehenderit nulla veniam magnam delectus?
-				</div>
-			</div>
-
-		</div>
-	</div>
-</div>
 						</div>			
 					</div>
 				</div>

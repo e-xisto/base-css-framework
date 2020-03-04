@@ -419,46 +419,83 @@
 </ul>				</div>
 				<div class="content">
 					<div class="content-container">
-<div class="container mt-xxl">
-	<div class="row center">
-		<div class="col-md-6">
-			<div id="parent">
-				<a href="" class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento"><strong>inner tag</strong> Collapse 1</a>
 
-				<div id="id-elemento" data-parent="parent" class="collapse mb-md show">
-					Elemento 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe molestias aliquam. Reprehenderit nulla veniam magnam delectus?
-					<div class="row">
-						<div class="col-md-6">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, tempore quibusdam! Facilis doloribus tenetur quod possimus sed. Illo eum impedit, delectus odio, mollitia eaque vel illum aliquid, deserunt placeat laborum!
-						</div>
-						<div class="col-md-6">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, tempore quibusdam! Facilis doloribus tenetur quod possimus sed. Illo eum impedit, delectus odio, mollitia eaque vel illum aliquid, deserunt placeat laborum!
-						</div>
-					</div>
-				</div>
+<h1 id="contenidos">Contenidos</h1>
+<p>Base CSS incluye, dentro de su estructura en carpetas, los archivos finales ya precompilados listos para su uso y distribución y el código fuente.</p>
+<p>Los contenidos se organizan en carpetas de la siguiente forma:</p>
+<pre><code class="language-AsciiDoc">base-css/
+├── dist/     # Archivos finales para distribución
+│   ├── css/
+│   │   └── base.css
+│   └── js/
+│       └── base.js
+├── docs/     # Documentación
+│   ├── css/
+│   ├── images/
+│   ├── js/
+│   ├── index.html
+│   └── ...
+├── src/      # Código fuente
+│   ├── css/
+│   │   ├── assets/          # Assets utilizados en la guía de estilos
+│   │   ├── components/      # Componentes (offcanvas, collapse, tabs, navbar...)
+│   │   ├── elements/        # Elementos de contenido (heads, paragraphs, buttons...)
+│   │   ├── forms/           # Elementos para creación de formularios
+│   │   ├── global/          # Estilos comunes (color, fonts y reset)
+│   │   ├── grid/            # Componente rejilla a 12 columnas
+│   │   ├── mixins/          # Mixins y funciones de ayuda
+│   │   ├── theme/           # Variables de configuración del tema
+│   │   ├── utilities/       # Conjunto de utilidades (spacing, visible, text, position...)
+│   │   └── base.scss
+│   ├── docs/
+│   │   ├── images/          # Imágenes, recursos o assets
+│   │   ├── layouts/         # Layout y estilos personalizados
+│   │   ├── partials/        # Elementos comunes a del layout
+│   │   ├── views/           # Plantillas contenido de documentación
+│   │   ├── menu.js          # Definición de menús de navegación
+│   │   ├── template.js      # Carga plantillas documentación
+└── └── js/
+      ├── components/      # Código javascript para componentes
+      ├── types/           # Tipos para typescript
+      └── base.ts</code></pre>
+<h3 id="archivos-precompilados">Archivos precompilados</h3>
+<p>El framework proporciona una versión del CSS y Javascript precompilada y minificada lista para su uso directo en tu proyecto.</p>
+<p>Dentro de la carpeta <code>/dist</code> se encuentran los archivos <code>css/base.css</code> y <code>js/base.js</code>.</p>
+<p>Para instalar estos archivos en tu proyecto sigue las <a href="install.html">instrucciones de instalación</a>.</p>
+<p>Algunos de los componentes utilizan código y librerías externas al framework que en deberán ser añadidas opcionalmente a tu proyecto.</p>
+<h3 id="código-fuente">Código fuente</h3>
+<h4 id="css">CSS</h4>
+<p>Todos los documentos CSS del framework se organizan en diferentes carpetas según su tipo dentro de la carpeta <code>/css</code>.</p>
+<p>El archivo <code>base.scss</code> es el encargado de importar todas las dependencias CSS del framework y está configurado como punto de entrada en la herramienta de precompilado (webpack).</p>
+<p>A su vez, cada carpeta contine un archivo <code>_all.scss</code> donde se declaran todas las importaciones de los elementos o componenetes que contiene.</p>
+<p>La carpeta <code>/theme</code> contiene únicamente un archivo de variables donde se puede modificar el aspecto de elementos y componentes actuando sobre tipografías, colores, espaciado y tamaños. Dentro de la carpeta <code>/theme</code> se deben incluir los documentos CSS que redefinan o sobreescriben los componentes originales. </p>
+<p>De esta forma, el código fuente del framework siempre permanecerán sin cambios y solo los documentos dentro de <code>/theme</code> serán los que se modifiquen según las necesidades de personalización de nuestro proyecto.</p>
+<p>En la carpeta <code>/assets</code> almacenamos los recursos y complementos que necesita nuestro framework. Por defecto únicamente se incluye una tipografía personalizada con una colección de iconos.</p>
+<h4 id="javascript">Javascript</h4>
+<p>La programación necesaria para cada componenete se encuentra en la carpeta <code>/js</code>.</p>
+<p>En la carpeta <code>/components</code> se organiza el código de cada componente por archivos. Cada archivo corresponde con un componente del framework.</p>
+<p>Se ha utilizado <code>typescript</code> para la programación de los componentes. Para su transpilado se utiliza como punto de entrada el archivo <code>base.ts</code>.</p>
+<p>Dentro del archivo <code>base.ts</code> se realiza la importación e inicialización de cada componente.</p>
+<p>La carpeta <code>/types</code> es necesaria para la correcta definición de tipos en <code>typescript</code>.</p>
+<h4 id="documentación">Documentación</h4>
+<p>La carpeta <code>/docs</code> contiene el código fuente necesario para la generación de esta documentación.</p>
+<p>Dentro de <code>/views</code> se almacenan las diferentes plantillas que generan los documentos <code>html</code> de la documentación.</p>
+<p>El archivo <code>menu.js</code> exporta una variable donde se definen las opciones de menú y sus enlaces.</p>
+<p>Con <code>templates.js</code> se automatiza la lectura y renderizado de todas las plantillas incluidas en <code>/views</code>. 
+Básicamente lee todos los archivos que contiene la carpeta y definie un archivo de configuración que importa el plugin <code>nunjucks-webpack-plugin</code> para renderizar las plantillas.</p>
+<h3 id="instrucciones-comandos-desarrollo">Instrucciones comandos desarrollo</h3>
+<p>Si descargas el código fuente del framework dispondrás de dos comandos para trabajar con él.</p>
+<h5 id="comando-de-desarrollo">Comando de desarrollo</h5>
+<pre><code class="language-shell">npm run dev</code></pre>
+<p>Ejecutando este comando en la terminal se ejecuta el entorno de desarrollo.</p>
+<p>Este entorno abrirá un navegador con la vista de la documentación que se actualizará con cualquier modificación realizada sobre el código fuente.</p>
+<p>Para realizar pruebas y test existe un archivo <code>/src/docs/views/sandbox.njk</code> donde únicamente se carga el CSS y JS del framework independientemente.</p>
+<p>Este documento es accesible en <a href="sandbox.html">localhost:3000/sandbox.html</a></p>
+<h5 id="comando-de-build">Comando de build</h5>
+<pre><code class="language-shell">npm run build</code></pre>
+<p>Con este comando se genera toda la documentación y los archivos precompilados para su distribución.</p>
+<p>La ejecución de este comando es siempre necesaria antes de la generación de una nueva versión del framework.</p>
 
-				<a href="" class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento2">Collapse 2</a>
-
-				<div id="id-elemento2" data-parent="parent"  class="collapse mb-md">
-					Elemento 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe molestias aliquam. Reprehenderit nulla veniam magnam delectus?
-				</div>
-
-				<a href="" class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento3">Collapse 3</a>
-
-				<div id="id-elemento3" data-parent="parent" class="collapse mb-md">
-					Elemento 3: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe molestias aliquam. Reprehenderit nulla veniam magnam delectus?
-				</div>
-
-				<a href="" class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento4">Collapse independiente</a>
-
-				<div id="id-elemento4" class="collapse mb-md">
-					Independiente: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe molestias aliquam. Reprehenderit nulla veniam magnam delectus?
-				</div>
-			</div>
-
-		</div>
-	</div>
-</div>
 						</div>			
 					</div>
 				</div>

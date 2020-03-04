@@ -419,46 +419,79 @@
 </ul>				</div>
 				<div class="content">
 					<div class="content-container">
-<div class="container mt-xxl">
-	<div class="row center">
-		<div class="col-md-6">
-			<div id="parent">
-				<a href="" class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento"><strong>inner tag</strong> Collapse 1</a>
 
-				<div id="id-elemento" data-parent="parent" class="collapse mb-md show">
-					Elemento 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe molestias aliquam. Reprehenderit nulla veniam magnam delectus?
-					<div class="row">
-						<div class="col-md-6">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, tempore quibusdam! Facilis doloribus tenetur quod possimus sed. Illo eum impedit, delectus odio, mollitia eaque vel illum aliquid, deserunt placeat laborum!
-						</div>
-						<div class="col-md-6">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, tempore quibusdam! Facilis doloribus tenetur quod possimus sed. Illo eum impedit, delectus odio, mollitia eaque vel illum aliquid, deserunt placeat laborum!
-						</div>
-					</div>
-				</div>
-
-				<a href="" class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento2">Collapse 2</a>
-
-				<div id="id-elemento2" data-parent="parent"  class="collapse mb-md">
-					Elemento 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe molestias aliquam. Reprehenderit nulla veniam magnam delectus?
-				</div>
-
-				<a href="" class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento3">Collapse 3</a>
-
-				<div id="id-elemento3" data-parent="parent" class="collapse mb-md">
-					Elemento 3: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe molestias aliquam. Reprehenderit nulla veniam magnam delectus?
-				</div>
-
-				<a href="" class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento4">Collapse independiente</a>
-
-				<div id="id-elemento4" class="collapse mb-md">
-					Independiente: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe molestias aliquam. Reprehenderit nulla veniam magnam delectus?
-				</div>
-			</div>
-
-		</div>
-	</div>
+<h1 id="layout">Layout</h1>
+<p>Para estructurar nuestros diseños y maquetaciones utilizaremos diferentes componentes que nos ayudaran a generar el andamiaje sobre el que ubicaremos nuestros contenidos.</p>
+<p>En nuestro framework disponemos de elementos contenedores (<code>.conteiner</code>), filas (<code>.row</code>) y columnas (<code>.col</code>) que forma lo que denominamos el componente <code>grid</code> o rejilla.</p>
+<p>Con los elementos del <code>grid</code> podremos organizar nuestros bloques de contenido de forma horizontal dentro de una retícula de 12 columnas y decidir el comportamiento responsive utilizando una colección de clases auxiliares.</p>
+<p>Durante años hemos utilizado para desarrollar nuestros proyectos el modelo de rejilla incluido en Bootstrap (versión 3). Este modelo nos gusta y lo hemos heredado y actualizado incluyendo flexbox. Por este motivo, la mayoría de las clases utilizadas para definir nuestra rejilla son las mismas que utiliza Bootstrap. Pordríamos decir que nuestra rejilla es &quot;Bootstrap Friendly&quot;.</p>
+<h4 id="ejemplo-de-uso">Ejemplo de uso</h4>
+<div class="demo">
+<div class="container">
+<div class="row pt-xs">
+    <div class="col-6">
+        <div>.col-6</div>
+    </div>
+    <div class="col-6">
+        <div>.col-6</div>
+    </div>
 </div>
+<div class="row">
+    <div class="col-md-4">
+        <div>.col-md-4</div>
+    </div>
+    <div class="col-md-4">
+        <div>.col-md-4</div>
+    </div>
+    <div class="col-md-4">
+        <div>.col-md-4</div>
+    </div>
+</div>
+<div class="row pb-xs">
+    <div class="col-md-6 col-lg-3">
+        <div>.col-md-6 .col-lg-3</div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div>.col-md-6 .col-lg-3</div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div>.col-md-6 .col-lg-3</div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div>.col-md-6 .col-lg-3</div>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-6&quot;&gt;.col-6&lt;/div&gt;
+        &lt;div class=&quot;col-6&quot;&gt;.col-6&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-4&quot;&gt;.col-md-4&lt;/div&gt;
+        &lt;div class=&quot;col-md-4&quot;&gt;.col-md-4&lt;/div&gt;
+        &lt;div class=&quot;col-md-4&quot;&gt;.col-md-4&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-6 col-lg-3&quot;&gt;.col-md-6 .col-lg-3&lt;/div&gt;
+        &lt;div class=&quot;col-md-6 col-lg-3&quot;&gt;.col-md-6 .col-lg-3&lt;/div&gt;
+        &lt;div class=&quot;col-md-6 col-lg-3&quot;&gt;.col-md-6 .col-lg-3&lt;/div&gt;
+        &lt;div class=&quot;col-md-6 col-lg-3&quot;&gt;.col-md-6 .col-lg-3&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>Analizando el código del ejemplo podemos ver que existe una clase <code>.container</code> que sirve como contenedor del resto de clases del layout.</p>
+<p>Dentro de nuestro contenedor encontramos diferentes elementos <code>.row</code> que agrupan en filas las diferentes columnas nombradas con la clase <code>.col-*-*</code>.</p>
+<p>El tamaño de las columnas es variable pero la suma de los tamaños de todas las columnas que contiene una fila no puede superar 12. Si se supera este tamaño máximo las columnas excedentes se desplazarán a nueva fila.</p>
+<p>Las columnas pueden tener un tamaño fijo o modificar su tamaño dependiendo de la resolución. Por defecto, si no se especifica su tamaño, las columnas tendrán un tamaño 12 ocupando el ancho total de la fila.</p>
+<p>Si declaramos la columna con la clase <code>.col-6</code> esta tendrá el mismo tamaño en cualquier resolución de pantalla.</p>
+<p>Si declaramos la columna añadiendo un parámetro adicional podemos modificar su tamaño según la resolución de pantalla.</p>
+<p>Por ejemplo, en la segunda fila encontramos 3 columnas con la clase <code>.col-md-4</code>. Con esto conseguimos que cuando la pantalla tenga como mínimo un resolución <code>medium</code> las columnas tendrán un tamaño de 4. Para resoluciones menores el tamaño de las columnas será por defecto de 12.</p>
+<p>En la tercela fila asignamos dos comportamientos a las columnas. Para resolución <code>large</code> las columnas tendrán un tamaño de 3 y para resolución <code>medium</code> tendrán un tamaño de 6.</p>
+<p>Ajustando el ancho de la ventada del navegador se puede verificar este comportamiento.</p>
+<p>A continuación describiremos cada uno de los elementos de nuestro <code>Grid</code> y sus opciones.</p>
+
 						</div>			
 					</div>
 				</div>

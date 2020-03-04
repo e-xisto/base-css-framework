@@ -6,6 +6,7 @@ ul, ol {
 
 	li {
 		margin-bottom: $base-space-size;
+		line-height: $text-paragraph-line-height;
 	}
 
 	& ol,

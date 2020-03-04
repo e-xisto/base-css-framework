@@ -419,46 +419,47 @@
 </ul>				</div>
 				<div class="content">
 					<div class="content-container">
-<div class="container mt-xxl">
-	<div class="row center">
-		<div class="col-md-6">
-			<div id="parent">
-				<a href="" class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento"><strong>inner tag</strong> Collapse 1</a>
 
-				<div id="id-elemento" data-parent="parent" class="collapse mb-md show">
-					Elemento 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe molestias aliquam. Reprehenderit nulla veniam magnam delectus?
-					<div class="row">
-						<div class="col-md-6">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, tempore quibusdam! Facilis doloribus tenetur quod possimus sed. Illo eum impedit, delectus odio, mollitia eaque vel illum aliquid, deserunt placeat laborum!
-						</div>
-						<div class="col-md-6">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, tempore quibusdam! Facilis doloribus tenetur quod possimus sed. Illo eum impedit, delectus odio, mollitia eaque vel illum aliquid, deserunt placeat laborum!
-						</div>
-					</div>
-				</div>
+<h1 id="instalación">Instalación</h1>
+<p>Para comenzar a utilizar Base CSS en tu proyecto puedes optar por tres diferentes opciones: Cargar los archivos necesarios desde un CDN, utilizar el gestor de paquetes NPM o descargar directamente el código fuente desde Github. </p>
+<h3 id="carga-de-archivos-desde-cdn">Carga de archivos desde CDN</h3>
+<p>Copia y pega la hoja de estilo en el <head> antes de todos los demás estilos para cargar nuestro CSS.</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/e-xisto/base-css-framework/dist/css/base.css&quot;&gt;</code></pre>
+<p>Varios de nuestros componentes requieren del uso de Javascript para funcionar. Copia y pega la siguiente etiqueta <code>&lt;script&gt;</code> al final de todas tus páginas, justo antes de la etiqueta de cierre <code>&lt;body&gt;</code>.</p>
+<pre><code class="language-html">&lt;script src=&quot;https://cdn.jsdelivr.net/gh/e-xisto/base-css-framework/dist/js/base.js&quot;&gt;&lt;/script&gt;</code></pre>
+<h4 id="plantilla-básica-de-inicio">Plantilla básica de inicio</h4>
+<p>Así se vería un plantilla básica configurada con la carga de archivos necesarios para comenzar a utilizar Base CSS:</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html lang=&quot;es&quot;&gt;
 
-				<a href="" class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento2">Collapse 2</a>
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
 
-				<div id="id-elemento2" data-parent="parent"  class="collapse mb-md">
-					Elemento 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe molestias aliquam. Reprehenderit nulla veniam magnam delectus?
-				</div>
+  &lt;!-- Base CSS --&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/e-xisto/base-css-framework/dist/css/base.css&quot;&gt;
 
-				<a href="" class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento3">Collapse 3</a>
+  &lt;title&gt;Hola, mundo!&lt;/title&gt;
+&lt;/head&gt;
 
-				<div id="id-elemento3" data-parent="parent" class="collapse mb-md">
-					Elemento 3: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe molestias aliquam. Reprehenderit nulla veniam magnam delectus?
-				</div>
+&lt;body&gt;
+  &lt;h1&gt;Hola, mundo!&lt;/h1&gt;
 
-				<a href="" class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento4">Collapse independiente</a>
+  &lt;!-- Base JavaScript --&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/gh/e-xisto/base-css-framework/dist/js/base.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
 
-				<div id="id-elemento4" class="collapse mb-md">
-					Independiente: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe molestias aliquam. Reprehenderit nulla veniam magnam delectus?
-				</div>
-			</div>
+&lt;/html&gt;</code></pre>
+<h3 id="usar-npm">Usar NPM</h3>
+<p>Puedes instalar el <code>framework</code> como una dependencia <code>npm</code> en tu proyecto.</p>
+<p>Para ello tendrás que ejecutar en la terminal el comando:</p>
+<pre><code class="language-shell">npm i @e-xisto/base-css-framework</code></pre>
+<p>Para importar en tu proyecto los archivos de estilos CSS:</p>
+<pre><code class="language-sass">import &#39;~@e-xisto/base-css-framework/dist/css/base.css&#39;</code></pre>
+<h3 id="descargar-código-fuente-desde-github">Descargar código fuente desde Github</h3>
+<p>Si necesitas personalizar el framework, conocer cómo está desarrollado o realizar una aportación solo tienes que acceder al repositorio en Github.</p>
+<p><a href="https://github.com/e-xisto/base-css-framework">https://github.com/e-xisto/base-css-framework</a></p>
 
-		</div>
-	</div>
-</div>
 						</div>			
 					</div>
 				</div>
