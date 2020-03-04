@@ -7,6 +7,11 @@ p {
 	margin-top: $text-paragraph-margin-top;
 	margin-bottom: $text-paragraph-margin-bottom;
 	text-transform: $text-paragraph-text-transform;
+
+	@include breakpoint-down(sm) {
+		font-size: $text-paragraph-font-size-mobile;
+		line-height: $text-paragraph-line-height-mobile;		
+	}	
 }
 
 // Variantes de estilos de texto
