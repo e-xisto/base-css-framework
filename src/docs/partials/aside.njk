@@ -1,0 +1,16 @@
+<ul>
+	{% for item in menu %}
+	<li>
+		<a href="{{ item.link }}">{{ item.title }}</a>
+		{% if item.submenu %}
+		<ul>
+			{% for submenu in item.submenu %}
+			<li {% if condition %} class="active" {% endif %} >
+				<a href="{{ submenu.link }}">{{ submenu.title }}</a>
+			</li>	
+			{% endfor %}
+		</ul>
+		{% endif %}
+	</li>
+	{% endfor %}
+</ul>

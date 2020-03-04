@@ -1,0 +1,22 @@
+
+{% extends "../layouts/default.njk" %}
+
+{% block content %}
+
+{% markdown %}
+
+# Theming
+
+Por ejemplo, si queremos redefinir el componente `tabs.scss` lo primero que haremos será hacer una copia del componente a la carpeta `/theme`, 
+a continuación comentaremos la línea donde se realiza la importación de este componenete en `/components/_all.scss` y añadiremos un comando `@import './theme/tabs';` dentro del archivo `base.scss`.
+
+TODO:
+
+- Instrucciones para cambiar variables
+- Organización de variables (listado por bloques)
+- Instrucciones para sobreescribir compentes o elementos dentro de la carpeta theme
+
+
+{% endmarkdown %}
+
+{% endblock %}

@@ -1,17 +1,18 @@
 const fs = require('fs');
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-let templates = fs.readdirSync(__dirname + '/views/');
+const menu = require('./menu.js')
+const templates = fs.readdirSync(__dirname + '/views/');
 
-console.log('Loaded Templates...')
-console.log(templates)
+const context = { menu }
 
-const templatesHtmlPlugin = templates.map ( (template) => {
-	return new HtmlWebpackPlugin({
-		customData: { title: 'BASE CSS', lista: [ "guia.html", "sandbox.html", "..." ] },
-		filename: __dirname + `/../../docs/${template.replace("njk", "html")}`,
-		template: __dirname + `/views/${template}`
-	})
+const nunjucksTemplates = templates.map ( (template) => {
+	return {
+		from: __dirname + `/views/${template}`,
+		to: __dirname + `/../../docs/${template.replace("njk", "html")}`,
+		context: context,
+		// writeToFileEmit: true,
+		// callback: function(err, res) { console.log(res) }
+	}
 });
 
-module.exports = templatesHtmlPlugin;
+module.exports = nunjucksTemplates;

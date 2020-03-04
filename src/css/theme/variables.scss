@@ -85,13 +85,10 @@ $color-white: #FFFFFF;
 // $font-size-base: 16px;
 // $font-scale-factor: 1.33;
 
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900');
+$font-family-sans-serif: 'Nunito Sans', sans-serif;
+$font-family-serif: serif;
 
-$font-family-sans-serif: 'Lato', sans-serif;
-$font-family-serif: 'Merriweather', serif;
-
-$font-family-base: 'Lato', sans-serif;
+$font-family-base: $font-family-sans-serif;
 $font-size-base: 16px;
 
 // TODO: Eliminar esta variable
@@ -124,6 +121,8 @@ $text-header-color: $color-black;
 // Párrafos
 $text-paragraph-font-size: 16px;
 $text-paragraph-line-height: 24px;
+$text-paragraph-font-size-mobile: 48px;
+$text-paragraph-line-height-mobile: 50px;
 $text-paragraph-font-family: var(--font-family-sans-serif);
 $text-paragraph-color: var(--text-color);
 $text-paragraph-margin-top: 0px;
@@ -259,6 +258,7 @@ $button-border-color: var(--bright);
 
 $button-padding-x: $base-space-size * 2;
 $button-padding-y: 10px;
+// TODO: Resolvel sumando variables
 $button-height: 38px; // Suma font-size + padding-y + border-width
 
 $button-background-color: var(--bright);
@@ -666,6 +666,70 @@ $tabs-item-hover-border-color: darken($color-bright, 2%);
 $tabs-item-active-font-color: var(--dark);
 $tabs-item-active-font-weight: bold;
 
+
+// =========================================================
+//   NAVBAR
+// 
+// =========================================================
+
+$navbar-height: 65px;
+$navbar-border-radius: 4px;
+$navbar-padding-x: $base-space-size;
+$navbar-background-color: var(--bright);
+
+$navbar-item-font-color: var(--midtone);
+$navbar-item-font-size: 16px;
+$navbar-item-font-weight: bold;
+$navbar-item-text-decoration: none;
+$navbar-item-link-color: $navbar-item-font-color;
+$navbar-item-hover-link-color: var(--dark);
+$navbar-item-background-color: transparent;
+$navbar-item-hover-background-color: var(--light);
+$navbar-item-padding-x: 10px;
+
+$navbar-dropdown-menu-padding-y: 10px;
+$navbar-dropdown-menu-font-color: var(--white);
+$navbar-dropdown-menu-font-size: 16px;
+$navbar-dropdown-menu-font-weight: bold;
+$navbar-dropdown-menu-text-decoration: none;
+$navbar-dropdown-menu-background-color: var(--midtone);
+$navbar-dropdown-menu-hover-background-color: var(--dark);
+$navbar-dropdown-menu-item-padding-x: $navbar-item-padding-x * 2;
+$navbar-dropdown-menu-item-padding-y: $base-space-size / 2;
+
+$navbar-responsive-height: 45px;
+$navbar-responsive-background-color: $navbar-background-color;
+$navbar-responsive-menu-background-color: var(--light);
+$navbar-responsive-menu-padding-y: $base-space-size * 2;
+
+$navbar-responsive-item-font-color: var(--midtone);
+$navbar-responsive-item-font-size: 18px;
+$navbar-responsive-item-font-weight: bold;
+$navbar-responsive-item-text-decoration: none;
+$navbar-responsive-item-link-color: $navbar-item-font-color;
+$navbar-responsive-item-hover-link-color: var(--dark);
+$navbar-responsive-item-background-color: transparent;
+$navbar-responsive-item-hover-background-color: var(--gray);
+$navbar-responsive-item-padding-x: $base-space-size * 2;
+$navbar-responsive-item-padding-y: $base-space-size;
+
+$navbar-responsive-dropdown-menu-padding-y: $base-space-size;
+$navbar-responsive-dropdown-menu-font-color: var(--white);
+$navbar-responsive-dropdown-menu-font-size: 16px;
+$navbar-responsive-dropdown-menu-font-weight: bold;
+$navbar-responsive-dropdown-menu-text-decoration: none;
+$navbar-responsive-dropdown-menu-background-color: var(--midtone);
+$navbar-responsive-dropdown-menu-hover-background-color: var(--dark);
+$navbar-responsive-dropdown-menu-item-padding-x: $base-space-size * 2;
+$navbar-responsive-dropdown-menu-item-padding-y: $base-space-size;
+
+
+$navbar-burger-width: 25px;
+$navbar-burger-height: 45px;
+$navbar-burger-bar-height: 2px;
+$navbar-burger-bar-margin: 5px;
+$navbar-burger-bar-color: black;
+$navbar-burger-bar-border-radius: 10px;
 
 
 

@@ -8,7 +8,7 @@
 	margin-bottom: $text-display-margin-bottom;
 	text-transform: $text-display-text-transform;
 
-	@include breakpoint(xs) {
+	@include breakpoint-down(sm) {
 		font-size: $text-display-font-size-mobile;
 		line-height: $text-display-line-height-mobile;		
 	}		
@@ -23,7 +23,7 @@ h1, .h1 {
 	margin-bottom: $text-h1-margin-bottom;
 	text-transform: $text-h1-text-transform;	
 
-	@include breakpoint(xs) {
+	@include breakpoint-down(sm) {
 		font-size: $text-h1-font-size-mobile;
 		line-height: $text-h1-line-height-mobile;		
 	}
@@ -38,7 +38,7 @@ h2, .h2 {
 	margin-bottom: $text-h2-margin-bottom;
 	text-transform: $text-h2-text-transform;
 
-	@include breakpoint(xs) {
+	@include breakpoint-down(sm) {
 		font-size: $text-h2-font-size-mobile;
 		line-height: $text-h2-line-height-mobile;		
 	}	
@@ -53,7 +53,7 @@ h3, .h3 {
 	margin-bottom: $text-h3-margin-bottom;
 	text-transform: $text-h3-text-transform;
 
-	@include breakpoint(xs) {
+	@include breakpoint-down(sm) {
 		font-size: $text-h3-font-size-mobile;
 		line-height: $text-h3-line-height-mobile;		
 	}	

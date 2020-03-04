@@ -1,24 +1,40 @@
 
-{% extends "layouts/default.njk" %}
+{% extends "../layouts/default.njk" %}
 
 {% block content %}
 
-<h1>Grid</h1>
+{% markdown %}
 
-<div class="ul">
-	<li>Conteiner: Tamaños por breakpoint y fluid</li>
-	<li>Rows: alineación horizontal y vertical, reverse, no-wrap y nogutter</li>
-	<li>Cols: tamaño auto, tamaño por columnas, alineación vertical, offset, order, incluir un row, gutter para xs diferente</li>
-	<li>Veriables</li>
-</div>
+# Grid
 
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-xs-3 bg-secondary"><span class="block bg-primary text-white">Column 1</span></div>
-		<div class="col-xs-3 bg-secondary"><span class="block bg-primary text-white">Column 2</span></div>
-		<div class="col-xs-3 bg-secondary"><span class="block bg-primary text-white">Column 3</span></div>
-		<div class="col-xs-3 bg-secondary"><span class="block bg-primary text-white">Column 4</span></div>
-	</div>
-</div>
+### Contenedores (.container)
+
+- tabla tamaños
+- Container fluid
+- Ver opción de meter clase nuevas BS 4 container-md
+- No anidar dos contenedores
+- Variables breakpoints (mixins)
+- Variables modificar contenedor
+- Ejemplos
+
+### Filas (.row)
+
+- Alineación vertical
+- Distribución horizontal
+- no-gutter
+- reverse
+- no-wrap
+- Anidamiento de filas
+
+
+### Columnas (.col)
+
+- Tamaños
+- responsive
+- Alineamiento vertical
+- Offset
+- Order
+
+{% endmarkdown %}
 
 {% endblock %}

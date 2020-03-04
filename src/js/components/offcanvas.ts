@@ -40,10 +40,9 @@ function toggle(id: string | null, button: Element) {
 
 	offcanvas.classList.forEach((clase: string) => {
 
-		if (clase.startsWith('offcanvas-push-')) {
+		let wrap = <HTMLElement>document.getElementsByClassName('offcanvas-wrap')[0];
+		if (wrap && clase.startsWith('offcanvas-push-')) {
 
-			let wrap = <HTMLElement>document.getElementsByClassName('offcanvas-wrap')[0];
-			if (wrap) {
 				let transform = '';
 				if (shown) {
 					if (clase.endsWith('-right')) transform = `translateX(-${offcanvas.offsetWidth}px)`;
@@ -53,10 +52,11 @@ function toggle(id: string | null, button: Element) {
 				}
 				wrap.style.transform = transform;
 
-				wrap.classList.toggle(clase.replace('push', 'wrap'), shown);
-				backdrop(shown, id, offcanvas);
+
 				return;
-			}
+		} else if (wrap && clase.startsWith('offcanvas-slide-') && offcanvas.classList.contains('offcanvas-noclick')){
+			wrap.classList.toggle(clase.replace('slide', 'wrap'), shown);
+			backdrop(shown, id, offcanvas);
 		}
 	});
 }

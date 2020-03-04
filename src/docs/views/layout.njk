@@ -1,0 +1,99 @@
+
+{% extends "../layouts/default.njk" %}
+
+{% block content %}
+
+{% markdown %}
+
+# Layout
+
+Para estructurar nuestros diseños y maquetaciones utilizaremos diferentes componentes que nos ayudaran a generar el andamiaje sobre el que ubicaremos nuestros contenidos.
+
+En nuestro framework disponemos de elementos contenedores (`.conteiner`), filas (`.row`) y columnas (`.col`) que forma lo que denominamos el componente `grid` o rejilla.
+
+Con los elementos del `grid` podremos organizar nuestros bloques de contenido de forma horizontal dentro de una retícula de 12 columnas y decidir el comportamiento responsive utilizando una colección de clases auxiliares.
+
+Durante años hemos utilizado para desarrollar nuestros proyectos el modelo de rejilla incluido en Bootstrap (versión 3). Este modelo nos gusta y lo hemos heredado y actualizado incluyendo flexbox. Por este motivo, la mayoría de las clases utilizadas para definir nuestra rejilla son las mismas que utiliza Bootstrap. Pordríamos decir que nuestra rejilla es "Bootstrap Friendly".
+
+#### Ejemplo de uso
+
+<div class="demo">
+	<div class="container">
+		<div class="row pt-xs">
+			<div class="col-6">
+				<div>.col-6</div>
+			</div>
+			<div class="col-6">
+				<div>.col-6</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div>.col-md-4</div>
+			</div>
+			<div class="col-md-4">
+				<div>.col-md-4</div>
+			</div>
+			<div class="col-md-4">
+				<div>.col-md-4</div>
+			</div>
+		</div>
+		<div class="row pb-xs">
+			<div class="col-md-6 col-lg-3">
+				<div>.col-md-6 .col-lg-3</div>
+			</div>
+			<div class="col-md-6 col-lg-3">
+				<div>.col-md-6 .col-lg-3</div>
+			</div>
+			<div class="col-md-6 col-lg-3">
+				<div>.col-md-6 .col-lg-3</div>
+			</div>
+			<div class="col-md-6 col-lg-3">
+				<div>.col-md-6 .col-lg-3</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+```html
+		<div class="container">
+			<div class="row">
+				<div class="col-6">.col-6</div>
+				<div class="col-6">.col-6</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-4">.col-md-4</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-lg-3">.col-md-6 .col-lg-3</div>
+				<div class="col-md-6 col-lg-3">.col-md-6 .col-lg-3</div>
+				<div class="col-md-6 col-lg-3">.col-md-6 .col-lg-3</div>
+				<div class="col-md-6 col-lg-3">.col-md-6 .col-lg-3</div>
+			</div>
+		</div>
+```
+Analizando el código del ejemplo podemos ver que existe una clase `.container` que sirve como contenedor del resto de clases del layout.
+
+Dentro de nuestro contenedor encontramos diferentes elementos `.row` que agrupan en filas las diferentes columnas nombradas con la clase `.col-*-*`.
+
+El tamaño de las columnas es variable pero la suma de los tamaños de todas las columnas que contiene una fila no puede superar 12. Si se supera este tamaño máximo las columnas excedentes se desplazarán a nueva fila.
+
+Las columnas pueden tener un tamaño fijo o modificar su tamaño dependiendo de la resolución. Por defecto, si no se especifica su tamaño, las columnas tendrán un tamaño 12 ocupando el ancho total de la fila.
+
+Si declaramos la columna con la clase `.col-6` esta tendrá el mismo tamaño en cualquier resolución de pantalla.
+
+Si declaramos la columna añadiendo un parámetro adicional podemos modificar su tamaño según la resolución de pantalla.
+
+Por ejemplo, en la segunda fila encontramos 3 columnas con la clase `.col-md-4`. Con esto conseguimos que cuando la pantalla tenga como mínimo un resolución `medium` las columnas tendrán un tamaño de 4. Para resoluciones menores el tamaño de las columnas será por defecto de 12.
+
+En la tercela fila asignamos dos comportamientos a las columnas. Para resolución `large` las columnas tendrán un tamaño de 3 y para resolución `medium` tendrán un tamaño de 6.
+
+Ajustando el ancho de la ventada del navegador se puede verificar este comportamiento.
+
+A continuación describiremos cada uno de los elementos de nuestro `Grid` y sus opciones.
+
+{% endmarkdown %}
+
+{% endblock %}

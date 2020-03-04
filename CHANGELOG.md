@@ -6,22 +6,40 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.2] - 2020-03-04
+
 ### Added
 - Se añade Terser-webpack-plugin a la configuración de Webpack.
 - Responsive tables.
 - Se añade la opción de parallax con video background.
 - Componente tooltip.
 - Componente alert.
+- Componente navbar.
+- Renderizado de markdown en documentación.
+- Configurar Google Chrome como navegador por defecto en Browsersync.
+- Carga menú de contenidos en documentación.
+- Documentación introducción, instalación, contenidos y layout.
+- Se añade plantilla sandbox.html para realizar test y pruebas.
 
 ### Changed
 - Revisión función inicialización Slider y ejemplos.
 - Revisión componente parallax.
+- Actualización de configuración webpack (event-hooks, nunjucks-plugin, browsersync).
+- Optimización scripts package.json eliminando webpack-dev-server y copia de archivos.
+- Se optimiza la carga de plantillas nunjucks y contexto de variables.
+- Estilos plantilla de documentación.
+- Comportamiento responsive de heading y paragraph.
+- Modificada la tipografía base por "Nunito Sans".
+- Revisada las proporciones en la utilidad spacing.
 
 ### Removed
 - Eliminar UglifyJS-webpack-plugin.
+- Se elimina la carga de plantillas con HtmlWebpackPlugin y nunjucks-isomorphic-loader.
 
 ### Fixed
-- Stop video al cerrar modal con video
+- Stop video al cerrar modal con video.
+- Eliminar creación de archivo base.js.LICENCE.txt (TerserPlugin extractComments option).
+
 
 ## [0.1.1] - 2020-02-03
 

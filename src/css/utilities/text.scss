@@ -8,7 +8,7 @@
 .text-xl, .text-size-xl 	{ font-size: $text-size-xl; line-height: 1.5; }
 .text-xxl, .text-size-xxl 	{ font-size: $text-size-xxl; line-height: 1.333; }
 
-@include breakpoint(xs) {
+@include breakpoint-down(sm) {
 	.text-xxs, .text-size-xxs 	{ font-size: $text-size-xxs-mobile; }
 	.text-xs, .text-size-xs 	{ font-size: $text-size-xs-mobile; }
 	.text-sm, .text-size-sm 	{ font-size: $text-size-sm-mobile; }

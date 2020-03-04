@@ -6,6 +6,7 @@ import collapse from './components/collapse';
 import ellipsis from './components/ellipsis';
 import slider from './components/slider';
 import parallax from './components/parallax';
+import alert from './components/alert';
 
 dropdown.init();
 tabs.init();
@@ -15,3 +16,4 @@ collapse.init();
 ellipsis.init();
 slider.init();
 parallax.init();
+alert.init();

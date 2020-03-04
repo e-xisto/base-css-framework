@@ -1,32 +1,35 @@
-{% set vars = htmlWebpackPlugin.options.customData %}
-
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>{{ vars.title }}</title>
+		<title>Base CSS Framework</title>
 
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/base.css">
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/toolbar/prism-toolbar.min.css">
 	</head>		
 	<body>
 		
-		{% include "layouts/styles.njk" %}
+		{% include "../layouts/styles.njk" %}
 		
 		{% block offcanvas %}
 		{% endblock %}
 
 		<div class="offcanvas-wrap">
 
-			<div class="flex column" style="min-height: 100%;">
-				<div class="menu-top">menu top</div>
-				<div class="flex flex-item stretch">
-					<div class="menu-aside">menu aside</div>
-					<div class="content flex-item stretch">
-						<div class="content-container">
+			<div class="menu-top">
+				{% include "../partials/top.njk" %}
+			</div>
+			<div class="view-port">
+				<div class="menu-aside">
+					{% include "../partials/aside.njk" %}
+				</div>
+				<div class="content">
+					<div class="content-container">
 							{% block content %}
 							{% endblock %}
 						</div>			
@@ -36,6 +39,8 @@
 			
 		</div>
 	
+		<script src="js/base.js"></script>
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/toolbar/prism-toolbar.min.js"></script>
