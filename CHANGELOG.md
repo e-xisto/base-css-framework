@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.2] - 2020-03-04
+
 ### Added
 - Se añade Terser-webpack-plugin a la configuración de Webpack.
 - Responsive tables.
@@ -29,7 +31,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Comportamiento responsive de heading y paragraph.
 - Modificada la tipografía base por "Nunito Sans".
 - Revisada las proporciones en la utilidad spacing.
-
 
 ### Removed
 - Eliminar UglifyJS-webpack-plugin.
