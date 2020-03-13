@@ -26,7 +26,17 @@ $breakpoints: (
 // =========================================================
 
 // Tamaño de espacio base utilizado para margenes y padding
-$base-space-size: 15px;
+$space-size-xxs: 2px;
+$space-size-xs: 5px;
+$space-size-sm: 10px;
+$space-size-md: 15px;
+$space-size-lg: 20px;
+$space-size-xl: 30px;
+$space-size-xxl: 50px;
+$space-size-xxxl: 80px;
+$space-size-xxxxl: 130px;
+
+$base-space-size: $space-size-md;
 
 // =========================================================
 //   COLOR
@@ -121,8 +131,8 @@ $text-header-color: $color-black;
 // Párrafos
 $text-paragraph-font-size: 16px;
 $text-paragraph-line-height: 24px;
-$text-paragraph-font-size-mobile: 48px;
-$text-paragraph-line-height-mobile: 50px;
+$text-paragraph-font-size-mobile: 16px;
+$text-paragraph-line-height-mobile: 24px;
 $text-paragraph-font-family: var(--font-family-sans-serif);
 $text-paragraph-color: var(--text-color);
 $text-paragraph-margin-top: 0px;

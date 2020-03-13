@@ -38,6 +38,11 @@
 	&.justify-arround { justify-content: space-around; }
 	&.justify-between { justify-content: space-between; }
 
+	@media (max-width: $media-xs) {
+		padding-left: ($grid-column-gutter-xs / 2);
+		padding-right: ($grid-column-gutter-xs / 2);
+	}	
+
 	&.no-gutters {
 		margin-right: 0;
 		margin-left: 0;

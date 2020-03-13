@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+
+## [0.1.3] - 2020-03-13
+
+### Added
+- Añado variables sizes eliminando tamaños proporcionales de ´$base-space-size´.
+
+### Changed
+- Ajuste padding row en xs para separar contenido del borde de pantalla.
+
+
 ## [0.1.2] - 2020-03-04
 
 ### Added
