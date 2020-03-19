@@ -6,12 +6,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+
+
+## [0.1.4] - 2020-03-19
+
+### Fixed
+- Error mixin color cuando nombre color es black o white (solo en build).
+
+
+## [0.1.4] - 2020-03-19
+
 ### Added
 - Utilidad `.text-decoration-none` y `.text-decoration-underline`.
 
 ### Fixed
 - Error en utilidad .m{$pos}-{$break}-xxxl.
-
 
 
 ## [0.1.3] - 2020-03-13
