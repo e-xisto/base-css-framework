@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
-## [0.1.4] - 2020-03-19
+## [0.1.5] - 2020-03-19
 
 ### Fixed
 - Error mixin color cuando nombre color es black o white (solo en build).
