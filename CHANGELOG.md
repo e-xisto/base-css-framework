@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
+## [0.1.6] - 2020-03-19
+
+### Added
+- Comportamiento `.navbar-fluid`.
+- Comportamiento `.navbar-fixed`.
+
+### Changed
+- Estilos por defecto de componente `.navbar`.
+
+
 ## [0.1.5] - 2020-03-19
 
 ### Fixed

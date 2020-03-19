@@ -685,17 +685,17 @@ $tabs-item-active-font-weight: bold;
 $navbar-height: 65px;
 $navbar-border-radius: 4px;
 $navbar-padding-x: $base-space-size;
-$navbar-background-color: var(--bright);
+$navbar-background-color: var(--white);
 
-$navbar-item-font-color: var(--midtone);
+$navbar-item-font-color: var(--black);
 $navbar-item-font-size: 16px;
-$navbar-item-font-weight: bold;
+$navbar-item-font-weight: normal;
 $navbar-item-text-decoration: none;
 $navbar-item-link-color: $navbar-item-font-color;
-$navbar-item-hover-link-color: var(--dark);
+$navbar-item-hover-link-color: var(--white);
 $navbar-item-background-color: transparent;
-$navbar-item-hover-background-color: var(--light);
-$navbar-item-padding-x: 10px;
+$navbar-item-hover-background-color: var(--black);
+$navbar-item-padding-x: 15px;
 
 $navbar-dropdown-menu-padding-y: 10px;
 $navbar-dropdown-menu-font-color: var(--white);
@@ -709,18 +709,18 @@ $navbar-dropdown-menu-item-padding-y: $base-space-size / 2;
 
 $navbar-responsive-height: 45px;
 $navbar-responsive-background-color: $navbar-background-color;
-$navbar-responsive-menu-background-color: var(--light);
-$navbar-responsive-menu-padding-y: $base-space-size * 2;
+$navbar-responsive-menu-background-color: var(--bright);
+$navbar-responsive-menu-padding-y: $base-space-size;
 
-$navbar-responsive-item-font-color: var(--midtone);
-$navbar-responsive-item-font-size: 18px;
-$navbar-responsive-item-font-weight: bold;
+$navbar-responsive-item-font-color: var(--gray);
+$navbar-responsive-item-font-size: 16px;
+$navbar-responsive-item-font-weight: normal;
 $navbar-responsive-item-text-decoration: none;
 $navbar-responsive-item-link-color: $navbar-item-font-color;
-$navbar-responsive-item-hover-link-color: var(--dark);
+$navbar-responsive-item-hover-link-color: var(--black);
 $navbar-responsive-item-background-color: transparent;
-$navbar-responsive-item-hover-background-color: var(--gray);
-$navbar-responsive-item-padding-x: $base-space-size * 2;
+$navbar-responsive-item-hover-background-color: var(--light);
+$navbar-responsive-item-padding-x: $base-space-size * 1.5;
 $navbar-responsive-item-padding-y: $base-space-size;
 
 $navbar-responsive-dropdown-menu-padding-y: $base-space-size;
