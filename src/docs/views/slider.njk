@@ -93,13 +93,18 @@
 		<div class="swiper-pagination"></div>
 	</div>
 
+	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+	
+	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
 	<script>
 
 		document.addEventListener("DOMContentLoaded", function() {
 
-			var mySwiper = Slider('.swiper-simple')
+			var mySwiper = new Swiper('.swiper-simple')
 
-			var pepe = Slider('.swiper-navigation', {			
+			var pepe = new Swiper('.swiper-navigation', {			
 				autoHeight: true,
 				loop: true,
 				autoplay: {
@@ -117,7 +122,7 @@
 				},				
 			});
 
-			var mySwiper = Slider('.swiper-autoheight', {
+			var mySwiper = new Swiper('.swiper-autoheight', {
 				autoHeight: true,
 				pagination: {
 					el: '.swiper-pagination',
@@ -130,7 +135,7 @@
 				},	
 			});
 
-			var mySwiper = Slider('.swiper-pages', {
+			var mySwiper = new Swiper('.swiper-pages', {
 				autoHeight: true,
 				pagination: {
 					el: '.swiper-pagination',
@@ -142,7 +147,7 @@
 				},	
 			});
 			
-			var mySwiper = Slider('.swiper-fade', {
+			var mySwiper = new Swiper('.swiper-fade', {
 				autoHeight: true,
 				effect: 'fade',
 				navigation: {
@@ -151,7 +156,7 @@
 				},	
 			});
 
-			var mySwiper = Slider('.swiper-vertical', {
+			var mySwiper = new Swiper('.swiper-vertical', {
 				direction: 'vertical',
 				mousewheel: true,
 				pagination: {
@@ -159,8 +164,6 @@
 					clickable: true,
 				},
 			});
-
-			
 		});
 	</script>	
 
