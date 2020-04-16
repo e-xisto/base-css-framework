@@ -70,12 +70,14 @@
 		<div class="swiper-pagination"></div>
 	</div>
 
+	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
 
 
-			var mySwiper = Slider('.swiper-carosusel', {
+			var mySwiper = new Swiper('.swiper-carosusel', {
 				slidesPerView: 3,
 				spaceBetween: 30,
 				centeredSlides: true,
@@ -89,7 +91,7 @@
 				},						
 			});
 
-			var mySwiper = Slider('.swiper-carosusel-breakpoints', {
+			var mySwiper = new Swiper('.swiper-carosusel-breakpoints', {
 				slidesPerView: 2,
 				spaceBetween: 15,
 				centeredSlides: true,
@@ -117,7 +119,7 @@
 				}						
 			});
 
-			var mySwiper = Slider('.swiper-fade', {
+			var mySwiper = new Swiper('.swiper-fade', {
 				slidesPerView: 3,
 				spaceBetween: 30,
 				centeredSlides: true,
@@ -128,7 +130,7 @@
 				},			
 			});
 
-			var mySwiper = Slider('.swiper-coverflow', {
+			var mySwiper = new Swiper('.swiper-coverflow', {
 				effect: 'coverflow',
 				grabCursor: true,
 				centeredSlides: true,
