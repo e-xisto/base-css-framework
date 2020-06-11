@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Base CSS Framework</title>
+
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/base.css">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/toolbar/prism-toolbar.min.css">
+	</head>		
+	<body>
+		
+<style>
+
+	html, body { height: 100%;}
+
+	h1 {
+		padding-bottom: 10px;
+		border-bottom: 1px solid #efefef;
+	}
+
+	h3 {
+		padding-bottom: 10px;
+		border-bottom: 1px solid #efefef;		
+	}
+
+	.view-port {
+		display: flex;
+		height: 100%;
+		padding-top: 65px;
+	}
+
+	.content {
+		max-width: 100%;
+		overflow-y: scroll;
+		flex-grow: 1;
+	}
+
+	.content-container {
+		display: block;
+		max-width: 960px;
+		padding: 30px;
+		padding-bottom: 120px;
+		margin: auto;
+	}
+
+		@media (max-width: 768px) {
+			.content-container { padding: 15px; }
+		}
+
+	.menu-top {
+		position: fixed;
+		display: flex;
+		padding: 0px 20px;
+		justify-content: space-between;
+		width: 100%;
+		height: 65px;
+		background: #1B1F23;
+	}
+
+	.menu-top-logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+
+	.menu-top-logo img {
+	 	display: inline-block;
+		height: 30px;
+	}
+
+	.menu-top-logo span {
+		color: var(--midtone);
+		margin-left: 15px;
+		margin-top: 15px;
+	}
+
+	.menu-top-menu {
+	}
+
+	.menu-top-menu ul {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.menu-top-menu ul li {
+		padding-top: 15px;
+		margin-bottom: 0;
+		margin-right: 20px;
+	}
+
+	.menu-top-menu ul li a {
+		font-size: 16px;
+		text-decoration: none;
+		color: var(--light);
+	}
+
+	.menu-aside {
+		width: 260px;
+		height: 100%;
+		flex-shrink: 0;
+		background: #FAFBFC;
+		border-right: 1px solid #E1E4E8;
+		overflow-y: scroll;
+	}
+
+		.menu-aside ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}			
+
+		.menu-aside ul li {
+			padding: 25px;
+			margin-bottom: 0px;
+			border-bottom: 1px solid #E1E4E8;
+		}					
+		.menu-aside ul li a {
+			font-size: 16px;
+			line-height: 24px;
+			font-weight: bold;
+			text-decoration: none;
+			color: var(--black);
+		}
+
+		.menu-aside ul li a:hover { text-decoration: underline; }					
+		
+		.menu-aside ul li ul {
+			margin-top: 10px;
+		}					
+
+		.menu-aside ul li ul li {
+			border: none;
+			padding: 5px;
+			padding-left: 0px; 
+			margin: 0;
+		}	
+
+		.menu-aside ul li ul li.active a {
+			color: var(--black);
+			font-weight: bold;
+			pointer-events: none;
+		}
+
+		.menu-aside ul li ul li a {
+			font-size: 14px;
+			font-weight: normal;
+			color: var(--primary);
+		}
+
+		@media (max-width: 1220px) {
+			.menu-aside { display: none; }
+		}
+
+	.demo {
+		border: 1px solid #F6F8FA;
+		padding: 10px;
+	}
+
+	.demo .row {
+		background: #F6F8FA;
+	}
+
+	.demo [class^='col'] div {
+		padding: 15px;
+		border: 1px dashed var(--primary-br);
+		margin-top: 2px;
+		margin-bottom: 2px;
+		color: var(--midtone);
+	}
+
+	.color-sample {
+		border-radius: 3px;
+		margin-bottom: 30px;
+		background: #f0f0f0;
+	}
+
+		.color-sample-block {
+			border-radius: 3px;
+			display: block;
+			width: 100%;
+			height: 100px;
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+			transition: all 0.2s;
+		}
+
+		.color-sample-block:hover {
+			box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+			transform: scale(1.008);
+		}
+
+		.color-sample-text {
+			padding: 15px;
+			color: var(--midtone);
+		}
+
+	.code-toolbar button {
+		color: #ccc !important;
+		background: none !important;
+		border: 1px #ccc solid !important;	
+		padding: 5px !important;
+		margin-right: 10px;
+		margin-top: 10px;
+		box-shadow: none !important;
+		cursor: pointer;
+	}
+
+		.code-toolbar button:hover {
+			color: white !important;
+			background: var(--primary) !important;
+			border-color: var(--primary) !important;	
+		}
+
+		pre {
+			background: #F6F8FA !important;
+		}
+
+		code {
+			font-size: 14px !important;
+			line-height: 1.5 !important;
+			background: #F6F8FA;
+		}
+
+</style>		
+
+		<div class="offcanvas-wrap">
+
+			<div class="menu-top">
+<div class="menu-top-logo">
+	<img src="/images/logo.svg" alt="base: CSS & Style Guide Framework">
+	<span>CSS & Style Guide Framework</span>
+</div>
+
+<div class="menu-top-menu">
+	<ul>
+		<li><a href="changelog.html">Novedades</a></li>
+		<li><a href="guide.html">Guía</a></li>
+		<li><a href="about.html">About</a></li>
+	</ul>
+</div>			</div>
+			<div class="view-port">
+				<div class="menu-aside">
+<ul>
+	<li>
+		<a href="getting-started.html">Empezar a trabajar</a>
+		<ul>
+			<li  >
+				<a href="getting-started.html">Introducción</a>
+			</li>	
+			<li  >
+				<a href="install.html">Instalación</a>
+			</li>	
+			<li  >
+				<a href="folder-contents.html">Contenidos</a>
+			</li>	
+			<li  >
+				<a href="theming.html">Theming</a>
+			</li>	
+		</ul>
+	</li>
+	<li>
+		<a href="layout.html">Layout</a>
+		<ul>
+			<li  >
+				<a href="layout.html">Visión general</a>
+			</li>	
+			<li  >
+				<a href="grid.html">Grid</a>
+			</li>	
+			<li  >
+				<a href="grid-util.html">Utilidades</a>
+			</li>	
+		</ul>
+	</li>
+	<li>
+		<a href="color.html">Contenidos</a>
+		<ul>
+			<li  >
+				<a href="colors.html">Color</a>
+			</li>	
+			<li  >
+				<a href="tipography.html">Tipografía</a>
+			</li>	
+			<li  >
+				<a href="text.html">Texto</a>
+			</li>	
+			<li  >
+				<a href="buttons.html">Botones</a>
+			</li>	
+			<li  >
+				<a href="lists.html">Listas</a>
+			</li>	
+			<li  >
+				<a href="tables.html">Tablas</a>
+			</li>	
+			<li  >
+				<a href="images.html">Imágenes</a>
+			</li>	
+			<li  >
+				<a href="icons.html">Iconos</a>
+			</li>	
+			<li  >
+				<a href="embed.html">Embeds</a>
+			</li>	
+		</ul>
+	</li>
+	<li>
+		<a href="forms.html">Formularios</a>
+		<ul>
+			<li  >
+				<a href="forms.html">Introducción</a>
+			</li>	
+			<li  >
+				<a href="input.html">Input</a>
+			</li>	
+			<li  >
+				<a href="select.html">Select</a>
+			</li>	
+			<li  >
+				<a href="check-radio-switch.html">Check y Radio</a>
+			</li>	
+			<li  >
+				<a href="textarea.html">Textarea</a>
+			</li>	
+			<li  >
+				<a href="input-group.html">Input Group</a>
+			</li>	
+			<li  >
+				<a href="file.html">File</a>
+			</li>	
+		</ul>
+	</li>
+	<li>
+		<a href="alert.html">Componentes</a>
+		<ul>
+			<li  >
+				<a href="alert.html">Alerts</a>
+			</li>	
+			<li  >
+				<a href="collapse.html">Collapse</a>
+			</li>	
+			<li  >
+				<a href="dropdown.html">Dropdown</a>
+			</li>	
+			<li  >
+				<a href="modal.html">Modal</a>
+			</li>	
+			<li  >
+				<a href="navbar.html">Navbar</a>
+			</li>	
+			<li  >
+				<a href="offcanvas.html">Offcanvas</a>
+			</li>	
+			<li  >
+				<a href="parallax.html">Parallax</a>
+			</li>	
+			<li  >
+				<a href="slider.html">Slider</a>
+			</li>	
+			<li  >
+				<a href="carousel.html">Carousel</a>
+			</li>	
+			<li  >
+				<a href="tabs.html">Tabs</a>
+			</li>	
+			<li  >
+				<a href="tooltips.html">Tooltips</a>
+			</li>	
+		</ul>
+	</li>
+	<li>
+		<a href="spacing.html">Utilidades</a>
+		<ul>
+			<li  >
+				<a href="spacing.html">Spacing</a>
+			</li>	
+			<li  >
+				<a href="visible.html">Visible</a>
+			</li>	
+			<li  >
+				<a href="sizes.html">Sizes</a>
+			</li>	
+			<li  >
+				<a href="shadow.html">Shadow</a>
+			</li>	
+			<li  >
+				<a href="position.html">Position</a>
+			</li>	
+			<li  >
+				<a href="flex.html">Flex</a>
+			</li>	
+			<li  >
+				<a href="display.html">display</a>
+			</li>	
+			<li  >
+				<a href="border.html">Border</a>
+			</li>	
+			<li  >
+				<a href="animations.html">Animations</a>
+			</li>	
+			<li  >
+				<a href="other-utils.html">Otras</a>
+			</li>	
+			<li  >
+				<a href="mixins.html">Mixins</a>
+			</li>	
+		</ul>
+	</li>
+</ul>				</div>
+				<div class="content">
+					<div class="content-container">
+
+<style>
+
+.utilities-border span {
+	display: inline-block;
+	width: 5rem;
+	height: 5rem;
+	background-color: #EEE;
+	margin: 0.4em;
+}
+
+.utilities-border-remove span {
+	border: 1px solid #000;
+}
+
+</style>
+
+<h1 id="bordes">Bordes</h1>
+<p>Una serie de clases para añadir o eliminar bordes a un elemento de forma fácil y rápida.</p>
+<h3 id="añadir-bordes">Añadir bordes</h3>
+<div class="utilities-border">
+<span class="border"></span>
+<span class="border-top"></span>
+<span class="border-right"></span>
+<span class="border-bottom"></span>
+<span class="border-left"></span>
+</div>
+
+<pre><code class="language-html">
+&lt;span class=&quot;border&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-top&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-right&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-bottom&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-left&quot;&gt;&lt;/span&gt;
+</code></pre>
+<h3 id="eliminar-bordes">Eliminar bordes</h3>
+<div class="utilities-border utilities-border-remove">
+<span class="border-none"></span>
+<span class="border-top-none"></span>
+<span class="border-right-none"></span>
+<span class="border-bottom-none"></span>
+<span class="border-left-none"></span>
+</div>
+
+<pre><code class="language-html">
+&lt;span class=&quot;border-none&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-top-none&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-right-none&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-bottom-none&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-left-none&quot;&gt;&lt;/span&gt;
+</code></pre>
+<h3 id="bordes-redondeados">Bordes redondeados</h3>
+<div class="utilities-border utilities-border-remove">
+<span class="border-rounded"></span>
+<span class="border-rounded-none"></span>
+<span class="border-rounded-top"></span>
+<span class="border-rounded-right"></span>
+<span class="border-rounded-bottom"></span>
+<span class="border-rounded-left"></span>
+<span class="border-circle"></span>
+</div>
+
+<pre><code class="language-html">
+&lt;span class=&quot;border-rounded&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-rounded-none&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-rounded-top&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-rounded-right&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-rounded-bottom&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-rounded-left&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-circle&quot;&gt;&lt;/span&gt;
+</code></pre>
+<h3 id="colores-aplicados-a-bordes">Colores aplicados a bordes</h3>
+<p>Como vimos anteriormente, podíamos aplicar <a href="/colors.html">colores</a> tanto en textos como en colores de fondo,
+y ,en este caso, también podemos aplicar todos los mismos colores a los bordes.</p>
+<div class="utilities-border">
+<span class="border border-primary-md"></span>
+<span class="border-top border-secondary"></span>
+<span class="border-right border-custom-3"></span>
+<span class="border-bottom border-gray"></span>
+<span class="border-left border-success"></span>
+</div>
+
+<pre><code class="language-html">
+&lt;span class=&quot;border border-primary-md&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-top border-secondary&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-right border-custom-3&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-bottom border-gray&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;border-left border-success&quot;&gt;&lt;/span&gt;
+</code></pre>
+
+						</div>			
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	
+		<script src="js/base.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/toolbar/prism-toolbar.min.js"></script>
+
+		<script>
+
+			// PrimsJS Plugin Toolbar Copy Code Buttom
+			(function(){
+				if (typeof self === 'undefined' || !self.Prism || !self.document) {
+					return;
+				}
+
+				if (!Prism.plugins.toolbar) {
+					console.warn('Copy to Clipboard plugin loaded before Toolbar plugin.');
+
+					return;
+				}
+
+				var ClipboardJS = window.ClipboardJS || undefined;
+
+				if (!ClipboardJS && typeof require === 'function') {
+					ClipboardJS = require('clipboard');
+				}
+
+				var callbacks = [];
+
+				if (!ClipboardJS) {
+					var script = document.createElement('script');
+					var head = document.querySelector('head');
+
+					script.onload = function() {
+						ClipboardJS = window.ClipboardJS;
+
+						if (ClipboardJS) {
+							while (callbacks.length) {
+								callbacks.pop()();
+							}
+						}
+					};
+
+					script.src = 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js';
+					head.appendChild(script);
+				}
+
+				Prism.plugins.toolbar.registerButton('copy-to-clipboard', function (env) {
+					var linkCopy = document.createElement('button');
+					linkCopy.textContent = 'Copiar';
+
+					if (!ClipboardJS) {
+						callbacks.push(registerClipboard);
+					} else {
+						registerClipboard();
+					}
+
+					return linkCopy;
+
+					function registerClipboard() {
+						var clip = new ClipboardJS(linkCopy, {
+							'text': function () {
+								return env.code;
+							}
+						});
+
+						clip.on('success', function() {
+							linkCopy.textContent = 'Copiado!';
+
+							resetText();
+						});
+						clip.on('error', function () {
+							linkCopy.textContent = 'Presiona Ctrl+C para copiar';
+
+							resetText();
+						});
+					}
+
+					function resetText() {
+						setTimeout(function () {
+							linkCopy.textContent = 'Copiar';
+						}, 5000);
+					}
+				});
+			})();
+		</script>
+	</body>
+</html>
