@@ -420,6 +420,356 @@
 				<div class="content">
 					<div class="content-container">
 
+<style>
+
+.utilities-flex .flex {
+	background: #EEE;
+}
+
+.utilities-flex .item {
+	padding: 0.75em;
+	background: #CCC;
+	border: 1px solid #000;
+}
+
+.utilities-flex-vertical {
+	min-height: 100px;
+}
+
+
+</style>
+
+<h1 id="flex">Flex</h1>
+<p>Una forma fácil y rápida de poder alinear y distribuir el espacio entre los elementos de un contenedor.</p>
+<p>Para empezar a utilizar flex, necesitamos usar por defecto la clase <code>flex</code> en nuestro elemento.</p>
+<div class="utilities-flex">
+<div class="flex mb-md">
+<div class="item">Flex 1</div>
+<div class="item">Flex 2</div>
+</div>
+
+<div class="flex flex-inline">
+<div class="item">Flex 1</div>
+<div class="item">Flex 2</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;flex mb-md&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex flex-inline&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="dirección">Dirección</h3>
+<p>Indica la dirección que van a seguir los elementos (por defecto es horizontal, por lo tanto no existe tal clase).</p>
+<p>Como contabamos, no existe ninguna clase para indicar que funcione horizontalmente ya que por defecto el navegador
+funciona así.
+Aun así, podemos ordenar los elementos horizontalmente pero empezando por el lado contrario usando la clase <code>row-reverse</code></p>
+<div class="utilities-flex">
+<div class="flex row-reverse">
+<div class="item">Flex 1</div>
+<div class="item">Flex 2</div>
+<div class="item">Flex 3</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;flex row-reverse&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>No solo podemos alinear los elementos horizontalmente, sino que también podemos hacerlo verticalmente con la clase
+<code>column</code> y verticalmente empezando por el lado opuesto usando <code>column-reverse</code>.</p>
+<div class="utilities-flex">
+<div class="flex column mb-md">
+<div class="item">Flex 1</div>
+<div class="item">Flex 2</div>
+<div class="item">Flex 3</div>
+</div>
+<div class="flex column-reverse">
+<div class="item">Flex 1</div>
+<div class="item">Flex 2</div>
+<div class="item">Flex 3</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;flex column mb-md&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex column-reverse&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="alineado-vertical">Alineado vertical</h3>
+<p>Para poder alinear verticalmente nuestros elementos disponemos de cinco clases la cual nos proporciona la propiedad <code>align-items</code></p>
+<div class="utilities-flex mb-md">
+<div class="flex top utilities-flex-vertical">
+<div class="item">Flex 1</div>
+<div class="item">Flex 2</div>
+<div class="item">Flex 3</div>
+</div>
+</div>
+<div class="utilities-flex mb-md">
+<div class="flex middle utilities-flex-vertical">
+<div class="item">Flex 1</div>
+<div class="item">Flex 2</div>
+<div class="item">Flex 3</div>
+</div>
+</div>
+<div class="utilities-flex mb-md">
+<div class="flex bottom utilities-flex-vertical">
+<div class="item">Flex 1</div>
+<div class="item">Flex 2</div>
+<div class="item">Flex 3</div>
+</div>
+</div>
+<div class="utilities-flex mb-md">
+<div class="flex stretch utilities-flex-vertical">
+<div class="item">Flex 1</div>
+<div class="item">Flex 2</div>
+<div class="item">Flex 3</div>
+</div>
+</div>
+<div class="utilities-flex mb-md">
+<div class="flex baseline utilities-flex-vertical">
+<div class="item">Flex 1</div>
+<div class="item">Flex 2</div>
+<div class="item">Flex 3</div>
+</div>
+</div>
+
+
+<pre><code class="language-html">
+&lt;div class=&quot;flex top&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex middle&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex bottom&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex stretch&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex baseline&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Otra forma de ordenar los elementos verticalmente es mediante la propiedad <code>align-self</code>la cual nos permite alinear un
+elemento en específico. Para ello, debemos añadir la clase <code>flex-item</code> por defecto al elemento en especifico</p>
+<div class="utilities-flex mb-md">
+<div class="flex utilities-flex-vertical">
+    <div class="item flex-item">Flex 1</div>
+    <div class="item flex-item middle">Flex 2</div>
+    <div class="item flex-item">Flex 3</div>
+</div>
+</div>
+<div class="utilities-flex mb-md">
+<div class="flex utilities-flex-vertical">
+    <div class="item flex-item">Flex 1</div>
+    <div class="item flex-item">Flex 2</div>
+    <div class="item flex-item">Flex 3</div>
+</div>
+</div>
+<div class="utilities-flex mb-md">
+<div class="flex utilities-flex-vertical">
+    <div class="item flex-item">Flex 1</div>
+    <div class="item flex-item">Flex 2</div>
+    <div class="item flex-item">Flex 3</div>
+</div>
+</div>
+<div class="utilities-flex mb-md">
+<div class="flex utilities-flex-vertical">
+    <div class="item flex-item">Flex 1</div>
+    <div class="item flex-item">Flex 2</div>
+    <div class="item flex-item">Flex 3</div>
+</div>
+</div>
+<div class="utilities-flex mb-md">
+<div class="flex utilities-flex-vertical">
+    <div class="item flex-item">Flex 1</div>
+    <div class="item flex-item">Flex 2</div>
+    <div class="item flex-item">Flex 3</div>
+</div>
+</div>
+<div class="utilities-flex mb-md">
+<div class="flex utilities-flex-vertical">
+    <div class="item flex-item">Flex 1</div>
+    <div class="item flex-item">Flex 2</div>
+    <div class="item flex-item">Flex 3</div>
+</div>
+</div>
+
+
+<h3 id="alineado-horizontal">Alineado horizontal</h3>
+<p>Podemos alinear horizontalmente nuestro contenedor con la propiedad <code>justify-content</code> usando estas seis clases.</p>
+<div class="utilities-flex mb-md">
+<div class="flex left">
+<div class="item">Flex 1</div>
+<div class="item">Flex 2</div>
+<div class="item">Flex 3</div>
+</div>
+</div>
+<div class="utilities-flex mb-md">
+<div class="flex center">
+<div class="item">Flex 1</div>
+<div class="item">Flex 2</div>
+<div class="item">Flex 3</div>
+</div>
+</div>
+<div class="utilities-flex mb-md">
+<div class="flex right">
+<div class="item">Flex 1</div>
+<div class="item">Flex 2</div>
+<div class="item">Flex 3</div>
+</div>
+</div>
+<div class="utilities-flex mb-md">
+<div class="flex space-around">
+<div class="item">Flex 1</div>
+<div class="item">Flex 2</div>
+<div class="item">Flex 3</div>
+</div>
+</div>
+<div class="utilities-flex mb-md">
+<div class="flex space-between">
+<div class="item">Flex 1</div>
+<div class="item">Flex 2</div>
+<div class="item">Flex 3</div>
+</div>
+</div>
+<div class="utilities-flex mb-md">
+<div class="flex space-evenly">
+<div class="item">Flex 1</div>
+<div class="item">Flex 2</div>
+<div class="item">Flex 3</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;flex left&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex center&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex right&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex space-around&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex space-between&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex space-evenly&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>También podemos distribuir horizontalmente nuestros elementos cuando se muestran como columna usando la propiedad <code>align-items</code>.</p>
+<div class="utilities-flex mb-md">
+<div class="flex left utilities-flex-vertical column">
+<div class="item">Flex 1</div>
+<div class="item">Flex 2</div>
+<div class="item">Flex 3</div>
+</div>
+</div>
+<div class="utilities-flex mb-md">
+<div class="flex center utilities-flex-vertical column-reverse">
+<div class="item">Flex 1</div>
+<div class="item">Flex 2</div>
+<div class="item">Flex 3</div>
+</div>
+</div>
+<div class="utilities-flex mb-md">
+<div class="flex right utilities-flex-vertical column">
+<div class="item">Flex 1</div>
+<div class="item">Flex 2</div>
+<div class="item">Flex 3</div>
+</div>
+</div>
+<div class="utilities-flex mb-md">
+<div class="flex stretch utilities-flex-vertical column">
+<div class="item">Flex 1</div>
+<div class="item">Flex 2</div>
+<div class="item">Flex 3</div>
+</div>
+</div>
+<div class="utilities-flex mb-md">
+<div class="flex baseline utilities-flex-vertical column">
+<div class="item">Flex 1</div>
+<div class="item">Flex 2</div>
+<div class="item">Flex 3</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;flex left column&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex center column&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex right column&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex stretch column&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex baseline column&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
 						</div>			
 					</div>
 				</div>

@@ -3,46 +3,46 @@
 	flex-direction: row;
 	box-sizing: border-box;
 
-	&.flex-inline { display: flex-line; }
+	&.flex-inline { display: inline-flex; }
 	&.row-reverse { flex-direction: row-reverse; }
 	&.column-reverse { flex-direction: column-reverse; }
-	
+
 	&:not(.column) {
 
 		// Vertical items alignment
-		&.top { align-items: flex-start; background: red;}
+		&.top { align-items: flex-start;}
 		&.middle { align-items: center; }
 		&.bottom { align-items: flex-end; }
-		&.stretch { align-items: flex-stretch; }
-		&.baseline { align-items: baseline; }	
-		
+		&.stretch { align-items: stretch; }
+		&.baseline { align-items: baseline; }
+
 		// Horizontal distribution
 		&.left { justify-content: flex-start; }
 		&.center { justify-content: center; }
 		&.right { justify-content: flex-end; }
-		&.space-arround { justify-content: space-around; }
+		&.space-around { justify-content: space-around; }
 		&.space-between { justify-content: space-between; }
 		&.space-evenly { justify-content: space-evenly; }
 	}
 
 	&.column {
 		flex-direction: column;
-		
+
 		// Vertical items alignment
 		&.top { justify-content: flex-start; }
 		&.middle { justify-content: center; }
 		&.bottom { justify-content: flex-end; }
-		&.space-arround { justify-content: space-around; }
+		&.space-around { justify-content: space-around; }
 		&.space-between { justify-content: space-between; }
-		&.space-evenly { justify-content: space-evenly; }		
-		
+		&.space-evenly { justify-content: space-evenly; }
+
 		// Horizontal distribution
 		&.left { align-items: flex-start; }
 		&.center { align-items: center; }
 		&.right { align-items: flex-end; }
-		&.stretch { align-items: flex-stretch; }
-		&.baseline { align-items: baseline; }	
-		
+		&.stretch { align-items: stretch; }
+		&.baseline { align-items: baseline; }
+
 		// // Vertical distribution
 		// &.column-start { align-content: flex-start; }
 		// &.column-center { align-content: center; }
@@ -51,7 +51,7 @@
 		// &.column-space-between { align-content: space-between; }
 		// &.column-space-evenly { align-content: space-evenly; }
 	}
-	
+
 	&.wrap { flex-wrap: wrap; }
 	&.no-wrap { flex-wrap: nowrap; }
 	&.wrap-reverse { flex-wrap: wrap-reverse; }
