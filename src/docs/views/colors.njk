@@ -3,225 +3,372 @@
 
 {% block content %}
 
-<div class="container">
-	<div class="row">
-		<div class="col-md-12">
 
-			<h1>Colores</h1>
+{% markdown %}
 
-			<p>
-				En Base CSS contamos con una amplia y modificable paleta de colores.
-			</p>
 
-			<p>
-				Estos colores se pueden cambiar de forma sencilla en el archivo de variables y, como puedes observar, tienen una semántica muy sencilla para aplicar en CSS ya que todos comienzan por <span class="token tag">$color-*</span>.
-			</p>
+# Colores
 
-			<h3 class="mt-xl">Color primario</h3>
+En Base CSS contamos con una amplia y modificable paleta de colores.
 
-			<div class="row">
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-primary-dk"></div>
-						<div class="color-sample-text">primary-dk</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-primary-md"></div>
-						<div class="color-sample-text">primary-md</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-primary"></div>
-						<div class="color-sample-text">primary</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-primary-lt"></div>
-						<div class="color-sample-text">primary-lt</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-primary-br"></div>
-						<div class="color-sample-text">primary-br</div>
-					</div>
-				</div>
-			</div>
+Estos colores se pueden cambiar de forma sencilla en el archivo de variables y, como puedes observar, tienen una semántica muy sencilla para aplicar en CSS ya que todos comienzan por `$color-`
 
-			<h3 class="mt-xl">Color secundario</h3>
+### Color primario
 
-			<div class="row">
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-secondary-dk"></div>
-						<div class="color-sample-text">secondary-dk</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-secondary-md"></div>
-						<div class="color-sample-text">secondary-md</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-secondary"></div>
-						<div class="color-sample-text">secondary</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-secondary-lt"></div>
-						<div class="color-sample-text">secondary-lt</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-secondary-br"></div>
-						<div class="color-sample-text">secondary-br</div>
-					</div>
-				</div>
-			</div>
-
-			<h3 class="mt-xl">Colores personalizados</h3>
-
-			<div class="row">
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-custom-1"></div>
-						<div class="color-sample-text">custom-1</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-custom-2"></div>
-						<div class="color-sample-text">custom-2</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-custom-3"></div>
-						<div class="color-sample-text">custom-3</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-custom-4"></div>
-						<div class="color-sample-text">custom-4</div>
-					</div>
-				</div>
-			</div>
-
-			<h3 class="mt-xl">Colores de sistema</h3>
-
-			<div class="row">
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-success"></div>
-						<div class="color-sample-text">success</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-warning"></div>
-						<div class="color-sample-text">warning</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-danger"></div>
-						<div class="color-sample-text">danger</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-info"></div>
-						<div class="color-sample-text">info</div>
-					</div>
-				</div>
-			</div>
-
-			<h3 class="mt-xl">Escala de grises</h3>
-
-			<div class="row">
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-black"></div>
-						<div class="color-sample-text">black</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-dark"></div>
-						<div class="color-sample-text">dark</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-midtone"></div>
-						<div class="color-sample-text">midtone</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-gray"></div>
-						<div class="color-sample-text">gray</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-light"></div>
-						<div class="color-sample-text">light</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-bright"></div>
-						<div class="color-sample-text">bright</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3">
-					<div class="color-sample">
-						<div class="color-sample-block bg-white"></div>
-						<div class="color-sample-text">white</div>
-					</div>
-				</div>
-			</div>
-
-			<p class="mt-xxl">
-				Todos estos colores, se pueden aplicar fácilmente, por ejemplo, en textos y backgrounds.
-			</p>
-
-			{% markdown %}
-
-			```html
-
-				<p class="text-primary-md">.text-primary-md</p>
-				<p class="text-primary">.text-primary</p>
-				<p class="text-secondary">.text-secondary</p>
-
-				<p class="py-md px-sm text-white bg-success">.bg-success</p>
-				<p class="py-md px-sm bg-custom-3">.bg-custom-3</p>
-				<p class="py-md px-sm text-white bg-secondary-lt">.bg-secondary-lt</p>
-
-			```
-			<p class="text-primary-md">.text-primary-md</p>
-			<p class="text-primary">.text-primary</p>
-			<p class="text-secondary">.text-secondary</p>
-
-			<p class="py-md px-sm text-white bg-success">.bg-success</p>
-			<p class="py-md px-sm bg-custom-3">.bg-custom-3</p>
-			<p class="py-md px-sm text-white bg-secondary-lt">.bg-secondary-lt</p>
-
-			{% endmarkdown %}
-
+<div class="row">
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-primary-dk"></div>
+			<div class="color-sample-text">primary-dk</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-primary-md"></div>
+			<div class="color-sample-text">primary-md</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-primary"></div>
+			<div class="color-sample-text">primary</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-primary-lt"></div>
+			<div class="color-sample-text">primary-lt</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-primary-br"></div>
+			<div class="color-sample-text">primary-br</div>
 		</div>
 	</div>
 </div>
+
+### Color secundario
+
+<div class="row">
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-secondary-dk"></div>
+			<div class="color-sample-text">secondary-dk</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-secondary-md"></div>
+			<div class="color-sample-text">secondary-md</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-secondary"></div>
+			<div class="color-sample-text">secondary</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-secondary-lt"></div>
+			<div class="color-sample-text">secondary-lt</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-secondary-br"></div>
+			<div class="color-sample-text">secondary-br</div>
+		</div>
+	</div>
+</div>
+
+### Colores personalizados
+
+<div class="row">
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-custom-1"></div>
+			<div class="color-sample-text">custom-1</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-custom-2"></div>
+			<div class="color-sample-text">custom-2</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-custom-3"></div>
+			<div class="color-sample-text">custom-3</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-custom-4"></div>
+			<div class="color-sample-text">custom-4</div>
+		</div>
+	</div>
+</div>
+
+### Colores de sistema
+
+<div class="row">
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-success"></div>
+			<div class="color-sample-text">success</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-warning"></div>
+			<div class="color-sample-text">warning</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-danger"></div>
+			<div class="color-sample-text">danger</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-info"></div>
+			<div class="color-sample-text">info</div>
+		</div>
+	</div>
+</div>
+
+### Escala de grises
+
+<div class="row">
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-black"></div>
+			<div class="color-sample-text">black</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-dark"></div>
+			<div class="color-sample-text">dark</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-midtone"></div>
+			<div class="color-sample-text">midtone</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-gray"></div>
+			<div class="color-sample-text">gray</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-light"></div>
+			<div class="color-sample-text">light</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-bright"></div>
+			<div class="color-sample-text">bright</div>
+		</div>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-md-3">
+		<div class="color-sample">
+			<div class="color-sample-block bg-white"></div>
+			<div class="color-sample-text">white</div>
+		</div>
+	</div>
+</div>
+
+
+### Colores aplicados en textos
+
+Todos estos colores que acabamos de ver no sólo pueden usarse mediante CSS, sino que podemos usarlos mediante clases en HTML en encabezados, párrafos, enlaces... para así cambiar el color del mismo.
+
+La semántica de dicha clase comienza con `text-` más el nombre al que hemos asociado nuestro color.
+
+
+
+<div class="row mb-xxl">
+	<div class="col-md-3 col-sm-4">
+		<h4 class="text-primary-dk">.text-primary-dk</h4>
+		<h5 class="text-primary-md">.text-primary-md</h5>
+		<p class="text-primary">.text-primary</p>
+		<p class="text-primary-lt">.text-primary-lt</p>
+		<a class="text-primary-br">.text-primary-br</a>
+	</div>
+	<div class="col-md-3 col-sm-4">
+		<h4 class="text-secondary-dk">.text-secondary-dk</h4>
+		<h5 class="text-secondary-md">.text-secondary-md</h5>
+		<p class="text-secondary">.text-secondary</p>
+		<p class="text-secondary-lt">.text-secondary-lt</p>
+		<a class="text-secondary-br">.text-secondary-br</a>
+	</div>
+	<div class="col-md-3 col-sm-4">
+		<h4 class="text-custom-1">.text-custom-1</h4>
+		<p class="text-custom-2">.text-custom-2</p>
+		<p class="text-custom-3">.text-custom-3</p>
+		<a class="text-custom-4">.text-custom-4</a>
+	</div>
+	<div class="col-md-3 col-sm-4">
+		<h4 class="text-success">.text-success</h4>
+		<p class="text-warning">.text-warning</p>
+		<p class="text-danger">.text-danger</p>
+		<a class="text-info">.text-info</a>
+	</div>
+
+	<div class="col-md-3 col-sm-4 mt-md">
+		<p class="text-black">.text-black</p>
+		<p class="text-dark">.text-dark</p>
+	</div>
+	<div class="col-md-3 col-sm-4 mt-md">
+		<p class="text-midtone">.text-midtone</p>
+		<p class="text-gray">.text-gray</p>
+	</div>
+	<div class="col-md-3 col-sm-4 mt-md">
+		<p class="text-light">.text-light</p>
+		<p class="text-bright">.text-bright</p>
+	</div>
+	<div class="col-md-3 col-sm-4 mt-md">
+		<p class="text-white">.text-white</p>
+	</div>
+</div>
+
+
+
+
+```html
+
+		<h4 class="text-primary-dk">.text-primary-dk</h4>
+		<h5 class="text-primary-md">.text-primary-md</h5>
+		<p class="text-primary">.text-primary</p>
+		<p class="text-primary-lt">.text-primary-lt</p>
+		<a class="text-primary-br">.text-primary-br</a>
+
+		<h4 class="text-secondary-dk">.text-secondary-dk</h4>
+		<h5 class="text-secondary-md">.text-secondary-md</h5>
+		<p class="text-secondary">.text-secondary</p>
+		<p class="text-secondary-lt">.text-secondary-lt</p>
+		<a class="text-secondary-br">.text-secondary-br</a>
+
+		<h4 class="text-custom-1">.text-custom-1</h4>
+		<p class="text-custom-2">.text-custom-2</p>
+		<p class="text-custom-3">.text-custom-3</p>
+		<a class="text-custom-4">.text-custom-4</a>
+
+		<h4 class="text-success">.text-success</h4>
+		<p class="text-warning">.text-warning</p>
+		<p class="text-danger">.text-danger</p>
+		<a class="text-info">.text-info</a>
+
+		<p class="text-black">.text-black</p>
+		<p class="text-dark">.text-dark</p>
+		<p class="text-midtone">.text-midtone</p>
+		<p class="text-gray">.text-gray</p>
+		<p class="text-light">.text-light</p>
+		<p class="text-bright">.text-bright</p>
+		<p class="text-white">.text-white</p>
+
+```
+
+
+### Colores aplicados como fondo
+
+Como acabamos de ver, podemos usar nuestros colores para cambiar el color del texto pero también podemos usarlos para añadirles un color de fondo.
+
+Para poder usar estos colores como color de fondo, debemos usar `bg-` más el nombre de nuestro color.
+
+
+<div class="row mb-xxl">
+	<div class="col-md-3 col-sm-4">
+		<h4 class="bg-primary-dk p-sm text-white">.bg-primary-dk</h4>
+		<h5 class="bg-primary-md p-sm text-white">.bg-primary-md</h5>
+		<p class="bg-primary p-sm text-white">.bg-primary</p>
+		<p class="bg-primary-lt p-sm">.bg-primary-lt</p>
+		<a class="bg-primary-br p-sm">.bg-primary-br</a>
+	</div>
+	<div class="col-md-3 col-sm-4">
+		<h4 class="bg-secondary-dk p-sm text-white">.bg-secondary-dk</h4>
+		<h5 class="bg-secondary-md p-sm text-white">.bg-secondary-md</h5>
+		<p class="bg-secondary p-sm text-white">.bg-secondary</p>
+		<p class="bg-secondary-lt p-sm">.bg-secondary-lt</p>
+		<a class="bg-secondary-br p-sm">.bg-secondary-br</a>
+	</div>
+	<div class="col-md-3 col-sm-4">
+		<h4 class="bg-custom-1 p-sm text-white">.bg-custom-1</h4>
+		<p class="bg-custom-2 p-sm text-white">.bg-custom-2</p>
+		<p class="bg-custom-3 p-sm text-white">.bg-custom-3</p>
+		<a class="bg-custom-4 p-sm">.bg-custom-4</a>
+	</div>
+	<div class="col-md-3 col-sm-4">
+		<h4 class="bg-success p-sm text-white">.bg-success</h4>
+		<p class="bg-warning p-sm text-white">.bg-warning</p>
+		<p class="bg-danger p-sm text-white">.bg-danger</p>
+		<a class="bg-info p-sm text-white">.bg-info</a>
+	</div>
+	<div class="col-md-3 col-sm-4 mt-md">
+		<p class="bg-black p-sm text-white">.bg-black</p>
+		<p class="bg-dark p-sm text-white">.bg-dark</p>
+	</div>
+	<div class="col-md-3 col-sm-4 mt-md">
+		<p class="bg-midtone p-sm text-white">.bg-midtone</p>
+		<p class="bg-gray p-sm text-white">.bg-gray</p>
+	</div>
+	<div class="col-md-3 col-sm-4 mt-md">
+		<p class="bg-light p-sm">.bg-light</p>
+		<p class="bg-bright p-sm">.bg-bright</p>
+	</div>
+	<div class="col-md-3 col-sm-4 mt-md">
+		<p class="bg-white p-sm">.bg-white</p>
+	</div>
+</div>
+
+``` html
+
+		<h4 class="bg-primary-dk p-sm text-white">.bg-primary-dk</h4>
+		<h5 class="bg-primary-md p-sm text-white">.bg-primary-md</h5>
+		<p class="bg-primary p-sm text-white">.bg-primary</p>
+		<p class="bg-primary-lt p-sm">.bg-primary-lt</p>
+		<a class="bg-primary-br p-sm">.bg-primary-br</a>
+
+		<h4 class="bg-secondary-dk p-sm text-white">.bg-secondary-dk</h4>
+		<h5 class="bg-secondary-md p-sm text-white">.bg-secondary-md</h5>
+		<p class="bg-secondary p-sm text-white">.bg-secondary</p>
+		<p class="bg-secondary-lt p-sm">.bg-secondary-lt</p>
+		<a class="bg-secondary-br p-sm">.bg-secondary-br</a>
+
+		<h4 class="bg-custom-1 p-sm text-white">.bg-custom-1</h4>
+		<p class="bg-custom-2 p-sm text-white">.bg-custom-2</p>
+		<p class="bg-custom-3 p-sm text-white">.bg-custom-3</p>
+		<a class="bg-custom-4 p-sm">.bg-custom-4</a>
+
+		<h4 class="bg-success p-sm text-white">.bg-success</h4>
+		<p class="bg-warning p-sm text-white">.bg-warning</p>
+		<p class="bg-danger p-sm text-white">.bg-danger</p>
+		<a class="bg-info p-sm text-white">.bg-info</a>
+
+		<p class="bg-black text-white">.bg-black</p>
+		<p class="bg-dark text-white">.bg-dark</p>
+		<p class="bg-midtone text-white">.bg-midtone</p>
+		<p class="bg-gray">.bg-gray</p>
+		<p class="bg-light">.bg-light</p>
+		<p class="bg-bright">.bg-bright</p>
+		<p class="bg-white">.bg-white</p>
+
+```
+{% endmarkdown %}
+
+
+
+
 
 
 
