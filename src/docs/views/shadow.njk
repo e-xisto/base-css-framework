@@ -1,0 +1,50 @@
+
+{% extends "../layouts/default.njk" %}
+
+{% block content %}
+
+<style>
+
+.utilities-shadow div {
+	border: 1px solid #000;
+	padding: 20px;
+	margin-bottom: 50px;
+}
+
+</style>
+
+{% markdown %}
+
+# Sombras
+
+Añadir o eliminar sombras de un elemento fácilmente.
+
+
+<div class="demo">
+	<div class="utilities-shadow">
+		<div class="shadow">Sombra</div>
+	</div>
+	<div class="utilities-shadow">
+		<div class="shadow-sm">Sombra sm</div>
+	</div>
+	<div class="utilities-shadow">
+		<div class="shadow-lg">Sombra lg</div>
+	</div>
+	<div class="utilities-shadow">
+		<div class="shadow-none">Sin sombra</div>
+	</div>
+</div>
+
+```html
+
+		<div class="shadow">Sombra</div>
+		<div class="shadow-sm">Sombra sm</div>
+		<div class="shadow-lg">Sombra lg</div>
+		<div class="shadow-none">Sin sombra</div>
+
+```
+
+
+{% endmarkdown %}
+
+{% endblock %}
