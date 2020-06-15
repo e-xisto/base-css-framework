@@ -3,13 +3,141 @@
 
 {% block content %}
 
-	<h1>Spacing</h1>
+<style>
 
-	<ul>
-		<li>Tamaños y proporciones</li>
-		<li>Nomenclatura y condicionar por breakpoint</li>
-	</ul>
+.spacing-demo {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
 
+.spacing-utilities {
+	display: inline-block;
+	border: 1px solid var(--light);
+	background: #f8f9fa;
+	margin-bottom: 15px;
+	margin-right: 5px;
+}
 
+.spacing-utilities span {
+	display: block;
+	border: 1px solid black;
+	border-style: dashed;
+	color: black;
+}
+
+</style>
+
+{% markdown %}
+
+# Espacios
+
+Una serie de clases ya sea aplicando `margin` o `padding` las cuales cuentan cuentan con una versión `xxs` hasta `xxxxl`.
+
+La semántica de dichas clases es la siguiente:
+
+<ul>
+	<li>
+		Si queremos aplicar <code>margin</code> a nuestro elemento, empezariamos la clase por <code>m-</code>, mientras que si es padding la empezaríamos por <code>p-</code>.
+	</li>
+	<li>
+		Indistintamente de si es <code>margin</code> o <code>padding</code>, a continuación escribiriamos el lado al que queremos que se aplique, donde:
+		<ul>
+			<li><code>t-</code> es para <code>margin-top</code> o <code>padding-top</code></li>
+			<li><code>b-</code> es para <code>margin-bottom</code> o <code>padding-bottom</code></li>
+			<li><code>l-</code> es para <code>margin-left</code> o <code>padding-left</code></li>
+			<li><code>r-</code> es para <code>margin-right</code> o <code>padding-right</code></li>
+			<li><code>x-</code> es para <code>margin-right</code> o <code>padding-right</code> y <code>margin-left</code> o <code>padding-left</code></li>
+			<li><code>y-</code> es para <code>margin-top</code> o <code>padding-top</code> y <code>margin-bottom</code> o <code>padding-bottom</code></li>
+		</ul>
+	</li>
+	<li>
+		A continuación añadiriamos el breakpoint (desde<code>xs</code> hasta <code>lg</code>), aunque no es necesario a no ser que busquemos darle ese <code>margin</code> o <code>padding</code>
+		en una resolución específica.
+	</li>
+	<li>Por último, añadimos el tamaño partiendo desde <code>xss</code> hasta <code>xxxxl</code>, donde también encontramos <code>none</code>.</li>
+</ul>
+
+Los valores que encontramos desde `xxs` hasta `xxxxl` equivale al siguiente tamaño en píxeles que se muestra en la
+siguiente tabla:
+
+<table class="table-responsive-list table-striped table-bordered">
+	<thead>
+		<tr>
+			<th>Valor</th>
+			<th>Tamaño</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>xxs</td>
+			<td>2px</td>
+		</tr>
+		<tr>
+			<td>xs</td>
+			<td>5px</td>
+		</tr>
+		<tr>
+			<td>sm</td>
+			<td>10px</td>
+		</tr>
+		<tr>
+			<td>md</td>
+			<td>15px</td>
+		</tr>
+		<tr>
+			<td>lg</td>
+			<td>20px</td>
+		</tr>
+		<tr>
+			<td>xl</td>
+			<td>30px</td>
+		</tr>
+		<tr>
+			<td>xxl</td>
+			<td>50px</td>
+		</tr>
+		<tr>
+			<td>xxxl</td>
+			<td>80px</td>
+		</tr>
+		<tr>
+			<td>xxxxl</td>
+			<td>130px</td>
+		</tr>
+	</tbody>
+</table>
+
+### Algunos ejemplos
+
+<div class="demo spacing-demo">
+	<div class="spacing-utilities">
+		<span class="mt-lg-md pt-lg-sm">.mt-lg-md .pt-lg-sm</span>
+	</div>
+	<div class="spacing-utilities">
+		<span class="my-sm pb-xs">.my-sm .pb-xs</span>
+	</div>
+	<div class="spacing-utilities">
+		<span class="mb-xs-xs">.mb-xs-xs</span>
+	</div>
+	<div class="spacing-utilities">
+		<span class="mx-xxxl p-md">.mx-xxxl .p-md</span>
+	</div>
+	<div class="spacing-utilities">
+		<span class="my-xl pb-md-xl">.my-xl .pb-md-xl</span>
+	</div>
+</div>
+
+```html
+
+		<span class="mt-lg-md pt-lg-sm">.mt-lg-md .pt-lg-sm</span>
+		<span class="my-sm pb-xs">.my-sm .pb-xs</span>
+		<span class="mb-xs-xs">.mb-xs-xs</span>
+		<span class="mx-xxxl p-md">.mx-xxxl .p-md</span>
+		<span class="my-xl pb-md-xl">.my-xl .pb-md-xl</span>
+
+```
+
+{% endmarkdown %}
 
 {% endblock %}
