@@ -597,54 +597,53 @@
 
 <h3 id="colores-aplicados-en-textos">Colores aplicados en textos</h3>
 <p>Todos estos colores que acabamos de ver no sólo pueden usarse mediante CSS, sino que podemos usarlos mediante clases en HTML en encabezados, párrafos, enlaces... para así cambiar el color del mismo.</p>
-<p>La semántica de dicha clase comienza con <code>text-</code> más el nombre al que hemos asociado nuestro color.</p>
-<div class="row mb-xxl">
+<p>La semántica de dicha clase sería <code>text-#{$color}</code>.</p>
+<div class="demo">
+<div class="row">
 <div class="col-md-3 col-sm-4">
-<h4 class="text-primary-dk">.text-primary-dk</h4>
-<h5 class="text-primary-md">.text-primary-md</h5>
-<p class="text-primary">.text-primary</p>
-<p class="text-primary-lt">.text-primary-lt</p>
-<a class="text-primary-br">.text-primary-br</a>
+    <h4 class="text-primary-dk">.text-primary-dk</h4>
+    <h5 class="text-primary-md">.text-primary-md</h5>
+    <p class="text-primary">.text-primary</p>
+    <p class="text-primary-lt">.text-primary-lt</p>
+    <a class="text-primary-br">.text-primary-br</a>
 </div>
 <div class="col-md-3 col-sm-4">
-<h4 class="text-secondary-dk">.text-secondary-dk</h4>
-<h5 class="text-secondary-md">.text-secondary-md</h5>
-<p class="text-secondary">.text-secondary</p>
-<p class="text-secondary-lt">.text-secondary-lt</p>
-<a class="text-secondary-br">.text-secondary-br</a>
+    <h4 class="text-secondary-dk">.text-secondary-dk</h4>
+    <h5 class="text-secondary-md">.text-secondary-md</h5>
+    <p class="text-secondary">.text-secondary</p>
+    <p class="text-secondary-lt">.text-secondary-lt</p>
+    <a class="text-secondary-br">.text-secondary-br</a>
 </div>
 <div class="col-md-3 col-sm-4">
-<h4 class="text-custom-1">.text-custom-1</h4>
-<p class="text-custom-2">.text-custom-2</p>
-<p class="text-custom-3">.text-custom-3</p>
-<a class="text-custom-4">.text-custom-4</a>
+    <h4 class="text-custom-1">.text-custom-1</h4>
+    <p class="text-custom-2">.text-custom-2</p>
+    <p class="text-custom-3">.text-custom-3</p>
+    <a class="text-custom-4">.text-custom-4</a>
 </div>
 <div class="col-md-3 col-sm-4">
-<h4 class="text-success">.text-success</h4>
-<p class="text-warning">.text-warning</p>
-<p class="text-danger">.text-danger</p>
-<a class="text-info">.text-info</a>
+    <h4 class="text-success">.text-success</h4>
+    <p class="text-warning">.text-warning</p>
+    <p class="text-danger">.text-danger</p>
+    <a class="text-info">.text-info</a>
 </div>
 
 <div class="col-md-3 col-sm-4 mt-md">
-<p class="text-black">.text-black</p>
-<p class="text-dark">.text-dark</p>
+    <p class="text-black">.text-black</p>
+    <p class="text-dark">.text-dark</p>
 </div>
 <div class="col-md-3 col-sm-4 mt-md">
-<p class="text-midtone">.text-midtone</p>
-<p class="text-gray">.text-gray</p>
+    <p class="text-midtone">.text-midtone</p>
+    <p class="text-gray">.text-gray</p>
 </div>
 <div class="col-md-3 col-sm-4 mt-md">
-<p class="text-light">.text-light</p>
-<p class="text-bright">.text-bright</p>
+    <p class="text-light">.text-light</p>
+    <p class="text-bright">.text-bright</p>
 </div>
 <div class="col-md-3 col-sm-4 mt-md">
-<p class="text-white">.text-white</p>
+    <p class="text-white">.text-white</p>
 </div>
 </div>
-
-
-
+</div>
 
 <pre><code class="language-html">
 &lt;h4 class=&quot;text-primary-dk&quot;&gt;.text-primary-dk&lt;/h4&gt;
@@ -679,77 +678,80 @@
 </code></pre>
 <h3 id="colores-aplicados-como-fondo">Colores aplicados como fondo</h3>
 <p>Como acabamos de ver, podemos usar nuestros colores para cambiar el color del texto pero también podemos usarlos para añadirles un color de fondo.</p>
-<p>Para poder usar estos colores como color de fondo, debemos usar <code>bg-</code> más el nombre de nuestro color.</p>
-<div class="row mb-xxl">
+<p>Para poder usar estos colores como color de fondo, debemos usar <code>bg-#{color}</code>.</p>
+<div class="demo">
+<div class="row">
 <div class="col-md-3 col-sm-4">
-<h4 class="bg-primary-dk p-sm text-white">.bg-primary-dk</h4>
-<h5 class="bg-primary-md p-sm text-white">.bg-primary-md</h5>
-<p class="bg-primary p-sm text-white">.bg-primary</p>
-<p class="bg-primary-lt p-sm">.bg-primary-lt</p>
-<a class="bg-primary-br p-sm">.bg-primary-br</a>
-</div>
-<div class="col-md-3 col-sm-4">
-<h4 class="bg-secondary-dk p-sm text-white">.bg-secondary-dk</h4>
-<h5 class="bg-secondary-md p-sm text-white">.bg-secondary-md</h5>
-<p class="bg-secondary p-sm text-white">.bg-secondary</p>
-<p class="bg-secondary-lt p-sm">.bg-secondary-lt</p>
-<a class="bg-secondary-br p-sm">.bg-secondary-br</a>
+    <h4 class="bg-primary-dk p-sm text-white">.bg-primary-dk</h4>
+    <h5 class="bg-primary-md p-sm text-white">.bg-primary-md</h5>
+    <p class="bg-primary p-sm text-white">.bg-primary</p>
+    <p class="bg-primary-lt p-sm">.bg-primary-lt</p>
+    <a class="bg-primary-br p-sm">.bg-primary-br</a>
 </div>
 <div class="col-md-3 col-sm-4">
-<h4 class="bg-custom-1 p-sm text-white">.bg-custom-1</h4>
-<p class="bg-custom-2 p-sm text-white">.bg-custom-2</p>
-<p class="bg-custom-3 p-sm text-white">.bg-custom-3</p>
-<a class="bg-custom-4 p-sm">.bg-custom-4</a>
+    <h4 class="bg-secondary-dk p-sm text-white">.bg-secondary-dk</h4>
+    <h5 class="bg-secondary-md p-sm text-white">.bg-secondary-md</h5>
+    <p class="bg-secondary p-sm text-white">.bg-secondary</p>
+    <p class="bg-secondary-lt p-sm">.bg-secondary-lt</p>
+    <a class="bg-secondary-br p-sm">.bg-secondary-br</a>
 </div>
 <div class="col-md-3 col-sm-4">
-<h4 class="bg-success p-sm text-white">.bg-success</h4>
-<p class="bg-warning p-sm text-white">.bg-warning</p>
-<p class="bg-danger p-sm text-white">.bg-danger</p>
-<a class="bg-info p-sm text-white">.bg-info</a>
+    <h4 class="bg-custom-1 p-sm text-white">.bg-custom-1</h4>
+    <p class="bg-custom-2 p-sm text-white">.bg-custom-2</p>
+    <p class="bg-custom-3 p-sm text-white">.bg-custom-3</p>
+    <a class="bg-custom-4 p-sm">.bg-custom-4</a>
+</div>
+<div class="col-md-3 col-sm-4">
+    <h4 class="bg-success p-sm text-white">.bg-success</h4>
+    <p class="bg-warning p-sm text-white">.bg-warning</p>
+    <p class="bg-danger p-sm text-white">.bg-danger</p>
+    <a class="bg-info p-sm text-white">.bg-info</a>
 </div>
 <div class="col-md-3 col-sm-4 mt-md">
-<p class="bg-black p-sm text-white">.bg-black</p>
-<p class="bg-dark p-sm text-white">.bg-dark</p>
+    <p class="bg-black p-sm text-white">.bg-black</p>
+    <p class="bg-dark p-sm text-white">.bg-dark</p>
 </div>
 <div class="col-md-3 col-sm-4 mt-md">
-<p class="bg-midtone p-sm text-white">.bg-midtone</p>
-<p class="bg-gray p-sm text-white">.bg-gray</p>
+    <p class="bg-midtone p-sm text-white">.bg-midtone</p>
+    <p class="bg-gray p-sm text-white">.bg-gray</p>
 </div>
 <div class="col-md-3 col-sm-4 mt-md">
-<p class="bg-light p-sm">.bg-light</p>
-<p class="bg-bright p-sm">.bg-bright</p>
+    <p class="bg-light p-sm">.bg-light</p>
+    <p class="bg-bright p-sm">.bg-bright</p>
 </div>
 <div class="col-md-3 col-sm-4 mt-md">
-<p class="bg-white p-sm">.bg-white</p>
+    <p class="bg-white p-sm">.bg-white</p>
 </div>
 </div>
+</div>
+
 
 <pre><code class="language-html">
-&lt;h4 class=&quot;bg-primary-dk p-sm text-white&quot;&gt;.bg-primary-dk&lt;/h4&gt;
-&lt;h5 class=&quot;bg-primary-md p-sm text-white&quot;&gt;.bg-primary-md&lt;/h5&gt;
-&lt;p class=&quot;bg-primary p-sm text-white&quot;&gt;.bg-primary&lt;/p&gt;
-&lt;p class=&quot;bg-primary-lt p-sm&quot;&gt;.bg-primary-lt&lt;/p&gt;
-&lt;a class=&quot;bg-primary-br p-sm&quot;&gt;.bg-primary-br&lt;/a&gt;
+&lt;h4 class=&quot;bg-primary-dk&quot;&gt;.bg-primary-dk&lt;/h4&gt;
+&lt;h5 class=&quot;bg-primary-md&quot;&gt;.bg-primary-md&lt;/h5&gt;
+&lt;p class=&quot;bg-primary&quot;&gt;.bg-primary&lt;/p&gt;
+&lt;p class=&quot;bg-primary-lt&quot;&gt;.bg-primary-lt&lt;/p&gt;
+&lt;a class=&quot;bg-primary-br&quot;&gt;.bg-primary-br&lt;/a&gt;
 
-&lt;h4 class=&quot;bg-secondary-dk p-sm text-white&quot;&gt;.bg-secondary-dk&lt;/h4&gt;
-&lt;h5 class=&quot;bg-secondary-md p-sm text-white&quot;&gt;.bg-secondary-md&lt;/h5&gt;
-&lt;p class=&quot;bg-secondary p-sm text-white&quot;&gt;.bg-secondary&lt;/p&gt;
-&lt;p class=&quot;bg-secondary-lt p-sm&quot;&gt;.bg-secondary-lt&lt;/p&gt;
-&lt;a class=&quot;bg-secondary-br p-sm&quot;&gt;.bg-secondary-br&lt;/a&gt;
+&lt;h4 class=&quot;bg-secondary-dk&quot;&gt;.bg-secondary-dk&lt;/h4&gt;
+&lt;h5 class=&quot;bg-secondary-md&quot;&gt;.bg-secondary-md&lt;/h5&gt;
+&lt;p class=&quot;bg-secondary&quot;&gt;.bg-secondary&lt;/p&gt;
+&lt;p class=&quot;bg-secondary-lt&quot;&gt;.bg-secondary-lt&lt;/p&gt;
+&lt;a class=&quot;bg-secondary-br&quot;&gt;.bg-secondary-br&lt;/a&gt;
 
-&lt;h4 class=&quot;bg-custom-1 p-sm text-white&quot;&gt;.bg-custom-1&lt;/h4&gt;
-&lt;p class=&quot;bg-custom-2 p-sm text-white&quot;&gt;.bg-custom-2&lt;/p&gt;
-&lt;p class=&quot;bg-custom-3 p-sm text-white&quot;&gt;.bg-custom-3&lt;/p&gt;
-&lt;a class=&quot;bg-custom-4 p-sm&quot;&gt;.bg-custom-4&lt;/a&gt;
+&lt;h4 class=&quot;bg-custom-1&quot;&gt;.bg-custom-1&lt;/h4&gt;
+&lt;p class=&quot;bg-custom-2&quot;&gt;.bg-custom-2&lt;/p&gt;
+&lt;p class=&quot;bg-custom-3&quot;&gt;.bg-custom-3&lt;/p&gt;
+&lt;a class=&quot;bg-custom-4&quot;&gt;.bg-custom-4&lt;/a&gt;
 
-&lt;h4 class=&quot;bg-success p-sm text-white&quot;&gt;.bg-success&lt;/h4&gt;
-&lt;p class=&quot;bg-warning p-sm text-white&quot;&gt;.bg-warning&lt;/p&gt;
-&lt;p class=&quot;bg-danger p-sm text-white&quot;&gt;.bg-danger&lt;/p&gt;
-&lt;a class=&quot;bg-info p-sm text-white&quot;&gt;.bg-info&lt;/a&gt;
+&lt;h4 class=&quot;bg-success&quot;&gt;.bg-success&lt;/h4&gt;
+&lt;p class=&quot;bg-warning&quot;&gt;.bg-warning&lt;/p&gt;
+&lt;p class=&quot;bg-danger&quot;&gt;.bg-danger&lt;/p&gt;
+&lt;a class=&quot;bg-info&quot;&gt;.bg-info&lt;/a&gt;
 
-&lt;p class=&quot;bg-black text-white&quot;&gt;.bg-black&lt;/p&gt;
-&lt;p class=&quot;bg-dark text-white&quot;&gt;.bg-dark&lt;/p&gt;
-&lt;p class=&quot;bg-midtone text-white&quot;&gt;.bg-midtone&lt;/p&gt;
+&lt;p class=&quot;bg-black&quot;&gt;.bg-black&lt;/p&gt;
+&lt;p class=&quot;bg-dark&quot;&gt;.bg-dark&lt;/p&gt;
+&lt;p class=&quot;bg-midtone&quot;&gt;.bg-midtone&lt;/p&gt;
 &lt;p class=&quot;bg-gray&quot;&gt;.bg-gray&lt;/p&gt;
 &lt;p class=&quot;bg-light&quot;&gt;.bg-light&lt;/p&gt;
 &lt;p class=&quot;bg-bright&quot;&gt;.bg-bright&lt;/p&gt;
