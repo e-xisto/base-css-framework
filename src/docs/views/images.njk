@@ -19,16 +19,17 @@
 Disponemos de tres clases para decidir el funcionamiento de las imágenes. Estas tres clases nos convertirá nuestra
 imagen como bloque.
 
-`img-responsive` limitará el tamaño máximo de la imagen al ancho del contenedor, pero nunca forzando a que la imagen ocupe el ancho completo.
+### Img-responsive
 
-`img-center` permite centrar la imagen en el contenedor sin fijar un ancho. Lo ideal sería utilizar esta clase junto a
-`img-responsive`, para así asegurarnos de que en ningún momento la imagen sobrepasará su contenedor.
+La clase `img-responsive` limitará el tamaño máximo de la imagen al ancho del contenedor, pero nunca forzando a que la imagen ocupe el ancho completo.
 
-`ìmg-full-responsive` forzará a que la imagen ocupe el ancho completo del contenedor.
-
-<div class="utilities-image mb-md">
-	<img src="https://ximg.es/450x250/eee" class="img-responsive" alt="">
+<div class="demo">
+	<div class="utilities-image">
+		<img src="https://ximg.es/450x250/eee" class="img-responsive" alt="">
+	</div>
 </div>
+
+
 
 ```html
 
@@ -36,8 +37,15 @@ imagen como bloque.
 
 ```
 
-<div class="utilities-image mb-md">
-	<img src="https://ximg.es/280x280/eee" class="img-center" alt="">
+### Img-center y img-responsive
+
+La clase `img-center` permite centrar la imagen en el contenedor sin fijar un ancho. Lo ideal sería utilizar esta clase
+junto a `img-responsive`, para así asegurarnos de que en ningún momento la imagen sobrepasará su contenedor.
+
+<div class="demo">
+	<div class="utilities-image">
+		<img src="https://ximg.es/280x280/eee" class="img-center" alt="">
+	</div>
 </div>
 
 ```html
@@ -46,8 +54,10 @@ imagen como bloque.
 
 ```
 
-<div class="utilities-image mb-md">
-	<img src="https://ximg.es/500x500/eee" class="img-responsive img-center" alt="">
+<div class="demo">
+	<div class="utilities-image">
+		<img src="https://ximg.es/500x500/eee" class="img-responsive img-center" alt="">
+	</div>
 </div>
 
 ```html
@@ -56,8 +66,14 @@ imagen como bloque.
 
 ```
 
-<div class="utilities-image">
-	<img src="https://ximg.es/800x800/eee" class="img-full-responsive" alt="">
+### Img-full-responsive
+
+La clase `ìmg-full-responsive` forzará a que la imagen ocupe el ancho completo del contenedor.
+
+<div class="demo">
+	<div class="utilities-image">
+		<img src="https://ximg.es/800x800/eee" class="img-full-responsive" alt="">
+	</div>
 </div>
 
 ```html
