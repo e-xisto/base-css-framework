@@ -10,30 +10,32 @@
 Para empezar a aplicar los estilos de los botones predefinidos por Base CSS, necesitamos usar la clase `btn` o `button`
 por defecto.
 
-Esta clase podemos aplicarla tanto a elementos `<button>` como `<a>`.
+Esta clase se puede aplicar tanto a elementos `<button>` como `<a>`.
 
-Para modificar el color de los botones, deberíamos cambiar en el archivo de variables los <a href="/colors.html">colores</a>.
+Para modificar el color de los botones, deberíamos cambiar los <a href="/colors.html">colores</a> en el archivo de variables.
 
-<div class="row">
-	<div class="col-sm-3 col-xs-6">
-		<a href="" class="btn btn-block mb-md">Default</a>
-		<a href="" class="btn btn-primary btn-block mb-xs-md">Primary</a>
-	</div>
-	<div class="col-sm-3 col-xs-6">
-		<button class="btn btn-secondary btn-block mb-md">Secondary</button>
-		<button class="btn btn-link btn-block mb-xs-md">link</button>
-	</div>
-	<div class="col-sm-3 col-xs-6">
-		<a href="" class="btn btn-danger btn-block mb-md">Danger</a>
-		<a href="" class="btn btn-warning btn-block mb-xs-md">Warning</a>
-	</div>
-	<div class="col-sm-3 col-xs-6">
-		<button class="btn btn-success btn-block mb-md">Success</button>
-		<button class="btn btn-info btn-block mb-xs-md">Info</button>
+<div class="demo">
+	<div class="row">
+		<div class="col-sm-3 col-xs-6">
+			<a href="" class="btn btn-block mb-md">Default</a>
+			<a href="" class="btn btn-primary btn-block mb-xs-md">Primary</a>
+		</div>
+		<div class="col-sm-3 col-xs-6">
+			<button class="btn btn-secondary btn-block mb-md">Secondary</button>
+			<button class="btn btn-link btn-block mb-xs-md">link</button>
+		</div>
+		<div class="col-sm-3 col-xs-6">
+			<a href="" class="btn btn-danger btn-block mb-md">Danger</a>
+			<a href="" class="btn btn-warning btn-block mb-xs-md">Warning</a>
+		</div>
+		<div class="col-sm-3 col-xs-6">
+			<button class="btn btn-success btn-block mb-md">Success</button>
+			<button class="btn btn-info btn-block mb-xs-md">Info</button>
+		</div>
 	</div>
 </div>
 
-```html
+	```html
 
 		<a href="" class="btn">Default</a>
 		<a href="" class="btn btn-primary">Primary</a>
@@ -51,25 +53,26 @@ Para modificar el color de los botones, deberíamos cambiar en el archivo de var
 
 ### Botones outline
 
-Contamos con las clases `btn-outlined` o `btn-outline` en el caso de que queramos eliminar el color de fondo de los
-botones
+Contamos con las clases `btn-outlined` o `btn-outline` para eliminar el color de fondo de los botones.
 
-<div class="row">
-	<div class="col-sm-3 col-xs-6">
-		<a href="" class="btn btn-outlined btn-block mb-md">Default</a>
-		<a href="" class="btn btn-primary btn-outlined btn-block mb-xs-md">Primary</a>
-	</div>
-	<div class="col-sm-3 col-xs-6">
-		<button class="btn btn-secondary btn-outline btn-block mb-md">Secondary</button>
-		<button class="btn btn-link btn-outline btn-block mb-xs-md">link</button>
-	</div>
-	<div class="col-sm-3 col-xs-6">
-		<a href="" class="btn btn-danger btn-outlined btn-block mb-md">Danger</a>
-		<a href="" class="btn btn-warning btn-outlined btn-block mb-xs-md">Warning</a>
-	</div>
-	<div class="col-sm-3 col-xs-6">
-		<button class="btn btn-success btn-outline btn-block mb-md">Success</button>
-		<button class="btn btn-info btn-outline btn-block mb-xs-md">Info</button>
+<div class="demo">
+	<div class="row">
+		<div class="col-sm-3 col-xs-6">
+			<a href="" class="btn btn-outlined btn-block mb-md">Default</a>
+			<a href="" class="btn btn-primary btn-outlined btn-block mb-xs-md">Primary</a>
+		</div>
+		<div class="col-sm-3 col-xs-6">
+			<button class="btn btn-secondary btn-outline btn-block mb-md">Secondary</button>
+			<button class="btn btn-link btn-outline btn-block mb-xs-md">link</button>
+		</div>
+		<div class="col-sm-3 col-xs-6">
+			<a href="" class="btn btn-danger btn-outlined btn-block mb-md">Danger</a>
+			<a href="" class="btn btn-warning btn-outlined btn-block mb-xs-md">Warning</a>
+		</div>
+		<div class="col-sm-3 col-xs-6">
+			<button class="btn btn-success btn-outline btn-block mb-md">Success</button>
+			<button class="btn btn-info btn-outline btn-block mb-xs-md">Info</button>
+		</div>
 	</div>
 </div>
 
@@ -90,12 +93,14 @@ botones
 
 ### Tamaños
 
-Modifica el tamaño de los botones de una forma rápida y sencilla mediante `btn-lg`, `btn-md` y `btn-sm`.
+Modifica el tamaño de los botones mediante las clases `btn-lg`, `btn-md` y `btn-sm`.
 
-<button class="btn btn-primary btn-lg mb-xs-md">Botón LG</button>
-<button class="btn btn-primary btn-md mb-xs-md">Botón MD</button>
-<button class="btn btn-primary mb-xs-md">Default</button>
-<button class="btn btn-primary btn-sm mb-xs-md">Botón SM</button>
+<div class="demo">
+	<button class="btn btn-primary btn-lg mb-xs-md">Botón LG</button>
+	<button class="btn btn-primary btn-md mb-xs-md">Botón MD</button>
+	<button class="btn btn-primary mb-xs-md">Default</button>
+	<button class="btn btn-primary btn-sm mb-xs-md">Botón SM</button>
+</div>
 
 ```html
 
@@ -108,10 +113,12 @@ Modifica el tamaño de los botones de una forma rápida y sencilla mediante `btn
 
 ### Desactivado
 
-Modifica el estado de un botón a desactivado mediante la clase `required` o simplemente como atributo.
+Modifica el estado de un botón a desactivado mediante la clase `disabled` o como atributo.
 
-<a class="btn mb-xs-md" disabled>Botón atributo disabled</a>
-<a class="btn disabled mb-xs-md">Botón clase disabled</a>
+<div class="demo">
+	<a class="btn mb-xs-md" disabled>Botón atributo disabled</a>
+	<a class="btn disabled mb-xs-md">Botón clase disabled</a>
+</div>
 
 ```html
 
@@ -122,10 +129,12 @@ Modifica el estado de un botón a desactivado mediante la clase `required` o sim
 
 ### Botón redondeado
 
-Redondea los botones mediante las clases `btn-round` y `btn-rounded`
+Redondea los botones usando `btn-round` o `btn-rounded`.
 
-<a class="btn btn-success mr-md btn-rounded mb-xs-md">Botón rounded</a>
-<a class="btn btn-secondary btn-round mb-xs-md">Botón round</a>
+<div class="demo">
+	<a class="btn btn-success mr-md btn-rounded mb-xs-md">Botón rounded</a>
+	<a class="btn btn-secondary btn-round mb-xs-md">Botón round</a>
+</div>
 
 ```html
 		<a class="btn btn-success mr-md btn-rounded">Botón rounded</a>
@@ -136,7 +145,9 @@ Redondea los botones mediante las clases `btn-round` y `btn-rounded`
 
 Usando la clase `btn-block`, hacemos que ocupe el ancho completo del padre.
 
-<button class="btn btn-block btn-primary">Botón block</button>
+<div class="demo">
+	<button class="btn btn-block btn-primary">Botón block</button>
+</div>
 
 ```html
 
@@ -145,12 +156,14 @@ Usando la clase `btn-block`, hacemos que ocupe el ancho completo del padre.
 ```
 
 También podemos usar esta clase para responsive, es decir, utilizando la clase `btn-#{breakpoint}-block` (donde #{breakpoint} equivale a `lg`, `md`, `sm` y `xs`) decidimos para
-que resolución queremos que el botón ocupe el ancho completo.
+que resolución el botón ocuparía el ancho completo.
 
-<a class="btn btn-primary btn-lg-block mr-sm mr-lg-none mb-sm">Botón lg block</a>
-<a class="btn btn-primary btn-md-block mr-sm mr-md-sm mb-sm">Botón md block</a>
-<a class="btn btn-primary btn-sm-block mr-sm mr-sm-sm mb-sm">Botón sm block</a>
-<a class="btn btn-primary btn-xs-block mr-sm mr-xs-sm mb-sm">Botón xs block</a>
+<div class="demo">
+	<a class="btn btn-primary btn-lg-block mr-sm mr-lg-none mb-sm">Botón lg block</a>
+	<a class="btn btn-primary btn-md-block mr-sm mr-md-sm mb-sm">Botón md block</a>
+	<a class="btn btn-primary btn-sm-block mr-sm mr-sm-sm mb-sm">Botón sm block</a>
+	<a class="btn btn-primary btn-xs-block mr-sm mr-xs-sm mb-sm">Botón xs block</a>
+</div>
 
 ```html
 

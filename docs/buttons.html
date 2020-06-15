@@ -423,24 +423,26 @@
 <h1 id="botones">Botones</h1>
 <p>Para empezar a aplicar los estilos de los botones predefinidos por Base CSS, necesitamos usar la clase <code>btn</code> o <code>button</code>
 por defecto.</p>
-<p>Esta clase podemos aplicarla tanto a elementos <code>&lt;button&gt;</code> como <code>&lt;a&gt;</code>.</p>
-<p>Para modificar el color de los botones, deberíamos cambiar en el archivo de variables los <a href="/colors.html">colores</a>.</p>
+<p>Esta clase se puede aplicar tanto a elementos <code>&lt;button&gt;</code> como <code>&lt;a&gt;</code>.</p>
+<p>Para modificar el color de los botones, deberíamos cambiar los <a href="/colors.html">colores</a> en el archivo de variables.</p>
+<div class="demo">
 <div class="row">
 <div class="col-sm-3 col-xs-6">
-<a href="" class="btn btn-block mb-md">Default</a>
-<a href="" class="btn btn-primary btn-block mb-xs-md">Primary</a>
+    <a href="" class="btn btn-block mb-md">Default</a>
+    <a href="" class="btn btn-primary btn-block mb-xs-md">Primary</a>
 </div>
 <div class="col-sm-3 col-xs-6">
-<button class="btn btn-secondary btn-block mb-md">Secondary</button>
-<button class="btn btn-link btn-block mb-xs-md">link</button>
+    <button class="btn btn-secondary btn-block mb-md">Secondary</button>
+    <button class="btn btn-link btn-block mb-xs-md">link</button>
 </div>
 <div class="col-sm-3 col-xs-6">
-<a href="" class="btn btn-danger btn-block mb-md">Danger</a>
-<a href="" class="btn btn-warning btn-block mb-xs-md">Warning</a>
+    <a href="" class="btn btn-danger btn-block mb-md">Danger</a>
+    <a href="" class="btn btn-warning btn-block mb-xs-md">Warning</a>
 </div>
 <div class="col-sm-3 col-xs-6">
-<button class="btn btn-success btn-block mb-md">Success</button>
-<button class="btn btn-info btn-block mb-xs-md">Info</button>
+    <button class="btn btn-success btn-block mb-md">Success</button>
+    <button class="btn btn-info btn-block mb-xs-md">Info</button>
+</div>
 </div>
 </div>
 
@@ -458,24 +460,25 @@ por defecto.</p>
 &lt;button class=&quot;btn btn-info&quot;&gt;Info&lt;/button&gt;
 </code></pre>
 <h3 id="botones-outline">Botones outline</h3>
-<p>Contamos con las clases <code>btn-outlined</code> o <code>btn-outline</code> en el caso de que queramos eliminar el color de fondo de los
-botones</p>
+<p>Contamos con las clases <code>btn-outlined</code> o <code>btn-outline</code> para eliminar el color de fondo de los botones.</p>
+<div class="demo">
 <div class="row">
 <div class="col-sm-3 col-xs-6">
-<a href="" class="btn btn-outlined btn-block mb-md">Default</a>
-<a href="" class="btn btn-primary btn-outlined btn-block mb-xs-md">Primary</a>
+    <a href="" class="btn btn-outlined btn-block mb-md">Default</a>
+    <a href="" class="btn btn-primary btn-outlined btn-block mb-xs-md">Primary</a>
 </div>
 <div class="col-sm-3 col-xs-6">
-<button class="btn btn-secondary btn-outline btn-block mb-md">Secondary</button>
-<button class="btn btn-link btn-outline btn-block mb-xs-md">link</button>
+    <button class="btn btn-secondary btn-outline btn-block mb-md">Secondary</button>
+    <button class="btn btn-link btn-outline btn-block mb-xs-md">link</button>
 </div>
 <div class="col-sm-3 col-xs-6">
-<a href="" class="btn btn-danger btn-outlined btn-block mb-md">Danger</a>
-<a href="" class="btn btn-warning btn-outlined btn-block mb-xs-md">Warning</a>
+    <a href="" class="btn btn-danger btn-outlined btn-block mb-md">Danger</a>
+    <a href="" class="btn btn-warning btn-outlined btn-block mb-xs-md">Warning</a>
 </div>
 <div class="col-sm-3 col-xs-6">
-<button class="btn btn-success btn-outline btn-block mb-md">Success</button>
-<button class="btn btn-info btn-outline btn-block mb-xs-md">Info</button>
+    <button class="btn btn-success btn-outline btn-block mb-md">Success</button>
+    <button class="btn btn-info btn-outline btn-block mb-xs-md">Info</button>
+</div>
 </div>
 </div>
 
@@ -492,11 +495,14 @@ botones</p>
 &lt;button class=&quot;btn btn-success btn-outline&quot;&gt;Success&lt;/button&gt;
 &lt;button class=&quot;btn btn-info btn-outline&quot;&gt;Info&lt;/button&gt;</code></pre>
 <h3 id="tamaños">Tamaños</h3>
-<p>Modifica el tamaño de los botones de una forma rápida y sencilla mediante <code>btn-lg</code>, <code>btn-md</code> y <code>btn-sm</code>.</p>
-<p><button class="btn btn-primary btn-lg mb-xs-md">Botón LG</button>
+<p>Modifica el tamaño de los botones mediante las clases <code>btn-lg</code>, <code>btn-md</code> y <code>btn-sm</code>.</p>
+<div class="demo">
+<button class="btn btn-primary btn-lg mb-xs-md">Botón LG</button>
 <button class="btn btn-primary btn-md mb-xs-md">Botón MD</button>
 <button class="btn btn-primary mb-xs-md">Default</button>
-<button class="btn btn-primary btn-sm mb-xs-md">Botón SM</button></p>
+<button class="btn btn-primary btn-sm mb-xs-md">Botón SM</button>
+</div>
+
 <pre><code class="language-html">
 &lt;button class=&quot;btn btn-primary btn-lg&quot;&gt;Botón LG&lt;/button&gt;
 &lt;button class=&quot;btn btn-primary btn-md&quot;&gt;Botón MD&lt;/button&gt;
@@ -504,31 +510,43 @@ botones</p>
 &lt;button class=&quot;btn btn-primary btn-sm&quot;&gt;Botón SM&lt;/button&gt;
 </code></pre>
 <h3 id="desactivado">Desactivado</h3>
-<p>Modifica el estado de un botón a desactivado mediante la clase <code>required</code> o simplemente como atributo.</p>
-<p><a class="btn mb-xs-md" disabled>Botón atributo disabled</a>
-<a class="btn disabled mb-xs-md">Botón clase disabled</a></p>
+<p>Modifica el estado de un botón a desactivado mediante la clase <code>disabled</code> o como atributo.</p>
+<div class="demo">
+<a class="btn mb-xs-md" disabled>Botón atributo disabled</a>
+<a class="btn disabled mb-xs-md">Botón clase disabled</a>
+</div>
+
 <pre><code class="language-html">
 &lt;a class=&quot;btn&quot; disabled&gt;Botón atributo disabled&lt;/a&gt;
 &lt;a class=&quot;btn disabled&quot;&gt;Botón clase disabled&lt;/a&gt;
 </code></pre>
 <h3 id="botón-redondeado">Botón redondeado</h3>
-<p>Redondea los botones mediante las clases <code>btn-round</code> y <code>btn-rounded</code></p>
-<p><a class="btn btn-success mr-md btn-rounded mb-xs-md">Botón rounded</a>
-<a class="btn btn-secondary btn-round mb-xs-md">Botón round</a></p>
+<p>Redondea los botones usando <code>btn-round</code> o <code>btn-rounded</code>.</p>
+<div class="demo">
+<a class="btn btn-success mr-md btn-rounded mb-xs-md">Botón rounded</a>
+<a class="btn btn-secondary btn-round mb-xs-md">Botón round</a>
+</div>
+
 <pre><code class="language-html">&lt;a class=&quot;btn btn-success mr-md btn-rounded&quot;&gt;Botón rounded&lt;/a&gt;
 &lt;a class=&quot;btn btn-secondary btn-round&quot;&gt;Botón round&lt;/a&gt;</code></pre>
 <h3 id="botón-como-bloque">Botón como bloque</h3>
 <p>Usando la clase <code>btn-block</code>, hacemos que ocupe el ancho completo del padre.</p>
-<p><button class="btn btn-block btn-primary">Botón block</button></p>
+<div class="demo">
+<button class="btn btn-block btn-primary">Botón block</button>
+</div>
+
 <pre><code class="language-html">
 &lt;button class=&quot;btn btn-block btn-primary&quot;&gt;Botón block&lt;/button&gt;
 </code></pre>
 <p>También podemos usar esta clase para responsive, es decir, utilizando la clase <code>btn-#{breakpoint}-block</code> (donde #{breakpoint} equivale a <code>lg</code>, <code>md</code>, <code>sm</code> y <code>xs</code>) decidimos para
-que resolución queremos que el botón ocupe el ancho completo.</p>
-<p><a class="btn btn-primary btn-lg-block mr-sm mr-lg-none mb-sm">Botón lg block</a>
+que resolución el botón ocuparía el ancho completo.</p>
+<div class="demo">
+<a class="btn btn-primary btn-lg-block mr-sm mr-lg-none mb-sm">Botón lg block</a>
 <a class="btn btn-primary btn-md-block mr-sm mr-md-sm mb-sm">Botón md block</a>
 <a class="btn btn-primary btn-sm-block mr-sm mr-sm-sm mb-sm">Botón sm block</a>
-<a class="btn btn-primary btn-xs-block mr-sm mr-xs-sm mb-sm">Botón xs block</a></p>
+<a class="btn btn-primary btn-xs-block mr-sm mr-xs-sm mb-sm">Botón xs block</a>
+</div>
+
 <pre><code class="language-html">
 &lt;a class=&quot;btn btn-primary btn-lg-block&quot;&gt;Botón lg block&lt;/a&gt;
 &lt;a class=&quot;btn btn-primary btn-md-block&quot;&gt;Botón md block&lt;/a&gt;
