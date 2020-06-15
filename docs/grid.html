@@ -424,10 +424,51 @@
 <h3 id="contenedores-container">Contenedores (.container)</h3>
 <ul>
 <li>tabla tamaños</li>
+</ul>
+<p>Dependiendo de la resolución del dispositivo, <code>container</code> tendrá un ancho predeterminado como podemos ver en la tabla a
+continuación:</p>
+<table class="table-responsive-list table-striped">
+<thead>
+<tr>
+    <th>Ancho dispositivo</th>
+    <th>Ancho contenedor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1200px o más</td>
+    <td>1170px</td>
+</tr>
+<tr>
+    <td>992px hasta 1199px</td>
+    <td>970px</td>
+</tr>
+<tr>
+    <td>768px hasta 991px</td>
+    <td>750px</td>
+</tr>
+<tr>
+    <td>Menos de 767px</td>
+    <td>100%</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
 <li>Container fluid</li>
+</ul>
+<p>Si en lugar de utilizar la clase <code>container</code> utilizamos la clase <code>container-fluid</code>, lo que conseguiremos no será un
+contenedor con un ancho máximo, sino que este ocupará el ancho al 100%.</p>
+<ul>
 <li>Ver opción de meter clase nuevas BS 4 container-md</li>
+</ul>
+<p>Actualmente, nos encontramos desarrollando la opción de añadir un contenedor al ancho 100% dependiendo de la resolución
+del dispositvo, añadiendo así dicha función de <a href="https://getbootstrap.com/docs/4.5/layout/overview/#containers">Bootstrap 4</a>.</p>
+<ul>
 <li>No anidar dos contenedores</li>
 <li>Variables breakpoints (mixins)</li>
+</ul>
+<ul>
 <li>Variables modificar contenedor</li>
 <li>Ejemplos</li>
 </ul>
