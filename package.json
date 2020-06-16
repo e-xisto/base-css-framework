@@ -26,7 +26,6 @@
 	},
 	"homepage": "https://github.com/e-xisto/base-css-framework#readme",
 	"dependencies": {
-		"simple-parallax-js": "^5.5.1"
 	},
 	"devDependencies": {
 		"@types/swiper": "^5.3.2",
@@ -50,6 +49,7 @@
 		"nunjucks-webpack-plugin": "^5.0.0",
 		"optimize-css-assets-webpack-plugin": "^5.0.1",
 		"sass-loader": "^7.1.0",
+		"simple-parallax-js": "^5.5.1",
 		"style-loader": "^0.23.0",
 		"swiper": "^5.4.3",
 		"terser-webpack-plugin": "^2.3.7",
