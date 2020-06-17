@@ -2,110 +2,259 @@
 
 {% block content %}
 
-<h1>Tables</h1>
+{% markdown %}
 
 
+# Tablas
 
-<div class="container">
-	<div class="row">
-		<div class="col-md-12">
-			<h4>Table responsive</h4>
+Crea tablas responsive usando las clases `table-responsive` y `table-responsive-list` (comprobar en una resolución móvil).
 
-			<table class="table-responsive">
-				<thead>
-					<tr>
-						<th>Account</th>
-						<th>Due Date</th>
-						<th>Amount</th>
-						<th>Period</th>
-						<th>Period</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td data-label="Account">Visa - 3412</td>
-						<td data-label="Due Date">04/01/2016</td>
-						<td data-label="Amount">$1,190</td>
-						<td data-label="Period">03/01/2016 - 03/31/2016</td>
-						<td data-label="Period">03/01/2016 - 03/31/2016</td>
-					</tr>
-					<tr>
-						<td data-label="Account">Visa - 3412</td>
-						<td data-label="Due Date">04/01/2016</td>
-						<td data-label="Amount">$1,190</td>
-						<td data-label="Period">03/01/2016 - 03/31/2016</td>
-						<td data-label="Period">03/01/2016 - 03/31/2016</td>
-					</tr>
-					<tr>
-						<td data-label="Account">Visa - 3412</td>
-						<td data-label="Due Date">04/01/2016</td>
-						<td data-label="Amount">$1,190</td>
-						<td data-label="Period">03/01/2016 - 03/31/2016</td>
-						<td data-label="Period">03/01/2016 - 03/31/2016</td>
-					</tr>
-					<tr>
-						<td data-label="Account">Visa - 3412</td>
-						<td data-label="Due Date">04/01/2016</td>
-						<td data-label="Amount">$1,190</td>
-						<td data-label="Period">03/01/2016 - 03/31/2016</td>
-						<td data-label="Period">03/01/2016 - 03/31/2016</td>
-					</tr>
-					<tr>
-						<td data-label="Account">Visa - 3412</td>
-						<td data-label="Due Date">04/01/2016</td>
-						<td data-label="Amount">$1,190</td>
-						<td data-label="Period">03/01/2016 - 03/31/2016</td>
-						<td data-label="Period">03/01/2016 - 03/31/2016</td>
-					</tr>
-				</tbody>
-			</table>
-
-			<table class="table-striped table-responsive-list">
-				<thead>
-					<tr>
-						<th>Account</th>
-						<th>Due Date</th>
-						<th>Amount</th>
-						<th>Period</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td data-label="Account">Visa - 3412</td>
-						<td data-label="Due Date">04/01/2016</td>
-						<td data-label="Amount">$1,190</td>
-						<td data-label="Period">03/01/2016 - 03/31/2016</td>
-					</tr>
-					<tr>
-						<td data-label="Account">Visa - 3412</td>
-						<td data-label="Due Date">04/01/2016</td>
-						<td data-label="Amount">$1,190</td>
-						<td data-label="Period">03/01/2016 - 03/31/2016</td>
-					</tr>
-					<tr>
-						<td data-label="Account">Visa - 3412</td>
-						<td data-label="Due Date">04/01/2016</td>
-						<td data-label="Amount">$1,190</td>
-						<td data-label="Period">03/01/2016 - 03/31/2016</td>
-					</tr>
-					<tr>
-						<td data-label="Account">Visa - 3412</td>
-						<td data-label="Due Date">04/01/2016</td>
-						<td data-label="Amount">$1,190</td>
-						<td data-label="Period">03/01/2016 - 03/31/2016</td>
-					</tr>
-					<tr>
-						<td data-label="Account">Visa - 3412</td>
-						<td data-label="Due Date">04/01/2016</td>
-						<td data-label="Amount">$1,190</td>
-						<td data-label="Period">03/01/2016 - 03/31/2016</td>
-					</tr>
-				</tbody>
-			</table>
-
-		</div>
-	</div>
+<div class="demo">
+	<table class="table-responsive">
+		<thead>
+			<tr>
+				<th>Account</th>
+				<th>Due Date</th>
+				<th>Amount</th>
+				<th>Period</th>
+				<th>Period</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td data-label="Account">Visa - 3412</td>
+				<td data-label="Due Date">04/01/2016</td>
+				<td data-label="Amount">$1,190</td>
+				<td data-label="Period">03/01/2016 - 03/31/2016</td>
+				<td data-label="Period">03/01/2016 - 03/31/2016</td>
+			</tr>
+			<tr>
+				<td data-label="Account">Visa - 3412</td>
+				<td data-label="Due Date">04/01/2016</td>
+				<td data-label="Amount">$1,190</td>
+				<td data-label="Period">03/01/2016 - 03/31/2016</td>
+				<td data-label="Period">03/01/2016 - 03/31/2016</td>
+			</tr>
+			<tr>
+				<td data-label="Account">Visa - 3412</td>
+				<td data-label="Due Date">04/01/2016</td>
+				<td data-label="Amount">$1,190</td>
+				<td data-label="Period">03/01/2016 - 03/31/2016</td>
+				<td data-label="Period">03/01/2016 - 03/31/2016</td>
+			</tr>
+			<tr>
+				<td data-label="Account">Visa - 3412</td>
+				<td data-label="Due Date">04/01/2016</td>
+				<td data-label="Amount">$1,190</td>
+				<td data-label="Period">03/01/2016 - 03/31/2016</td>
+				<td data-label="Period">03/01/2016 - 03/31/2016</td>
+			</tr>
+			<tr>
+				<td data-label="Account">Visa - 3412</td>
+				<td data-label="Due Date">04/01/2016</td>
+				<td data-label="Amount">$1,190</td>
+				<td data-label="Period">03/01/2016 - 03/31/2016</td>
+				<td data-label="Period">03/01/2016 - 03/31/2016</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
 
+```html
+
+		<table class="table-responsive">
+			<thead>
+				<tr>
+					<th>Account</th>
+					<th>Due Date</th>
+					<th>Amount</th>
+					<th>Period</th>
+					<th>Period</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td data-label="Account">Visa - 3412</td>
+					<td data-label="Due Date">04/01/2016</td>
+					<td data-label="Amount">$1,190</td>
+					<td data-label="Period">03/01/2016 - 03/31/2016</td>
+					<td data-label="Period">03/01/2016 - 03/31/2016</td>
+				</tr>
+				<tr>
+					<td data-label="Account">Visa - 3412</td>
+					<td data-label="Due Date">04/01/2016</td>
+					<td data-label="Amount">$1,190</td>
+					<td data-label="Period">03/01/2016 - 03/31/2016</td>
+					<td data-label="Period">03/01/2016 - 03/31/2016</td>
+				</tr>
+				<tr>
+					<td data-label="Account">Visa - 3412</td>
+					<td data-label="Due Date">04/01/2016</td>
+					<td data-label="Amount">$1,190</td>
+					<td data-label="Period">03/01/2016 - 03/31/2016</td>
+					<td data-label="Period">03/01/2016 - 03/31/2016</td>
+				</tr>
+				<tr>
+					<td data-label="Account">Visa - 3412</td>
+					<td data-label="Due Date">04/01/2016</td>
+					<td data-label="Amount">$1,190</td>
+					<td data-label="Period">03/01/2016 - 03/31/2016</td>
+					<td data-label="Period">03/01/2016 - 03/31/2016</td>
+				</tr>
+				<tr>
+					<td data-label="Account">Visa - 3412</td>
+					<td data-label="Due Date">04/01/2016</td>
+					<td data-label="Amount">$1,190</td>
+					<td data-label="Period">03/01/2016 - 03/31/2016</td>
+					<td data-label="Period">03/01/2016 - 03/31/2016</td>
+				</tr>
+			</tbody>
+		</table>
+
+```
+
+<div class="demo">
+	<table class="table-responsive-list">
+		<thead>
+			<tr>
+				<th>Account</th>
+				<th>Due Date</th>
+				<th>Amount</th>
+				<th>Period</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td data-label="Account">Visa - 3412</td>
+				<td data-label="Due Date">04/01/2016</td>
+				<td data-label="Amount">$1,190</td>
+				<td data-label="Period">03/01/2016 - 03/31/2016</td>
+			</tr>
+			<tr>
+				<td data-label="Account">Visa - 3412</td>
+				<td data-label="Due Date">04/01/2016</td>
+				<td data-label="Amount">$1,190</td>
+				<td data-label="Period">03/01/2016 - 03/31/2016</td>
+			</tr>
+			<tr>
+				<td data-label="Account">Visa - 3412</td>
+				<td data-label="Due Date">04/01/2016</td>
+				<td data-label="Amount">$1,190</td>
+				<td data-label="Period">03/01/2016 - 03/31/2016</td>
+			</tr>
+			<tr>
+				<td data-label="Account">Visa - 3412</td>
+				<td data-label="Due Date">04/01/2016</td>
+				<td data-label="Amount">$1,190</td>
+				<td data-label="Period">03/01/2016 - 03/31/2016</td>
+			</tr>
+			<tr>
+				<td data-label="Account">Visa - 3412</td>
+				<td data-label="Due Date">04/01/2016</td>
+				<td data-label="Amount">$1,190</td>
+				<td data-label="Period">03/01/2016 - 03/31/2016</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+```html
+
+		<table class="table-responsive-list">
+			<thead>
+				<tr>
+					<th>Account</th>
+					<th>Due Date</th>
+					<th>Amount</th>
+					<th>Period</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td data-label="Account">Visa - 3412</td>
+					<td data-label="Due Date">04/01/2016</td>
+					<td data-label="Amount">$1,190</td>
+					<td data-label="Period">03/01/2016 - 03/31/2016</td>
+				</tr>
+				<tr>
+					<td data-label="Account">Visa - 3412</td>
+					<td data-label="Due Date">04/01/2016</td>
+					<td data-label="Amount">$1,190</td>
+					<td data-label="Period">03/01/2016 - 03/31/2016</td>
+				</tr>
+				<tr>
+					<td data-label="Account">Visa - 3412</td>
+					<td data-label="Due Date">04/01/2016</td>
+					<td data-label="Amount">$1,190</td>
+					<td data-label="Period">03/01/2016 - 03/31/2016</td>
+				</tr>
+				<tr>
+					<td data-label="Account">Visa - 3412</td>
+					<td data-label="Due Date">04/01/2016</td>
+					<td data-label="Amount">$1,190</td>
+					<td data-label="Period">03/01/2016 - 03/31/2016</td>
+				</tr>
+				<tr>
+					<td data-label="Account">Visa - 3412</td>
+					<td data-label="Due Date">04/01/2016</td>
+					<td data-label="Amount">$1,190</td>
+					<td data-label="Period">03/01/2016 - 03/31/2016</td>
+				</tr>
+			</tbody>
+		</table>
+
+```
+
+### Striped y bordered
+
+Usando `table-striped` añadimos un color de fondo a las filas impares, mientras que con `bordered` provocamos que todas
+las celdas tengan borde.
+
+<div class="demo">
+	<table class="table-responsive table-striped table-bordered">
+		<thead>
+			<tr>
+				<th>Account</th>
+				<th>Due Date</th>
+				<th>Amount</th>
+				<th>Period</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td data-label="Account">Visa - 3412</td>
+				<td data-label="Due Date">04/01/2016</td>
+				<td data-label="Amount">$1,190</td>
+				<td data-label="Period">03/01/2016 - 03/31/2016</td>
+			</tr>
+			<tr>
+				<td data-label="Account">Visa - 3412</td>
+				<td data-label="Due Date">04/01/2016</td>
+				<td data-label="Amount">$1,190</td>
+				<td data-label="Period">03/01/2016 - 03/31/2016</td>
+			</tr>
+			<tr>
+				<td data-label="Account">Visa - 3412</td>
+				<td data-label="Due Date">04/01/2016</td>
+				<td data-label="Amount">$1,190</td>
+				<td data-label="Period">03/01/2016 - 03/31/2016</td>
+			</tr>
+			<tr>
+				<td data-label="Account">Visa - 3412</td>
+				<td data-label="Due Date">04/01/2016</td>
+				<td data-label="Amount">$1,190</td>
+				<td data-label="Period">03/01/2016 - 03/31/2016</td>
+			</tr>
+			<tr>
+				<td data-label="Account">Visa - 3412</td>
+				<td data-label="Due Date">04/01/2016</td>
+				<td data-label="Amount">$1,190</td>
+				<td data-label="Period">03/01/2016 - 03/31/2016</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+{% endmarkdown %}
 
 {% endblock %}
