@@ -420,6 +420,41 @@
 				<div class="content">
 					<div class="content-container">
 
+<style>
+
+.utilities-heading h1 {
+	padding-bottom: 0;
+	border: 0;
+}
+
+.utilities-heading h3 {
+	padding-bottom: 0px;
+	border: 0;
+}
+
+.utilities-text {
+	width: 70px;
+	border: 1px solid #0E5989;
+	border-style: dotted;
+	padding: 5px;
+}
+
+</style>
+
+<h1 id="tipografía">Tipografía</h1>
+<p>Carga y selecciona la fuente o las fuentes usada en la web.</p>
+<p>Para cargar una nueva fuente, debemos importarla en el archivo <code>fonts.scss</code> usando la regla <code>@import</code>.</p>
+<pre><code class="language-sass">
+@import url(&#39;https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&amp;display=swap&#39;);
+</code></pre>
+<p>En el archivo <code>variables.scss</code>, podemos seleccionar dicha tipografía que acabamos de importar mediante las variables
+<code>$font-family-sans-serif</code> y <code>$font-family-base</code>.</p>
+<pre><code class="language-sass">
+$font-family-sans-serif: &#39;Nunito Sans&#39;, sans-serif;
+$font-family-base: $font-family-sans-serif;
+</code></pre>
+
+
 						</div>			
 					</div>
 				</div>
