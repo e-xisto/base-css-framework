@@ -11,7 +11,7 @@
 
 En Base CSS contamos con una amplia y modificable paleta de colores.
 
-Estos colores se pueden cambiar de forma sencilla en el archivo de variables y, como puedes observar, tienen una semántica muy sencilla para aplicar en CSS ya que todos comienzan por `$color-`
+Estos colores se pueden cambiar de forma sencilla en el archivo `variables.scss` y, como puedes observar, tienen una semántica muy sencilla para aplicar en CSS ya que todos comienzan por `$color-*`
 
 ### Color primario
 
@@ -280,9 +280,9 @@ La semántica de dicha clase sería `text-#{$color}`.
 
 ### Colores aplicados como fondo
 
-Como acabamos de ver, podemos usar nuestros colores para cambiar el color del texto pero también podemos usarlos para añadirles un color de fondo.
+También podemos usarlos para añadir un color de fondo.
 
-Para poder usar estos colores como color de fondo, debemos usar `bg-#{color}`.
+Para poder usar estos colores como color de fondo, debemos usar la clase `bg-#{color}`.
 
 <div class="demo">
 	<div class="row">

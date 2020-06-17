@@ -423,7 +423,7 @@
 
 <h1 id="colores">Colores</h1>
 <p>En Base CSS contamos con una amplia y modificable paleta de colores.</p>
-<p>Estos colores se pueden cambiar de forma sencilla en el archivo de variables y, como puedes observar, tienen una semántica muy sencilla para aplicar en CSS ya que todos comienzan por <code>$color-</code></p>
+<p>Estos colores se pueden cambiar de forma sencilla en el archivo <code>variables.scss</code> y, como puedes observar, tienen una semántica muy sencilla para aplicar en CSS ya que todos comienzan por <code>$color-*</code></p>
 <h3 id="color-primario">Color primario</h3>
 <div class="row">
 <div class="col-xs-6 col-sm-4 col-md-3">
@@ -677,8 +677,8 @@
 &lt;p class=&quot;text-white&quot;&gt;.text-white&lt;/p&gt;
 </code></pre>
 <h3 id="colores-aplicados-como-fondo">Colores aplicados como fondo</h3>
-<p>Como acabamos de ver, podemos usar nuestros colores para cambiar el color del texto pero también podemos usarlos para añadirles un color de fondo.</p>
-<p>Para poder usar estos colores como color de fondo, debemos usar <code>bg-#{color}</code>.</p>
+<p>También podemos usarlos para añadir un color de fondo.</p>
+<p>Para poder usar estos colores como color de fondo, debemos usar la clase <code>bg-#{color}</code>.</p>
 <div class="demo">
 <div class="row">
 <div class="col-md-3 col-sm-4">

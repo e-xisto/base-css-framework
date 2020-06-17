@@ -7,7 +7,8 @@
 
 # Tablas
 
-Crea tablas responsive usando las clases `table-responsive` y `table-responsive-list` (comprobar en una resolución móvil).
+Crea tablas responsive usando las clases `table-responsive` y `table-responsive-list` (comprobar en una resolución
+móvil su comportamiento responsive).
 
 <div class="demo">
 	<table class="table-responsive">
@@ -207,7 +208,7 @@ Crea tablas responsive usando las clases `table-responsive` y `table-responsive-
 
 ### Striped y bordered
 
-Usando `table-striped` añadimos un color de fondo a las filas impares, mientras que con `bordered` provocamos que todas
+Usando `table-striped` añadimos un color de fondo a las filas impares, mientras que con `table-bordered` provocamos que todas
 las celdas tengan borde.
 
 <div class="demo">
@@ -255,6 +256,52 @@ las celdas tengan borde.
 	</table>
 </div>
 
+```html
+
+		<table class="table-responsive table-striped table-bordered">
+			<thead>
+				<tr>
+					<th>Account</th>
+					<th>Due Date</th>
+					<th>Amount</th>
+					<th>Period</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td data-label="Account">Visa - 3412</td>
+					<td data-label="Due Date">04/01/2016</td>
+					<td data-label="Amount">$1,190</td>
+					<td data-label="Period">03/01/2016 - 03/31/2016</td>
+				</tr>
+				<tr>
+					<td data-label="Account">Visa - 3412</td>
+					<td data-label="Due Date">04/01/2016</td>
+					<td data-label="Amount">$1,190</td>
+					<td data-label="Period">03/01/2016 - 03/31/2016</td>
+				</tr>
+				<tr>
+					<td data-label="Account">Visa - 3412</td>
+					<td data-label="Due Date">04/01/2016</td>
+					<td data-label="Amount">$1,190</td>
+					<td data-label="Period">03/01/2016 - 03/31/2016</td>
+				</tr>
+				<tr>
+					<td data-label="Account">Visa - 3412</td>
+					<td data-label="Due Date">04/01/2016</td>
+					<td data-label="Amount">$1,190</td>
+					<td data-label="Period">03/01/2016 - 03/31/2016</td>
+				</tr>
+				<tr>
+					<td data-label="Account">Visa - 3412</td>
+					<td data-label="Due Date">04/01/2016</td>
+					<td data-label="Amount">$1,190</td>
+					<td data-label="Period">03/01/2016 - 03/31/2016</td>
+				</tr>
+			</tbody>
+		</table>
+
+```
 {% endmarkdown %}
 
 {% endblock %}
