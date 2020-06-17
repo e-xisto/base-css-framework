@@ -1,0 +1,78 @@
+{% extends "../layouts/default.njk" %}
+
+{% block content %}
+
+{% markdown %}
+
+# Listas
+
+Estilos por defecto para las listas, ya sean `<ol>` o `<ul>`.
+
+	<div class="demo">
+		<ul>
+			<li>Elemento 1</li>
+			<li>Elemento 2</li>
+			<li>Elemento 3</li>
+		</ul>
+	</div>
+
+```html
+
+		<ul>
+			<li>Elemento 1</li>
+			<li>Elemento 2</li>
+			<li>Elemento 3</li>
+		</ul>
+
+```
+
+### Lista sin estilos
+
+Evitamos que tengan apariencia de listado mediante la clase `list-unstyled`.
+
+<div class="demo">
+	<ol class="list-unstyled">
+		<li>Elemento 1</li>
+		<li>Elemento 2</li>
+		<li>Elemento 3</li>
+	</ol>
+</div>
+
+```html
+
+		<ol class="list-unstyled">
+			<li>Elemento 1</li>
+			<li>Elemento 2</li>
+			<li>Elemento 3</li>
+		</ol>
+
+```
+
+### Lista en línea
+
+Usando `list-inline` provocamos que todos los `li` se sitúen horizontalmente uno al lado del otro.
+
+<div class="demo">
+	<ul class="list-inline">
+		<li>Elemento 1</li>
+		<li>Elemento 2</li>
+		<li>Elemento 3</li>
+	</ul>
+</div>
+
+```html
+
+		<ul class="list-inline">
+			<li>Elemento 1</li>
+			<li>Elemento 2</li>
+			<li>Elemento 3</li>
+		</ul>
+
+```
+
+
+
+
+{% endmarkdown %}
+
+{% endblock %}
