@@ -419,37 +419,143 @@
 </ul>				</div>
 				<div class="content">
 					<div class="content-container">
-<div class="container">
-	<h1>Texto ellipsis</h1>
-	<div class="row" id="cols">
-		<div class="col-md-3">
-			<p class="ellipsis" data-ellipsis-height="70">Anim amet ullamco cillum minim proident esse. Reprehenderit commodo ut eu non fugiat consectetur mollit
-				excepteur in id proident est dolor elit. Qui laborum veniam nostrud nisi dolore consectetur in reprehenderit
-				nostrud sit elit ad laboris pariatur. Sunt dolore voluptate ut reprehenderit. Tempor laborum minim aliqua
-				minim ad consequat exercitation pariatur. Aliquip nostrud ad veniam officia. Magna ad ullamco aliquip amet
-				ad sunt dolore nulla <span>mollit sunt proident id</span> voluptate.</p>
-		</div>
-		<div class="col-md-3">
-			<p class="ellipsis" data-ellipsis-height="150" data-ellipsis="10">Anim amet ullamco cillum minim proident esse. Reprehenderit commodo ut eu non fugiat consectetur mollit
-				excepteur in id proident est dolor elit. Qui laborum veniam nostrud nisi dolore consectetur in reprehenderit
-				nostrud sit elit ad laboris pariatur. Sunt dolore voluptate ut reprehenderit. Tempor laborum minim aliqua
-				minim ad consequat exercitation pariatur. Aliquip nostrud ad veniam officia. Magna ad ullamco aliquip amet
-				ad sunt dolore nulla <span>mollit sunt proident id</span> voluptate.</p>
-		</div>
-		<div class="col-md-3">
-			<p class="ellipsis" data-ellipsis="4">Anim amet ullamco cillum minim proident esse. Reprehenderit commodo ut eu non fugiat consectetur mollit
-				excepteur in id proident est dolor elit. Qui laborum veniam nostrud nisi dolore consectetur in reprehenderit
-				nostrud sit elit ad laboris </p>
-		</div>
-		<div class="col-md-3">
-			<p class="ellipsis" data-ellipsis="2">Anim amet ullamco cillum minim proident esse. Reprehenderit commodo ut eu non fugiat consectetur mollit
-				excepteur in id proident est dolor elit. Qui laborum veniam nostrud nisi dolore consectetur in reprehenderit
-				nostrud sit elit ad laboris </p>
-		</div>
-	</div>
-	<button type="button" onclick="addBlock()" class="btn">Añadir bloque</button>
+
+<style>
+
+.utilities-scroll p {
+	max-height: 110px;
+	max-width: 150px;
+	overflow: scroll;
+	display: inline-block;
+}
+
+</style>
+
+<h1 id="other-utils">Other utils</h1>
+<p>Una lista de otras utilidades</p>
+<h3 id="texto-ellipsis">Texto ellipsis</h3>
+<p>Para que nuestro texto muestre una ellipsis (...), añadiremos a dicho elemento que contiene el texto la clase <code>ellipsis</code>
+seguido del atributo <code>data-ellipsis</code> o <code>data-ellipsis-height</code>.</p>
+<p>Si usamos <code>data-ellipsis</code>, indicaremos cuantas líneas queremos que ocupe el texto, mientras que si usamos
+<code>data-ellipsis-height</code>, definiremos el alto máximo que ocupará.</p>
+<div class="demo">
+<div class="col-md-4">
+<p class="ellipsis" data-ellipsis-height="120">
+    Anim amet ullamco cillum minim proident esse. Reprehenderit commodo ut eu non fugiat consectetur mollit
+    excepteur in id proident est dolor elit. Qui laborum veniam nostrud nisi dolore consectetur in reprehenderit
+    nostrud sit elit ad laboris pariatur. Sunt dolore voluptate ut reprehenderit. Tempor laborum minim aliqua
+    minim ad consequat exercitation pariatur. Aliquip nostrud ad veniam officia. Magna ad ullamco aliquip amet
+    ad sunt dolore nulla
+</p>
+</div>
 </div>
 
+<pre><code class="language-html">
+&lt;p class=&quot;ellipsis&quot; data-ellipsis-height=&quot;120&quot;&gt;
+    Anim amet ullamco cillum minim proident esse. Reprehenderit commodo ut eu non fugiat consectetur mollit
+    excepteur in id proident est dolor elit. Qui laborum veniam nostrud nisi dolore consectetur in reprehenderit
+    nostrud sit elit ad laboris pariatur. Sunt dolore voluptate ut reprehenderit. Tempor laborum minim aliqua
+    minim ad consequat exercitation pariatur. Aliquip nostrud ad veniam officia. Magna ad ullamco aliquip amet
+    ad sunt dolore nulla
+&lt;/p&gt;
+</code></pre>
+<div class="demo">
+<div class="col-md-4">
+<p class="ellipsis" data-ellipsis="3">
+    Anim amet ullamco cillum minim proident esse. Reprehenderit commodo ut eu non fugiat consectetur mollit
+    excepteur in id proident est dolor elit. Qui laborum veniam nostrud nisi dolore consectetur in reprehenderit
+    nostrud sit elit ad laboris pariatur. Sunt dolore voluptate ut reprehenderit. Tempor laborum minim aliqua
+    minim ad consequat exercitation pariatur. Aliquip nostrud ad veniam officia. Magna ad ullamco aliquip amet
+    ad sunt dolore nulla
+</p>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;p class=&quot;ellipsis&quot; data-ellipsis=&quot;3&quot;&gt;
+    Anim amet ullamco cillum minim proident esse. Reprehenderit commodo ut eu non fugiat consectetur mollit
+    excepteur in id proident est dolor elit. Qui laborum veniam nostrud nisi dolore consectetur in reprehenderit
+    nostrud sit elit ad laboris pariatur. Sunt dolore voluptate ut reprehenderit. Tempor laborum minim aliqua
+    minim ad consequat exercitation pariatur. Aliquip nostrud ad veniam officia. Magna ad ullamco aliquip amet
+    ad sunt dolore nulla
+&lt;/p&gt;
+</code></pre>
+<h3 id="clearfix">Clearfix</h3>
+<p>Borra fácilmente los floats de un elemento padre usando la clase <code>clearfix</code>.</p>
+<div class="demo">
+<div class="clearfix">
+<p class="float-right">.float-right</p>
+<p class="float-left">.float-left</p>
+</div>
+<p>no float</p>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;float-left&quot;&gt;float-left&lt;/div&gt;
+</code></pre>
+<h3 id="readers">Readers</h3>
+<p>Oculta un elemento para todos los servicios excepto a los lectores de pantalla</p>
+<pre><code class="language-html">
+&lt;div class=&quot;sr-only&quot;&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<h3 id="no-select">No select</h3>
+<p>Evita que el usuario pueda seleccionar el texto</p>
+<div class="demo">
+<p class="noselect">
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam cupiditate sit accusantium voluptates dolorum
+ducimus commodi veniam fugiat quod quis inventore voluptatem beatae quae amet in, dolor animi sapiente fugit.
+</p>
+</div>
+
+<pre><code class="language-html">
+&lt;p class=&quot;noselect&quot;&gt;
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam cupiditate sit accusantium voluptates dolorum
+    ducimus commodi veniam fugiat quod quis inventore voluptatem beatae quae amet in, dolor animi sapiente fugit.
+&lt;/p&gt;
+</code></pre>
+<h3 id="no-scroll">No scroll</h3>
+<p>Evita el scroll de un elemento usando <code>noscroll</code>.</p>
+<div class="utilities-scroll demo">
+<div>
+<p class="mr-md">
+    <span class="tag token">Scroll</span> lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus voluptatem dignissimos quo corrupti minima, dolorem inventore, earum, harum alias iste similique odio aut consectetur. Accusamus quam alias totam atque cum.
+</p>
+<p class="noscroll">
+    <span class="tag token">Noscroll</span> lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus voluptatem dignissimos quo corrupti minima, dolorem inventore, earum, harum alias iste similique odio aut consectetur. Accusamus quam alias totam atque cum.
+</p>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;p&gt;
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus voluptatem dignissimos quo corrupti minima, dolorem inventore, earum, harum alias iste similique odio aut consectetur. Accusamus quam alias totam atque cum.
+&lt;/p&gt;
+&lt;p class=&quot;noscroll&quot;&gt;
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus voluptatem dignissimos quo corrupti minima, dolorem inventore, earum, harum alias iste similique odio aut consectetur. Accusamus quam alias totam atque cum.
+&lt;/p&gt;
+</code></pre>
+<h3 id="separador-horizontal">Separador horizontal</h3>
+<p>Tres estilos predefinidos para los <code>hr</code></p>
+<hr>
+
+<pre><code class="language-html">
+&lt;hr&gt;
+</code></pre>
+<hr class="alt1">
+
+<pre><code class="language-html">
+&lt;hr class=&quot;alt1&quot;&gt;
+</code></pre>
+<hr class="alt2">
+
+<pre><code class="language-html">
+&lt;hr class=&quot;alt2&quot;&gt;
+</code></pre>
+
+
+	<!-- <button type="button" onclick="addBlock()" class="btn">Añadir bloque</button>
 
 <script>
 
@@ -461,7 +567,7 @@
 				ad sunt dolore nulla <span>mollit sunt proident id</span> voluptate.</p></div>`;
 	}
 
-</script>
+</script> -->
 
 						</div>			
 					</div>

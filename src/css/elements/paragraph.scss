@@ -10,8 +10,8 @@ p {
 
 	@include breakpoint-down(sm) {
 		font-size: $text-paragraph-font-size-mobile;
-		line-height: $text-paragraph-line-height-mobile;		
-	}	
+		line-height: $text-paragraph-line-height-mobile;
+	}
 }
 
 // Variantes de estilos de texto
@@ -36,7 +36,7 @@ sub {
 	bottom: 1px;
 }
 
-mark, 
+mark,
 .mark {
 	$mark-colors: (
 		blue: #5BC0EB,

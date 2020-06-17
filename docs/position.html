@@ -422,9 +422,6 @@
 
 <style>
 
-.utilities-float .code-toolbar {
-	clear: both;
-}
 
 </style>
 
@@ -478,7 +475,7 @@
 
 <h3 id="float">Float</h3>
 <p>Aplica float a un elemento mediante las clases <code>float-left</code> y <code>float-right</code>. También disponible <code>float-none</code></p>
-<div class="demo">
+<div class="demo clearfix">
 <p class="float-right">.float-right</p>
 <p class="float-left">.float-left</p>
 </div>
@@ -488,7 +485,7 @@
 &lt;p class=&quot;float-left&quot;&gt;.float-left&lt;/p&gt;
 </code></pre>
 <p>Mediante <code>float-#{$breakpoint}-*</code> podemos aplicarlo para la resolución que queramos.</p>
-<div class="demo">
+<div class="demo clearfix">
 <p class="float-right float-md-left mr-md-md ml-sm-sm">.float-right .float-md-left</p>
 <p class="float-left float-sm-right">.float-left .float-sm-right</p>
 </div>
