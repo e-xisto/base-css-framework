@@ -1,0 +1,113 @@
+
+{% extends "../layouts/default.njk" %}
+
+{% block content %}
+
+<style>
+
+.utilities-float .code-toolbar {
+	clear: both;
+}
+
+</style>
+
+
+{% markdown %}
+
+# Position
+
+Cambia la posición de un elemento usando `position-static`, `position-relative`, `position-absolute` y
+`position-fixed`.
+
+```html
+
+		<div class="position-static">
+			...
+		</div>
+		<div class="position-relative">
+			...
+		</div>
+		<div class="position-absolute">
+			...
+		</div>
+		<div class="position-fixed">
+			...
+		</div>
+
+```
+
+### Fixed top
+
+Coloca un elemento en la parte superior de la pantalla usando `fixed-top`. También se pueden usar las clases
+`fixed-top-left` para alinearlo a la izquierda y `fixed-top-right` para alinearlo a la derecha.
+
+```html
+
+		<div class="fixed-top">
+			...
+		</div>
+		<div class="fixed-top-left">
+			...
+		</div>
+		<div class="fixed-top-right">
+			...
+		</div>
+
+```
+
+### Fixed bottom
+
+Coloca un elemento en la parte inferior de la pantalla usando `fixed-bottom`. También se pueden usar las clases
+`fixed-bottom-left` para alinearlo a la izquierda y `fixed-bottom-right` para alinearlo a la derecha.
+
+```html
+
+		<div class="fixed-bottom">
+			...
+		</div>
+		<div class="fixed-bottom-left">
+			...
+		</div>
+		<div class="fixed-bottom-right">
+			...
+		</div>
+
+```
+
+<section class="utilities-float">
+
+### Float
+
+Aplica float a un elemento mediante las clases `float-left` y `float-right`. También disponible `float-none`
+
+<div class="demo">
+	<p class="float-right">.float-right</p>
+	<p class="float-left">.float-left</p>
+</div>
+
+```html
+
+		<p class="float-right">.float-right</p>
+		<p class="float-left">.float-left</p>
+
+```
+
+Mediante `float-#{$breakpoint}-*` podemos aplicarlo para la resolución que queramos.
+
+<div class="demo">
+	<p class="float-right float-md-left mr-md-md ml-sm-sm">.float-right .float-md-left</p>
+	<p class="float-left float-sm-right">.float-left .float-sm-right</p>
+</div>
+
+```html
+
+		<p class="float-right float-md-left">.float-right .float-md-left</p>
+		<p class="float-left float-sm-right">.float-left .float-sm-right</p>
+
+```
+</section>
+
+
+{% endmarkdown %}
+
+{% endblock %}
