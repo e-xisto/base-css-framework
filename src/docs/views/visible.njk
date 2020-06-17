@@ -1,0 +1,109 @@
+
+{% extends "../layouts/default.njk" %}
+
+{% block content %}
+
+{% markdown %}
+
+# Visibilidad
+
+Podemos ocultar o mostrar elementos según la resolución en la que nos encontremos y también modificar su valor `display`.
+
+Para ello, utilizamos la clase `hidden` para ocultar el elemento en todas las resoluciones, `visible-#{$break}-*` para modificar su valor
+`display`, y `hidden-#{$break}` para ocultarlo dependiendo de la resolución.
+
+<table class="table-responsive-list">
+	<thead>
+		<tr>
+			<th>Resolución</th>
+			<th>Clase</th>
+		</tr>
+	</thead>
+	<tbody>
+
+		<tr>
+			<td>Ocultar en todas las resoluciones</td>
+			<td class="token tag">class="hidden"</td>
+		</tr>
+		<tr>
+			<td>Ocultar en lg</td>
+			<td class="token tag">class="hidden-lg"</td>
+		</tr>
+		<tr>
+			<td>Ocultar en md</td>
+			<td class="token tag">class="hidden-md"</td>
+		</tr>
+		<tr>
+			<td>Ocultar en sm</td>
+			<td class="token tag">class="hidden-sm"</td>
+		</tr>
+		<tr>
+			<td>Ocultar en xs</td>
+			<td class="token tag">class="hidden-xs"</td>
+		</tr>
+		<tr>
+			<td>Cambiar display en todas las resoluciones</td>
+			<td class="token tag">
+				class="visible-block" <br>
+				class="visible-inline-block" <br>
+				class="visible-inline"<br>
+				class="visible-flex"<br>
+				class="visible-inline-flex"
+			</td>
+		</tr>
+		<tr>
+			<td>Cambiar display en lg</td>
+			<td class="token tag">
+				class="visible-lg" <br>
+				class="visible-lg-block" <br>
+				class="visible-lg-inline-block" <br>
+				class="visible-lg-inline"<br>
+				class="visible-lg-flex"<br>
+				class="visible-lg-inline-flex"
+			</td>
+		</tr>
+		<tr>
+			<td>Cambiar display en md</td>
+			<td class="token tag">
+				class="visible-md" <br>
+				class="visible-md-block" <br>
+				class="visible-md-inline-block" <br>
+				class="visible-md-inline"<br>
+				class="visible-md-flex"<br>
+				class="visible-md-inline-flex"
+			</td>
+		</tr>
+		<tr>
+			<td>Cambiar display en sm</td>
+			<td class="token tag">
+				class="visible-sm" <br>
+				class="visible-sm-block" <br>
+				class="visible-sm-inline-block" <br>
+				class="visible-sm-inline"<br>
+				class="visible-sm-flex"<br>
+				class="visible-sm-inline-flex"
+			</td>
+		</tr>
+		<tr>
+			<td>Cambiar display en xs</td>
+			<td class="token tag">
+				class="visible-xs" <br>
+				class="visible-xs-block" <br>
+				class="visible-xs-inline-block" <br>
+				class="visible-xs-inline"<br>
+				class="visible-xs-flex"<br>
+				class="visible-xs-inline-flex"
+			</td>
+		</tr>
+
+
+	</tbody>
+</table>
+
+
+
+
+
+{% endmarkdown %}
+
+{% endblock %}
