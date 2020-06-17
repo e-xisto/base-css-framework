@@ -3,36 +3,78 @@
 
 {% block content %}
 
-<div class="container">
-	<div class="row">
-		<div class="col-md-12">
-			<h1>Alerts</h1>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-12">
+{% markdown %}
 
+# Alertas
 
-			<div class="alert alert-success alert-dismissible">
-				<h4 class="alert-heading">Well done!</h4>
-				<p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-				<hr>
-				<p class="mb-none">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
-				<div class="alert-close" onclick="console.log('click')"><i class="icon-x-circle"></i></div>
-			</div>
+Alertas responsive para lanzar comentarios al usuario sobre sus acciones.
 
-			<div class="alert alert-danger alert-dismissible">
-				<p class="mb-none">Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-				<div class="alert-close"><i class="icon-x"></i></div>
-			</div>
-			<div class="alert alert-warning">
-				<p class="mb-none">Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-			</div>
-			<div class="alert alert-info">
-				<p class="mb-none">Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-			</div>
+Por defecto debemos utilizar la clase `alert` en nuestro contenedor, seguido de la clase `alert-dismissible` si deseamos que dicha alerta pueda cerrarse.
+
+Si la alerta cuenta con la clase `alert-dismissible`, debemos añadir un contenedor con la clase `alert-close` para así poder cerrarla.
+
+También, podemos utilizar nuestro archivo de variables de <a href="/colors.html">colores</a> usando la clase `alert-#{$color}`.
+
+<div class="demo">
+	<div class="alert alert-success alert-dismissible">
+		<h4>Well done!</h4>
+		<p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+		<hr>
+		<p class="mb-none">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+		<div class="alert-close">
+			<i class="icon-x-circle"></i>
 		</div>
 	</div>
 </div>
+
+```html
+
+		<div class="alert alert-success alert-dismissible">
+			<h4>Well done!</h4>
+			<p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+			<hr>
+			<p class="mb-none">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+			<div class="alert-close">
+				<i class="icon-x-circle"></i>
+			</div>
+		</div>
+
+```
+
+<div class="demo">
+	<div class="alert alert-danger alert-dismissible">
+		<p class="mb-none">Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+		<div class="alert-close">
+			<i class="icon-x"></i>
+		</div>
+	</div>
+</div>
+
+```html
+
+		<div class="alert alert-danger alert-dismissible">
+			<p class="mb-none">Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+			<div class="alert-close">
+				<i class="icon-x"></i>
+			</div>
+		</div>
+
+```
+
+<div class="demo">
+	<div class="alert alert-primary-md">
+		<p class="mb-none">Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+	</div>
+</div>
+
+```html
+
+		<div class="alert alert-primary-md">
+			<p class="mb-none">Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+		</div>
+
+```
+
+{% endmarkdown %}
 
 {% endblock %}
