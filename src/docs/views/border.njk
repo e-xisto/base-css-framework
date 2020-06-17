@@ -1,0 +1,125 @@
+{% extends "../layouts/default.njk" %}
+
+{% block content %}
+
+<style>
+
+.utilities-border span {
+	display: inline-block;
+	width: 5rem;
+	height: 5rem;
+	background-color: #EEE;
+	margin: 0.4em;
+}
+
+.utilities-border-remove span {
+	border: 1px solid #000;
+}
+
+</style>
+
+{% markdown %}
+
+# Bordes
+
+Una serie de clases para añadir o eliminar bordes a un elemento de forma fácil y rápida.
+
+### Añadir bordes
+
+<div class="demo">
+	<div class="utilities-border">
+		<span class="border"></span>
+		<span class="border-top"></span>
+		<span class="border-right"></span>
+		<span class="border-bottom"></span>
+		<span class="border-left"></span>
+	</div>
+</div>
+
+```html
+
+		<span class="border"></span>
+		<span class="border-top"></span>
+		<span class="border-right"></span>
+		<span class="border-bottom"></span>
+		<span class="border-left"></span>
+
+```
+
+### Eliminar bordes
+
+<div class="demo">
+	<div class="utilities-border utilities-border-remove">
+		<span class="border-none"></span>
+		<span class="border-top-none"></span>
+		<span class="border-right-none"></span>
+		<span class="border-bottom-none"></span>
+		<span class="border-left-none"></span>
+	</div>
+</div>
+
+```html
+
+		<span class="border-none"></span>
+		<span class="border-top-none"></span>
+		<span class="border-right-none"></span>
+		<span class="border-bottom-none"></span>
+		<span class="border-left-none"></span>
+
+```
+
+### Bordes redondeados
+
+<div class="demo">
+	<div class="utilities-border utilities-border-remove">
+		<span class="border-rounded"></span>
+		<span class="border-rounded-none"></span>
+		<span class="border-rounded-top"></span>
+		<span class="border-rounded-right"></span>
+		<span class="border-rounded-bottom"></span>
+		<span class="border-rounded-left"></span>
+		<span class="border-circle"></span>
+	</div>
+</div>
+
+```html
+
+		<span class="border-rounded"></span>
+		<span class="border-rounded-none"></span>
+		<span class="border-rounded-top"></span>
+		<span class="border-rounded-right"></span>
+		<span class="border-rounded-bottom"></span>
+		<span class="border-rounded-left"></span>
+		<span class="border-circle"></span>
+
+```
+
+### Colores aplicados a bordes
+
+Como vimos anteriormente, podíamos aplicar <a href="/colors.html">colores</a> tanto en textos como en colores de fondo,
+y, en este caso, también podemos aplicar todos esos mismos colores a los bordes.
+
+<div class="demo">
+	<div class="utilities-border">
+		<span class="border border-primary-md"></span>
+		<span class="border-top border-secondary"></span>
+		<span class="border-right border-custom-3"></span>
+		<span class="border-bottom border-gray"></span>
+		<span class="border-left border-success"></span>
+	</div>
+</div>
+
+```html
+
+		<span class="border border-primary-md"></span>
+		<span class="border-top border-secondary"></span>
+		<span class="border-right border-custom-3"></span>
+		<span class="border-bottom border-gray"></span>
+		<span class="border-left border-success"></span>
+
+```
+
+
+{% endmarkdown %}
+
+{% endblock %}
