@@ -1,0 +1,88 @@
+
+{% extends "../layouts/default.njk" %}
+
+{% block content %}
+
+<style>
+
+.utilities-image {
+	border: 1px solid #0E5989;
+	border-style: dotted;
+}
+
+</style>
+
+{% markdown %}
+
+# Imágenes
+
+Disponemos de tres clases para decidir el funcionamiento de las imágenes. Estas tres clases nos convertirá nuestra
+imagen como bloque.
+
+### Img-responsive
+
+La clase `img-responsive` limitará el tamaño máximo de la imagen al ancho del contenedor, pero nunca forzando a que la imagen ocupe el ancho completo.
+
+<div class="demo">
+	<div class="utilities-image">
+		<img src="https://ximg.es/450x250/eee" class="img-responsive" alt="">
+	</div>
+</div>
+
+
+
+```html
+
+		<img src="https://ximg.es/450x250/eee" class="img-responsive">
+
+```
+
+### Img-center y img-responsive
+
+La clase `img-center` permite centrar la imagen en el contenedor sin fijar un ancho. Lo ideal sería utilizar esta clase
+junto a `img-responsive`, para así asegurarnos de que en ningún momento la imagen sobrepasará su contenedor.
+
+<div class="demo">
+	<div class="utilities-image">
+		<img src="https://ximg.es/280x280/eee" class="img-center" alt="">
+	</div>
+</div>
+
+```html
+
+		<img src="https://ximg.es/280x280/eee" class="img-center">
+
+```
+
+<div class="demo">
+	<div class="utilities-image">
+		<img src="https://ximg.es/500x500/eee" class="img-responsive img-center" alt="">
+	</div>
+</div>
+
+```html
+
+		<img src="https://ximg.es/500x500/eee" class="img-responsive img-center">
+
+```
+
+### Img-full-responsive
+
+La clase `ìmg-full-responsive` forzará a que la imagen ocupe el ancho completo del contenedor.
+
+<div class="demo">
+	<div class="utilities-image">
+		<img src="https://ximg.es/800x800/eee" class="img-full-responsive" alt="">
+	</div>
+</div>
+
+```html
+
+		<img src="https://ximg.es/800x800/eee" class="img-full-responsive">
+
+```
+
+
+{% endmarkdown %}
+
+{% endblock %}
