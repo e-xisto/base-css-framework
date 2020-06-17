@@ -1,0 +1,123 @@
+
+{% extends "../layouts/default.njk" %}
+
+{% block content %}
+
+
+<style>
+
+.utilities-size {
+	background: var(--bright);
+	padding: 10px;
+	margin-bottom: 5px;
+}
+
+.utilities-size span {
+	display: inline-block;
+	border: 1px solid black;
+	padding: 5px;
+}
+
+.utilities-size-height {
+	height: 250px;
+}
+
+</style>
+
+{% markdown %}
+
+# Tamaños
+
+Ajusta el ancho y el alto de un elemento mediante las siguientes clases
+
+### Ancho
+
+Para ajustar el ancho de un elemento contamos con seis clases, las cuales el número representa el porcentaje del ancho
+el cual va a ocupar el elemento respecto al contenedor.
+
+Las clases son las siguientes: `w100`, `w50`, `w33`, `w25`, `w20` y `w10`.
+
+<div class="demo">
+	<div class="utilities-size">
+		<span class="w100">.w100</span>
+	</div>
+	<div class="utilities-size">
+		<span class="w50">.w50</span>
+	</div>
+	<div class="utilities-size">
+		<span class="w33">.w33</span>
+	</div>
+	<div class="utilities-size">
+		<span class="w25">.w25</span>
+	</div>
+	<div class="utilities-size">
+		<span class="w20">.w20</span>
+	</div>
+	<div class="utilities-size">
+		<span class="w10">.w10</span>
+	</div>
+</div>
+
+```html
+
+		<span class="w100">.w100</span>
+		<span class="w50">.w50</span>
+		<span class="w33">.w33</span>
+		<span class="w25">.w25</span>
+		<span class="w20">.w20</span>
+		<span class="w10">.w10</span>
+
+```
+
+### Alto
+
+Para ajustar el alto, sería exactamente igual que con el ancho pero cambiando la `w` por la `h`.
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-2 col-xs-4">
+			<div class="utilities-size utilities-size-height">
+				<span class="h100">.h100</span>
+			</div>
+		</div>
+		<div class="col-sm-2 col-xs-4">
+			<div class="utilities-size utilities-size-height">
+				<span class="h50">.h50</span>
+			</div>
+		</div>
+		<div class="col-sm-2 col-xs-4">
+			<div class="utilities-size utilities-size-height">
+				<span class="h33">.h33</span>
+			</div>
+		</div>
+		<div class="col-sm-2 col-xs-4">
+			<div class="utilities-size utilities-size-height">
+				<span class="h25">.h25</span>
+			</div>
+		</div>
+		<div class="col-sm-2 col-xs-4">
+			<div class="utilities-size utilities-size-height">
+				<span class="h20">.h20</span>
+			</div>
+		</div>
+		<div class="col-sm-2 col-xs-4">
+			<div class="utilities-size utilities-size-height">
+				<span class="h10">.h10</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+```html
+
+		<span class="h100">.h100</span>
+		<span class="h50">.h50</span>
+		<span class="h33">.h33</span>
+		<span class="h25">.h25</span>
+		<span class="h20">.h20</span>
+		<span class="h10">.h10</span>
+
+```
+{% endmarkdown %}
+
+{% endblock %}
