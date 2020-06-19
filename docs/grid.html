@@ -421,10 +421,15 @@
 					<div class="content-container">
 
 <h1 id="grid">Grid</h1>
-<h3 id="contenedores-container">Contenedores (.container)</h3>
-<ul>
-<li>tabla tamaños</li>
-</ul>
+<p>Una cuadrícula responsive basada en <a href="https://getbootstrap.com/">Bootstrap</a>.</p>
+<h2 id="contenedores-container">Contenedores (.container)</h2>
+<p>Los elementos <code>container</code> son obligatorios si deseamos que nuestra estructura sea responsive.</p>
+<pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<h3 id="tabla-tamaños">Tabla tamaños</h3>
 <p>Dependiendo de la resolución del dispositivo, <code>container</code> tendrá un ancho predeterminado como podemos ver en la tabla a
 continuación:</p>
 <table class="table-responsive-list table-striped">
@@ -436,59 +441,713 @@ continuación:</p>
 </thead>
 <tbody>
 <tr>
-    <td>1200px o más</td>
+    <td>1200px o más (lg)</td>
     <td>1170px</td>
 </tr>
 <tr>
-    <td>992px hasta 1199px</td>
+    <td>992px hasta 1199px (md)</td>
     <td>970px</td>
 </tr>
 <tr>
-    <td>768px hasta 991px</td>
+    <td>768px hasta 991px (sm)</td>
     <td>750px</td>
 </tr>
 <tr>
-    <td>Menos de 767px</td>
+    <td>Menos de 767px (xs)</td>
     <td>100%</td>
 </tr>
 </tbody>
 </table>
 
-<ul>
-<li>Container fluid</li>
-</ul>
+<h3 id="container-fluid">Container fluid</h3>
 <p>Si en lugar de utilizar la clase <code>container</code> utilizamos la clase <code>container-fluid</code>, lo que conseguiremos no será un
-contenedor con un ancho máximo, sino que este ocupará el ancho al 100%.</p>
-<ul>
-<li>Ver opción de meter clase nuevas BS 4 container-md</li>
-</ul>
-<p>Actualmente, nos encontramos desarrollando la opción de añadir un contenedor al ancho 100% dependiendo de la resolución
-del dispositvo, añadiendo así dicha función de <a href="https://getbootstrap.com/docs/4.5/layout/overview/#containers">Bootstrap 4</a>.</p>
-<ul>
-<li>No anidar dos contenedores</li>
-<li>Variables breakpoints (mixins)</li>
-</ul>
-<ul>
-<li>Variables modificar contenedor</li>
-<li>Ejemplos</li>
-</ul>
-<h3 id="filas-row">Filas (.row)</h3>
-<ul>
-<li>Alineación vertical</li>
-<li>Distribución horizontal</li>
-<li>no-gutter</li>
-<li>reverse</li>
-<li>no-wrap</li>
-<li>Anidamiento de filas</li>
-</ul>
-<h3 id="columnas-col">Columnas (.col)</h3>
-<ul>
-<li>Tamaños</li>
-<li>responsive</li>
-<li>Alineamiento vertical</li>
-<li>Offset</li>
-<li>Order</li>
-</ul>
+contenedor con un ancho máximo fijado, sino que este ocupará el ancho al 100%.</p>
+<pre><code class="language-html">
+&lt;div class=&quot;container-fluid&quot;&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<h3 id="ver-opción-de-meter-clase-nuevas-bs-4-container-md">Ver opción de meter clase nuevas BS 4 container-md</h3>
+<p>Actualmente nos encontramos desarrollando la opción de añadir un contenedor al ancho 100% hasta una resolución
+específica, añadiendo así dicha función de <a href="https://getbootstrap.com/docs/4.5/layout/overview/#containers">Bootstrap 4</a>.</p>
+<h3 id="no-anidar-dos-contenedores">No anidar dos contenedores</h3>
+<p>Los <code>container</code> cuentan con un ancho fijo, por lo tanto no hay necesidad de anidar uno dentro de otro. Debido al
+espacio y más, nunca debemos añadir un <code>container</code> dentro de otro <code>container</code>.</p>
+<h3 id="variables-breakpoints-mixins">Variables breakpoints (mixins)</h3>
+<p>Una serie de media queries basados en el ancho mínimo de cada ventana que nos permite modificar los elementos conforme
+la resolución de la ventana cambia.</p>
+<p>Estos media queries se pueden modificar en el archivo <code>variables.scss</code>.</p>
+<p>Dichos media queries son:</p>
+<pre><code class="language-sass">
+@media (max-width: 767px) {...}
+@media (min-width: 768px) and (max-width: 992px) {...}
+@media (min-width: 992px) and (max-width: 1200px) {...}
+@media (min-width: 1200px) {...}
+</code></pre>
+<p>Estos media queries los usamos a través de los siguientes <code>mixins</code>:</p>
+<pre><code class="language-sass">
+@include breakpoint(xs) {...}
+@include breakpoint(sm) {...}
+@include breakpoint(md) {...}
+@include breakpoint(lg) {...}
+</code></pre>
+<p>También podemos usar los anteriores breakpoints para indicar que parten de dicha resolución hacia delante:</p>
+<pre><code class="language-sass">
+@include breakpoint-up(xs) {...}
+@include breakpoint-up(sm) {...}
+@include breakpoint-up(md) {...}
+@include breakpoint-up(lg) {...}
+</code></pre>
+<p>Al igual que lo realizamos de una resolución hacia delante, también podemos partir de una resolución hacia atrás:</p>
+<pre><code class="language-sass">
+@include breakpoint-down(xs) {...}
+@include breakpoint-down(sm) {...}
+@include breakpoint-down(md) {...}
+@include breakpoint-down(lg) {...}
+</code></pre>
+<p>Y por último, entre dos resoluciones:</p>
+<pre><code class="language-sass">
+@include breakpoint-between(xs,sm) {...}
+@include breakpoint-between(sm,md) {...}
+@include breakpoint-between(md,lg) {...}
+</code></pre>
+<h3 id="variables-modificar-contenedor">Variables modificar contenedor</h3>
+<p>El ancho del contenedor puede modificarse fácilmente en cualquier resolución desde el archivo <code>variables.scss</code>. Estas
+variables se encuentran definidas mediante la semántica <code>$grid-container-width-#{$breakpoint}</code>.</p>
+<pre><code class="language-sass">
+$grid-container-width-lg: 1140px;
+$grid-container-width-md: 940px;
+$grid-container-width-sm: 720px;
+$grid-container-width-xs: 100%;
+</code></pre>
+<p>Aunque el valor final que determina el ancho del contenedor no es ese, sino la suma de su ancho + el espacio fijado
+entre columnas.</p>
+<p>Este espacio entre columnas se representa mediante la variable <code>$grid-column-gutter</code> y <code>$grid-column-gutter-xs</code> para
+ajustar el tamaño en resoluciones móviles.</p>
+<pre><code class="language-sass">
+$grid-column-gutter: 30px;
+$grid-column-gutter-xs: 15px;
+</code></pre>
+<p>En resumen, el verdadero ancho de nuestro contenedor, como hemos nombrado anteriormente, sería
+<code>$grid-container-width-#{$breakpoint}</code> + <code>grid-column-gutter</code>.</p>
+<pre><code class="language-sass">
+@media (max-width: $media-xs) { max-width: $grid-container-width-xs; }
+@media (min-width: $media-sm) and (max-width: $media-md) { max-width: $grid-container-width-sm + $grid-column-gutter; }
+@media (min-width: $media-md) and (max-width: $media-lg) { max-width: $grid-container-width-md + $grid-column-gutter; }
+@media (min-width: $media-lg) { max-width: $grid-container-width-lg + $grid-column-gutter; }
+</code></pre>
+<p>Representando así el ancho del contenedor reflejado en la tabla anterior.</p>
+<h2 id="filas-row">Filas (.row)</h2>
+<p>Una vez contamos con nuestro elemento padre <code>container</code>, el siguiente paso es añadir un elemento <code>row</code></p>
+<div class="demo">
+<div class="container">
+<div class="row">
+    <div class="col-4">
+        <div>.col-4</div>
+    </div>
+    <div class="col-4">
+        <div>.col-4</div>
+    </div>
+    <div class="col-4">
+        <div>.col-4</div>
+    </div>
+</div>
+</div>
+</div>
+
+
+<pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-4&quot;&gt;.col-4&lt;/div&gt;
+        &lt;div class=&quot;col-4&quot;&gt;.col-4&lt;/div&gt;
+        &lt;div class=&quot;col-4&quot;&gt;.col-4&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="alineación-vertical">Alineación vertical</h3>
+<p>Podemos alinear verticalmente el contenido de las columnas mediante flexbox.</p>
+<p>Para que se alineen partiendo desde arriba, usamos la clase <code>align-top</code>:</p>
+<div class="demo">
+<div class="container">
+<div class="row align-top">
+    <div class="col-4">
+        <div>.align-top</div>
+    </div>
+    <div class="col-4">
+        <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde aperiam veniam eveniet exercitationem, cumque
+        </div>
+    </div>
+    <div class="col-4">
+        <div>.align-top</div>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row align-top&quot;&gt;
+        &lt;div class=&quot;col-4&quot;&gt;.align-top&lt;/div&gt;
+        &lt;div class=&quot;col-4&quot;&gt;
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde aperiam veniam eveniet exercitationem, cumque
+        &lt;/div&gt;
+        &lt;div class=&quot;col-4&quot;&gt;.align-top&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Para que se alineen al centro, <code>align-middle</code>:</p>
+<div class="demo">
+<div class="container">
+<div class="row align-middle">
+    <div class="col-4">
+        <div>.align-middle</div>
+    </div>
+    <div class="col-4">
+        <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde aperiam veniam eveniet exercitationem, cumque
+        </div>
+    </div>
+    <div class="col-4">
+        <div>
+            .align-middle
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row align-middle&quot;&gt;
+        &lt;div class=&quot;col-4&quot;&gt;.align-middle&lt;/div&gt;
+        &lt;div class=&quot;col-4&quot;&gt;
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde aperiam veniam eveniet exercitationem, cumque
+        &lt;/div&gt;
+        &lt;div class=&quot;col-4&quot;&gt;.align-middle&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Y por último, para alinearlo partiendo desde abajo, <code>align-bottom</code>:</p>
+<div class="demo">
+<div class="container">
+<div class="row align-bottom">
+    <div class="col-4">
+        <div>.align-bottom</div>
+    </div>
+    <div class="col-4">
+        <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde aperiam veniam eveniet exercitationem, cumque
+        </div>
+    </div>
+    <div class="col-4">
+        <div>
+            .align-bottom
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row align-bottom&quot;&gt;
+        &lt;div class=&quot;col-4&quot;&gt;.align-bottom&lt;/div&gt;
+        &lt;div class=&quot;col-4&quot;&gt;
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde aperiam veniam eveniet exercitationem, cumque
+        &lt;/div&gt;
+        &lt;div class=&quot;col-4&quot;&gt;.align-bottom&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="distribución-horizontal">Distribución horizontal</h3>
+<p>Para alinear verticalmente el contenido del <code>row</code>, necesitamos que no estén ocupadas las 12 columnas ya que sino
+visualmente no veremos cambio alguno aunque esté funcionando.</p>
+<p>Para alinearlas a la izquierda, usamos <code>justify-start</code>:</p>
+<div class="demo">
+<div class="container">
+<div class="row justify-start">
+    <div class="col-2">
+        <div>.col-2</div>
+    </div>
+    <div class="col-2">
+        <div>.col-2</div>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row justify-start&quot;&gt;
+        &lt;div class=&quot;col-2&quot;&gt;.col-2&lt;/div&gt;
+        &lt;div class=&quot;col-2&quot;&gt;.col-2&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Para alinearlas al centro, usamos <code>justify-center</code>:</p>
+<div class="demo">
+<div class="container">
+<div class="row justify-center">
+    <div class="col-2">
+        <div>.col-2</div>
+    </div>
+    <div class="col-2">
+        <div>.col-2</div>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row justify-center&quot;&gt;
+        &lt;div class=&quot;col-2&quot;&gt;.col-2&lt;/div&gt;
+        &lt;div class=&quot;col-2&quot;&gt;.col-2&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Para alinearlas a la derecha, usamos <code>justify-end</code>:</p>
+<div class="demo">
+<div class="container">
+<div class="row justify-end">
+    <div class="col-2">
+        <div>.col-2</div>
+    </div>
+    <div class="col-2">
+        <div>.col-2</div>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row justify-end&quot;&gt;
+        &lt;div class=&quot;col-2&quot;&gt;.col-2&lt;/div&gt;
+        &lt;div class=&quot;col-2&quot;&gt;.col-2&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Los elementos se distribuyen uniformemente en la línea con igual espacio a su alrededor usando <code>justify-arround</code>:</p>
+<div class="demo">
+<div class="container">
+<div class="row justify-arround">
+    <div class="col-2">
+        <div>.col-2</div>
+    </div>
+    <div class="col-2">
+        <div>.col-2</div>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row justify-arround&quot;&gt;
+        &lt;div class=&quot;col-2&quot;&gt;.col-2&lt;/div&gt;
+        &lt;div class=&quot;col-2&quot;&gt;.col-2&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Por último, con <code>justify-between</code>, empujaremos cada elemento a los extremos dejando todo el máximo espacio posible
+entre ellos:</p>
+<div class="demo">
+<div class="container">
+<div class="row justify-between">
+    <div class="col-2">
+        <div>.col-2</div>
+    </div>
+    <div class="col-2">
+        <div>.col-2</div>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row justify-between&quot;&gt;
+        &lt;div class=&quot;col-2&quot;&gt;.col-2&lt;/div&gt;
+        &lt;div class=&quot;col-2&quot;&gt;.col-2&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="no-gutters">No gutters</h3>
+<p>Para evitar que las columnas tengan espacio entre ellas usamos <code>no-gutters</code>.</p>
+<div class="demo">
+<div class="container">
+<div class="row no-gutters">
+    <div class="col-4">
+        <div>.col-4</div>
+    </div>
+    <div class="col-4">
+        <div>.col-4</div>
+    </div>
+    <div class="col-4">
+        <div>.col-4</div>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row no-gutters&quot;&gt;
+        &lt;div class=&quot;col-4&quot;&gt;.col-4&lt;/div&gt;
+        &lt;div class=&quot;col-4&quot;&gt;.col-4&lt;/div&gt;
+        &lt;div class=&quot;col-4&quot;&gt;.col-4&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="reverse">Reverse</h3>
+<p>A nuestro elemento <code>row</code> podemos cambiarle la dirección horizontal que siguen los elementos, es decir, si los elementos
+se muestran de izquierda a derecha y queremos que se muestren a la inversa, de derecha a izquierda, podemos usar la
+clase <code>reverse</code>.</p>
+<div class="demo">
+<div class="container">
+<div class="row reverse">
+    <div class="col-4">
+        <div>Primera col-4</div>
+    </div>
+    <div class="col-4">
+        <div>Segunda col-4</div>
+    </div>
+    <div class="col-4">
+        <div>Tercera col-4</div>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row reverse&quot;&gt;
+        &lt;div class=&quot;col-4&quot;&gt;Primera col-4&lt;/div&gt;
+        &lt;div class=&quot;col-4&quot;&gt;Segunda col-4&lt;/div&gt;
+        &lt;div class=&quot;col-4&quot;&gt;Tercera col-4&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="no-wrap">No wrap</h3>
+<p>Para evitar que las columnas salten de fila automáticamente al superar las doce columnas permitidas por fila, aplicamos
+<code>no-wrap</code>.</p>
+<div class="demo">
+<div class="container">
+<div class="row no-wrap">
+    <div class="col-6">
+        <div>col-6</div>
+    </div>
+    <div class="col-6">
+        <div>col-6</div>
+    </div>
+    <div class="col-2">
+        <div>col-2</div>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row no-wrap&quot;&gt;
+        &lt;div class=&quot;col-6&quot;&gt;
+            &lt;div&gt;col-4&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-6&quot;&gt;
+            &lt;div&gt;col-6&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-2&quot;&gt;
+            &lt;div&gt;col-2&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="anidamiento-de-filas">Anidamiento de filas</h3>
+<p>Si una fila va a superar las doce columnas, el último bloque que exceda las doce saltará a una nueva línea.</p>
+<div class="demo">
+<div class="container">
+<div class="row">
+    <div class="col-6">
+        <div>.col-6</div>
+    </div>
+    <div class="col-8">
+        <div>.col-8 (salta de línea porque 6 + 8 = 14, por lo tanto supera el máximo de 12)</div>
+    </div>
+    <div class="col-4">
+        <div>.col-4 (no salta de línea porque 8 + 4 = 12, por lo tanto no supera las 12)</div>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-6&quot;&gt;.col-6&lt;/div&gt;
+        &lt;div class=&quot;col-8&quot;&gt;.col-8 (salta de línea porque 6 + 8 = 14, por lo tanto supera el máximo de 12)&lt;/div&gt;
+        &lt;div class=&quot;col-4&quot;&gt;.col-4 (no salta de línea porque 8 + 4 = 12, por lo tanto no supera las 12)
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Si deseamos forzar que el elemento salte a una nueva línea aunque no se hayan superado las doce columnas, debemos crear un
+nuevo <code>row</code>.</p>
+<div class="demo">
+<div class="container">
+<div class="row">
+    <div class="col-3">
+        <div>.col-3</div>
+    </div>
+    <div class="col-3">
+        <div>.col-3</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <div>.col-3 (salta a una nueva línea porque está en un row distinto)</div>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-3&quot;&gt;.col-3&lt;/div&gt;
+        &lt;div class=&quot;col-3&quot;&gt;.col-3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-3&quot;&gt;.col-3 (salta a una nueva línea porque está en un row distinto)&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="columnas-col">Columnas (.col)</h2>
+<p>Las columnas siempre deben ir inmediatamente después del <code>row</code> y su semántica es <code>col-{número}</code> o
+<code>col-#{$breakpoint}-{número}</code>.</p>
+<p>El número que se añade, equivale al número de columnas que ocupa el contenedor, siempre con un máximo de 12.</p>
+<div class="demo">
+<div class="container">
+<div class="row">
+    <div class="col-2">
+        <div>.col-2</div>
+    </div>
+    <div class="col-md-4">
+        <div>.col-md-4</div>
+    </div>
+    <div class="col-xs-6">
+        <div>.col-xs-6</div>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;col-2&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;col-md-4&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;col-xs-6&quot;&gt;&lt;/div&gt;
+</code></pre>
+<h3 id="responsive">Responsive</h3>
+<p>Si definimos el contenedor usando <code>col-{número}</code>, este contenedor siempre ocupará el mismo espacio de columnas en todas las resoluciones.</p>
+<div class="demo">
+<div class="container">
+<div class="row">
+    <div class="col-6">
+        <div>.col-6</div>
+    </div>
+    <div class="col-6">
+        <div>.col-6</div>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-6&quot;&gt;
+            &lt;div&gt;.col-6&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-6&quot;&gt;
+            &lt;div&gt;.col-6&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Si definimos el espacio de columnas que ocupará según la resolución, debemos escribirlo como
+<code>col-#{$breakpoint}-{número de columnas}</code> donde <code>#{$breakpoint}</code> equivale a <code>lg</code>, <code>md</code>, <code>sm</code> y <code>xs</code>.</p>
+<div class="demo">
+<div class="container">
+<div class="row">
+    <div class="col-md-3">
+        <div>.col-md-3</div>
+    </div>
+    <div class="col-md-6">
+        <div>.col-md-6</div>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-3&quot;&gt;
+            &lt;div&gt;.col-md-3&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div&gt;.col-md-6&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Hay que tener en cuenta que si representamos el contenedor utilizando un breakpoint, toda columna inferior a dicha
+resolución se representará con un ancho 100%, como si estuviese a 12 columnas. Mientras que las resoluciones superiores
+se quedarán definidas con el número de columnas que marcamos en la clase.</p>
+<p>En este ejemplo veremos como en la resolución <code>md</code> (desde 992px hasta 1199px) el contenedor ocupará 6 columnas, es
+decir, el 50% de su elemento padre. Pero no sólo ocupará 6 columnas en <code>md</code> sino que también las ocupará en <code>lg</code> (más
+de 1200px).</p>
+<p>En resoluciones inferiores, tanto <code>xs</code> (menos de 767px) como <code>sm</code> (de 768px a 991px), ocupará el 100% como si
+estuviese a 12 columnas.</p>
+<div class="demo">
+<div class="container">
+<div class="row">
+    <div class="col-md-6">
+        <div>.col-md-6</div>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            .col-md-6
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="tamaños">Tamaños</h3>
+<p>El espacio entre columnas se calcula mediante <code>padding-left</code> y <code>padding-right</code>, utilizando en ambos casos la variable,
+la cual vimos anteriormente, <code>$grid-column-gutter / 2</code></p>
+<pre><code class="language-sass">
+padding-left: ($grid-column-gutter / 2);
+padding-right: ($grid-column-gutter / 2);
+</code></pre>
+<p>El ancho de las columnas está indicado en %, así siempre mantienen un tamaño relativo a su contenedor padre. Dicho %
+tendrá un ancho máximo u otro dependiendo del número de columnas que queremos que ocupe, ya que dicho valor
+condicionará el ancho máximo del contenedor.</p>
+<pre><code class="language-sass">
+.col-#{$breakpoint}-#{$i} {
+    flex-basis: 100%/($columns / $i);
+    max-width: 100%/($columns / $i);
+}
+</code></pre>
+<h3 id="alineamiento-vertical">Alineamiento vertical</h3>
+<p>Podemos alinear verticalmente las columnas utilizando las mismas clases que usamos anteriormente con las filas, pero esta
+vez aplicándolas en el contenedor de las columnas.</p>
+<div class="demo">
+<div class="container">
+<div class="row">
+    <div class="col-4 align-bottom">
+        <div>.align-bottom</div>
+    </div>
+    <div class="col-4 align-top">
+        <div>
+            .align-middle lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, natus quasi consequuntur debitis consequatur
+            delectus nulla commodi eveniet sapiente, sequi aliquid at fuga, voluptas alias ex? Deleniti tempore sunt minima.
+        </div>
+    </div>
+    <div class="col-4 align-middle">
+        <div>
+            .align-middle
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-4 align-bottom&quot;&gt;
+            .align-bottom
+        &lt;/div&gt;
+        &lt;div class=&quot;col-4 align-top&quot;&gt;
+            .align-top lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, natus quasi consequuntur debitis
+            consequatur delectus nulla commodi eveniet sapiente, sequi aliquid at fuga, voluptas alias ex? Deleniti tempore sunt
+            minima.
+        &lt;/div&gt;
+        &lt;div class=&quot;col-4 align-middle&quot;&gt;
+            .align-middle
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="offset">Offset</h3>
+<p>Aplica un margen izquierdo a las columnas usando las clases <code>col-#{$breakpoint}-offset-{número de columnas de
+espacio}</code>.</p>
+<div class="demo">
+<div class="container">
+<div class="row">
+    <div class="col-md-4 col-md-offset-2"><div>.col-md-4 .col-md-offset-2</div></div>
+    <div class="col-md-3 col-md-offset-3"><div>.col-md-3 .col-md-offset-3</div></div>
+</div>
+<div class="row">
+    <div class="col-md-6"><div>.col-md-6</div></div>
+    <div class="col-md-3 col-md-offset-2"><div>.col-md-3</div></div>
+</div>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3"><div>.col-md-6 .col-md-offset-3</div></div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-4 col-md-offset-2&quot;&gt;.col-md-4 .col-md-offset-2&lt;/div&gt;
+        &lt;div class=&quot;col-md-3 col-md-offset-3&quot;&gt;.col-md-3 .col-md-offset-3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;.col-md-6&lt;/div&gt;
+        &lt;div class=&quot;col-md-3 col-md-offset-2&quot;&gt;.col-md-3 .col-md-offset-2&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-6 col-md-offset-3&quot;&gt;.col-md-6 .col-md-offset-3&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="order">Order</h3>
+<p>Podemos cambiar el orden en el que se muestran las columnas mediante <code>order-#{$breakpoint}-{número de posición}</code>.</p>
+<p>El {número de posición} equivaldrá a un máximo de 12, ya que equivale al número máximo de columnas total.</p>
+<p>Otras clases que podemos usar son <code>order-#{$breakpoint}-last</code> para indicar que el elemento va en última posición y
+<code>order-#{$breakpoint}-first</code> si queremos que sea el primero.</p>
+<div class="demo">
+<div class="container">
+<div class="row">
+    <div class="col-md-3 order-md-last"><div>.order-md-last</div></div>
+    <div class="col-md-3 order-md-3"><div>.order-md-3</div></div>
+    <div class="col-md-3 order-md-2"><div>.order-md-2</div></div>
+    <div class="col-md-3 order-md-first"><div>.order-md-first</div></div>
+</div>
+</div>
+</div>
+
+
+<pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-3 order-md-last&quot;&gt;&lt;div&gt;.order-md-last&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;col-md-3 order-md-3&quot;&gt;&lt;div&gt;.order-md-3&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;col-md-3 order-md-2&quot;&gt;&lt;div&gt;.order-md-2&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;col-md-3 order-md-first&quot;&gt;&lt;div&gt;.order-md-first&lt;/div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
 
 						</div>			
 					</div>
