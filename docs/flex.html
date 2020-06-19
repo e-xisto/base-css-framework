@@ -466,10 +466,10 @@
 &lt;/div&gt;
 </code></pre>
 <h3 id="dirección">Dirección</h3>
-<p>Indica la dirección que van a seguir los elementos (por defecto es horizontal, por lo tanto no existe tal clase).</p>
-<p>Como contabamos, no existe ninguna clase para indicar que funcione horizontalmente ya que por defecto el navegador
-funciona así.
-Aun así, podemos ordenar los elementos horizontalmente pero empezando por el lado contrario usando la clase <code>row-reverse</code></p>
+<p>Indica la dirección que van a seguir los elementos (por defecto del navegador es horizontal, por lo tanto no existe tal
+clase).</p>
+<p>Aun así, podemos ordenarlos empezando por el lado contrario, es decir, de derecha a izquierda usando la clase
+<code>row-reverse</code>.</p>
 <div class="utilities-flex">
 <div class="flex row-reverse">
 <div class="item">Flex 1</div>
@@ -637,45 +637,45 @@ elemento en específico. Para ello, debemos añadir la clase <code>flex-item</co
 
 <pre><code class="language-html">
 &lt;div class=&quot;flex&quot;&gt;
-&lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
-&lt;div class=&quot;item flex-item middle&quot;&gt;Flex item 2&lt;/div&gt;
-&lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item flex-item middle&quot;&gt;Flex item 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;flex&quot;&gt;
-&lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
-&lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
-&lt;div class=&quot;item flex-item bottom&quot;&gt;Flex item 3&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item flex-item bottom&quot;&gt;Flex item 3&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;flex&quot;&gt;
-&lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
-&lt;div class=&quot;item flex-item baseline&quot;&gt;Flex item 2&lt;/div&gt;
-&lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item flex-item baseline&quot;&gt;Flex item 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;flex&quot;&gt;
-&lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
-&lt;div class=&quot;item flex-item stretch&quot;&gt;Flex item 2&lt;/div&gt;
-&lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item flex-item stretch&quot;&gt;Flex item 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;flex&quot;&gt;
-&lt;div class=&quot;item flex-item top&quot;&gt;Flex item 1&lt;/div&gt;
-&lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
-&lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+    &lt;div class=&quot;item flex-item top&quot;&gt;Flex item 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;flex&quot;&gt;
-&lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
-&lt;div class=&quot;item flex-item last&quot;&gt;Flex item 2&lt;/div&gt;
-&lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item flex-item last&quot;&gt;Flex item 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 3&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;flex&quot;&gt;
-&lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
-&lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
-&lt;div class=&quot;item flex-item first&quot;&gt;Flex item 3&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex 2&lt;/div&gt;
+    &lt;div class=&quot;item flex-item first&quot;&gt;Flex item 3&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 <h3 id="alineado-horizontal">Alineado horizontal</h3>
@@ -926,8 +926,8 @@ los demas elementos utilizaran sólo el espacio que necesitan.</p>
 &lt;div class=&quot;flex&quot;&gt;
     &lt;div class=&quot;item&quot;&gt;Flex item&lt;/div&gt;
     &lt;div class=&quot;item flex-item&quot;&gt;Flex item&lt;/div&gt;
-    &lt;div class=&quot;item&quot;&gt;Flex item&lt;/div&gt;
-    &lt;div class=&quot;item&quot;&gt;Flex item&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex item item&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Flex item item&lt;/div&gt;
 &lt;/div&gt;
 
 ´´´

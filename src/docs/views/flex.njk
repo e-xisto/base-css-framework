@@ -58,11 +58,11 @@ Para empezar a utilizar flex, necesitamos usar por defecto la clase `flex` en nu
 
 ### Dirección
 
-Indica la dirección que van a seguir los elementos (por defecto es horizontal, por lo tanto no existe tal clase).
+Indica la dirección que van a seguir los elementos (por defecto del navegador es horizontal, por lo tanto no existe tal
+clase).
 
-Como contabamos, no existe ninguna clase para indicar que funcione horizontalmente ya que por defecto el navegador
-funciona así.
-Aun así, podemos ordenar los elementos horizontalmente pero empezando por el lado contrario usando la clase `row-reverse`
+Aun así, podemos ordenarlos empezando por el lado contrario, es decir, de derecha a izquierda usando la clase
+`row-reverse`.
 
 
 <div class="utilities-flex">
@@ -245,47 +245,47 @@ elemento en específico. Para ello, debemos añadir la clase `flex-item` por def
 
 ```html
 
-	<div class="flex">
-		<div class="item">Flex 1</div>
-		<div class="item flex-item middle">Flex item 2</div>
-		<div class="item">Flex 3</div>
-	</div>
+		<div class="flex">
+			<div class="item">Flex 1</div>
+			<div class="item flex-item middle">Flex item 2</div>
+			<div class="item">Flex 3</div>
+		</div>
 
-	<div class="flex">
-		<div class="item">Flex 1</div>
-		<div class="item">Flex 2</div>
-		<div class="item flex-item bottom">Flex item 3</div>
-	</div>
+		<div class="flex">
+			<div class="item">Flex 1</div>
+			<div class="item">Flex 2</div>
+			<div class="item flex-item bottom">Flex item 3</div>
+		</div>
 
-	<div class="flex">
-		<div class="item">Flex 1</div>
-		<div class="item flex-item baseline">Flex item 2</div>
-		<div class="item">Flex 3</div>
-	</div>
+		<div class="flex">
+			<div class="item">Flex 1</div>
+			<div class="item flex-item baseline">Flex item 2</div>
+			<div class="item">Flex 3</div>
+		</div>
 
-	<div class="flex">
-		<div class="item">Flex 1</div>
-		<div class="item flex-item stretch">Flex item 2</div>
-		<div class="item">Flex 3</div>
-	</div>
+		<div class="flex">
+			<div class="item">Flex 1</div>
+			<div class="item flex-item stretch">Flex item 2</div>
+			<div class="item">Flex 3</div>
+		</div>
 
-	<div class="flex">
-		<div class="item flex-item top">Flex item 1</div>
-		<div class="item">Flex 2</div>
-		<div class="item">Flex 3</div>
-	</div>
+		<div class="flex">
+			<div class="item flex-item top">Flex item 1</div>
+			<div class="item">Flex 2</div>
+			<div class="item">Flex 3</div>
+		</div>
 
-	<div class="flex">
-		<div class="item">Flex 1</div>
-		<div class="item flex-item last">Flex item 2</div>
-		<div class="item">Flex 3</div>
-	</div>
+		<div class="flex">
+			<div class="item">Flex 1</div>
+			<div class="item flex-item last">Flex item 2</div>
+			<div class="item">Flex 3</div>
+		</div>
 
-	<div class="flex">
-		<div class="item">Flex 1</div>
-		<div class="item">Flex 2</div>
-		<div class="item flex-item first">Flex item 3</div>
-	</div>
+		<div class="flex">
+			<div class="item">Flex 1</div>
+			<div class="item">Flex 2</div>
+			<div class="item flex-item first">Flex item 3</div>
+		</div>
 
 ```
 
@@ -561,8 +561,8 @@ los demas elementos utilizaran sólo el espacio que necesitan.
 		<div class="flex">
 			<div class="item">Flex item</div>
 			<div class="item flex-item">Flex item</div>
-			<div class="item">Flex item</div>
-			<div class="item">Flex item</div>
+			<div class="item">Flex item item</div>
+			<div class="item">Flex item item</div>
 		</div>
 
 ´´´
