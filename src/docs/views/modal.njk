@@ -3,358 +3,536 @@
 
 {% block content %}
 
-<div class="conteiner">
+{% markdown %}
+
+# Modal
+
+Para utilizar una modal debemos tener en cuenta lo siguiente:
+
+<ul>
+	<li>
+		Uno de los requisitos para crear nuestra modal es proporcionarle un <code>id</code> al contenedor, al igual que la
+		clase <code>modal</code>.
+	</li>
+	<li>
+		La modal debe contar con un contenedor <code>modal-content</code> en su interior.
+	</li>
+	<li><code>modal-content</code> está compuesto por tres contenedores básicos:
+		<ul>
+			<li><code>modal-header</code></li>
+			<li><code>modal-body</code></li>
+			<li><code>modal-footer</code></li>
+		</ul>
+	</li>
+	<li>
+		Dentro de <code>modal-header</code> encontramos <code>modal-title</code>, clase la cual se aplicaría en el título
+		de la modal.
+	</li>
+	<li>Para cerrar la modal, debemos aplicar la clase <code>modal-close</code>y las propiedades <code>data-action="modal-close"</code>
+		y <code>data-target={id modal}</code>. Las modales también pueden cerrarse haciendo click fuera de ella.
+	</li>
+</ul>
+
+<div class="container">
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
-			<a onclick="console.log('demo 1')" class="btn btn-outlined-secondary btn-md btn-block mt-xxl" data-action="modal-open" data-target="modal-demo-1">Modal</a>
-			<a onclick="console.log('demo 1')" class="btn btn-outlined-secondary btn-md btn-block mt-xxl" data-action="modal-open" data-target="modal-demo-center">Modal center</a>
+			<a class="btn btn-outlined-secondary btn-md btn-block mb-md" data-action="modal-open" data-target="modal-demo-1">Modal</a>
+		</div>
+	</div>
+</div>
 
-			<button class="btn btn-outlined-secondary btn-md btn-block mt-xxl" data-action="modal-open" data-target="modal-demo-2">Modal noclick</button>
+<div class="modal" id="modal-demo-1">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title">Título de la modal</h4>
+		</div>
+		<div class="modal-body">
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae
+				necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae
+				voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo.
+			</p>
+			<p>
+				Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
+				consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum
+				asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed
+				atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?
+			</p>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae
+				necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae
+				voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo.
+			</p>
+			<p>
+				Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
+				consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum
+				asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed
+				atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?
+			</p>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae
+				necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae
+				voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo.
+			</p>
+			<p>
+				Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
+				consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum
+				asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed
+				atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?
+			</p>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae
+				necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae
+				voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo.
+			</p>
+			<p>
+				Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
+				consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum
+				asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed
+				atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?
+			</p>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae
+				necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae
+				voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo.
+			</p>
+			<p>
+				Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
+				consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum
+				asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed
+				atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?
+			</p>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae
+				necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae
+				voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo.
+			</p>
+			<p>
+				Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
+				consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum
+				asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed
+				atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?
+			</p>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae
+				necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae
+				voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo.
+			</p>
+			<p>
+				Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
+				consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum
+				asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed
+				atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?
+			</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-1">Cancelar</a>
+			<a href="" class="btn btn-success btn-xs-block btn-sm-block">Aceptar</a>
+		</div>
+	</div>
+</div>
 
-			<a onclick="console.log('demo 3')" class="btn btn-outlined-secondary btn-md btn-block mt-xxl" data-action="modal-open" data-target="modal-demo-3">Multiple Modal</a>
-			<a onclick="console.log('demo 3')" class="btn btn-outlined-secondary btn-md btn-block mt-xxl" data-action="modal-open" data-target="modal-demo-video">Modal Video</a>
+```html
 
-			<a onclick="abrirModal()" class="btn btn-outlined-secondary btn-md btn-block mt-xxl mb-xxl">Abrir por js</a>
+		<a class="btn btn-outlined-secondary btn-md btn-block mt-xxl" data-action="modal-open" data-target="modal-demo-1">Modal</a>
 
-			<div class="form-input">
-				<label for="nombre">Parámetro nombre</label>
-				<input type="text" name="nombre" id="nombre" value="Test">
+		<div class="modal" id="modal-demo-1">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Título de la modal</h4>
+				</div>
+				<div class="modal-body">
+					<p>
+						...
+					</p>
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-1">Cancelar</a>
+					<a href="" class="btn btn-success btn-xs-block btn-sm-block">Aceptar</a>
+				</div>
 			</div>
-			<a onclick="abrirModalParams()" class="btn btn-outlined-secondary btn-md btn-block mb-md">Abrir modal parametrizada</a>
-			<a onclick="abrirModalParamsCallback()" class="btn btn-outlined-secondary btn-md btn-block">Abrir modal parametrizada con callback</a>
+		</div>
+
+```
+
+### Modal center
+
+Aplicando la clase `modal-center`, la modal se centrará y su scroll vertical no se aplicará a la ventana, sino a la modal.
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-3 col-md-6">
+			<a class="btn btn-outlined-secondary btn-md btn-block mb-md" data-action="modal-open" data-target="modal-demo-center">Modal center</a>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-center" id="modal-demo-center">
+
+	<div class="modal-content">
+		<div class="modal-header">
+			<h3 class="modal-title">Título de la modal</h3>
+		</div>
+		<div class="modal-body">
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis,
+				veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad!
+				Exercitationem hic nobis laborum illo.
+			</p>
+			<p>
+				Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
+				consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi
+				mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto
+				quaerat modi aspernatur dolor tempora nobis?
+			</p>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis,
+				veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad!
+				Exercitationem hic nobis laborum illo.
+			</p>
+			<p>
+				Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
+				consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi
+				mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto
+				quaerat modi aspernatur dolor tempora nobis?
+			</p>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis,
+				veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad!
+				Exercitationem hic nobis laborum illo.
+			</p>
+			<p>
+				Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
+				consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi
+				mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto
+				quaerat modi aspernatur dolor tempora nobis?
+			</p>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis,
+				veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad!
+				Exercitationem hic nobis laborum illo.
+			</p>
+			<p>
+				Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
+				consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi
+				mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto
+				quaerat modi aspernatur dolor tempora nobis?
+			</p>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis,
+				veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad!
+				Exercitationem hic nobis laborum illo.
+			</p>
+			<p>
+				Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
+				consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi
+				mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto
+				quaerat modi aspernatur dolor tempora nobis?
+			</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-center">Cancelar</a>
+			<a href="" class="btn btn-success btn-xs-block btn-sm-block">Aceptar</a>
+		</div>
+	</div>
+
+</div>
+
+```html
+
+		<a class="btn btn-outlined-secondary btn-md btn-block mb-md" data-action="modal-open" data-target="modal-demo-center">Modal center</a>
+
+		<div class="modal modal-center" id="modal-demo-center">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title">Título de la modal</h3>
+				</div>
+				<div class="modal-body">
+					<p>
+						...
+					</p>
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-center">Cancelar</a>
+					<a href="" class="btn btn-success btn-xs-block btn-sm-block">Aceptar</a>
+				</div>
+			</div>
+		</div>
+
+```
+
+### Modal noclick
+
+Con `modal-noclick` evitamos que la modal se pueda cerrar al hacer click fuera de ella.
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-3 col-md-6">
+			<button class="btn btn-outlined-secondary btn-md btn-block mb-md" data-action="modal-open" data-target="modal-demo-2">Modal noclick</button>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-center modal-noclick" id="modal-demo-2">
+	<div class="modal-content">
+		<div class="modal-close" data-action="modal-close" data-target="modal-demo-2"><div class="icon-x"></div></div>
+
+		<div class="modal-body pt-xxxl">
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis,
+				veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad!
+				Exercitationem hic nobis laborum illo.
+			</p>
+
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-2">Cancelar</a>
+			<a href="" class="btn btn-success btn-xs-block btn-sm-block">Aceptar</a>
 		</div>
 	</div>
 </div>
 
 
-	<div class="modal" id="modal-demo-1">
+```html
 
-		<div class="modal-close" data-action="modal-close" data-target="modal-demo-1"><div class="icon-x"></div></div>
-		
-		<div class="modal-content">
-			<div class="modal-header">
-				<h3 class="modal-title">Título de la modal</h3>
-			</div>
-			<div class="modal-body">
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, 
-					veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! 
-					Exercitationem hic nobis laborum illo.
-				</p>
-				<p>
-					Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-					consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi 
-					mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto 
-					quaerat modi aspernatur dolor tempora nobis?
-				</p>
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, 
-					veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! 
-					Exercitationem hic nobis laborum illo.
-				</p>
-				<p>
-					Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-					consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi 
-					mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto 
-					quaerat modi aspernatur dolor tempora nobis?
-				</p>
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, 
-					veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! 
-					Exercitationem hic nobis laborum illo.
-				</p>
-				<p>
-					Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-					consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi 
-					mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto 
-					quaerat modi aspernatur dolor tempora nobis?
-				</p>
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, 
-					veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! 
-					Exercitationem hic nobis laborum illo.
-				</p>
-				<p>
-					Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-					consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi 
-					mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto 
-					quaerat modi aspernatur dolor tempora nobis?
-				</p>
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, 
-					veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! 
-					Exercitationem hic nobis laborum illo.
-				</p>
-				<p>
-					Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-					consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi 
-					mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto 
-					quaerat modi aspernatur dolor tempora nobis?
-				</p>
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, 
-					veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! 
-					Exercitationem hic nobis laborum illo.
-				</p>
-				<p>
-					Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-					consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi 
-					mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto 
-					quaerat modi aspernatur dolor tempora nobis?
-				</p>
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, 
-					veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! 
-					Exercitationem hic nobis laborum illo.
-				</p>
-				<p>
-					Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-					consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi 
-					mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto 
-					quaerat modi aspernatur dolor tempora nobis?
-				</p>
-			</div>
-			<div class="modal-footer">
-				<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-1">Cancelar</a>
-				<a href="" class="btn btn-success btn-xs-block btn-sm-block">Aceptar</a>
-			</div>
-		</div>
+		<button class="btn btn-outlined-secondary btn-md btn-block mb-md" data-action="modal-open" data-target="modal-demo-2">Modal noclick</button>
 
-	</div>
-
-	<div class="modal modal-center" id="modal-demo-center">
-
-		<div class="modal-content">
-			<div class="modal-close" data-action="modal-close" data-target="modal-demo-center"><div class="icon-x"></div></div>
-			<div class="modal-header">
-				<h3 class="modal-title">Título de la modal</h3>
-			</div>
-			<div class="modal-body">
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, 
-					veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! 
-					Exercitationem hic nobis laborum illo.
-				</p>
-<p>
-					Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-					consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi 
-					mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto 
-					quaerat modi aspernatur dolor tempora nobis?
-				</p>
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, 
-					veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! 
-					Exercitationem hic nobis laborum illo.
-				</p>
-				<p>
-					Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-					consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi 
-					mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto 
-					quaerat modi aspernatur dolor tempora nobis?
-				</p>
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, 
-					veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! 
-					Exercitationem hic nobis laborum illo.
-				</p>
-				<p>
-					Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-					consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi 
-					mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto 
-					quaerat modi aspernatur dolor tempora nobis?
-				</p>
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, 
-					veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! 
-					Exercitationem hic nobis laborum illo.
-				</p>
-				<p>
-					Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-					consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi 
-					mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto 
-					quaerat modi aspernatur dolor tempora nobis?
-				</p>
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, 
-					veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! 
-					Exercitationem hic nobis laborum illo.
-				</p>
-				<p>
-					Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-					consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi 
-					mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto 
-					quaerat modi aspernatur dolor tempora nobis?
-				</p>				
-			</div>
-			<div class="modal-footer">
-				<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-center">Cancelar</a>
-				<a href="" class="btn btn-success btn-xs-block btn-sm-block">Aceptar</a>
-			</div>
-		</div>
-
-	</div>
-
-	<div class="modal modal-center" id="modal-demo-fixed">
-
-		<div class="modal-content">
-			<div class="modal-close" data-action="modal-close" data-target="modal-demo-fixed"><div class="icon-x"></div></div>
-			<div class="modal-header">
-				<h3 class="modal-title">Título de la modal</h3>
-			</div>
-			<div class="modal-body">
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, 
-					veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! 
-					Exercitationem hic nobis laborum illo.
-				</p>
-				<p>
-					Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-					consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi 
-					mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto 
-					quaerat modi aspernatur dolor tempora nobis?
-				</p>
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, 
-					veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! 
-					Exercitationem hic nobis laborum illo.
-				</p>
-				<p>
-					Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-					consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi 
-					mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto 
-					quaerat modi aspernatur dolor tempora nobis?
-				</p>
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, 
-					veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! 
-					Exercitationem hic nobis laborum illo.
-				</p>
-				<p>
-					Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-					consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi 
-					mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto 
-					quaerat modi aspernatur dolor tempora nobis?
-				</p>
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, 
-					veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! 
-					Exercitationem hic nobis laborum illo.
-				</p>
-				<p>
-					Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-					consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi 
-					mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto 
-					quaerat modi aspernatur dolor tempora nobis?
-				</p>
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, 
-					veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! 
-					Exercitationem hic nobis laborum illo.
-				</p>
-				<p>
-					Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-					consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi 
-					mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto 
-					quaerat modi aspernatur dolor tempora nobis?
-				</p>
-				
-			</div>
-			<div class="modal-footer">
-				<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-fixed">Cancelar</a>
-				<a href="" class="btn btn-success btn-xs-block btn-sm-block">Aceptar</a>
-			</div>
-		</div>
-
-	</div>
-
-
-	<div class="modal modal-center modal-noclick" id="modal-demo-2">
-
-		<div class="modal-content">
-			<div class="modal-close" data-action="modal-close" data-target="modal-demo-2"><div class="icon-x"></div></div>
-	
-			<div class="modal-body pt-xxxl">
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, 
-					veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! 
-					Exercitationem hic nobis laborum illo.
-				</p>	
-							
-			</div>
-			<div class="modal-footer">
-				<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-2">Cancelar</a>
-				<a href="" class="btn btn-success btn-xs-block btn-sm-block">Aceptar</a>
-			</div>
-		</div>
-
-	</div>
-
-	<div class="modal modal-video" id="modal-demo-video">
-		<div class="modal-close" data-action="modal-close" data-target="modal-demo-video"><div class="icon-x"></div></div>
-		<div class="modal-content">
-			<div class="modal-body">
-				<div class="embed-responsive">
-					<iframe class="" src="https://www.youtube.com/embed/3vBwRfQbXkg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+		<div class="modal modal-center modal-noclick" id="modal-demo-2">
+			<div class="modal-content">
+				<div class="modal-close" data-action="modal-close" data-target="modal-demo-2"><div class="icon-x"></div></div>
+				<div class="modal-body pt-xxxl">
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae
+						necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae
+						voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo.
+					</p>
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-2">Cancelar</a>
+					<a href="" class="btn btn-success btn-xs-block btn-sm-block">Aceptar</a>
 				</div>
 			</div>
 		</div>
+
+```
+
+### Modal multiple
+
+También, se puede lanzar una modal dentro de una modal.
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-3 col-md-6">
+			<a onclick="console.log('demo 3')" class="btn btn-outlined-secondary btn-md btn-block mb-md" data-action="modal-open" data-target="modal-demo-3">Multiple Modal</a>
+		</div>
 	</div>
+</div>
 
+<div class="modal modal-lg modal-noclick" id="modal-demo-3">
+	<div class="modal-content">
+		<div class="modal-close" data-action="modal-close" data-target="modal-demo-3">&times;</div>
+		<div class="modal-header">
+			<h3 class="modal-title">Título de la modal</h3>
+		</div>
+		<div class="modal-body">
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae
+				necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae
+				voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo. Dolore ad
+				voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
+				consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum
+				asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed
+				atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora
+				nobis?
+			</p>
+			<button onclick="console.log('onclick')" class="btn btn-outlined-secondary btn-md btn-block mt-xxl" data-action="modal-open" data-target="modal-demo-1">Modal</button>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-3">Cancelar</a>
+			<a href="" class="btn btn-success btn-xs-block btn-sm-block">Múltiples modales</a>
+		</div>
+	</div>
+</div>
 
-	<div class="modal modal-lg modal-noclick" id="modal-demo-3">
+```html
 
-		<div class="modal-content">
-			<div class="modal-close" data-action="modal-close" data-target="modal-demo-3">&times;</div>
-			<div class="modal-header">
-				<h3 class="modal-title">Título de la modal</h3>
-			</div>
-			<div class="modal-body">
-				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo. Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?</p>
-				<button onclick="console.log('onclick')" class="btn btn-outlined-secondary btn-md btn-block mt-xxl" data-action="modal-open" data-target="modal-demo-1">Modal</button>
-			</div>
-			<div class="modal-footer">
-				<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-3">Cancelar</a>
-				<a href="" class="btn btn-success btn-xs-block btn-sm-block">Múltiples modales</a>
+		<a onclick="console.log('demo 3')" class="btn btn-outlined-secondary btn-md btn-block mt-xxl" data-action="modal-open" data-target="modal-demo-3">Multiple Modal</a>
+
+		<div class="modal modal-lg modal-noclick" id="modal-demo-3">
+			<div class="modal-content">
+				<div class="modal-close" data-action="modal-close" data-target="modal-demo-3">&times;</div>
+				<div class="modal-header">
+					<h3 class="modal-title">Título de la modal</h3>
+				</div>
+				<div class="modal-body">
+					<p>...</p>
+					<button onclick="console.log('onclick')" class="btn btn-outlined-secondary btn-md btn-block mt-xxl" data-action="modal-open" data-target="modal-demo-1">Modal</button>
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-3">Cancelar</a>
+					<a href="" class="btn btn-success btn-xs-block btn-sm-block">Múltiples modales</a>
+				</div>
 			</div>
 		</div>
 
+```
+
+### Modal video
+
+Usando la clase `modal-video` y `embed-responsive` podemos añadir vídeos responsive a la modal.
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-3 col-md-6">
+			<a onclick="console.log('demo 3')" class="btn btn-outlined-secondary btn-md btn-block mb-md" data-action="modal-open" data-target="modal-demo-video">Modal Video</a>
+		</div>
 	</div>
+</div>
 
-
-	<div class="modal" id="modal-demo-param">
-
-		<div class="modal-content">
-			<div class="modal-close" data-action="modal-close" data-target="modal-demo-param">&times;</div>
-			<div class="modal-header">
-				<h3>Título de la modal paramétrizada</h3>
+<div class="modal modal-video" id="modal-demo-video">
+	<div class="modal-close" data-action="modal-close" data-target="modal-demo-video"><div class="icon-x"></div></div>
+	<div class="modal-content">
+		<div class="modal-body">
+			<div class="embed-responsive">
+				<iframe class="" src="https://www.youtube.com/embed/3vBwRfQbXkg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
-			<div class="modal-body">
-				{% raw %}
-				<p>Hola {{nombre}},</p>
+		</div>
+	</div>
+</div>
 
-				<p>
-					¿Qué tal {{nombre}}? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo. Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?
-				</p>
-				{% endraw %}
-			</div>
-			<div class="modal-footer">
-				<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-param">Cancelar</a>
-				<a href="" class="btn btn-success btn-xs-block btn-sm-block">Aceptar</a>
+```html
+
+		<a onclick="console.log('demo 3')" class="btn btn-outlined-secondary btn-md btn-block mb-md" data-action="modal-open" data-target="modal-demo-video">Modal Video</a>
+
+		<div class="modal modal-video" id="modal-demo-video">
+			<div class="modal-close" data-action="modal-close" data-target="modal-demo-video"><div class="icon-x"></div></div>
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="embed-responsive">
+						<iframe class="" src="https://www.youtube.com/embed/3vBwRfQbXkg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
 			</div>
 		</div>
 
-	</div>
+```
 
-	<script>
+### Abrir modal por javascript
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-3 col-md-6">
+			<a onclick="abrirModal()" class="btn btn-outlined-secondary btn-md btn-block mb-md">Abrir por js</a>
+		</div>
+	</div>
+</div>
+
+```html
+
+		<a onclick="abrirModal()" class="btn btn-outlined-secondary btn-md btn-block mt-xxl mb-xxl">Abrir por js</a>
+
+```
+
+```js
 
 		function abrirModal() {
 			Modal.open('modal-demo-1');
 		}
 
+```
+
+### Modal parametrizada
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-3 col-md-6">
+			<div class="form-input">
+				<label for="nombre">Parámetro nombre</label>
+				<input type="text" name="nombre" id="nombre" value="Test">
+			</div>
+			<a onclick="abrirModalParams()" class="btn btn-outlined-secondary btn-md btn-block mb-md">Abrir modal parametrizada</a>
+		</div>
+	</div>
+</div>
+
+<div class="modal" id="modal-demo-param">
+	<div class="modal-content">
+		<div class="modal-close" data-action="modal-close" data-target="modal-demo-param">&times;</div>
+		<div class="modal-header">
+			<h3>Título de la modal paramétrizada</h3>
+		</div>
+		<div class="modal-body">
+			{% raw %}
+			<p>Hola {{nombre}},</p>
+			<p>
+				¿Qué tal {{nombre}}? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo. Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?
+			</p>
+			{% endraw %}
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-param">Cancelar</a>
+			<a href="" class="btn btn-success btn-xs-block btn-sm-block">Aceptar</a>
+		</div>
+	</div>
+</div>
+
+```html
+
+		<div class="form-input">
+			<label for="nombre">Parámetro nombre</label>
+			<input type="text" name="nombre" id="nombre" value="Test">
+		</div>
+		<a onclick="abrirModalParams()" class="btn btn-outlined-secondary btn-md btn-block mb-md">Abrir modal parametrizada</a>
+
+		<div class="modal" id="modal-demo-param">
+			<div class="modal-content">
+				<div class="modal-close" data-action="modal-close" data-target="modal-demo-param">&times;</div>
+				<div class="modal-header">
+					<h3>Título de la modal paramétrizada</h3>
+				</div>
+				<div class="modal-body">
+					{% raw %}
+					<p>Hola {{nombre}},</p>
+
+					<p>
+						¿Qué tal {{nombre}}? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo. Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?
+					</p>
+					{% endraw %}
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-param">Cancelar</a>
+					<a href="" class="btn btn-success btn-xs-block btn-sm-block">Aceptar</a>
+				</div>
+			</div>
+		</div>
+
+```
+
+```js
+
 		function abrirModalParams() {
 			var nombre = document.getElementById('nombre').value;
 			Modal.open('modal-demo-param', { nombre });
 		}
+
+```
+
+### Modal parametrizada con callback
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-3 col-md-6">
+			<a onclick="abrirModalParamsCallback()" class="btn btn-outlined-secondary btn-md mb-md btn-block">Abrir modal parametrizada con callback</a>
+		</div>
+	</div>
+</div>
+
+```html
+
+		<a onclick="abrirModalParamsCallback()" class="btn btn-outlined-secondary btn-md btn-block">Abrir modal parametrizada con callback</a>
+
+```
+
+```js
 
 		function abrirModalParamsCallback() {
 			var nombre = document.getElementById('nombre').value;
@@ -363,6 +541,148 @@
 			});
 		}
 
-	</script>
+```
+
+### Modal fluid
+
+Añadiendo la clase `modal-fluid`, la modal ocupará el 80% de la ventana.
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-3 col-md-6">
+			<a class="btn btn-outlined-secondary btn-md btn-block mb-md" data-action="modal-open" data-target="modal-demo-fluid">Modal fluid</a>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-center modal-fluid" id="modal-demo-fluid">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h3 class="modal-title">Título de la modal</h3>
+		</div>
+		<div class="modal-body">
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis,
+				veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad!
+				Exercitationem hic nobis laborum illo.
+			</p>
+			<p>
+				Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
+				consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi
+				mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto
+				quaerat modi aspernatur dolor tempora nobis?
+			</p>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis,
+				veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad!
+				Exercitationem hic nobis laborum illo.
+			</p>
+			<p>
+				Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
+				consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi
+				mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto
+				quaerat modi aspernatur dolor tempora nobis?
+			</p>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis,
+				veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad!
+				Exercitationem hic nobis laborum illo.
+			</p>
+			<p>
+				Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
+				consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi
+				mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto
+				quaerat modi aspernatur dolor tempora nobis?
+			</p>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis,
+				veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad!
+				Exercitationem hic nobis laborum illo.
+			</p>
+			<p>
+				Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
+				consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi
+				mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto
+				quaerat modi aspernatur dolor tempora nobis?
+			</p>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis,
+				veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad!
+				Exercitationem hic nobis laborum illo.
+			</p>
+			<p>
+				Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
+				consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi
+				mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto
+				quaerat modi aspernatur dolor tempora nobis?
+			</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-fluid">Cancelar</a>
+			<a href="" class="btn btn-success btn-xs-block btn-sm-block">Aceptar</a>
+		</div>
+	</div>
+</div>
+
+```html
+
+		<a class="btn btn-outlined-secondary btn-md btn-block mb-md" data-action="modal-open" data-target="modal-demo-fluid">Modal center</a>
+
+		<div class="modal modal-center modal-fluid" id="modal-demo-fluid">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title">Título de la modal</h3>
+				</div>
+				<div class="modal-body">
+					<p>
+						...
+					</p>
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="btn btn-outlined btn-xs-block btn-sm-block mb-xs-md" data-action="modal-close" data-target="modal-demo-fluid">Cancelar</a>
+					<a href="" class="btn btn-success btn-xs-block btn-sm-block">Aceptar</a>
+				</div>
+			</div>
+		</div>
+
+```
+
+### Tamaños
+
+Podemos cambiar el tamaño de la modal aplicándole las clases `modal-sm`, `modal-md` y `modal-lg`.
+
+El ancho de estas tres clases puede modificarse fácilmente en el archivo `variables.scss`.
+
+```sass
+
+		$modal-sm-content-width: 480px;
+		$modal-md-content-width: 780px;
+		$modal-lg-content-width: 900px;
+
+```
+
+
+
+{% endmarkdown %}
+
+<script>
+
+	function abrirModal() {
+		Modal.open('modal-demo-1');
+	}
+
+	function abrirModalParams() {
+		var nombre = document.getElementById('nombre').value;
+		Modal.open('modal-demo-param', { nombre });
+	}
+
+	function abrirModalParamsCallback() {
+		var nombre = document.getElementById('nombre').value;
+		Modal.open('modal-demo-param', { nombre: nombre }, function(data) {
+			alert(nombre);
+		});
+	}
+
+</script>
 
 {% endblock %}
