@@ -419,46 +419,174 @@
 </ul>				</div>
 				<div class="content">
 					<div class="content-container">
-<div class="container mt-xxl">
-	<div class="row">
 
-		<div class="col-md-4 col-md-offset-4">
-			<div class="dropdown">
-				<a href="" class="btn btn-block dropdown-toggle">dropdown-menu</a>
-				<ul class="dropdown-menu">
-					<li class="dropdown-item"><a href="javascript:void(0)">Opción 1</a></li>
-					<li class="dropdown-item disabled"><a href="javascript:void(0)">Opción 1</a></li>
-					<li class="dropdown-item active"><a href="javascript:void(0)">Opción 1</a></li>
-					<li class="dropdown-item"><a href="javascript:void(0)"><i class="icon-printer"></i> Opción 1</a></li>
-					<li class="dropdown-divider"></li>
-					<li class="dropdown-item"><a href="javascript:void(0)">Opción 1</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-4">
-			<div class="dropdown">
-				<a class="dropdown-toggle">
-					<img src="https://dummyimage.com/50x30/ff0000/000000.png&text=es" class="bandera" alt="">
-					Español
-				</a>
-				<div class="dropdown-menu">
-					<a class="dropdown-item" href=""><img class="bandera hidden-xs" src="https://dummyimage.com/50x30/0000ff/ff0000.png&text=en">English</a>
-					<a class="dropdown-item" href=""><img class="bandera hidden-xs" src="https://dummyimage.com/50x30/0000ff/ffffff.png&text=fr">Français</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-12">
-			<div class="dropdown">
-				<div class="dropdown-toggle">Abrir</div>
-				<div class="dropdown-menu">
-					menu
-				</div>
-			</div>
-		</div>
-	</div>
+<h1 id="dropdown">Dropdown</h1>
+<p>Crea un elemento interactivo que muestra un menú, una lista de enlaces...</p>
+<p>Lo primero que debemos crear es un contenedor que contenga la clase <code>dropdown</code>.</p>
+<pre><code class="language-html">
+&lt;div class=&quot;dropdown&quot;&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<p>Una vez tenemos nuestro contenedor creado, debemos añadir un elemento con la clase <code>dropdown-toggle</code>. Este elemento
+provocará que al hacer click en él se despliegue el menú.</p>
+<p>Para ello, necesitamos crear otro contenedor dentro de <code>dropdown</code> que contenga la clase <code>dropdown-menu</code>.</p>
+<p>En este caso, nuestro elemento <code>dropdown-menu</code> será una lista.</p>
+<pre><code class="language-html">
+&lt;div class=&quot;dropdown&quot;&gt;
+    &lt;a class=&quot;dropdown-toggle&quot;&gt;&lt;/a&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        ...
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Una vez creado, todo los elementos que añadamos dentro de él deberán llevar la clase <code>dropdown-item</code>.</p>
+<div class="demo">
+<div class="dropdown">
+<a class="btn btn-primary dropdown-toggle">.dropdown-toggle</a>
+<ul class="dropdown-menu">
+    <li class="dropdown-item"><a href="">.dropdown-item</a></li>
+    <li class="dropdown-item"><a href="">.dropdown-item</a></li>
+    <li class="dropdown-item"><a href="">.dropdown-item</a></li>
+</ul>
 </div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;dropdown&quot;&gt;
+    &lt;a class=&quot;btn btn-primary dropdown-toggle&quot;&gt;.dropdown-toggle&lt;/a&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li class=&quot;dropdown-item&quot;&gt;&lt;a href=&quot;&quot;&gt;.dropdown-item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;dropdown-item&quot;&gt;&lt;a href=&quot;&quot;&gt;.dropdown-item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;dropdown-item&quot;&gt;&lt;a href=&quot;&quot;&gt;.dropdown-item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="dropdown-divider">Dropdown-divider</h3>
+<p>Dentro de <code>dropdown-menu</code>, podemos añadir una línea divisoria usando la clase <code>dropdown-divider</code>.</p>
+<div class="demo">
+<div class="dropdown">
+<a class="btn btn-primary dropdown-toggle">.dropdown-toggle</a>
+<ul class="dropdown-menu">
+    <li class="dropdown-item"><a href="">.dropdown-item</a></li>
+    <li class="dropdown-item"><a href="">.dropdown-item</a></li>
+    <li class="dropdown-item"><a href="">.dropdown-item</a></li>
+    <li class="dropdown-divider"></li>
+    <li class="dropdown-item"><a href="">.dropdown-item</a></li>
+    <li class="dropdown-item"><a href="">.dropdown-item</a></li>
+</ul>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;dropdown&quot;&gt;
+    &lt;a class=&quot;btn btn-primary dropdown-toggle&quot;&gt;.dropdown-toggle&lt;/a&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li class=&quot;dropdown-item&quot;&gt;&lt;a href=&quot;&quot;&gt;.dropdown-item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;dropdown-item&quot;&gt;&lt;a href=&quot;&quot;&gt;.dropdown-item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;dropdown-item&quot;&gt;&lt;a href=&quot;&quot;&gt;.dropdown-item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;dropdown-divider&quot;&gt;&lt;/li&gt;
+        &lt;li class=&quot;dropdown-item&quot;&gt;&lt;a href=&quot;&quot;&gt;.dropdown-item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;dropdown-item&quot;&gt;&lt;a href=&quot;&quot;&gt;.dropdown-item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="active">Active</h3>
+<p>Podemos marcar que el elemento está activo mediante la clase <code>active</code>.</p>
+<div class="demo">
+<div class="dropdown">
+<a class="btn btn-primary dropdown-toggle">.dropdown-toggle</a>
+<ul class="dropdown-menu">
+    <li class="dropdown-item"><a href="">.dropdown-item</a></li>
+    <li class="dropdown-item active"><a href="">.dropdown-item .active</a></li>
+    <li class="dropdown-item"><a href="">.dropdown-item</a></li>
+</ul>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;dropdown&quot;&gt;
+    &lt;a class=&quot;btn btn-primary dropdown-toggle&quot;&gt;.dropdown-toggle&lt;/a&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li class=&quot;dropdown-item&quot;&gt;&lt;a href=&quot;&quot;&gt;.dropdown-item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;dropdown-item active&quot;&gt;&lt;a href=&quot;&quot;&gt;.dropdown-item .active&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;dropdown-item&quot;&gt;&lt;a href=&quot;&quot;&gt;.dropdown-item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="disabled">Disabled</h3>
+<p>Si queremos marcar un elemento como desactivado, usamos <code>disabled</code>.</p>
+<div class="demo">
+<div class="dropdown">
+<a class="btn btn-primary dropdown-toggle">.dropdown-toggle</a>
+<ul class="dropdown-menu">
+    <li class="dropdown-item"><a href="">.dropdown-item</a></li>
+    <li class="dropdown-item disabled"><a href="">.dropdown-item .disabled</a></li>
+    <li class="dropdown-item"><a href="">.dropdown-item</a></li>
+</ul>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;dropdown&quot;&gt;
+    &lt;a class=&quot;btn btn-primary dropdown-toggle&quot;&gt;.dropdown-toggle&lt;/a&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li class=&quot;dropdown-item&quot;&gt;&lt;a href=&quot;&quot;&gt;.dropdown-item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;dropdown-item disabled&quot;&gt;&lt;a href=&quot;&quot;&gt;.dropdown-item .disabled&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;dropdown-item&quot;&gt;&lt;a href=&quot;&quot;&gt;.dropdown-item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="dropdown-menu-posición">Dropdown-menu posición</h3>
+<p>Podemos modificar la posición en la que se muestra <code>dropdown-menu</code> con las clases <code>dropdown-menu-left</code> y
+<code>dropdown-menu-right</code>, que mostrará el menú por el extremo izquierdo o derecho del contenedor.</p>
+<div class="demo">
+<div class="dropdown">
+<div class="text-center">
+    <a class="btn btn-primary dropdown-toggle">.dropdown-toggle</a>
+</div>
+<ul class="dropdown-menu dropdown-menu-left">
+    <li class="dropdown-item"><a href="">.dropdown-item</a></li>
+    <li class="dropdown-item"><a href="">.dropdown-item</a></li>
+    <li class="dropdown-item"><a href="">.dropdown-item</a></li>
+</ul>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;dropdown&quot;&gt;
+    &lt;a class=&quot;btn btn-primary dropdown-toggle&quot;&gt;.dropdown-toggle&lt;/a&gt;
+    &lt;ul class=&quot;dropdown-menu dropdown-menu-left&quot;&gt;
+        &lt;li class=&quot;dropdown-item&quot;&gt;&lt;a href=&quot;&quot;&gt;.dropdown-item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;dropdown-item&quot;&gt;&lt;a href=&quot;&quot;&gt;.dropdown-item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;dropdown-item&quot;&gt;&lt;a href=&quot;&quot;&gt;.dropdown-item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="demo">
+<div class="dropdown">
+<div class="text-center">
+    <a class="btn btn-primary dropdown-toggle">.dropdown-toggle</a>
+</div>
+<ul class="dropdown-menu dropdown-menu-right">
+    <li class="dropdown-item"><a href="">.dropdown-item</a></li>
+    <li class="dropdown-item"><a href="">.dropdown-item</a></li>
+    <li class="dropdown-item"><a href="">.dropdown-item</a></li>
+</ul>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;dropdown&quot;&gt;
+    &lt;a class=&quot;btn btn-primary dropdown-toggle&quot;&gt;.dropdown-toggle&lt;/a&gt;
+    &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot;&gt;
+        &lt;li class=&quot;dropdown-item&quot;&gt;&lt;a href=&quot;&quot;&gt;.dropdown-item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;dropdown-item&quot;&gt;&lt;a href=&quot;&quot;&gt;.dropdown-item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;dropdown-item&quot;&gt;&lt;a href=&quot;&quot;&gt;.dropdown-item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
 						</div>			
 					</div>
 				</div>
