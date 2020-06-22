@@ -3,73 +3,576 @@
 
 {% block content %}
 
-<h1>hola4</h1>
+{% markdown %}
 
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h1>Navbar</h1>
+# Navbar
+
+Barra de navegación responsive.
+
+Para empezar a usar el componente `navbar`, debemos crear un contenedor que englobe a todo lo que vamos a escribir con
+la clase `navbar`.
+
+```html
+
+		<nav class="navbar">
+			...
+		</nav>
+
+```
+
+El segundo paso, será añadir un nuevo contenedor llamado `navbar-content`.
+
+```html
+
+		<nav class="navbar">
+			<div class="navbar-content">
+				...
+			</div>
+		</nav>
+
+```
+
+Dentro de `navbar-content`, encontramos las clases `navbar-left`, `navbar-right` y `navbar-center`. Estas clases nos
+permitirán situar el contenido en la posición del contenedor que queramos.
+
+<div class="demo">
+	<nav class="navbar">
+		<div class="navbar-responsive">
+			<div class="navbar-left">
+				<div class="navbar-logo">
+					<img src="//ximg.es/150x30/dedede/aaa&text=LOGO" alt="">
+				</div>
+			</div>
+			<div class="navbar-center"></div>
+			<div class="navbar-right">
+				<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content').classList.toggle('open')">
+					<div class="navbar-burger-bar"></div>
+					<div class="navbar-burger-bar"></div>
+					<div class="navbar-burger-bar"></div>
+				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-12">
-
-				<nav class="navbar">
-
-					<div class="navbar-responsive">
-						<div class="navbar-left">
-							<div class="navbar-logo">
-								<img src="//ximg.es/150x30/dedede/aaa&text=LOGO" alt="">
-							</div>
-						</div>
-						<div class="navbar-center">
-							<!-- <span>Menu</span>	 -->
-						</div>
-						<div class="navbar-right">
-							<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content').classList.toggle('open')">
-								<div class="navbar-burger-bar"></div>
-								<div class="navbar-burger-bar"></div>
-								<div class="navbar-burger-bar"></div>
-							</div>
-						</div>
-					</div>
-
-					<div class="navbar-content open">
-						<div class="navbar-left">
-							<div class="navbar-logo hidden-xs hidden-sm">
-								<img src="//ximg.es/150x40/dedede/aaa&text=LOGO" alt="">
-							</div>
-						</div>
-						<div class="navbar-center">
-						</div>
-						<div class="navbar-right">
-							<div class="navbar-link hidden-xs hidden-sm"><a href=""><div class="icon-facebook"></div></a></div>
-							<div class="navbar-link hidden-xs hidden-sm mr-xl"><a href=""><div class="icon-twitter"></div></a></div>
-							<div class="navbar-link"><a href="">Item 1</a></div>
-							<!-- <div class="navbar-item"><span>texto normal</span></div> -->
-							<div class="navbar-link"><a href="">Item 2</a></div>
-							<div class="navbar-dropdown">
-								<a href="javascript:void()" class="navbar-dropdown-toogle" onclick="document.querySelector('.navbar-dropdown').classList.toggle('open')">Item 3 <i class="icon-chevron-down"></i></a>
-								<ul class="navbar-dropdown-menu navbar-dropdown-menu-right">
-									<li class="navbar-dropdown-item"><a href="">Dropdown Item 1</a></li>
-									<li class="navbar-dropdown-item"><a href="">Dropdown Item 2</a></li>
-									<li class="navbar-dropdown-item"><a href="">Dropdown</a></li>
-									<li class="navbar-dropdown-item"><a href="">Dropdown Item 4</a></li>
-								</ul>
-							</div>
-							<div class="navbar-item hidden-md hidden-lg mt-md">
-									<a href="" class="display-inline-block text-gray"><i class="icon-facebook text-xxl"></i></a>
-									<a href="" class="display-inline-block ml-md text-gray"><i class="icon-twitter text-xxl"></i></a>
-							</div>
-							<div class="navbar-button hidden-sm hidden-lg"><a href="" class="btn btn-primary btn-rounded btn-outlined btn-block">Item 3</a></div>
-						</div>
-					</div>
-
-				</nav>
-
+		<div class="navbar-content">
+			<div class="navbar-left">
+				.navbar-left
+			</div>
+			<div class="navbar-center">
+				.navbar-center
+			</div>
+			<div class="navbar-right">
+				.navbar-right
 			</div>
 		</div>
-	</div>
+	</nav>
+</div>
 
+```html
+
+		<nav class="navbar">
+			<div class="navbar-content">
+				<div class="navbar-left">
+					.navbar-left
+				</div>
+				<div class="navbar-center">
+					.navbar-center
+				</div>
+				<div class="navbar-right">
+					.navbar-right
+				</div>
+			</div>
+		</nav>
+
+```
+
+En nuestro `navbar`, lo más probable es que se encuentre el logo de nuestra página web. Por lo tanto, podemos usar la
+clase `navbar-logo` la cual hará que nuestra imagen funcione como un elemento de `bloque`.
+
+
+<div class="demo">
+	<nav class="navbar">
+			<div class="navbar-responsive">
+					<div class="navbar-left">
+						<div class="navbar-logo">
+							<img src="//ximg.es/150x30/dedede/aaa&text=LOGO" alt="">
+						</div>
+					</div>
+					<div class="navbar-center"></div>
+					<div class="navbar-right">
+						<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content').classList.toggle('open')">
+							<div class="navbar-burger-bar"></div>
+							<div class="navbar-burger-bar"></div>
+							<div class="navbar-burger-bar"></div>
+						</div>
+					</div>
+				</div>
+		<div class="navbar-content">
+			<div class="navbar-left">
+				<div class="navbar-logo">
+					<img src="//ximg.es/150x40/dedede/aaa&text=LOGO" alt="">
+				</div>
+			</div>
+			<div class="navbar-center">
+				.navbar-center
+			</div>
+			<div class="navbar-right">
+				.navbar-right
+			</div>
+		</div>
+	</nav>
+</div>
+
+```html
+
+		<nav class="navbar">
+			<div class="navbar-content">
+				<div class="navbar-left">
+					<div class="navbar-logo">
+						<img src="//ximg.es/150x40/dedede/aaa&text=LOGO" alt="">
+					</div>
+				</div>
+				<div class="navbar-center">
+					.navbar-center
+				</div>
+				<div class="navbar-right">
+					.navbar-right
+				</div>
+			</div>
+		</nav>
+
+```
+
+Lo mismo sucede con los botones. Si contamos con un botón en el `navbar`, podemos añadir a un contenedor con la clase
+`navbar-button`.
+
+<div class="demo">
+	<nav class="navbar">
+			<div class="navbar-responsive">
+					<div class="navbar-left">
+						<div class="navbar-logo">
+							<img src="//ximg.es/150x30/dedede/aaa&text=LOGO" alt="">
+						</div>
+					</div>
+					<div class="navbar-center"></div>
+					<div class="navbar-right">
+						<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content').classList.toggle('open')">
+							<div class="navbar-burger-bar"></div>
+							<div class="navbar-burger-bar"></div>
+							<div class="navbar-burger-bar"></div>
+						</div>
+					</div>
+				</div>
+		<div class="navbar-content">
+			<div class="navbar-left">
+				<div class="navbar-logo">
+					<img src="//ximg.es/150x40/dedede/aaa&text=LOGO" alt="">
+				</div>
+			</div>
+			<div class="navbar-center">
+				.navbar-center
+			</div>
+			<div class="navbar-right">
+				<div class="navbar-button">
+					<a href="" class="btn btn-primary">.navbar-button</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+</div>
+
+```html
+
+		<nav class="navbar">
+			<div class="navbar-content">
+				<div class="navbar-left">
+					<div class="navbar-logo">
+						<img src="//ximg.es/150x40/dedede/aaa&text=LOGO" alt="">
+					</div>
+				</div>
+				<div class="navbar-center">
+					.navbar-center
+				</div>
+				<div class="navbar-right">
+					<div class="navbar-button">
+						<a href="" class="btn btn-primary">.navbar-button</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+```
+
+Si contamos con enlaces, usaremos la clase `navbar-link`.
+
+<div class="demo">
+	<nav class="navbar">
+		<div class="navbar-responsive">
+			<div class="navbar-left">
+				<div class="navbar-logo">
+					<img src="//ximg.es/150x30/dedede/aaa&text=LOGO" alt="">
+				</div>
+			</div>
+			<div class="navbar-center"></div>
+			<div class="navbar-right">
+				<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content').classList.toggle('open')">
+					<div class="navbar-burger-bar"></div>
+					<div class="navbar-burger-bar"></div>
+					<div class="navbar-burger-bar"></div>
+				</div>
+			</div>
+		</div>
+		<div class="navbar-content">
+			<div class="navbar-left">
+				<div class="navbar-logo">
+					<img src="//ximg.es/150x40/dedede/aaa&text=LOGO" alt="">
+				</div>
+			</div>
+			<div class="navbar-center">
+				.navbar-center
+			</div>
+			<div class="navbar-right">
+				<div class="navbar-link"><a href="javascript: void(0)">.navbar-link</a></div>
+				<div class="navbar-link"><a href="javascript: void(0)">.navbar-link</a></div>
+			</div>
+		</div>
+	</nav>
+</div>
+
+```html
+
+		<nav class="navbar">
+			<div class="navbar-content">
+				<div class="navbar-left">
+					<div class="navbar-logo">
+						<img src="//ximg.es/150x40/dedede/aaa&text=LOGO" alt="">
+					</div>
+				</div>
+				<div class="navbar-center">
+					.navbar-center
+				</div>
+				<div class="navbar-right">
+					<div class="navbar-link"><a href="">.navbar-link</a></div>
+					<div class="navbar-link"><a href="">.navbar-link</a></div>
+				</div>
+			</div>
+		</nav>
+
+```
+
+Dentro del `navbar`, podemos añadir un elemento `dropdown` para que nos depsliegue un menú. Dicho elemento `dropdown`
+se aplica creando un contenedor la clase `navbar-dropdown` que englobe tanto el elemento que desplegará el menú como el
+menú en si.
+
+El menú desplegable utilizará la clase `navbar-dropdown-menu` y cada elemento dentro de él llevará la clase
+`navbar-dropdown-item`.
+
+Por último, el elemento que accione este menú debe ser un enlace `a` que lleve la clase `navbar-dropdown-toggle` y
+`onclick="document.querySelector('.navbar-dropdown').classList.toggle('open')"`.
+
+<div class="demo">
+	<nav class="navbar">
+			<div class="navbar-responsive">
+					<div class="navbar-left">
+						<div class="navbar-logo">
+							<img src="//ximg.es/150x30/dedede/aaa&text=LOGO" alt="">
+						</div>
+					</div>
+					<div class="navbar-center"></div>
+					<div class="navbar-right">
+						<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content').classList.toggle('open')">
+							<div class="navbar-burger-bar"></div>
+							<div class="navbar-burger-bar"></div>
+							<div class="navbar-burger-bar"></div>
+						</div>
+					</div>
+				</div>
+		<div class="navbar-content">
+			<div class="navbar-left">
+				<div class="navbar-logo">
+					<img src="//ximg.es/150x40/dedede/aaa&text=LOGO" alt="">
+				</div>
+			</div>
+			<div class="navbar-center">
+				<div class="navbar-link"><a href="javascript: void(0)">.navbar-link</a></div>
+				<div class="navbar-link"><a href="javascript: void(0)">.navbar-link</a></div>
+			</div>
+			<div class="navbar-right">
+				<div class="navbar-dropdown">
+					<a onclick="document.querySelector('.navbar-dropdown').classList.toggle('open')" class="navbar-dropdown-toogle">menú<i class="icon-chevron-down"></i></a>
+					<div class="navbar-dropdown-menu">
+						<div class="navbar-dropdown-item"><a href="">Dropdown item 1</a></div>
+						<div class="navbar-dropdown-item"><a href="">Dropdown item 2</a></div>
+						<div class="navbar-dropdown-item"><a href="">Dropdown item 3</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</div>
+
+```html
+
+		<nav class="navbar">
+			<div class="navbar-content">
+				<div class="navbar-left">
+					<div class="navbar-logo">
+						<img src="//ximg.es/150x40/dedede/aaa&text=LOGO" alt="">
+					</div>
+				</div>
+				<div class="navbar-center">
+					<div class="navbar-link"><a href="">.navbar-link</a></div>
+					<div class="navbar-link"><a href="">.navbar-link</a></div>
+				</div>
+				<div class="navbar-right">
+					<div class="navbar-dropdown">
+						<a onclick="document.querySelector('.navbar-dropdown').classList.toggle('open')" class="navbar-dropdown-toogle">menú<i class="icon-chevron-down"></i></a>
+						<div class="navbar-dropdown-menu">
+							<div class="navbar-dropdown-item"><a href="">Dropdown item 1</a></div>
+							<div class="navbar-dropdown-item"><a href="">Dropdown item 2</a></div>
+							<div class="navbar-dropdown-item"><a href="">Dropdown item 3</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+```
+
+Podemos modificar la posición en la que se muestra el menú dropdown mediante la clase `navbar-dropdown-menu-right`,
+añadiéndosela al elemento `navbar-dropdown-menu`.
+
+<div class="demo">
+	<nav class="navbar">
+			<div class="navbar-responsive">
+					<div class="navbar-left">
+						<div class="navbar-logo">
+							<img src="//ximg.es/150x30/dedede/aaa&text=LOGO" alt="">
+						</div>
+					</div>
+					<div class="navbar-center"></div>
+					<div class="navbar-right">
+						<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content').classList.toggle('open')">
+							<div class="navbar-burger-bar"></div>
+							<div class="navbar-burger-bar"></div>
+							<div class="navbar-burger-bar"></div>
+						</div>
+					</div>
+				</div>
+		<div class="navbar-content">
+			<div class="navbar-left">
+				<div class="navbar-logo">
+					<img src="//ximg.es/150x40/dedede/aaa&text=LOGO" alt="">
+				</div>
+			</div>
+			<div class="navbar-center">
+				<div class="navbar-link"><a href="javascript: void(0)">.navbar-link</a></div>
+				<div class="navbar-link"><a href="javascript: void(0)">.navbar-link</a></div>
+			</div>
+			<div class="navbar-right">
+				<div class="navbar-dropdown navbar-dropdown-demo-2">
+					<a onclick="document.querySelector('.navbar-dropdown-demo-2').classList.toggle('open')" class="navbar-dropdown-toogle">menú<i class="icon-chevron-down"></i></a>
+					<div class="navbar-dropdown-menu navbar-dropdown-menu-right">
+						<div class="navbar-dropdown-item"><a href="">Dropdown item 1</a></div>
+						<div class="navbar-dropdown-item"><a href="">Dropdown item 2</a></div>
+						<div class="navbar-dropdown-item"><a href="">Dropdown item 3</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</div>
+
+```html
+
+		<nav class="navbar">
+			<div class="navbar-content">
+				<div class="navbar-left">
+					<div class="navbar-logo">
+						<img src="//ximg.es/150x40/dedede/aaa&text=LOGO" alt="">
+					</div>
+				</div>
+				<div class="navbar-center">
+					<div class="navbar-link"><a href="">.navbar-link</a></div>
+					<div class="navbar-link"><a href="">.navbar-link</a></div>
+				</div>
+				<div class="navbar-right">
+					<div class="navbar-dropdown">
+						<a onclick="document.querySelector('.navbar-dropdown').classList.toggle('open')" class="navbar-dropdown-toogle">menú<i class="icon-chevron-down"></i></a>
+						<div class="navbar-dropdown-menu navbar-dropdown-menu-right">
+							<div class="navbar-dropdown-item"><a href="">Dropdown item 1</a></div>
+							<div class="navbar-dropdown-item"><a href="">Dropdown item 2</a></div>
+							<div class="navbar-dropdown-item"><a href="">Dropdown item 3</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+```
+
+Si uno de los elementos que añadimos al `navbar` no es un enlace, podemos aplicar la clase `navbar-item`.
+
+<div class="demo">
+	<nav class="navbar">
+			<div class="navbar-responsive">
+					<div class="navbar-left">
+						<div class="navbar-logo">
+							<img src="//ximg.es/150x30/dedede/aaa&text=LOGO" alt="">
+						</div>
+					</div>
+					<div class="navbar-center"></div>
+					<div class="navbar-right">
+						<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content').classList.toggle('open')">
+							<div class="navbar-burger-bar"></div>
+							<div class="navbar-burger-bar"></div>
+							<div class="navbar-burger-bar"></div>
+						</div>
+					</div>
+				</div>
+		<div class="navbar-content">
+			<div class="navbar-left">
+				<div class="navbar-logo">
+					<img src="//ximg.es/150x40/dedede/aaa&text=LOGO" alt="">
+				</div>
+			</div>
+			<div class="navbar-center">
+				<div class="navbar-link"><a href="javascript: void(0)">.navbar-link</a></div>
+				<div class="navbar-item">.navbar-item</div>
+			</div>
+			<div class="navbar-right">
+				<div class="navbar-dropdown navbar-dropdown-demo-3">
+					<a onclick="document.querySelector('.navbar-dropdown-demo-3').classList.toggle('open')" class="navbar-dropdown-toogle">menú<i class="icon-chevron-down"></i></a>
+					<div class="navbar-dropdown-menu navbar-dropdown-menu-right">
+						<div class="navbar-dropdown-item"><a href="">Dropdown item 1</a></div>
+						<div class="navbar-dropdown-item"><a href="">Dropdown item 2</a></div>
+						<div class="navbar-dropdown-item"><a href="">Dropdown item 3</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</div>
+
+```html
+
+		<nav class="navbar">
+			<div class="navbar-content">
+				<div class="navbar-left">
+					<div class="navbar-logo">
+						<img src="//ximg.es/150x40/dedede/aaa&text=LOGO" alt="">
+					</div>
+				</div>
+				<div class="navbar-center">
+					<div class="navbar-link"><a href="">.navbar-link</a></div>
+					<div class="navbar-item">.navbar-item</div>
+				</div>
+				<div class="navbar-right">
+					<div class="navbar-dropdown">
+						<a onclick="document.querySelector('.navbar-dropdown').classList.toggle('open')" class="navbar-dropdown-toogle">menú<i class="icon-chevron-down"></i></a>
+						<div class="navbar-dropdown-menu navbar-dropdown-menu-right">
+							<div class="navbar-dropdown-item"><a href="">Dropdown item 1</a></div>
+							<div class="navbar-dropdown-item"><a href="">Dropdown item 2</a></div>
+							<div class="navbar-dropdown-item"><a href="">Dropdown item 3</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+```
+
+Para terminar, encontramos la clase `navbar-responsive`. En el contenedor que apliquemos esta clase volveremos a usar
+las mismas clases usadas anteriormente en `navbar-content`, es decir, `navbar-left`, `navbar-right` y `navbar-center` para
+estructurar nuestro menú responsive.
+
+Dentro `navbar-responsive` encontramos `navbar-burger` conteniendo tres elementos con la clase `navbar-burger-bar`, los
+cuales representan el icono del menú y sus líneas. Esto se realiza así y no mediante un icono por el simple hecho de
+que así podemos animar el menú desplegable cuando este se abra y cierre.
+
+<div class="demo">
+	<nav class="navbar">
+		<div class="navbar-content navbar-content-demo-2">
+			<div class="navbar-left">
+				<div class="navbar-logo hidden-xs hidden-sm">
+					<img src="//ximg.es/150x40/dedede/aaa&text=LOGO" alt="">
+				</div>
+			</div>
+			<div class="navbar-center">
+				<div class="navbar-link"><a href="javascript: void(0)">.navbar-link</a></div>
+				<div class="navbar-item">.navbar-item</div>
+			</div>
+			<div class="navbar-right">
+				<div class="navbar-dropdown navbar-dropdown-demo-4 hidden-sm hidden-xs">
+					<a class="navbar-dropdown-toogle" onclick="document.querySelector('.navbar-dropdown-demo-4').classList.toggle('open')">Item 3 <i class="icon-chevron-down"></i></a>
+					<div class="navbar-dropdown-menu navbar-dropdown-menu-right">
+						<div class="navbar-dropdown-item"><a href="javascript: void(0)">Dropdown item 1</a></div>
+						<div class="navbar-dropdown-item"><a href="javascript: void(0)">Dropdown item 2</a></div>
+						<div class="navbar-dropdown-item"><a href="javascript: void(0)">Dropdown item 3</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="navbar-responsive">
+			<div class="navbar-left">
+				<div class="navbar-logo">
+					<img src="//ximg.es/150x30/dedede/aaa&text=LOGO" alt="">
+				</div>
+			</div>
+			<div class="navbar-center"></div>
+			<div class="navbar-right">
+				<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content-demo-2').classList.toggle('open')">
+					<div class="navbar-burger-bar"></div>
+					<div class="navbar-burger-bar"></div>
+					<div class="navbar-burger-bar"></div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</div>
+
+```html
+
+		<nav class="navbar">
+			<div class="navbar-content">
+				<div class="navbar-left">
+					<div class="navbar-logo hidden-xs hidden-sm">
+						<img src="//ximg.es/150x40/dedede/aaa&text=LOGO" alt="">
+					</div>
+				</div>
+				<div class="navbar-center">
+					<div class="navbar-link"><a href="javascript: void(0)">.navbar-link</a></div>
+					<div class="navbar-item">.navbar-item</div>
+				</div>
+				<div class="navbar-right">
+					<div class="navbar-dropdown hidden-sm hidden-xs">
+						<a class="navbar-dropdown-toogle" onclick="document.querySelector('.navbar-dropdown').classList.toggle('open')">Item 3 <i class="icon-chevron-down"></i></a>
+						<div class="navbar-dropdown-menu navbar-dropdown-menu-right">
+							<div class="navbar-dropdown-item"><a href="javascript: void(0)">Dropdown item 1</a></div>
+							<div class="navbar-dropdown-item"><a href="javascript: void(0)">Dropdown item 2</a></div>
+							<div class="navbar-dropdown-item"><a href="javascript: void(0)">Dropdown item 3</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="navbar-responsive">
+				<div class="navbar-left">
+					<div class="navbar-logo">
+						<img src="//ximg.es/150x30/dedede/aaa&text=LOGO" alt="">
+					</div>
+				</div>
+				<div class="navbar-center"></div>
+				<div class="navbar-right">
+					<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content').classList.toggle('open')">
+						<div class="navbar-burger-bar"></div>
+						<div class="navbar-burger-bar"></div>
+						<div class="navbar-burger-bar"></div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+```
+
+{% endmarkdown %}
 
 {% endblock %}
