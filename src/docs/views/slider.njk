@@ -3,169 +3,357 @@
 
 {% block content %}
 
+{% markdown %}
 
-	<h1>Slider</h1>
+# Slider
 
-	<h3>Simple slider</h3>
+Diferentes tipos de slider personalizables para mostrar imágenes o texto. (Créditos a <a href="https://swiperjs.com/" target="_blank">Swiperjs</a>.)
 
-	<div class="swiper-container swiper-simple">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
-			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
-			<div class="swiper-slide bg-gray"><h4 class="m-none">Slider 3</h4></div>
-		</div>
+### Simple Slider
+
+Slider básico, sin navegación.
+
+<div class="swiper-container swiper-simple">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+		<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+		<div class="swiper-slide bg-gray"><h4 class="m-none">Slider 3</h4></div>
 	</div>
-  
-	<h3>Slider con navegación y loop</h3>
+</div>
 
-	<div class="swiper-container swiper-navigation">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
-			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
-			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
-		</div>
-		<div class="swiper-button-next"></div>
-		<div class="swiper-button-prev"></div>		
-		<div class="swiper-pagination"></div>
-	</div>
+```html
 
-	<h3>Slider con imágenes autoheight</h3>
-
-	<div class="swiper-container swiper-autoheight">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
-			<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
-			<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
-			<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
-			<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
-		</div>
-		<div class="swiper-button-next"></div>
-		<div class="swiper-button-prev"></div>		
-		<div class="swiper-pagination"></div>
-	</div>
-
-	<script>
-
-	</script>
-
-	<h3>Slider con paginación</h3>
-
-	<div class="swiper-container swiper-pages">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
-			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
-			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
-		</div>
-		<div class="swiper-button-next"></div>
-		<div class="swiper-button-prev"></div>		
-		<div class="swiper-pagination"></div>
-	</div>
-
-
-	<h3>Slider con fade</h3>
-
-	<div class="swiper-container swiper-fade">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
-			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
-			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
-		</div>
-		<div class="swiper-button-next"></div>
-		<div class="swiper-button-prev"></div>		
-	</div>
-
-
-	<h3>Simple Vertical</h3>
-
-	<div class="swiper-container swiper-vertical" style="height: 600px;">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
-			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
-			<div class="swiper-slide bg-gray"><h4 class="m-none">Slider 3</h4></div>
+		<div class="swiper-container swiper-simple">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+				<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+				<div class="swiper-slide bg-gray"><h4 class="m-none">Slider 3</h4></div>
+			</div>
 		</div>
 
-		<div class="swiper-pagination"></div>
+```
+
+```js
+
+		var mySwiper = new Swiper('.swiper-simple')
+
+```
+
+### Slider con navegación y loop
+
+Slider tanto con puntos como con flechas de navegación y transición en bucle y automática.
+
+<div class="swiper-container swiper-navigation">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+		<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+		<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
+		<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
+		<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
 	</div>
+	<div class="swiper-button-next"></div>
+	<div class="swiper-button-prev"></div>
+	<div class="swiper-pagination"></div>
+</div>
 
-	
-	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-	
-	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+```html
 
-	<script>
+		<div class="swiper-container swiper-navigation">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+				<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+				<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
+				<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
+				<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
+			</div>
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-pagination"></div>
+		</div>
 
-		document.addEventListener("DOMContentLoaded", function() {
+```
 
-			var mySwiper = new Swiper('.swiper-simple')
+```js
 
-			var pepe = new Swiper('.swiper-navigation', {			
-				autoHeight: true,
-				loop: true,
-				autoplay: {
-					delay: 2500,
-					disableOnInteraction: false,
-				},			
-				pagination: {
-					el: '.swiper-pagination',
-					dynamicBullets: true,
-					clickable: true,
-				},
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				},				
-			});
-
-			var mySwiper = new Swiper('.swiper-autoheight', {
-				autoHeight: true,
-				pagination: {
-					el: '.swiper-pagination',
-					dynamicBullets: true,
-					clickable: true,
-				},
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				},	
-			});
-
-			var mySwiper = new Swiper('.swiper-pages', {
-				autoHeight: true,
-				pagination: {
-					el: '.swiper-pagination',
-					type: 'fraction',
-				},
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				},	
-			});
-			
-			var mySwiper = new Swiper('.swiper-fade', {
-				autoHeight: true,
-				effect: 'fade',
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				},	
-			});
-
-			var mySwiper = new Swiper('.swiper-vertical', {
-				direction: 'vertical',
-				mousewheel: true,
-				pagination: {
-					el: '.swiper-pagination',
-					clickable: true,
-				},
-			});
+		var mySwiper = new Swiper('.swiper-navigation', {
+			autoHeight: true,
+			loop: true,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				dynamicBullets: true,
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
 		});
-	</script>	
 
+```
+
+### Slider con imágenes autoheight
+
+Con este tipo de slider el contenedor ajustará su alto automáticamente según el alto de las imágenes que contiene.
+
+<div class="swiper-container swiper-autoheight">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
+		<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x400" alt=""></div>
+		<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
+		<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
+		<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x700" alt=""></div>
+	</div>
+	<div class="swiper-button-next"></div>
+	<div class="swiper-button-prev"></div>
+	<div class="swiper-pagination"></div>
+</div>
+
+``` html
+
+		<div class="swiper-container swiper-autoheight">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
+				<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x400" alt=""></div>
+				<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
+				<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
+				<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x700" alt=""></div>
+			</div>
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-pagination"></div>
+		</div>
+
+```
+
+```js
+
+		var mySwiper = new Swiper('.swiper-autoheight', {
+			autoHeight: true,
+			pagination: {
+				el: '.swiper-pagination',
+				dynamicBullets: true,
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+
+```
+
+### Slider con paginación
+
+Slider con paginación y flechas de navegación.
+
+<div class="swiper-container swiper-pages">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+		<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+		<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
+		<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
+		<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
+	</div>
+	<div class="swiper-button-next"></div>
+	<div class="swiper-button-prev"></div>
+	<div class="swiper-pagination"></div>
+</div>
+
+```html
+
+		<div class="swiper-container swiper-pages">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+				<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+				<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
+				<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
+				<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
+			</div>
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-pagination"></div>
+		</div>
+
+```
+
+```js
+
+		var mySwiper = new Swiper('.swiper-pages', {
+			autoHeight: true,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction',
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+
+```
+
+### Slider con fade
+
+Slider con animación fade al cambiar de imagen.
+
+<div class="swiper-container swiper-fade">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+		<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+		<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
+		<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
+		<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
+	</div>
+	<div class="swiper-button-next"></div>
+	<div class="swiper-button-prev"></div>
+</div>
+
+```html
+
+		<div class="swiper-container swiper-fade">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+				<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+				<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
+				<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
+				<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
+			</div>
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div>
+
+```
+
+```js
+
+		var mySwiper = new Swiper('.swiper-fade', {
+			autoHeight: true,
+			effect: 'fade',
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+
+```
+
+### Slider vertical
+
+Slider con navegación vertical tanto arrastrando como usando la rueda del ratón.
+
+<div class="swiper-container swiper-vertical" style="height: 600px;">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+		<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+		<div class="swiper-slide bg-gray"><h4 class="m-none">Slider 3</h4></div>
+	</div>
+
+	<div class="swiper-pagination"></div>
+</div>
+
+```html
+
+		<div class="swiper-container swiper-vertical" style="height: 600px;">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+				<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+				<div class="swiper-slide bg-gray"><h4 class="m-none">Slider 3</h4></div>
+			</div>
+
+			<div class="swiper-pagination"></div>
+		</div>
+
+```
+
+```js
+
+		var mySwiper = new Swiper('.swiper-vertical', {
+			direction: 'vertical',
+			mousewheel: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		});
+
+```
+
+{% endmarkdown %}
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+<script>
+
+	document.addEventListener("DOMContentLoaded", function() {
+
+		var mySwiper = new Swiper('.swiper-simple')
+
+		var mySwiper = new Swiper('.swiper-navigation', {
+			autoHeight: true,
+			loop: true,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				dynamicBullets: true,
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+
+		var mySwiper = new Swiper('.swiper-autoheight', {
+			autoHeight: true,
+			pagination: {
+				el: '.swiper-pagination',
+				dynamicBullets: true,
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+
+		var mySwiper = new Swiper('.swiper-pages', {
+			autoHeight: true,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction',
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+
+		var mySwiper = new Swiper('.swiper-fade', {
+			autoHeight: true,
+			effect: 'fade',
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+
+		var mySwiper = new Swiper('.swiper-vertical', {
+			direction: 'vertical',
+			mousewheel: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		});
+	});
+</script>
 
 {% endblock %}
