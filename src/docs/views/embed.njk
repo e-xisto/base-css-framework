@@ -2,11 +2,60 @@
 {% extends "../layouts/default.njk" %}
 
 {% block content %}
-<h1>Embeds</h1>
 
-<div class="embed-responsive">
-	<iframe class="" src="https://www.youtube.com/embed/3vBwRfQbXkg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% markdown %}
+
+# Embeds
+
+Crea vídeos responsive basados en el en el ancho del contenedor padre.
+
+Para aplicar dichos estilos, simplemente crear un contenedor con la clase `embed-responsive`
+
+Los estilos se aplicarán directamente a `<iframe>`, `<embed>`, `<object>` y `<video>`, aunque también se puede usar
+la clase `embed-responsive-time`.
+
+<div class="demo">
+	<div class="embed-responsive">
+		<iframe class="" src="https://www.youtube.com/embed/3vBwRfQbXkg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
 </div>
 
+```html
+
+		<div class="embed-responsive">
+			<iframe src="https://www.youtube.com/embed/3vBwRfQbXkg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+
+```
+
+Podemos modificar el formato de nuestro vídeo, es decir, si lo deseamos en 16:9 o 4:3.
+
+Para que el vídeo sea tenga un relación de aspecto de 4:3, aplicamos la clase `embed-responsive-4by3` al contenedor.
+
+<div class="demo">
+	<div class="embed-responsive embed-responsive-4by3">
+		<iframe class="" src="https://www.youtube.com/embed/3vBwRfQbXkg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+
+```html
+
+		<div class="embed-responsive embed-responsive-4by3">
+			<iframe class="" src="https://www.youtube.com/embed/3vBwRfQbXkg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+
+```
+
+Mientras que si lo deseamos a 16:9, cambiaremos la clase anterior por `embed-responsive-16by9`.
+
+```html
+
+		<div class="embed-responsive embed-responsive-16by9">
+			<iframe class="" src="https://www.youtube.com/embed/3vBwRfQbXkg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+
+```
+
+{% endmarkdown %}
 
 {% endblock %}
