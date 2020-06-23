@@ -2,29 +2,89 @@
 
 {% block content %}
 
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h1>Tooltips</h1>
-			</div>
-			<div class="col-md-12 mt-xxl">
+{% markdown %}
 
-				<p>Basado en wenk <a href="https://github.com/tiaanduplessis/wenk">https://github.com/tiaanduplessis/wenk</a></p>
+# Tooltips
 
-				<p class="mb-md"><span data-tooltip="This is a tooltip!">Ejemplo tooltip default</span></p>
-				
-				<p class="mb-md"><span data-tooltip="This is a tooltip!" data-tooltip-pos="bottom">Ejemplo tooltip posición bajo </span><p>
-				<p class="mb-md"><span data-tooltip="This is a tooltip!" data-tooltip-pos="right">Ejemplo tooltip posición derecha</span><p>
-				<p class="mb-md"><span data-tooltip="This is a tooltip!" data-tooltip-pos="left">Ejemplo tooltip posición izquierda</span><p>
-					
-				<p class="mb-md"><span data-tooltip="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, iure! Dolore aliquam sequi." data-tooltip-length="small">Ejemplo tooltip tamaño pequeño</span><p>
-				<p class="mb-md"><span data-tooltip="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, iure! Dolore aliquam sequi." data-tooltip-length="medium">Ejemplo tooltip tamaño medio</span><p>
-				<p class="mb-md"><span data-tooltip="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, iure! Dolore aliquam sequi." data-tooltip-length="large">Ejemplo tooltip tamaño grande</span><p>
-				<p class="mb-md"><span data-tooltip="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, iure! Dolore aliquam sequi." data-tooltip-length="fit">Ejemplo tooltip tamaño ajustado al elemento</span><p>
+Basado en wenk <a href="https://github.com/tiaanduplessis/wenk">https://github.com/tiaanduplessis/wenk</a>.
 
-				<p class="mb-md"><span data-tooltip="This is a tooltip!" data-tooltip-theme="light" data-tooltip-pos="left">Ejemplo tooltip theme light</span><p>
-			</div>
-		</div>
-	</div>
+Usa tooltips aplicando `data-tooltip-*=""`.
+
+Los `data-*` disponibles son los siguientes:
+
+<ul>
+	<li>
+		<code>data-tooltip</code>: el cual mostará el mensaje que queramos
+	</li>
+	<li>
+		<code>data-tooltip-pos</code>: para asignar la posición en la que se mostrará el mensaje.
+	</li>
+	<li>
+		<code>data-tooltip-theme</code>: para cambiar el estilo del contenedor del mensaje.
+	</li>
+	<li>
+		<code>data-tooltip-length</code>: para especificar el tamaño del mensaje.
+	</li>
+</ul>
+
+
+### Data-tooltip-pos
+
+A `data-tooltip-pos` se le pueden aplicar los valores: `top`, `bottom`, `left` y `right`.
+
+<div class="demo">
+	<p><span data-tooltip="This is a tooltip top!" data-tooltip-pos="top">Ejemplo tooltip top</span></p>
+	<p><span data-tooltip="This is a tooltip bottom!" data-tooltip-pos="bottom">Ejemplo tooltip bottom</span></p>
+	<p><span data-tooltip="This is a tooltip left!" data-tooltip-pos="left">Ejemplo tooltip left</span></p>
+	<p><span data-tooltip="This is a tooltip right!" data-tooltip-pos="right">Ejemplo tooltip right</span></p>
+</div>
+
+```html
+
+		<p><span data-tooltip="This is a tooltip top!" data-tooltip-pos="top">Ejemplo tooltip top</span></p>
+		<p><span data-tooltip="This is a tooltip bottom!" data-tooltip-pos="bottom">Ejemplo tooltip bottom</span></p>
+		<p><span data-tooltip="This is a tooltip left!" data-tooltip-pos="left">Ejemplo tooltip left</span></p>
+		<p><span data-tooltip="This is a tooltip right!" data-tooltip-pos="right">Ejemplo tooltip right</span></p>
+
+```
+
+### Data-tooltip-length
+
+A `data-tooltip-length` podemos aplicarle los valores: `small`, `medium`, `large` y `fit`.
+
+<div class="demo">
+	<p><span data-tooltip="Lorem ipsum dolor sit amet consectetur adipisicing elit." data-tooltip-length="small">Ejemplo tooltip tamaño pequeño</span><p>
+	<p><span data-tooltip="Lorem ipsum dolor sit amet consectetur adipisicing elit." data-tooltip-length="medium">Ejemplo tooltip tamaño medio</span><p>
+	<p><span data-tooltip="Lorem ipsum dolor sit amet consectetur adipisicing elit." data-tooltip-length="large">Ejemplo tooltip tamaño grande</span><p>
+	<p><span data-tooltip="Lorem ipsum dolor sit amet consectetur adipisicing elit." data-tooltip-length="fit">Ejemplo tooltip tamaño ajustado al elemento</span><p>
+</div>
+
+```html
+
+		<p><span data-tooltip="Lorem ipsum dolor sit amet consectetur adipisicing elit." data-tooltip-length="small">Ejemplo tooltip tamaño pequeño</span><p>
+		<p><span data-tooltip="Lorem ipsum dolor sit amet consectetur adipisicing elit." data-tooltip-length="medium">Ejemplo tooltip tamaño medio</span><p>
+		<p><span data-tooltip="Lorem ipsum dolor sit amet consectetur adipisicing elit." data-tooltip-length="large">Ejemplo tooltip tamaño grande</span><p>
+		<p><span data-tooltip="Lorem ipsum dolor sit amet consectetur adipisicing elit." data-tooltip-length="fit">Ejemplo tooltip tamaño ajustado al elemento</span><p>
+
+```
+
+### Data-tooltip-theme
+
+Podemos aplicarle `dark`, que sería el valor por defecto, y `light`.
+
+<div class="demo">
+	<p><span data-tooltip="This is a tooltip!" data-tooltip-theme="light" data-tooltip-pos="bottom">Ejemplo tooltip theme light</span><p>
+	<p><span data-tooltip="This is a tooltip!" data-tooltip-theme="dark" data-tooltip-pos="top">Ejemplo tooltip theme dark</span><p>
+</div>
+
+```html
+
+		<p><span data-tooltip="This is a tooltip!" data-tooltip-theme="light" data-tooltip-pos="bottom">Ejemplo tooltip theme light</span><p>
+		<p><span data-tooltip="This is a tooltip!" data-tooltip-theme="dark" data-tooltip-pos="top">Ejemplo tooltip theme dark</span><p>
+
+```
+
+{% endmarkdown %}
+
 
 {% endblock %}
