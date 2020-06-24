@@ -1,0 +1,65 @@
+{% extends "../layouts/default.njk" %}
+
+
+{% block content %}
+
+{% markdown %}
+
+<div class="row mt-xxl">
+	<div class="col-md-12"><h3 class="mt-xl">Inputs</h3></div>
+	<div class="col-md-6">
+		<div class="form-input form-sm">
+			<label for="test">Demo input</label>
+			<input type="text" id="test" placeholder="Escribe aquí un texto...">
+			<!-- <small>Texto ayuda para el usuario</small> -->
+		</div>
+		<div class="form-input">
+			<label for="test">Demo input</label>
+			<input type="text" id="test" placeholder="Escribe aquí un texto...">
+			<!-- <small>Texto ayuda para el usuario</small> -->
+		</div>
+		<div class="form-input form-md">
+			<label for="test">Demo input</label>
+			<input type="text" id="test" placeholder="Escribe aquí un texto...">
+			<!-- <small>Texto ayuda para el usuario</small> -->
+		</div>
+		<div class="form-input form-lg">
+			<label for="test">Demo input</label>
+			<input type="text" id="test" placeholder="Escribe aquí un texto...">
+			<!-- <small>Texto ayuda para el usuario</small> -->
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="form-input">
+			<label for="test">Readonly input</label>
+			<input type="text" id="test" value="Lorem ipsum dolor sit amet" readonly>
+			<small>Texto ayuda para el usuario</small>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="form-input">
+			<label for="test">Disabled input</label>
+			<input type="text" id="test" placeholder="Escribe aquí un texto..." disabled>
+			<small>Texto ayuda para el usuario</small>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="form-input form-sm">
+			<label for="test">Demo input size sm</label>
+			<input type="text" id="test" placeholder="Escribe aquí un texto...">
+			<small>Texto ayuda para el usuario</small>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="form-input form-lg">
+			<label for="test">Demo input size lg</label>
+			<input type="text" id="test" placeholder="Escribe aquí un texto...">
+			<small>Texto ayuda para el usuario</small>
+		</div>
+	</div>
+</div>
+
+{% endmarkdown %}
+
+{% endblock %}
+

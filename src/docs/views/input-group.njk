@@ -1,0 +1,96 @@
+{% extends "../layouts/default.njk" %}
+
+
+{% block content %}
+
+{% markdown %}
+
+<div class="row">
+	<div class="col-md-12"><h3 class="mt-xl">Input Groups</h3></div>
+	<div class="col-md-6">
+		<div class="form-input">
+			<label for="test">Demo input-group (input+text)</label>
+			<div class="input-group">
+				<input type="text" id="test" placeholder="Escribe aquí un texto..." class="">
+				<span class="text"><i class="icons-buscar"></i></span>
+			</div>
+		</div>
+		<div class="form-input">
+			<label for="test">Demo input-group (text+input)</label>
+			<div class="input-group">
+				<span class="text"><i class="icons-buscar"></i></span>
+				<input type="text" id="test" placeholder="Escribe aquí un texto..." class="">
+			</div>
+		</div>
+		<div class="form-input">
+			<label for="test">Demo input-group (input+btn)</label>
+			<div class="input-group">
+				<input type="text" id="test" placeholder="Escribe aquí un texto..." class="">
+				<a href="" class="btn btn-primary1 border-gray">Button</a>
+			</div>
+		</div>
+		<div class="form-input">
+			<label for="test">Demo input-group (btn+input)</label>
+			<div class="input-group">
+				<a href="" class="btn btn-primary1 border-gray">Button</a>
+				<input type="text" id="test" placeholder="Escribe aquí un texto..." class="">
+			</div>
+		</div>
+		<div class="form-input">
+			<label for="test">Demo input-group (btn+input+text)</label>
+			<div class="input-group">
+				<a href="" class="btn btn-primary1 border-gray">Button</a>
+				<input type="text" id="test" placeholder="Escribe aquí un texto..." class="">
+				<span class="text"><i class="icons-buscar"></i></span>
+			</div>
+		</div>
+		<div class="form-input">
+			<label for="test">Demo input-group (btn+text+input)</label>
+			<div class="input-group">
+				<a href="" class="btn btn-primary1 border-gray">Button</a>
+				<span class="text"><i class="icons-buscar"></i></span>
+				<input type="text" id="test" placeholder="Escribe aquí un texto..." class="">
+			</div>
+		</div>
+		<div class="form-input">
+			<label for="test">Demo input-group (input+btn+text)</label>
+			<div class="input-group">
+				<input type="text" id="test" placeholder="Escribe aquí un texto..." class="">
+				<a href="" class="btn btn-primary1 border-gray">Button</a>
+				<span class="text"><i class="icons-buscar"></i></span>
+			</div>
+		</div>
+		<div class="form-input">
+			<label for="test">Demo input-group (btn+input+btn+text)</label>
+			<div class="input-group">
+				<a href="" class="btn btn-primary1 border-gray"><i class="icons-buscar"></i> Button</a>
+				<input type="text" id="test" placeholder="Escribe aquí un texto..." class="">
+				<a href="" class="btn btn-primary1 border-gray">Button</a>
+				<span class="text"><i class="icons-buscar"></i></span>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="form-input form-sm">
+			<label for="test">Demo input-group (btn+input+text)</label>
+			<div class="input-group">
+				<a href="" class="btn btn-primary1 border-gray">Button</a>
+				<input type="text" id="test" placeholder="Escribe aquí un texto..." class="">
+				<span class="text"><i class="icons-buscar"></i></span>
+			</div>
+		</div>
+		<div class="form-input form-lg">
+			<label for="test">Demo input-group (btn+input+text)</label>
+			<div class="input-group">
+				<a href="" class="btn btn-primary1 border-gray">Button</a>
+				<input type="text" id="test" placeholder="Escribe aquí un texto..." class="">
+				<span class="text"><i class="icons-buscar"></i></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endmarkdown %}
+
+{% endblock %}
+

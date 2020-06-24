@@ -1,0 +1,58 @@
+{% extends "../layouts/default.njk" %}
+
+
+{% block content %}
+
+{% markdown %}
+
+<div class="row">
+<div class="col-md-12"><h3 class="mt-xl">Text Area</h3></div>
+<div class="col-md-6">
+	<div class="form-textarea">
+		<label for="">Demo textarea</label>
+		<textarea name="" id="" rows="5">Contenido textarea</textarea>
+		<small>Texto ayuda para el usuario</small>
+	</div>
+</div>
+<div class="col-md-6">
+	<div class="form-input">
+		<label for="test">Demo input</label>
+		<input type="text" id="test" placeholder="Escribe aquí un texto...">
+		<small>Texto ayuda para el usuario</small>
+	</div>
+	<div class="form-input">
+		<label for="test">Demo input</label>
+		<input type="text" id="test" placeholder="Escribe aquí un texto...">
+		<small>Texto ayuda para el usuario</small>
+	</div>
+
+
+
+	<div class="form-textarea">
+		<label for="">Disabled textarea</label>
+		<textarea name="" id="" rows="5" disabled>Contenido textarea</textarea>
+		<small>Texto ayuda para el usuario</small>
+	</div>
+</div>
+<div class="col-md-6">
+	<div class="form-textarea form-size-md">
+		<label for="">Disabled textarea</label>
+		<textarea name="" id="" rows="5" readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsa tempore natus fuga dicta quas molestias quibusdam! Magni, cum minus culpa possimus assumenda beatae ratione repellendus blanditiis quibusdam voluptate tempora?
+		</textarea>
+		<small>Texto ayuda para el usuario</small>
+	</div>
+</div>
+<div class="col-md-6">
+	<div class="form-textarea form-size-lg">
+		<label for="">Disabled textarea</label>
+		<textarea name="" id="" rows="5" readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsa tempore natus fuga dicta quas molestias quibusdam! Magni, cum minus culpa possimus assumenda beatae ratione repellendus blanditiis quibusdam voluptate tempora?
+		</textarea>
+		<small>Texto ayuda para el usuario</small>
+	</div>
+</div>
+</div>
+
+{% endmarkdown %}
+
+{% endblock %}
+
