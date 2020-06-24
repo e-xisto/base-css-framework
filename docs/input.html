@@ -420,30 +420,36 @@
 				<div class="content">
 					<div class="content-container">
 
-<div class="row mt-xxl">
-<div class="col-md-12"><h3 class="mt-xl">Inputs</h3></div>
+<h1 id="inputs">Inputs</h1>
+<p>Siempre que vayamos a añadir un elemento <code>input</code>, debemos añadirlo dentro de un contenedor <code>form-input</code>.</p>
+<pre><code class="language-html">
+&lt;div class=&quot;form-input&quot;&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<p>Dentro de este contenedor, añadiremos tanto el <code>label</code>como el <code>input</code>.</p>
+<div class="row">
 <div class="col-md-6">
-<div class="form-input form-sm">
-    <label for="test">Demo input</label>
-    <input type="text" id="test" placeholder="Escribe aquí un texto...">
-    <!-- <small>Texto ayuda para el usuario</small> -->
-</div>
 <div class="form-input">
-    <label for="test">Demo input</label>
-    <input type="text" id="test" placeholder="Escribe aquí un texto...">
-    <!-- <small>Texto ayuda para el usuario</small> -->
-</div>
-<div class="form-input form-md">
-    <label for="test">Demo input</label>
-    <input type="text" id="test" placeholder="Escribe aquí un texto...">
-    <!-- <small>Texto ayuda para el usuario</small> -->
-</div>
-<div class="form-input form-lg">
-    <label for="test">Demo input</label>
-    <input type="text" id="test" placeholder="Escribe aquí un texto...">
-    <!-- <small>Texto ayuda para el usuario</small> -->
+    <label for="">Demo input</label>
+    <input type="text" placeholder="Escriba aquí un texto...">
 </div>
 </div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;div class=&quot;form-input&quot;&gt;
+            &lt;label for=&quot;&quot;&gt;Demo input&lt;/label&gt;
+            &lt;input type=&quot;text&quot; placeholder=&quot;Escriba aquí un texto...&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="readonly-input">Readonly input</h3>
+<p>Al aplicar el atributo <code>readonly</code> o la clase <code>readonly</code> al <code>input</code>, pasará a verse así:</p>
+<div class="row">
 <div class="col-md-6">
 <div class="form-input">
     <label for="test">Readonly input</label>
@@ -451,6 +457,18 @@
     <small>Texto ayuda para el usuario</small>
 </div>
 </div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;form-input&quot;&gt;
+    &lt;label for=&quot;test&quot;&gt;Readonly input&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;test&quot; value=&quot;Lorem ipsum dolor sit amet&quot; readonly&gt;
+    &lt;small&gt;Texto ayuda para el usuario&lt;/small&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="disabled-input">Disabled input</h3>
+<p>Al igual que con el ejemplo anterior, podemos aplicar el atributo <code>disabled</code> o clase <code>disabled</code>.</p>
+<div class="row">
 <div class="col-md-6">
 <div class="form-input">
     <label for="test">Disabled input</label>
@@ -458,22 +476,61 @@
     <small>Texto ayuda para el usuario</small>
 </div>
 </div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;form-input&quot;&gt;
+    &lt;label for=&quot;test&quot;&gt;Disabled input&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;test&quot; placeholder=&quot;Escribe aquí un texto...&quot; disabled&gt;
+    &lt;small&gt;Texto ayuda para el usuario&lt;/small&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="tamaños-input">Tamaños input</h3>
+<p>El tamaño de los <code>input</code> es modificable usando las clases <code>form-sm</code> o <code>form-size-sm</code>, <code>form-md</code> o <code>form-size-md</code> y
+<code>form-lg</code> o <code>form-size-lg</code>.</p>
+<div class="row">
 <div class="col-md-6">
 <div class="form-input form-sm">
-    <label for="test">Demo input size sm</label>
-    <input type="text" id="test" placeholder="Escribe aquí un texto...">
-    <small>Texto ayuda para el usuario</small>
-</div>
-</div>
-<div class="col-md-6">
-<div class="form-input form-lg">
-    <label for="test">Demo input size lg</label>
-    <input type="text" id="test" placeholder="Escribe aquí un texto...">
-    <small>Texto ayuda para el usuario</small>
+    <label for="">Demo input</label>
+    <input type="text" placeholder="Escriba aquí un texto...">
 </div>
 </div>
 </div>
 
+<div class="row">
+<div class="col-md-6">
+<div class="form-input form-md">
+    <label for="">Demo input</label>
+    <input type="text" placeholder="Escriba aquí un texto...">
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-6">
+<div class="form-input form-lg">
+    <label for="">Demo input</label>
+    <input type="text" placeholder="Escriba aquí un texto...">
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;form-input form-sm&quot;&gt;
+    &lt;label for=&quot;&quot;&gt;Demo input&lt;/label&gt;
+    &lt;input type=&quot;text&quot; placeholder=&quot;Escriba aquí un texto...&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-input form-md&quot;&gt;
+    &lt;label for=&quot;&quot;&gt;Demo input&lt;/label&gt;
+    &lt;input type=&quot;text&quot; placeholder=&quot;Escriba aquí un texto...&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-input form-lg&quot;&gt;
+    &lt;label for=&quot;&quot;&gt;Demo input&lt;/label&gt;
+    &lt;input type=&quot;text&quot; placeholder=&quot;Escriba aquí un texto...&quot;&gt;
+&lt;/div&gt;
+</code></pre>
 
 						</div>			
 					</div>

@@ -5,30 +5,47 @@
 
 {% markdown %}
 
-<div class="row mt-xxl">
-	<div class="col-md-12"><h3 class="mt-xl">Inputs</h3></div>
-	<div class="col-md-6">
-		<div class="form-input form-sm">
-			<label for="test">Demo input</label>
-			<input type="text" id="test" placeholder="Escribe aquí un texto...">
-			<!-- <small>Texto ayuda para el usuario</small> -->
-		</div>
+# Inputs
+
+Siempre que vayamos a añadir un elemento `input`, debemos añadirlo dentro de un contenedor `form-input`.
+
+```html
+
 		<div class="form-input">
-			<label for="test">Demo input</label>
-			<input type="text" id="test" placeholder="Escribe aquí un texto...">
-			<!-- <small>Texto ayuda para el usuario</small> -->
+			...
 		</div>
-		<div class="form-input form-md">
-			<label for="test">Demo input</label>
-			<input type="text" id="test" placeholder="Escribe aquí un texto...">
-			<!-- <small>Texto ayuda para el usuario</small> -->
-		</div>
-		<div class="form-input form-lg">
-			<label for="test">Demo input</label>
-			<input type="text" id="test" placeholder="Escribe aquí un texto...">
-			<!-- <small>Texto ayuda para el usuario</small> -->
+
+```
+
+Dentro de este contenedor, añadiremos tanto el `label`como el `input`.
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="form-input">
+			<label for="">Demo input</label>
+			<input type="text" placeholder="Escriba aquí un texto...">
 		</div>
 	</div>
+</div>
+
+```html
+
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-input">
+					<label for="">Demo input</label>
+					<input type="text" placeholder="Escriba aquí un texto...">
+				</div>
+			</div>
+		</div>
+
+```
+
+### Readonly input
+
+Al aplicar el atributo `readonly` o la clase `readonly` al `input`, pasará a verse así:
+
+<div class="row">
 	<div class="col-md-6">
 		<div class="form-input">
 			<label for="test">Readonly input</label>
@@ -36,6 +53,23 @@
 			<small>Texto ayuda para el usuario</small>
 		</div>
 	</div>
+</div>
+
+```html
+
+		<div class="form-input">
+			<label for="test">Readonly input</label>
+			<input type="text" id="test" value="Lorem ipsum dolor sit amet" readonly>
+			<small>Texto ayuda para el usuario</small>
+		</div>
+
+```
+
+### Disabled input
+
+Al igual que con el ejemplo anterior, podemos aplicar el atributo `disabled` o clase `disabled`.
+
+<div class="row">
 	<div class="col-md-6">
 		<div class="form-input">
 			<label for="test">Disabled input</label>
@@ -43,21 +77,68 @@
 			<small>Texto ayuda para el usuario</small>
 		</div>
 	</div>
-	<div class="col-md-6">
-		<div class="form-input form-sm">
-			<label for="test">Demo input size sm</label>
-			<input type="text" id="test" placeholder="Escribe aquí un texto...">
+</div>
+
+```html
+
+		<div class="form-input">
+			<label for="test">Disabled input</label>
+			<input type="text" id="test" placeholder="Escribe aquí un texto..." disabled>
 			<small>Texto ayuda para el usuario</small>
 		</div>
-	</div>
+
+```
+
+### Tamaños input
+
+El tamaño de los `input` es modificable usando las clases `form-sm` o `form-size-sm`, `form-md` o `form-size-md` y
+`form-lg` o `form-size-lg`.
+
+<div class="row">
 	<div class="col-md-6">
-		<div class="form-input form-lg">
-			<label for="test">Demo input size lg</label>
-			<input type="text" id="test" placeholder="Escribe aquí un texto...">
-			<small>Texto ayuda para el usuario</small>
+		<div class="form-input form-sm">
+			<label for="">Demo input</label>
+			<input type="text" placeholder="Escriba aquí un texto...">
 		</div>
 	</div>
 </div>
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="form-input form-md">
+			<label for="">Demo input</label>
+			<input type="text" placeholder="Escriba aquí un texto...">
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="form-input form-lg">
+			<label for="">Demo input</label>
+			<input type="text" placeholder="Escriba aquí un texto...">
+		</div>
+	</div>
+</div>
+
+```html
+
+		<div class="form-input form-sm">
+			<label for="">Demo input</label>
+			<input type="text" placeholder="Escriba aquí un texto...">
+		</div>
+
+		<div class="form-input form-md">
+			<label for="">Demo input</label>
+			<input type="text" placeholder="Escriba aquí un texto...">
+		</div>
+
+		<div class="form-input form-lg">
+			<label for="">Demo input</label>
+			<input type="text" placeholder="Escriba aquí un texto...">
+		</div>
+
+```
 
 {% endmarkdown %}
 
