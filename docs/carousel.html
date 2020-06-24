@@ -420,155 +420,281 @@
 				<div class="content">
 					<div class="content-container">
 
-	<h1>Carousel</h1>
+<h1 id="carousel">Carousel</h1>
+<p>Al igual que con los <a href="/slider.html">sliders</a>,
+volveremos a usar <a href="https://swiperjs.com/" target="_blank">Swiperjs</a>.</p>
+<h3 id="carousel-con-navegación">Carousel con navegación</h3>
+<div class="demo">
+<div class="swiper-container swiper-carousel">
+<div class="swiper-wrapper">
+    <div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+    <div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+    <div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
+    <div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
+    <div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
+</div>
+<div class="swiper-pagination"></div>
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+</div>
+</div>
 
+<pre><code class="language-html">
+&lt;div class=&quot;swiper-container swiper-carousel&quot;&gt;
+    &lt;div class=&quot;swiper-wrapper&quot;&gt;
+        &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 1&lt;/h4&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide bg-light&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 2&lt;/h4&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 3&lt;/h4&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide bg-light&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 4&lt;/h4&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 5&lt;/h4&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 6&lt;/h4&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-js">
+var mySwiper = new Swiper(&#39;.swiper-carousel&#39;, {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    centeredSlides: true,
+    pagination: {
+        el: &#39;.swiper-pagination&#39;,
+        clickable: true,
+    },
+    navigation: {
+        nextEl: &#39;.swiper-button-next&#39;,
+        prevEl: &#39;.swiper-button-prev&#39;,
+    },
+});
+</code></pre>
+<h3 id="carousel-breakpoints">Carousel breakpoints</h3>
+<p>Con este tipo de carousel decidimos el número de slides a mostrar por resolución.</p>
+<p>(Es necesario comprobar en responsive para ver la diferencia.)</p>
+<div class="demo">
+<div class="swiper-container swiper-carousel-breakpoints">
+<div class="swiper-wrapper">
+    <div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+    <div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+    <div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
+    <div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
+    <div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
+    <div class="swiper-slide bg-bright"><h4 class="m-none">Slider 6</h4></div>
+</div>
+<div class="swiper-pagination"></div>
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+</div>
+</div>
 
-	<h3>Carousel</h3>
+<pre><code class="language-html">
+&lt;div class=&quot;demo&quot;&gt;
+    &lt;div class=&quot;swiper-container swiper-carousel-breakpoints&quot;&gt;
+        &lt;div class=&quot;swiper-wrapper&quot;&gt;
+            &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 1&lt;/h4&gt;&lt;/div&gt;
+            &lt;div class=&quot;swiper-slide bg-light&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 2&lt;/h4&gt;&lt;/div&gt;
+            &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 3&lt;/h4&gt;&lt;/div&gt;
+            &lt;div class=&quot;swiper-slide bg-light&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 4&lt;/h4&gt;&lt;/div&gt;
+            &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 5&lt;/h4&gt;&lt;/div&gt;
+            &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 6&lt;/h4&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-js">
+var mySwiper = new Swiper(&#39;.swiper-carousel-breakpoints&#39;, {
+    slidesPerView: 2,
+    spaceBetween: 15,
+    centeredSlides: true,
+    pagination: {
+        el: &#39;.swiper-pagination&#39;,
+        clickable: true,
+    },
+    navigation: {
+        nextEl: &#39;.swiper-button-next&#39;,
+        prevEl: &#39;.swiper-button-prev&#39;,
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+        },
+    }
+});
+</code></pre>
+<h3 id="carousel-freemode">Carousel freemode</h3>
+<div class="swiper-container swiper-freemode">
+<div class="swiper-wrapper">
+<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
+<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
+<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
+<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 6</h4></div>
+</div>
+<div class="swiper-pagination"></div>
+</div>
 
-	<div class="swiper-container swiper-carosusel">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
-			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
-			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 6</h4></div>
-		</div>		
-		<div class="swiper-pagination"></div>
-		<div class="swiper-button-next"></div>
-		<div class="swiper-button-prev"></div>		
-	</div>
+<pre><code class="language-html">
+&lt;div class=&quot;swiper-container swiper-freemode&quot;&gt;
+    &lt;div class=&quot;swiper-wrapper&quot;&gt;
+        &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 1&lt;/h4&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide bg-light&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 2&lt;/h4&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 3&lt;/h4&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide bg-light&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 4&lt;/h4&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 5&lt;/h4&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 6&lt;/h4&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-js">
+var mySwiper = new Swiper(&#39;.swiper-freemode&#39;, {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    centeredSlides: true,
+    freeMode: true,
+    pagination: {
+        el: &#39;.swiper-pagination&#39;,
+        clickable: true,
+    },
+});
+</code></pre>
+<h3 id="carousel-coverflow">Carousel Coverflow</h3>
+<div class="swiper-container swiper-coverflow">
+<div class="swiper-wrapper">
+    <div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+    <div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+    <div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
+    <div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
+    <div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
+    <div class="swiper-slide bg-bright"><h4 class="m-none">Slider 6</h4></div>
+</div>
+<div class="swiper-pagination"></div>
+</div>
 
+<pre><code class="language-html">
+&lt;div class=&quot;swiper-container swiper-coverflow&quot;&gt;
+    &lt;div class=&quot;swiper-wrapper&quot;&gt;
+        &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 1&lt;/h4&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide bg-light&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 2&lt;/h4&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 3&lt;/h4&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide bg-light&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 4&lt;/h4&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 5&lt;/h4&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 6&lt;/h4&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-js">
+var mySwiper = new Swiper(&#39;.swiper-coverflow&#39;, {
+    effect: &#39;coverflow&#39;,
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: &#39;auto&#39;,
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows : false,
+    },
+    pagination: {
+        el: &#39;.swiper-pagination&#39;,
+    },
+});
+</code></pre>
 
-	<h3>Carousel breakpoints</h3>
+<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
-	<div class="swiper-container swiper-carosusel-breakpoints">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
-			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
-			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 6</h4></div>
-		</div>		
-		<div class="swiper-pagination"></div>
-		<div class="swiper-button-next"></div>
-		<div class="swiper-button-prev"></div>		
-	</div>
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
 
-
-	<h3>Carousel freemode</h3>
-
-	<div class="swiper-container swiper-fade">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
-			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
-			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 6</h4></div>
-		</div>
-		<div class="swiper-pagination"></div>
-	</div>
-
-
-
-	<h3>Carousel coverflow</h3>
-
-	<div class="swiper-container swiper-coverflow">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
-			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
-			<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
-			<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 6</h4></div>
-		</div>
-		<div class="swiper-pagination"></div>
-	</div>
-
-	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-
-
-			var mySwiper = new Swiper('.swiper-carosusel', {
-				slidesPerView: 3,
-				spaceBetween: 30,
-				centeredSlides: true,
-				pagination: {
-					el: '.swiper-pagination',
-					clickable: true,
-				},		
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				},						
-			});
-
-			var mySwiper = new Swiper('.swiper-carosusel-breakpoints', {
-				slidesPerView: 2,
-				spaceBetween: 15,
-				centeredSlides: true,
-				pagination: {
-					el: '.swiper-pagination',
-					clickable: true,
-				},		
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				},	
-				breakpoints: {
-					640: {
-						slidesPerView: 2,
-						spaceBetween: 10,
-					},
-					768: {
-						slidesPerView: 3,
-						spaceBetween: 20,
-					},
-					1024: {
-						slidesPerView: 4,
-						spaceBetween: 30,
-					},
-				}						
-			});
-
-			var mySwiper = new Swiper('.swiper-fade', {
-				slidesPerView: 3,
-				spaceBetween: 30,
-				centeredSlides: true,
-				freeMode: true,
-				pagination: {
-					el: '.swiper-pagination',
-					clickable: true,
-				},			
-			});
-
-			var mySwiper = new Swiper('.swiper-coverflow', {
-				effect: 'coverflow',
-				grabCursor: true,
-				centeredSlides: true,
-				slidesPerView: 'auto',
-				coverflowEffect: {
-					rotate: 50,
-					stretch: 0,
-					depth: 100,
-					modifier: 1,
-					slideShadows : false,
-				},
-				pagination: {
-					el: '.swiper-pagination',
-				},			
-			});			
-
-
-			
+		var mySwiper = new Swiper('.swiper-carousel', {
+			slidesPerView: 3,
+			spaceBetween: 30,
+			centeredSlides: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
 		});
-	</script>	
 
+		var mySwiper = new Swiper('.swiper-carousel-breakpoints', {
+			slidesPerView: 2,
+			spaceBetween: 15,
+			centeredSlides: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			breakpoints: {
+				640: {
+					slidesPerView: 2,
+					spaceBetween: 10,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1024: {
+					slidesPerView: 4,
+					spaceBetween: 30,
+				},
+			}
+		});
+
+		var mySwiper = new Swiper('.swiper-freemode', {
+			slidesPerView: 3,
+			spaceBetween: 30,
+			centeredSlides: true,
+			freeMode: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		});
+
+		var mySwiper = new Swiper('.swiper-coverflow', {
+			effect: 'coverflow',
+			grabCursor: true,
+			centeredSlides: true,
+			slidesPerView: 'auto',
+			coverflowEffect: {
+				rotate: 50,
+				stretch: 0,
+				depth: 100,
+				modifier: 1,
+				slideShadows : false,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+			},
+		});
+
+	});
+</script>
 
 						</div>			
 					</div>
