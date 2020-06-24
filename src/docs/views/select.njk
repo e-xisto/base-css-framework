@@ -5,60 +5,71 @@
 
 {% markdown %}
 
+# Select
+
+Para los elementos `select`, seguimos el mismo proceso que con los `input`.
+
 <div class="row">
-	<div class="col-md-12"><h3 class="mt-xl">Select</h3></div>
 	<div class="col-md-6">
-		<div class="form-select form-sm">
-			<label for="test">Demo select</label>
-			<select name="" id="">
-				<option value="">Seleccionar opción...</option>
-				<option value="">Seleccionar opción...</option>
-				<option value="">Seleccionar opción...</option>
-				<option value="">Seleccionar opción...</option>
-			</select>
-			<small>Texto ayuda para el usuario</small>
-		</div>
 		<div class="form-select">
-			<label for="test">Demo select</label>
+			<label for="">Demo select</label>
 			<select name="" id="">
-				<option value="">Seleccionar opción...</option>
-				<option value="">Seleccionar opción...</option>
-				<option value="">Seleccionar opción...</option>
-				<option value="">Seleccionar opción...</option>
+				<option value="">Seleccionar una opción</option>
+				<option value="">Seleccionar una opción</option>
+				<option value="">Seleccionar una opción</option>
+				<option value="">Seleccionar una opción</option>
 			</select>
-			<small>Texto ayuda para el usuario</small>
-		</div>
-		<div class="form-select form-md">
-			<label for="test">Demo select</label>
-			<select name="" id="">
-				<option value="">Seleccionar opción...</option>
-				<option value="">Seleccionar opción...</option>
-				<option value="">Seleccionar opción...</option>
-				<option value="">Seleccionar opción...</option>
-			</select>
-			<small>Texto ayuda para el usuario</small>
-		</div>
-		<div class="form-select form-lg">
-			<label for="test">Demo select</label>
-			<select name="" id="">
-				<option value="">Seleccionar opción...</option>
-				<option value="">Seleccionar opción...</option>
-				<option value="">Seleccionar opción...</option>
-				<option value="">Seleccionar opción...</option>
-			</select>
-			<small>Texto ayuda para el usuario</small>
-		</div>
-		<div class="form-select">
-			<label for="test">Disabled select </label>
-			<select name="" id="" disabled>
-				<option value="">Seleccionar opción...</option>
-				<option value="">Seleccionar opción...</option>
-				<option value="">Seleccionar opción...</option>
-				<option value="">Seleccionar opción...</option>
-			</select>
-			<small>Texto ayuda para el usuario</small>
 		</div>
 	</div>
+</div>
+
+```html
+
+		<div class="form-select">
+			<label for="">Demo select</label>
+			<select name="" id="">
+				<option value="">Seleccionar una opción</option>
+				...
+			</select>
+		</div>
+
+```
+
+### Disabled select
+
+Aplicando el atributo `disabled` o la clase `disabled` al `select`.
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="form-select">
+			<label for="">Disabled select</label>
+			<select name="" id="" disabled>
+				<option value="">Seleccionar una opción</option>
+				<option value="">Seleccionar una opción</option>
+				<option value="">Seleccionar una opción</option>
+				<option value="">Seleccionar una opción</option>
+			</select>
+		</div>
+	</div>
+</div>
+
+```html
+
+		<div class="form-select">
+			<label for="">Disabled select</label>
+			<select name="" id="" disabled>
+				<option value="">Seleccionar una opción</option>
+				...
+			</select>
+		</div>
+
+```
+
+### Tamaños select
+
+El tamaño es modificable usando las clases `form-sm` o `form-size-sm`, `form-md` o `form-size-md` y
+`form-lg` o `form-size-lg`.
+
 	<div class="col-md-6">
 		<div class="form-select form-sm" >
 			<label for="test">Demo select size sm</label>
@@ -70,6 +81,22 @@
 			</select>
 			<small>Texto ayuda para el usuario</small>
 		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="form-select form-md">
+			<label for="test">Demo select size lg</label>
+			<select name="" id="">
+				<option value="">Seleccionar opción...</option>
+				<option value="">Seleccionar opción...</option>
+				<option value="">Seleccionar opción...</option>
+				<option value="">Seleccionar opción...</option>
+			</select>
+			<small>Texto ayuda para el usuario</small>
+		</div>
+	</div>
+
+	<div class="col-md-6">
 		<div class="form-select form-lg">
 			<label for="test">Demo select size lg</label>
 			<select name="" id="">
@@ -81,7 +108,44 @@
 			<small>Texto ayuda para el usuario</small>
 		</div>
 	</div>
-</div>
+
+
+```html
+
+		<div class="form-select form-sm" >
+			<label for="test">Demo select size sm</label>
+			<select name="" id="">
+				<option value="">Seleccionar opción...1</option>
+				<option value="">Seleccionar opción...2</option>
+				<option value="">Seleccionar opción...3</option>
+				<option value="">Seleccionar opción...4</option>
+			</select>
+			<small>Texto ayuda para el usuario</small>
+		</div>
+
+		<div class="form-select form-md">
+			<label for="test">Demo select size lg</label>
+			<select name="" id="">
+				<option value="">Seleccionar opción...</option>
+				<option value="">Seleccionar opción...</option>
+				<option value="">Seleccionar opción...</option>
+				<option value="">Seleccionar opción...</option>
+			</select>
+			<small>Texto ayuda para el usuario</small>
+		</div>
+
+		<div class="form-select form-lg">
+			<label for="test">Demo select size lg</label>
+			<select name="" id="">
+				<option value="">Seleccionar opción...</option>
+				<option value="">Seleccionar opción...</option>
+				<option value="">Seleccionar opción...</option>
+				<option value="">Seleccionar opción...</option>
+			</select>
+			<small>Texto ayuda para el usuario</small>
+		</div>
+
+```
 
 {% endmarkdown %}
 
