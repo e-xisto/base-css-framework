@@ -1,12 +1,40 @@
-<div class="menu-top-logo">
-	<img src="/images/logo.svg" alt="base: CSS & Style Guide Framework">
-	<span>CSS & Style Guide Framework</span>
-</div>
+<div class="navbar navbar-fluid">
+	<div class="navbar-responsive">
+		<div class="navbar-left">
+			<div class="navbar-logo menu-top-logo">
+				<img src="/images/logo.svg" alt="base: CSS & Style Guide Framework">
+				<span>CSS & Style Guide Framework</span>
+			</div>
+		</div>
+		<div class="navbar-center"></div>
+		<div class="navbar-right">
+			<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content').classList.toggle('open')">
+				<div class="navbar-burger-bar"></div>
+				<div class="navbar-burger-bar"></div>
+				<div class="navbar-burger-bar"></div>
+			</div>
+		</div>
+	</div>
+	<div class="navbar-content">
+		<div class="navbar-left hidden-sm hidden-xs">
+			<div class="menu-top-logo">
+				<img src="/images/logo.svg" alt="base: CSS & Style Guide Framework">
+				<span>CSS & Style Guide Framework</span>
+			</div>
+		</div>
+		<div class="navbar-center"></div>
+		<div class="navbar-right">
+			<div class="menu-top-menu">
+				<ul>
+					<li><a href="changelog.html">Novedades</a></li>
+					<li><a href="guide.html">Guía</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
 
-<div class="menu-top-menu">
-	<ul>
-		<li><a href="changelog.html">Novedades</a></li>
-		<li><a href="guide.html">Guía</a></li>
-		<li><a href="about.html">About</a></li>
-	</ul>
+				<div class="hidden visible-xs visible-sm">
+					{% include "../partials/aside.njk" %}
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

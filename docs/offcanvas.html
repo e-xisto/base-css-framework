@@ -25,7 +25,7 @@
 
 	h3 {
 		padding-bottom: 10px;
-		border-bottom: 1px solid #efefef;		
+		border-bottom: 1px solid #efefef;
 	}
 
 	.view-port {
@@ -60,6 +60,7 @@
 		width: 100%;
 		height: 65px;
 		background: #1B1F23;
+		z-index: 99;
 	}
 
 	.menu-top-logo {
@@ -78,6 +79,14 @@
 		color: var(--midtone);
 		margin-left: 15px;
 		margin-top: 15px;
+	}
+
+	.menu-top .navbar {
+		background: #1B1F23;
+	}
+
+	.menu-top .navbar-burger-bar {
+		background: var(--white);
 	}
 
 	.menu-top-menu {
@@ -105,6 +114,64 @@
 		color: var(--light);
 	}
 
+	@media (max-width: 992px) {
+
+		.menu-top { position: absolute; }
+		.menu-top-logo span { display: none; }
+		.menu-top .navbar-responsive { height: 65px; }
+
+		.menu-top .navbar-content {
+			z-index: 99;
+			top: 65px;
+			background: var(--white);
+			box-shadow: 0 0 5px;
+			margin-bottom: 20px;
+		}
+
+		.menu-top-menu { text-align: center; }
+		.menu-top-menu ul { flex-direction: column; }
+
+		.menu-top-menu ul li {
+			margin-right: 0;
+			padding-top: 0;
+			line-height: 48px
+		}
+
+		.menu-top-menu ul li a {
+			color: var(--black);
+			font-weight: 700;
+		}
+
+		.menu-top-menu > ul {
+			flex-direction: row;
+			margin-top: 5px;
+		}
+
+		.menu-top-menu > ul li::after {
+			content: '/';
+			margin: 0 5px;
+			color: var(--black);
+		}
+
+		.menu-top-menu > ul li:last-child::after {
+			content: '';
+			margin: 0;
+		}
+
+		.menu-top-menu .padre a {
+			font-size: 18px;
+			color: #2288FF;
+			margin-top: 30px;
+			font-weight: 700;
+		}
+
+		.menu-top-menu .padre ul li a {
+			color: var(--black);
+			font-size: 16px;
+			margin-top: 0;
+		}
+	}
+
 	.menu-aside {
 		width: 260px;
 		height: 100%;
@@ -118,13 +185,13 @@
 			list-style: none;
 			margin: 0;
 			padding: 0;
-		}			
+		}
 
 		.menu-aside ul li {
 			padding: 25px;
 			margin-bottom: 0px;
 			border-bottom: 1px solid #E1E4E8;
-		}					
+		}
 		.menu-aside ul li a {
 			font-size: 16px;
 			line-height: 24px;
@@ -133,18 +200,18 @@
 			color: var(--black);
 		}
 
-		.menu-aside ul li a:hover { text-decoration: underline; }					
-		
+		.menu-aside ul li a:hover { text-decoration: underline; }
+
 		.menu-aside ul li ul {
 			margin-top: 10px;
-		}					
+		}
 
 		.menu-aside ul li ul li {
 			border: none;
 			padding: 5px;
-			padding-left: 0px; 
+			padding-left: 0px;
 			margin: 0;
-		}	
+		}
 
 		.menu-aside ul li ul li.active a {
 			color: var(--black);
@@ -158,7 +225,7 @@
 			color: var(--primary);
 		}
 
-		@media (max-width: 1220px) {
+		@media (max-width: 992px) {
 			.menu-aside { display: none; }
 		}
 
@@ -207,7 +274,7 @@
 	.code-toolbar button {
 		color: #ccc !important;
 		background: none !important;
-		border: 1px #ccc solid !important;	
+		border: 1px #ccc solid !important;
 		padding: 5px !important;
 		margin-right: 10px;
 		margin-top: 10px;
@@ -218,7 +285,7 @@
 		.code-toolbar button:hover {
 			color: white !important;
 			background: var(--primary) !important;
-			border-color: var(--primary) !important;	
+			border-color: var(--primary) !important;
 		}
 
 		pre {
@@ -285,184 +352,377 @@
 		<div class="offcanvas-wrap">
 
 			<div class="menu-top">
-<div class="menu-top-logo">
-	<img src="/images/logo.svg" alt="base: CSS & Style Guide Framework">
-	<span>CSS & Style Guide Framework</span>
-</div>
+<div class="navbar navbar-fluid">
+	<div class="navbar-responsive">
+		<div class="navbar-left">
+			<div class="navbar-logo menu-top-logo">
+				<img src="/images/logo.svg" alt="base: CSS & Style Guide Framework">
+				<span>CSS & Style Guide Framework</span>
+			</div>
+		</div>
+		<div class="navbar-center"></div>
+		<div class="navbar-right">
+			<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content').classList.toggle('open')">
+				<div class="navbar-burger-bar"></div>
+				<div class="navbar-burger-bar"></div>
+				<div class="navbar-burger-bar"></div>
+			</div>
+		</div>
+	</div>
+	<div class="navbar-content">
+		<div class="navbar-left hidden-sm hidden-xs">
+			<div class="menu-top-logo">
+				<img src="/images/logo.svg" alt="base: CSS & Style Guide Framework">
+				<span>CSS & Style Guide Framework</span>
+			</div>
+		</div>
+		<div class="navbar-center"></div>
+		<div class="navbar-right">
+			<div class="menu-top-menu">
+				<ul>
+					<li><a href="changelog.html">Novedades</a></li>
+					<li><a href="guide.html">Guía</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
 
-<div class="menu-top-menu">
-	<ul>
-		<li><a href="changelog.html">Novedades</a></li>
-		<li><a href="guide.html">Guía</a></li>
-		<li><a href="about.html">About</a></li>
-	</ul>
-</div>			</div>
-			<div class="view-port">
-				<div class="menu-aside">
+				<div class="hidden visible-xs visible-sm">
 <ul>
-	<li>
+	<li class="padre">
 		<a href="getting-started.html">Empezar a trabajar</a>
 		<ul>
 			<li  >
 				<a href="getting-started.html">Introducción</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="install.html">Instalación</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="folder-contents.html">Contenidos</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="theming.html">Theming</a>
-			</li>	
+			</li>
 		</ul>
 	</li>
-	<li>
+	<li class="padre">
 		<a href="layout.html">Layout</a>
 		<ul>
 			<li  >
 				<a href="layout.html">Visión general</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="grid.html">Grid</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="grid-util.html">Utilidades</a>
-			</li>	
+			</li>
 		</ul>
 	</li>
-	<li>
+	<li class="padre">
 		<a href="color.html">Contenidos</a>
 		<ul>
 			<li  >
 				<a href="colors.html">Color</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="tipography.html">Tipografía</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="text.html">Texto</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="buttons.html">Botones</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="lists.html">Listas</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="tables.html">Tablas</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="images.html">Imágenes</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="icons.html">Iconos</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="embed.html">Embeds</a>
-			</li>	
+			</li>
 		</ul>
 	</li>
-	<li>
+	<li class="padre">
 		<a href="forms.html">Formularios</a>
 		<ul>
 			<li  >
 				<a href="forms.html">Introducción</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="input.html">Input</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="select.html">Select</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="check-radio-switch.html">Check y Radio</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="textarea.html">Textarea</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="input-group.html">Input Group</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="file.html">File</a>
-			</li>	
+			</li>
 		</ul>
 	</li>
-	<li>
+	<li class="padre">
 		<a href="alert.html">Componentes</a>
 		<ul>
 			<li  >
 				<a href="alert.html">Alerts</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="collapse.html">Collapse</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="dropdown.html">Dropdown</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="modal.html">Modal</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="navbar.html">Navbar</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="offcanvas.html">Offcanvas</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="parallax.html">Parallax</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="slider.html">Slider</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="carousel.html">Carousel</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="tabs.html">Tabs</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="tooltips.html">Tooltips</a>
-			</li>	
+			</li>
 		</ul>
 	</li>
-	<li>
+	<li class="padre">
 		<a href="spacing.html">Utilidades</a>
 		<ul>
 			<li  >
 				<a href="spacing.html">Spacing</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="visible.html">Visible</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="sizes.html">Sizes</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="shadow.html">Shadow</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="position.html">Position</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="flex.html">Flex</a>
-			</li>	
+			</li>
 			<li  >
-				<a href="display.html">display</a>
-			</li>	
+				<a href="display.html">Display</a>
+			</li>
 			<li  >
 				<a href="border.html">Border</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="animations.html">Animations</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="other-utils.html">Otras</a>
-			</li>	
+			</li>
 			<li  >
 				<a href="mixins.html">Mixins</a>
-			</li>	
+			</li>
+		</ul>
+	</li>
+</ul>				</div>
+			</div>
+		</div>
+	</div>
+</div>			</div>
+			<div class="view-port">
+				<div class="menu-aside">
+<ul>
+	<li class="padre">
+		<a href="getting-started.html">Empezar a trabajar</a>
+		<ul>
+			<li  >
+				<a href="getting-started.html">Introducción</a>
+			</li>
+			<li  >
+				<a href="install.html">Instalación</a>
+			</li>
+			<li  >
+				<a href="folder-contents.html">Contenidos</a>
+			</li>
+			<li  >
+				<a href="theming.html">Theming</a>
+			</li>
+		</ul>
+	</li>
+	<li class="padre">
+		<a href="layout.html">Layout</a>
+		<ul>
+			<li  >
+				<a href="layout.html">Visión general</a>
+			</li>
+			<li  >
+				<a href="grid.html">Grid</a>
+			</li>
+			<li  >
+				<a href="grid-util.html">Utilidades</a>
+			</li>
+		</ul>
+	</li>
+	<li class="padre">
+		<a href="color.html">Contenidos</a>
+		<ul>
+			<li  >
+				<a href="colors.html">Color</a>
+			</li>
+			<li  >
+				<a href="tipography.html">Tipografía</a>
+			</li>
+			<li  >
+				<a href="text.html">Texto</a>
+			</li>
+			<li  >
+				<a href="buttons.html">Botones</a>
+			</li>
+			<li  >
+				<a href="lists.html">Listas</a>
+			</li>
+			<li  >
+				<a href="tables.html">Tablas</a>
+			</li>
+			<li  >
+				<a href="images.html">Imágenes</a>
+			</li>
+			<li  >
+				<a href="icons.html">Iconos</a>
+			</li>
+			<li  >
+				<a href="embed.html">Embeds</a>
+			</li>
+		</ul>
+	</li>
+	<li class="padre">
+		<a href="forms.html">Formularios</a>
+		<ul>
+			<li  >
+				<a href="forms.html">Introducción</a>
+			</li>
+			<li  >
+				<a href="input.html">Input</a>
+			</li>
+			<li  >
+				<a href="select.html">Select</a>
+			</li>
+			<li  >
+				<a href="check-radio-switch.html">Check y Radio</a>
+			</li>
+			<li  >
+				<a href="textarea.html">Textarea</a>
+			</li>
+			<li  >
+				<a href="input-group.html">Input Group</a>
+			</li>
+			<li  >
+				<a href="file.html">File</a>
+			</li>
+		</ul>
+	</li>
+	<li class="padre">
+		<a href="alert.html">Componentes</a>
+		<ul>
+			<li  >
+				<a href="alert.html">Alerts</a>
+			</li>
+			<li  >
+				<a href="collapse.html">Collapse</a>
+			</li>
+			<li  >
+				<a href="dropdown.html">Dropdown</a>
+			</li>
+			<li  >
+				<a href="modal.html">Modal</a>
+			</li>
+			<li  >
+				<a href="navbar.html">Navbar</a>
+			</li>
+			<li  >
+				<a href="offcanvas.html">Offcanvas</a>
+			</li>
+			<li  >
+				<a href="parallax.html">Parallax</a>
+			</li>
+			<li  >
+				<a href="slider.html">Slider</a>
+			</li>
+			<li  >
+				<a href="carousel.html">Carousel</a>
+			</li>
+			<li  >
+				<a href="tabs.html">Tabs</a>
+			</li>
+			<li  >
+				<a href="tooltips.html">Tooltips</a>
+			</li>
+		</ul>
+	</li>
+	<li class="padre">
+		<a href="spacing.html">Utilidades</a>
+		<ul>
+			<li  >
+				<a href="spacing.html">Spacing</a>
+			</li>
+			<li  >
+				<a href="visible.html">Visible</a>
+			</li>
+			<li  >
+				<a href="sizes.html">Sizes</a>
+			</li>
+			<li  >
+				<a href="shadow.html">Shadow</a>
+			</li>
+			<li  >
+				<a href="position.html">Position</a>
+			</li>
+			<li  >
+				<a href="flex.html">Flex</a>
+			</li>
+			<li  >
+				<a href="display.html">Display</a>
+			</li>
+			<li  >
+				<a href="border.html">Border</a>
+			</li>
+			<li  >
+				<a href="animations.html">Animations</a>
+			</li>
+			<li  >
+				<a href="other-utils.html">Otras</a>
+			</li>
+			<li  >
+				<a href="mixins.html">Mixins</a>
+			</li>
 		</ul>
 	</li>
 </ul>				</div>

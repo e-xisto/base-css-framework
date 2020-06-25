@@ -164,7 +164,7 @@ const menu = [
 				link: "tooltips.html"
 			},
 		]
-	},	
+	},
 	{
 		title: "Utilidades",
 		link: "spacing.html",
@@ -194,7 +194,7 @@ const menu = [
 				link: "flex.html"
 			},
 			{
-				title: "display",
+				title: "Display",
 				link: "display.html"
 			},
 			{
@@ -214,7 +214,7 @@ const menu = [
 				link: "mixins.html"
 			},
 		]
-	},	
+	},
 ]
 
 module.exports = menu;
@@ -247,7 +247,7 @@ module.exports = menu;
 // - Imágenes
 // - Iconos
 // - Embed
-// 
+//
 
 
 // # Formularios
