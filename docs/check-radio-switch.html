@@ -420,130 +420,336 @@
 				<div class="content">
 					<div class="content-container">
 
-<div class="row">
-<div class="col-md-12"><h3 class="mt-xl">Checks</h3></div>
-<div class="col-md-12">
+<h1 id="checks-radio-y-switch">Checks, Radio y Switch</h1>
+<p>Estilos básicos para elementos <code>checkbox</code> y <code>radio</code></p>
+<h3 id="checks">Checks</h3>
+<p>El <code>id</code> del <code>input</code> debe coincidir con el atributo <code>for</code> del <code>label</code> para que funcione.</p>
+<div class="demo">
 <div class="row">
 <div class="col-md-6">
-    <div class="form-input form-md">
-        <label for="test">Demo input</label>
-        <input type="text" id="test" placeholder="Escribe aquí un texto...">
-        <!-- <small>Texto ayuda para el usuario</small> -->
-    </div>
-</div>
-<div class="col-md-6">
-    <div class="form-check form-md form-check-auto-align">
-        <input type="checkbox" name="demo-check5" id="demo-check5" checked>
-        <label for="demo-check5">Demo normal <a href="http://www.google.es" target="_blank">checkbox</a></label>
+    <div class="form-check">
+        <input type="checkbox" name="demo-check" id="demo-check">
+        <label for="demo-check">Demo checkbox</label>
     </div>
 </div>
 </div>
-<div class="form-check form-sm">
-    <input type="checkbox" name="demo-check1" id="demo-check1" required>
-    <label for="demo-check1">Demo normal checkbox</label>
-</div>
-<div class="form-check">
-    <input type="checkbox" name="demo-check2" id="demo-check2" required>
-    <label for="demo-check2">Demo normal checkbox</label>
-</div>
-<div class="form-check form-md">
-    <input type="checkbox" name="demo-check3" id="demo-check3" required>
-    <label for="demo-check3">Demo normal checkbox</label>
-</div>
-<div class="form-check form-lg">
-    <input type="checkbox" name="demo-check4" id="demo-check4" required>
-    <label for="demo-check4">Demo normal checkbox</label>
-</div>
-</div>
-<div class="col-md-6">
-<div class="form-input form-sm">
-    <label for="test">Demo input</label>
-    <input type="text" id="test" placeholder="Escribe aquí un texto...">
-    <!-- <small>Texto ayuda para el usuario</small> -->
-</div>
-<div class="form-check">
-    <input type="checkbox" name="demo-check5" id="demo-check5" checked>
-    <label for="demo-check5">Demo normal <a href="http://www.google.es" target="_blank">checkbox</a></label>
-</div>
-<div class="form-check">
-    <input type="checkbox" name="demo-check-disabled" id="demo-check-disabled" disabled>
-    <label for="demo-check-disabled">Demo disabled checkbox</label>
-</div>
-</div>
 </div>
 
+<pre><code class="language-html">
+&lt;div class=&quot;form-check&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;demo-check&quot; id=&quot;demo-check&quot;&gt;
+    &lt;label for=&quot;demo-check&quot;&gt;Demo checkbox&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+<h4 id="disabled-check">Disabled check</h4>
+<p>Estilo personalizado para los <code>checkbox</code> cuando usan el atributo <code>disabled</code>. En este caso, no podemos aplicar la clase
+<code>disabled</code>.</p>
+<div class="demo">
 <div class="row">
-<div class="col-md-12"><h3 class="mt-xl">Radio</h3></div>
 <div class="col-md-6">
-<div class="form-radio form-sm">
-    <input type="radio" name="demo-radio" id="demo-radio-1">
-    <label for="demo-radio-1">Demo normal radio</label>
-</div>
-<div class="form-radio">
-    <input type="radio" name="demo-radio" id="demo-radio-2">
-    <label for="demo-radio-2">Demo normal radio</label>
-</div>
-<div class="form-radio form-md">
-    <input type="radio" name="demo-radio" id="demo-radio-3">
-    <label for="demo-radio-3">Demo normal radio</label>
-</div>
-<div class="form-radio form-lg">
-    <input type="radio" name="demo-radio" id="demo-radio-4">
-    <label for="demo-radio-4">Demo normal radio</label>
-</div>
-<div class="form-radio">
-    <input type="radio" name="demo-radio" id="demo-radio-disabled" disabled>
-    <label for="demo-radio-disabled">Demo disabled radio</label>
-</div>
-</div>
-<div class="col-md-6">
-<div class="form-radio form-sm">
-    <input type="radio" name="demo-radio-size" id="demo-radio-sm">
-    <label for="demo-radio-sm">Demo normal radio</label>
-</div>
-<div class="form-radio form-lg">
-    <input type="radio" name="demo-radio-size" id="demo-radio-lg">
-    <label for="demo-radio-lg">Demo disabled radio</label>
+    <div class="form-check">
+        <input type="checkbox" name="demo-check-disabled" id="demo-check-disabled" disabled>
+        <label for="demo-check-disabled">Demo disabled checkbox</label>
+    </div>
 </div>
 </div>
 </div>
 
+<pre><code class="language-html">
+&lt;div class=&quot;form-check&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;demo-check-disabled&quot; id=&quot;demo-check-disabled&quot; disabled&gt;
+    &lt;label for=&quot;demo-check-disabled&quot;&gt;Demo disabled checkbox&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+<h4 id="tamaños-check">Tamaños check</h4>
+<p>El tamaño es modificable usando las clases <code>form-sm</code> o <code>form-size-sm</code>, <code>form-md</code> o <code>form-size-md</code> y
+<code>form-lg</code> o <code>form-size-lg</code>.</p>
+<div class="demo">
 <div class="row">
-<div class="col-md-12"><h3 class="mt-xl">Switch</h3></div>
 <div class="col-md-6">
-<div class="form-switch">
-    <input type="checkbox" name="demo-switch" id="demo-switch" >
-    <label for="demo-switch">Demo normal switch</label>
-</div>
-<div class="form-switch">
-    <input type="checkbox" name="demo-switch-checked" id="demo-switch-checked" checked>
-    <label for="demo-switch-checked">Demo disabled switch</label>
-</div>
-<div class="form-switch">
-    <input type="checkbox" name="demo-switch-disabled" id="demo-switch-disabled" disabled>
-    <label for="demo-switch-disabled">Demo disabled switch</label>
-</div>
-</div>
-<div class="col-md-6">
-<div class="form-switch form-sm">
-    <input type="checkbox" name="demo-switch-sm" id="demo-switch-sm">
-    <label for="demo-switch-sm">Demo normal switch</label>
-</div>
-<div class="form-switch">
-    <input type="checkbox" name="demo-switch-1" id="demo-switch-1">
-    <label for="demo-switch-1">Demo disabled switch</label>
-</div>
-<div class="form-switch form-md">
-    <input type="checkbox" name="demo-switch-md" id="demo-switch-md">
-    <label for="demo-switch-md">Demo disabled switch</label>
-</div>
-<div class="form-switch  form-lg">
-    <input type="checkbox" name="demo-switch-lg" id="demo-switch-lg">
-    <label for="demo-switch-lg">Demo disabled switch</label>
+    <div class="form-check form-sm">
+        <input type="checkbox" name="demo-sm-check" id="demo-sm-check" required>
+        <label for="demo-sm-check">Demo sm checkbox</label>
+    </div>
 </div>
 </div>
 </div>
 
+<div class="demo">
+<div class="row">
+<div class="col-md-6">
+    <div class="form-check form-md">
+        <input type="checkbox" name="demo-md-check" id="demo-md-check" required>
+        <label for="demo-md-check">Demo md checkbox</label>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="demo">
+<div class="row">
+<div class="col-md-6">
+    <div class="form-check form-lg">
+        <input type="checkbox" name="demo-lg-check" id="demo-lg-check" required>
+        <label for="demo-lg-check">Demo lg checkbox</label>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;form-check form-sm&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;demo-sm-check&quot; id=&quot;demo-sm-check&quot; required&gt;
+    &lt;label for=&quot;demo-sm-check&quot;&gt;Demo sm checkbox&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-check form-md&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;demo-md-check&quot; id=&quot;demo-md-check&quot; required&gt;
+    &lt;label for=&quot;demo-md-check&quot;&gt;Demo md checkbox&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-check form-lg&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;demo-lg-check&quot; id=&quot;demo-lg-check&quot; required&gt;
+    &lt;label for=&quot;demo-lg-check&quot;&gt;Demo lg checkbox&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+<h4 id="checked-checkbox">Checked checkbox</h4>
+<p>Podemos aplicar el atributo <code>checked</code> para que el <code>check</code> salga marcado por defecto.</p>
+<div class="demo">
+<div class="row">
+<div class="col-md-6">
+    <div class="form-check">
+        <input type="checkbox" name="demo-check" id="demo-check-checked" checked>
+        <label for="demo-check-checked">Demo check checked</label>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;form-check&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;demo-check&quot; id=&quot;demo-check-checked&quot; checked&gt;
+    &lt;label for=&quot;demo-check-checked&quot;&gt;Demo check checked&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="radio">Radio</h3>
+<p>Al igual que con el <code>check</code>, el <code>id</code> del input y el <code>for</code> del <code>label</code> deben coincidir.</p>
+<div class="demo">
+<div class="row">
+<div class="col-md-6">
+    <div class="form-radio">
+        <input type="radio" name="demo-radio" id="demo-radio">
+        <label for="demo-radio">Demo radio</label>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;form-radio&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;demo-radio&quot; id=&quot;demo-radio&quot;&gt;
+    &lt;label for=&quot;demo-radio&quot;&gt;Demo radio&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+<h4 id="disabled-radio">Disabled radio</h4>
+<p>Mismo procedimiento que con los <code>checkbox</code>.</p>
+<div class="demo">
+<div class="row">
+<div class="col-md-6">
+    <div class="form-radio">
+        <input type="radio" name="demo-radio" id="demo-radio-disabled" disabled>
+        <label for="demo-radio-disabled">Demo disabled radio</label>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;form-radio&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;demo-radio&quot; id=&quot;demo-radio-disabled&quot; disabled&gt;
+    &lt;label for=&quot;demo-radio-disabled&quot;&gt;Demo disabled radio&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+<h4 id="tamaños-radio">Tamaños radio</h4>
+<p>El tamaño es modificable usando las clases <code>form-sm</code> o <code>form-size-sm</code>, <code>form-md</code> o <code>form-size-md</code> y
+<code>form-lg</code> o <code>form-size-lg</code>.</p>
+<div class="demo">
+<div class="row">
+<div class="col-md-6">
+    <div class="form-radio form-sm">
+        <input type="radio" name="demo-radio" id="demo-sm-radio">
+        <label for="demo-sm-radio">Demo sm radio</label>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="demo">
+<div class="row">
+<div class="col-md-6">
+    <div class="form-radio form-md">
+        <input type="radio" name="demo-radio" id="demo-md-radio">
+        <label for="demo-md-radio">Demo md radio</label>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="demo">
+<div class="row">
+<div class="col-md-6">
+    <div class="form-radio form-lg">
+        <input type="radio" name="demo-radio" id="demo-lg-radio">
+        <label for="demo-lg-radio">Demo lg radio</label>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;form-radio form-sm&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;demo-radio&quot; id=&quot;demo-sm-radio&quot;&gt;
+    &lt;label for=&quot;demo-sm-radio&quot;&gt;Demo sm radio&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-radio form-md&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;demo-radio&quot; id=&quot;demo-md-radio&quot;&gt;
+    &lt;label for=&quot;demo-md-radio&quot;&gt;Demo md radio&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-radio form-lg&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;demo-radio&quot; id=&quot;demo-lg-radio&quot;&gt;
+    &lt;label for=&quot;demo-lg-radio&quot;&gt;Demo lg radio&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+<h4 id="checked-radio">Checked radio</h4>
+<p>Podemos aplicar el atributo <code>checked</code> para que el <code>check</code> salga marcado por defecto.</p>
+<div class="demo">
+<div class="row">
+<div class="col-md-6">
+    <div class="form-radio">
+        <input type="radio" name="demo-radio" id="demo-radio-checked" checked>
+        <label for="demo-radio-checked">Demo checked radio</label>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;form-radio&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;demo-radio&quot; id=&quot;demo-radio-checked&quot; checked&gt;
+    &lt;label for=&quot;demo-radio-checked&quot;&gt;Demo checked radio&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="switch">Switch</h3>
+<p>Un <code>checkbox</code> que mediante la clase <code>form-switch</code> cambia su estilo.</p>
+<div class="demo">
+<div class="row">
+<div class="col-md-6">
+    <div class="form-switch">
+        <input type="checkbox" name="demo-switch" id="demo-switch">
+        <label for="demo-switch">Demo switch</label>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;form-switch&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;demo-switch&quot; id=&quot;demo-switch&quot;&gt;
+    &lt;label for=&quot;demo-switch&quot;&gt;Demo switch&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+<h4 id="disabled-switch">Disabled switch</h4>
+<p>También, se le puede aplicar el atributo <code>disabled</code> al <code>input</code>.</p>
+<div class="demo">
+<div class="row">
+<div class="col-md-6">
+    <div class="form-switch">
+        <input type="checkbox" name="demo-switch-disabled" id="demo-switch-disabled" disabled>
+        <label for="demo-switch-disabled">Demo disabled switch</label>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;form-switch&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;demo-switch-disabled&quot; id=&quot;demo-switch-disabled&quot; disabled&gt;
+    &lt;label for=&quot;demo-switch-disabled&quot;&gt;Demo disabled switch&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+<h4 id="tamaños-switch">Tamaños switch</h4>
+<p>El tamaño es modificable usando las clases <code>form-sm</code> o <code>form-size-sm</code>, <code>form-md</code> o <code>form-size-md</code> y
+<code>form-lg</code> o <code>form-size-lg</code>.</p>
+<div class="demo">
+<div class="row">
+<div class="col-md-6">
+    <div class="form-switch form-sm">
+        <input type="checkbox" name="demo-sm-switch" id="demo-sm-switch">
+        <label for="demo-sm-switch">Demo sm switch</label>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="demo">
+<div class="row">
+<div class="col-md-6">
+    <div class="form-switch form-md">
+        <input type="checkbox" name="demo-md-switch" id="demo-md-switch">
+        <label for="demo-md-switch">Demo md switch</label>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="demo">
+<div class="row">
+<div class="col-md-6">
+    <div class="form-switch form-lg">
+        <input type="checkbox" name="demo-lg-switch" id="demo-lg-switch">
+        <label for="demo-lg-switch">Demo lg switch</label>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;form-switch form-sm&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;demo-sm-switch&quot; id=&quot;demo-sm-switch&quot;&gt;
+    &lt;label for=&quot;demo-sm-switch&quot;&gt;Demo sm switch&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-switch form-md&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;demo-md-switch&quot; id=&quot;demo-md-switch&quot;&gt;
+    &lt;label for=&quot;demo-md-switch&quot;&gt;Demo md switch&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-switch form-lg&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;demo-lg-switch&quot; id=&quot;demo-lg-switch&quot;&gt;
+    &lt;label for=&quot;demo-lg-switch&quot;&gt;Demo lg switch&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+<h4 id="checked-switch">Checked switch</h4>
+<p>Podemos aplicar el atributo <code>checked</code> para que el <code>check</code> salga marcado por defecto.</p>
+<div class="demo">
+<div class="row">
+<div class="col-md-6">
+    <div class="form-switch">
+        <input type="checkbox" name="demo-switch-checked" id="demo-switch-checked" checked>
+        <label for="demo-switch-checked">Demo checked switch</label>
+    </div>
+</div>
+</div>
+</div>
+
+<pre><code class="language-html">
+&lt;div class=&quot;form-switch&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;demo-switch-checked&quot; id=&quot;demo-switch-checked&quot; checked&gt;
+    &lt;label for=&quot;demo-switch-checked&quot;&gt;Demo checked switch&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
 
 						</div>			
 					</div>
