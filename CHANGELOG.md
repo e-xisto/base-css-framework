@@ -6,8 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+## [0.1.8] - 2020-09-01
+
 ### Changed
 - Actualización dependencias package.json
+
+### Fixed
+- Error con nombre colores al definir mapas "black"
 
 
 ## [0.1.7] - 2020-04-16
