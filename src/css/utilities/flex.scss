@@ -1,9 +1,9 @@
 .flex {
-	display: flex;
+	display: flex !important;
 	flex-direction: row;
 	box-sizing: border-box;
 
-	&.inline-flex { display: inline-flex; }
+	&.inline-flex { display: inline-flex !important; }
 	&.row-reverse { flex-direction: row-reverse; }
 	&.column-reverse { flex-direction: column-reverse; }
 
