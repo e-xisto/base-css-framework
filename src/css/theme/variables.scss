@@ -1,8 +1,8 @@
 // =========================================================
 //   BREACKPOINTS
-// 
+//
 // - Breakpoints para las diferentes resoluciones
-// 
+//
 // =========================================================
 
 // Breakpoints para las diferentes resoluciones
@@ -20,9 +20,9 @@ $breakpoints: (
 
 // =========================================================
 //   SPACING
-// 
+//
 // - Espacio base utilizado para cálculos de spacings
-// 
+//
 // =========================================================
 
 // Tamaño de espacio base utilizado para margenes y padding
@@ -40,13 +40,13 @@ $base-space-size: $space-size-md;
 
 // =========================================================
 //   COLOR
-// 
+//
 // - Color primario
 // - Color secundario
 // - Colores personalizados
 // - Color para avisos de sistema
 // - Escala de grises
-// 
+//
 // =========================================================
 
 // Color primario
@@ -87,9 +87,9 @@ $color-white: #FFFFFF;
 
 // =========================================================
 //   FONTS
-// 
+//
 // - Tamaño de fuenta base
-// 
+//
 // =========================================================
 
 // $font-size-base: 16px;
@@ -113,7 +113,7 @@ $font-weight-thin: 100;
 
 // =========================================================
 //   TEXT
-// 
+//
 // - Color texto y encabezados
 // - Párrafos
 // - Enlaces
@@ -121,7 +121,7 @@ $font-weight-thin: 100;
 // - Encabezados
 // - Listas
 // - Variantes de tamaños estándares
-// 
+//
 // =========================================================
 
 // Colores por defecto para texto y encabezados
@@ -245,13 +245,13 @@ $text-size-xxl-mobile: 	26px;
 
 // =========================================================
 //   BUTTONS
-// 
+//
 // - Botón por defecto
 // - Tamaños
 // - Primary
 // - Secondary
 // - Link
-// 
+//
 // =========================================================
 
 
@@ -281,14 +281,14 @@ $button-active-font-color: $button-font-color;
 $button-active-background-color: var(--light);
 $button-active-border-color: var(--light);
 
-$button-focus-color: var(--light);		
+$button-focus-color: var(--light);
 
 $button-text-decoration: none;
 $button-hover-text-decoration: none;
 
 $button-transition: all .25s ease-in;
 
-// Tamaños 
+// Tamaños
 
 $button-sm-font-size: 14px;
 $button-sm-padding-y: 6px;
@@ -318,7 +318,7 @@ $button-primary-active-font-color: var(--white);
 $button-primary-active-background-color: var(--primary-lt);
 $button-primary-active-border-color: var(--primary-lt);
 
-$button-primary-focus-color: var(--primary-br);		
+$button-primary-focus-color: var(--primary-br);
 
 $button-primary-text-decoration: none;
 $button-primary-hover-text-decoration: none;
@@ -339,7 +339,7 @@ $button-secondary-active-font-color: var(--white);
 $button-secondary-active-background-color: var(--secondary-lt);
 $button-secondary-active-border-color: var(--secondary-lt);
 
-$button-secondary-focus-color: var(--secondary-br);		
+$button-secondary-focus-color: var(--secondary-br);
 
 $button-secondary-text-decoration: none;
 $button-secondary-hover-text-decoration: none;
@@ -360,7 +360,7 @@ $button-link-active-font-color: $text-link-color-hover;
 $button-link-active-background-color: transparent;
 $button-link-active-border-color: transparent;
 
-$button-link-focus-color: var(--bright);		
+$button-link-focus-color: var(--bright);
 
 $button-link-text-decoration: $text-link-decoration;
 $button-link-hover-text-decoration: $text-link-decoration-hover;
@@ -368,7 +368,7 @@ $button-link-hover-text-decoration: $text-link-decoration-hover;
 
 // =========================================================
 //   FORMS
-// 
+//
 // -label
 // -Input
 // -Select
@@ -381,7 +381,7 @@ $button-link-hover-text-decoration: $text-link-decoration-hover;
 // -Read only
 // -Validación (mensajes de error)
 // -Input-group
-// 
+//
 // =========================================================
 
 // Label
@@ -504,11 +504,11 @@ $form-input-lg-height: $button-lg-height; // Suma font-size + padding-y + border
 
 // =========================================================
 //   GRID
-// 
+//
 // - Número de columnas total del Grid
 // - Espacio entre columnas
 // - Tamaños del contenedor según los diferentes $breakpoints
-// 
+//
 // =========================================================
 
 // Número de columnas total del Grid
@@ -528,7 +528,7 @@ $grid-container-width-xs: 100%;
 
 // =========================================================
 //   DROPDOWN
-// 
+//
 // =========================================================
 
 $dropdown-menu-background-color: var(--white);
@@ -556,7 +556,7 @@ $dropdown-menu-item-disabled-font-color: var(--light);
 
 // =========================================================
 //   MODAL
-// 
+//
 // =========================================================
 
 $modal-background-color: rgba(0,0,0,0.70);
@@ -589,7 +589,7 @@ $modal-close-hover-color: var(--gray);
 
 // =========================================================
 //   SLIDER
-// 
+//
 // =========================================================
 
 $slider-bullet-color: $color-gray;
@@ -600,7 +600,7 @@ $slider-navigation-size: 30px;
 
 // =========================================================
 //   OFFCANVAS MENU
-// 
+//
 // =========================================================
 
 $offcanvas-width: 300px;
@@ -613,7 +613,7 @@ $offcanvas-zindex: 1000;
 
 // =========================================================
 //   TABLE
-// 
+//
 // =========================================================
 
 $table-head-background-color: var(--dark);
@@ -625,7 +625,7 @@ $table-border-color: var(--light);
 
 // =========================================================
 //   TOOLTIP
-// 
+//
 // =========================================================
 
 $tooltip-font-size: $text-size-sm;
@@ -641,7 +641,7 @@ $tooltip-length-large: 260px;
 
 // =========================================================
 //   ALERTS
-// 
+//
 // =========================================================
 
 $alert-padding-y: $base-space-size;
@@ -653,7 +653,7 @@ $alert-border-width: 1px;
 
 // =========================================================
 //   TABS
-// 
+//
 // =========================================================
 
 $tabs-border-color: var(--light);
@@ -679,7 +679,7 @@ $tabs-item-active-font-weight: bold;
 
 // =========================================================
 //   NAVBAR
-// 
+//
 // =========================================================
 
 $navbar-height: 65px;
@@ -740,6 +740,30 @@ $navbar-burger-bar-height: 2px;
 $navbar-burger-bar-margin: 5px;
 $navbar-burger-bar-color: black;
 $navbar-burger-bar-border-radius: 10px;
+
+
+
+// =========================================================
+//   COLLAPSE
+//
+// =========================================================
+
+$collapse-border-width: 1px;
+$collapse-border-color: var(--gray);
+$collapse-border-radius: 4px;
+$collapse-background-color: var(--light);
+
+$collapse-action-padding-y: 10px;
+$collapse-action-padding-x: 15px;
+$collapse-action-font-size: 18px;
+$collapse-action-font-weight: 400;
+$collapse-action-background-color: var(--bright);
+$collapse-action-border-width: 1px;
+$collapse-action-border-color: var(--gray);
+$collapse-action-border-radius: 4px;
+
+$collapse-content-padding-y: 10px;
+$collapse-content-padding-x: 15px;
 
 
 
