@@ -2,7 +2,7 @@
 	position: relative;
 	width: 100%;
 	margin-left: auto;
-	margin-right: auto;	
+	margin-right: auto;
 	background: $navbar-background-color;
 	padding: 0 $navbar-padding-x;
 	border-radius: $navbar-border-radius;
@@ -50,8 +50,8 @@
 			max-width: 100%;
 			transform: none;
 			width: 100%;
-		}		
-	}	
+		}
+	}
 }
 
 .navbar-responsive {
@@ -102,7 +102,7 @@
 	text-decoration: $navbar-item-text-decoration !important;
 	padding: 0 $navbar-item-padding-x;
 
-	@include breakpoint-down(sm) {			
+	@include breakpoint-down(sm) {
 		display: block;
 		color: $navbar-responsive-item-link-color;
 		font-size: $navbar-responsive-item-font-size;
@@ -113,7 +113,7 @@
 }
 
 .navbar-link a:not(.btn),
-.navbar-dropdown-toogle {
+.navbar-dropdown-toggle {
 	display: inline-block;
 	line-height: $navbar-height;
 	color: $navbar-item-link-color;
@@ -123,6 +123,7 @@
 	padding: 0 $navbar-item-padding-x;
 	background: $navbar-item-background-color;
 	white-space: nowrap;
+	cursor: pointer;
 
 	&:hover,
 	&:focus {
@@ -152,7 +153,7 @@
 .navbar-button {
 	margin: 0 $navbar-item-padding-x;
 
-	@include breakpoint-down(sm) {			
+	@include breakpoint-down(sm) {
 		display: block;
 		margin: $navbar-responsive-item-padding-y $navbar-responsive-item-padding-x;
 	}
@@ -161,9 +162,10 @@
 .navbar-dropdown {
 	position: relative;
 
-	&.open .navbar-dropdown-toogle {
+	&.open .navbar-dropdown-toggle {
 		color: $navbar-dropdown-menu-font-color !important;
 		background: $navbar-dropdown-menu-background-color !important;
+		cursor: pointer;
 	}
 
 	&.open .navbar-dropdown-menu { display: block; }
@@ -188,7 +190,7 @@
 		color: $navbar-responsive-dropdown-menu-font-color;
 		font-size: $navbar-responsive-dropdown-menu-font-size;
 		font-weight: $navbar-responsive-dropdown-menu-font-weight;
-		background: $navbar-responsive-dropdown-menu-background-color;		
+		background: $navbar-responsive-dropdown-menu-background-color;
 	}
 }
 
@@ -210,7 +212,7 @@
 
 	@include breakpoint-down(sm) {
 		padding: $navbar-responsive-dropdown-menu-item-padding-y $navbar-responsive-dropdown-menu-item-padding-x;
-	}	
+	}
 }
 
 .navbar-burger {
@@ -223,7 +225,7 @@
 	margin: 0;
 	padding-top: ($navbar-burger-height - (($navbar-burger-bar-height * 3) + ($navbar-burger-bar-margin * 2))) / 2;
 	transition: all .3s;
-	cursor: pointer;	
+	cursor: pointer;
 
 	.navbar-burger-bar {
 		position: relative;
@@ -233,7 +235,7 @@
 		margin-bottom: $navbar-burger-bar-margin;
 		background-color: $navbar-burger-bar-color;
 		border-radius: 10px;
-		transition: all .3s;	
+		transition: all .3s;
 	}
 
 	&.open {
@@ -242,7 +244,7 @@
 			&:nth-of-type(1){ transform: translateY($navbar-burger-bar-height + $navbar-burger-bar-margin) rotate(45deg); }
 			&:nth-of-type(2){ opacity: 0; }
 			&:nth-of-type(3){ transform: translateY(-$navbar-burger-bar-height - $navbar-burger-bar-margin) rotate(-45deg); }
-		}	  
+		}
 	}
 }
 
