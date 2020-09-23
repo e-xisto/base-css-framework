@@ -19,7 +19,7 @@ function init() {
 
 function createResponsiveMenu() {
 
-	const tabs = document.getElementsByClassName('tabs-reponsive');
+	const tabs = document.getElementsByClassName('tabs-responsive');
 	Array.from(tabs).forEach((tab: Element) => {
 		const tabsItems = tab.querySelectorAll('.tabs-item');
 
