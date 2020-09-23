@@ -1,21 +1,21 @@
 
 // Text
-.text-xxs, .text-size-xxs 	{ font-size: $text-size-xxs; line-height: 1.5; }
-.text-xs, .text-size-xs 	{ font-size: $text-size-xs; line-height: 1.5; }
-.text-sm, .text-size-sm 	{ font-size: $text-size-sm; line-height: 1.5; }
-.text-md, .text-size-md 	{ font-size: $text-size-md; line-height: 1.5; }
-.text-lg, .text-size-lg 	{ font-size: $text-size-lg; line-height: 1.5; }
-.text-xl, .text-size-xl 	{ font-size: $text-size-xl; line-height: 1.5; }
-.text-xxl, .text-size-xxl 	{ font-size: $text-size-xxl; line-height: 1.333; }
+.text-xxs, .text-size-xxs 	{ font-size: $text-size-xxs !important; line-height: 1.5 !important; }
+.text-xs, .text-size-xs 	{ font-size: $text-size-xs !important; line-height: 1.5 !important; }
+.text-sm, .text-size-sm 	{ font-size: $text-size-sm !important; line-height: 1.5 !important; }
+.text-md, .text-size-md 	{ font-size: $text-size-md !important; line-height: 1.5 !important; }
+.text-lg, .text-size-lg 	{ font-size: $text-size-lg !important; line-height: 1.5 !important; }
+.text-xl, .text-size-xl 	{ font-size: $text-size-xl !important; line-height: 1.5 !important; }
+.text-xxl, .text-size-xxl 	{ font-size: $text-size-xxl !important; line-height: 1.333 !important; }
 
 @include breakpoint-down(sm) {
-	.text-xxs, .text-size-xxs 	{ font-size: $text-size-xxs-mobile; }
-	.text-xs, .text-size-xs 	{ font-size: $text-size-xs-mobile; }
-	.text-sm, .text-size-sm 	{ font-size: $text-size-sm-mobile; }
-	.text-md, .text-size-md 	{ font-size: $text-size-md-mobile; }
-	.text-lg, .text-size-lg 	{ font-size: $text-size-lg-mobile; }
-	.text-xl, .text-size-xl 	{ font-size: $text-size-xl-mobile; }
-	.text-xxl, .text-size-xxl 	{ font-size: $text-size-xxl-mobile; }
+	.text-xxs, .text-size-xxs 	{ font-size: $text-size-xxs-mobile !important; }
+	.text-xs, .text-size-xs 	{ font-size: $text-size-xs-mobile !important; }
+	.text-sm, .text-size-sm 	{ font-size: $text-size-sm-mobile !important; }
+	.text-md, .text-size-md 	{ font-size: $text-size-md-mobile !important; }
+	.text-lg, .text-size-lg 	{ font-size: $text-size-lg-mobile !important; }
+	.text-xl, .text-size-xl 	{ font-size: $text-size-xl-mobile !important; }
+	.text-xxl, .text-size-xxl 	{ font-size: $text-size-xxl-mobile !important; }
 }
 
 .text-bolder,
