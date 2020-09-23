@@ -423,29 +423,19 @@
 <h1 id="modal">Modal</h1>
 <p>Para utilizar una modal debemos tener en cuenta lo siguiente:</p>
 <ul>
-<li>
-Uno de los requisitos para crear nuestra modal es proporcionarle un <code>id</code> al contenedor, al igual que la
-clase <code>modal</code>.
-</li>
-<li>
-La modal debe contar con un contenedor <code>modal-content</code> en su interior.
-</li>
-<li><code>modal-content</code> está compuesto por tres contenedores básicos:
-<ul>
-    <li><code>modal-header</code></li>
-    <li><code>modal-body</code></li>
-    <li><code>modal-footer</code></li>
+<li>Uno de los requisitos para crear nuestra modal es proporcionarle un <code>id</code> al contenedor, al igual que la clase <code>modal</code>.</li>
+<li>La modal debe contar con un contenedor <code>modal-content</code> en su interior.</li>
+<li><code>modal-content</code> está compuesto por tres contenedores básicos:<ul>
+<li><code>modal-header</code></li>
+<li><code>modal-body</code></li>
+<li><code>modal-footer</code></li>
 </ul>
 </li>
-<li>
-Dentro de <code>modal-header</code> encontramos <code>modal-title</code>, clase la cual se aplicaría en el título
-de la modal.
-</li>
-<li>Para cerrar la modal, debemos aplicar la clase <code>modal-close</code>y las propiedades <code>data-action="modal-close"</code>
-y <code>data-target={id modal}</code>. Las modales también pueden cerrarse haciendo click fuera de ella.
-</li>
+<li>Dentro de <code>modal-header</code> encontramos <code>modal-title</code>, clase la cual se aplicaría en el título de la modal.</li>
+<li>Para cerrar la modal, debemos aplicar la clase <code>modal-close</code> y las propiedades <code>data-action=&quot;modal-close&quot;</code> y
+<code>data-target={id modal}</code>.</li>
+<li>Las modales también pueden cerrarse haciendo click fuera de ella.</li>
 </ul>
-
 <div class="container">
 <div class="row">
 <div class="col-md-6 col-md-offset-3">
@@ -545,8 +535,7 @@ y <code>data-target={id modal}</code>. Las modales también pueden cerrarse haci
 </div>
 </div>
 
-<pre><code class="language-html">
-&lt;a class=&quot;btn btn-outlined-secondary btn-md btn-block mt-xxl&quot; data-action=&quot;modal-open&quot; data-target=&quot;modal-demo-1&quot;&gt;Modal&lt;/a&gt;
+<pre><code class="language-html">&lt;a class=&quot;btn btn-outlined-secondary btn-md btn-block mt-xxl&quot; data-action=&quot;modal-open&quot; data-target=&quot;modal-demo-1&quot;&gt;Modal&lt;/a&gt;
 
 &lt;div class=&quot;modal&quot; id=&quot;modal-demo-1&quot;&gt;
     &lt;div class=&quot;modal-content&quot;&gt;
@@ -559,12 +548,11 @@ y <code>data-target={id modal}</code>. Las modales también pueden cerrarse haci
             &lt;/p&gt;
         &lt;/div&gt;
         &lt;div class=&quot;modal-footer&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;btn btn-outlined btn-xs-block btn-sm-block mb-xs-md&quot; data-action=&quot;modal-close&quot; data-target=&quot;modal-demo-1&quot;&gt;Cancelar&lt;/a&gt;
-            &lt;a href=&quot;&quot; class=&quot;btn btn-success btn-xs-block btn-sm-block&quot;&gt;Aceptar&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn btn-outlined mb-xs-md&quot; data-action=&quot;modal-close&quot; data-target=&quot;modal-demo-1&quot;&gt;Cancelar&lt;/a&gt;
+            &lt;a href=&quot;&quot; class=&quot;btn btn-success&quot;&gt;Aceptar&lt;/a&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
 <h3 id="modal-center">Modal center</h3>
 <p>Aplicando la clase <code>modal-center</code>, la modal se centrará y su scroll vertical no se aplicará a la ventana, sino a la modal.</p>
 <div class="container">
@@ -583,59 +571,59 @@ y <code>data-target={id modal}</code>. Las modales también pueden cerrarse haci
 </div>
 <div class="modal-body">
     <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis,
-        veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad!
-        Exercitationem hic nobis laborum illo.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae
+        necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae
+        voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo.
     </p>
     <p>
         Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-        consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi
-        mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto
-        quaerat modi aspernatur dolor tempora nobis?
+        consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum
+        asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed
+        atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?
     </p>
     <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis,
-        veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad!
-        Exercitationem hic nobis laborum illo.
-    </p>
-    <p>
-        Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-        consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi
-        mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto
-        quaerat modi aspernatur dolor tempora nobis?
-    </p>
-    <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis,
-        veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad!
-        Exercitationem hic nobis laborum illo.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae
+        necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae
+        voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo.
     </p>
     <p>
         Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-        consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi
-        mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto
-        quaerat modi aspernatur dolor tempora nobis?
+        consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum
+        asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed
+        atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?
     </p>
     <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis,
-        veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad!
-        Exercitationem hic nobis laborum illo.
-    </p>
-    <p>
-        Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-        consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi
-        mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto
-        quaerat modi aspernatur dolor tempora nobis?
-    </p>
-    <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis,
-        veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad!
-        Exercitationem hic nobis laborum illo.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae
+        necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae
+        voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo.
     </p>
     <p>
         Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
-        consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi
-        mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto
-        quaerat modi aspernatur dolor tempora nobis?
+        consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum
+        asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed
+        atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae
+        necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae
+        voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo.
+    </p>
+    <p>
+        Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
+        consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum
+        asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed
+        atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae
+        necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae
+        voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo.
+    </p>
+    <p>
+        Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt
+        consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum
+        asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed
+        atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?
     </p>
 </div>
 <div class="modal-footer">
@@ -646,8 +634,7 @@ y <code>data-target={id modal}</code>. Las modales también pueden cerrarse haci
 
 </div>
 
-<pre><code class="language-html">
-&lt;a class=&quot;btn btn-outlined-secondary btn-md btn-block mb-md&quot; data-action=&quot;modal-open&quot; data-target=&quot;modal-demo-center&quot;&gt;Modal center&lt;/a&gt;
+<pre><code class="language-html">&lt;a class=&quot;btn btn-outlined-secondary btn-md btn-block mb-md&quot; data-action=&quot;modal-open&quot; data-target=&quot;modal-demo-center&quot;&gt;Modal center&lt;/a&gt;
 
 &lt;div class=&quot;modal modal-center&quot; id=&quot;modal-demo-center&quot;&gt;
     &lt;div class=&quot;modal-content&quot;&gt;
@@ -660,14 +647,13 @@ y <code>data-target={id modal}</code>. Las modales también pueden cerrarse haci
             &lt;/p&gt;
         &lt;/div&gt;
         &lt;div class=&quot;modal-footer&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;btn btn-outlined btn-xs-block btn-sm-block mb-xs-md&quot; data-action=&quot;modal-close&quot; data-target=&quot;modal-demo-center&quot;&gt;Cancelar&lt;/a&gt;
-            &lt;a href=&quot;&quot; class=&quot;btn btn-success btn-xs-block btn-sm-block&quot;&gt;Aceptar&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn btn-outlined mb-xs-md&quot; data-action=&quot;modal-close&quot; data-target=&quot;modal-demo-center&quot;&gt;Cancelar&lt;/a&gt;
+            &lt;a href=&quot;&quot; class=&quot;btn btn-success&quot;&gt;Aceptar&lt;/a&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
 <h3 id="modal-noclick">Modal noclick</h3>
-<p>Con <code>modal-noclick</code> evitamos que la modal se pueda cerrar al hacer click fuera de ella.</p>
+<p>Con <code>modal-noclick</code> evitamos que la modal se cierre al hacer click fuera de ella.</p>
 <div class="container">
 <div class="row">
 <div class="col-md-offset-3 col-md-6">
@@ -696,8 +682,7 @@ y <code>data-target={id modal}</code>. Las modales también pueden cerrarse haci
 </div>
 
 
-<pre><code class="language-html">
-&lt;button class=&quot;btn btn-outlined-secondary btn-md btn-block mb-md&quot; data-action=&quot;modal-open&quot; data-target=&quot;modal-demo-2&quot;&gt;Modal noclick&lt;/button&gt;
+<pre><code class="language-html">&lt;button class=&quot;btn btn-outlined-secondary btn-md btn-block mb-md&quot; data-action=&quot;modal-open&quot; data-target=&quot;modal-demo-2&quot;&gt;Modal noclick&lt;/button&gt;
 
 &lt;div class=&quot;modal modal-center modal-noclick&quot; id=&quot;modal-demo-2&quot;&gt;
     &lt;div class=&quot;modal-content&quot;&gt;
@@ -710,12 +695,11 @@ y <code>data-target={id modal}</code>. Las modales también pueden cerrarse haci
             &lt;/p&gt;
         &lt;/div&gt;
         &lt;div class=&quot;modal-footer&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;btn btn-outlined btn-xs-block btn-sm-block mb-xs-md&quot; data-action=&quot;modal-close&quot; data-target=&quot;modal-demo-2&quot;&gt;Cancelar&lt;/a&gt;
-            &lt;a href=&quot;&quot; class=&quot;btn btn-success btn-xs-block btn-sm-block&quot;&gt;Aceptar&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn btn-outlined mb-xs-md&quot; data-action=&quot;modal-close&quot; data-target=&quot;modal-demo-2&quot;&gt;Cancelar&lt;/a&gt;
+            &lt;a href=&quot;&quot; class=&quot;btn btn-success&quot;&gt;Aceptar&lt;/a&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
 <h3 id="modal-multiple">Modal multiple</h3>
 <p>También, se puede lanzar una modal dentro de una modal.</p>
 <div class="container">
@@ -751,8 +735,7 @@ y <code>data-target={id modal}</code>. Las modales también pueden cerrarse haci
 </div>
 </div>
 
-<pre><code class="language-html">
-&lt;a onclick=&quot;console.log(&#39;demo 3&#39;)&quot; class=&quot;btn btn-outlined-secondary btn-md btn-block mt-xxl&quot; data-action=&quot;modal-open&quot; data-target=&quot;modal-demo-3&quot;&gt;Multiple Modal&lt;/a&gt;
+<pre><code class="language-html">&lt;a onclick=&quot;console.log(&#39;demo 3&#39;)&quot; class=&quot;btn btn-outlined-secondary btn-md btn-block mt-xxl&quot; data-action=&quot;modal-open&quot; data-target=&quot;modal-demo-3&quot;&gt;Multiple Modal&lt;/a&gt;
 
 &lt;div class=&quot;modal modal-lg modal-noclick&quot; id=&quot;modal-demo-3&quot;&gt;
     &lt;div class=&quot;modal-content&quot;&gt;
@@ -765,12 +748,11 @@ y <code>data-target={id modal}</code>. Las modales también pueden cerrarse haci
             &lt;button onclick=&quot;console.log(&#39;onclick&#39;)&quot; class=&quot;btn btn-outlined-secondary btn-md btn-block mt-xxl&quot; data-action=&quot;modal-open&quot; data-target=&quot;modal-demo-1&quot;&gt;Modal&lt;/button&gt;
         &lt;/div&gt;
         &lt;div class=&quot;modal-footer&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;btn btn-outlined btn-xs-block btn-sm-block mb-xs-md&quot; data-action=&quot;modal-close&quot; data-target=&quot;modal-demo-3&quot;&gt;Cancelar&lt;/a&gt;
-            &lt;a href=&quot;&quot; class=&quot;btn btn-success btn-xs-block btn-sm-block&quot;&gt;Múltiples modales&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn btn-outlined&quot; data-action=&quot;modal-close&quot; data-target=&quot;modal-demo-3&quot;&gt;Cancelar&lt;/a&gt;
+            &lt;a href=&quot;&quot; class=&quot;btn btn-success&quot;&gt;Múltiples modales&lt;/a&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
 <h3 id="modal-video">Modal video</h3>
 <p>Usando la clase <code>modal-video</code> y <code>embed-responsive</code> podemos añadir vídeos responsive a la modal.</p>
 <div class="container">
@@ -792,8 +774,7 @@ y <code>data-target={id modal}</code>. Las modales también pueden cerrarse haci
 </div>
 </div>
 
-<pre><code class="language-html">
-&lt;a onclick=&quot;console.log(&#39;demo 3&#39;)&quot; class=&quot;btn btn-outlined-secondary btn-md btn-block mb-md&quot; data-action=&quot;modal-open&quot; data-target=&quot;modal-demo-video&quot;&gt;Modal Video&lt;/a&gt;
+<pre><code class="language-html">&lt;a onclick=&quot;console.log(&#39;demo 3&#39;)&quot; class=&quot;btn btn-outlined-secondary btn-md btn-block&quot; data-action=&quot;modal-open&quot; data-target=&quot;modal-demo-video&quot;&gt;Modal Video&lt;/a&gt;
 
 &lt;div class=&quot;modal modal-video&quot; id=&quot;modal-demo-video&quot;&gt;
     &lt;div class=&quot;modal-close&quot; data-action=&quot;modal-close&quot; data-target=&quot;modal-demo-video&quot;&gt;&lt;div class=&quot;icon-x&quot;&gt;&lt;/div&gt;&lt;/div&gt;
@@ -804,8 +785,7 @@ y <code>data-target={id modal}</code>. Las modales también pueden cerrarse haci
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
 <h3 id="abrir-modal-por-javascript">Abrir modal por javascript</h3>
 <div class="container">
 <div class="row">
@@ -815,14 +795,10 @@ y <code>data-target={id modal}</code>. Las modales también pueden cerrarse haci
 </div>
 </div>
 
-<pre><code class="language-html">
-&lt;a onclick=&quot;abrirModal()&quot; class=&quot;btn btn-outlined-secondary btn-md btn-block mt-xxl mb-xxl&quot;&gt;Abrir por js&lt;/a&gt;
-</code></pre>
-<pre><code class="language-js">
-function abrirModal() {
+<pre><code class="language-html">&lt;a onclick=&quot;abrirModal()&quot; class=&quot;btn btn-outlined-secondary btn-md&quot;&gt;Abrir por js&lt;/a&gt;</code></pre>
+<pre><code class="language-js">function abrirModal() {
     Modal.open(&#39;modal-demo-1&#39;);
-}
-</code></pre>
+}</code></pre>
 <h3 id="modal-parametrizada">Modal parametrizada</h3>
 <div class="container">
 <div class="row">
@@ -845,7 +821,13 @@ function abrirModal() {
 <div class="modal-body">
     <p>Hola {{nombre}},</p>
     <p>
-        ¿Qué tal {{nombre}}? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo. Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?
+        ¿Qué tal {{nombre}}? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis
+        molestiae necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam
+        recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo. Dolore ad
+        voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt consequatur
+        a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores,
+        quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque
+        excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?
     </p>
 
 </div>
@@ -856,8 +838,7 @@ function abrirModal() {
 </div>
 </div>
 
-<pre><code class="language-html">
-&lt;div class=&quot;form-input&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;form-input&quot;&gt;
     &lt;label for=&quot;nombre&quot;&gt;Parámetro nombre&lt;/label&gt;
     &lt;input type=&quot;text&quot; name=&quot;nombre&quot; id=&quot;nombre&quot; value=&quot;Test&quot;&gt;
 &lt;/div&gt;
@@ -870,26 +851,23 @@ function abrirModal() {
             &lt;h3&gt;Título de la modal paramétrizada&lt;/h3&gt;
         &lt;/div&gt;
         &lt;div class=&quot;modal-body&quot;&gt;
-            &lt;p&gt;Hola {{nombre}},&lt;/p&gt;
+            &lt;p&gt;Hola ,&lt;/p&gt;
 
             &lt;p&gt;
-                ¿Qué tal {{nombre}}? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis molestiae necessitatibus eveniet debitis, veritatis laudantium unde cum ullam quod nobis obcaecati, sunt totam recusandae voluptatum laborum reprehenderit dignissimos minus quam ad! Exercitationem hic nobis laborum illo. Dolore ad voluptates illo, perspiciatis maxime iure. Aperiam reiciendis hic quae fugiat sapiente accusantium nesciunt consequatur a? Ratione eveniet deserunt et, commodi quisquam dicta quo sit? Quo voluptate corrupti rerum, nostrum asperiores, quibusdam quae consectetur commodi mollitia aspernatur in cumque, adipisci eligendi laudantium ut. Sed atque cumque excepturi quibusdam quaerat ullam. Eligendi velit, architecto quaerat modi aspernatur dolor tempora nobis?
+                ¿Qué tal ? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, dolor magnam? Fugit omnis
+                ...
             &lt;/p&gt;
-
         &lt;/div&gt;
         &lt;div class=&quot;modal-footer&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;btn btn-outlined btn-xs-block btn-sm-block mb-xs-md&quot; data-action=&quot;modal-close&quot; data-target=&quot;modal-demo-param&quot;&gt;Cancelar&lt;/a&gt;
-            &lt;a href=&quot;&quot; class=&quot;btn btn-success btn-xs-block btn-sm-block&quot;&gt;Aceptar&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn btn-outlined&quot; data-action=&quot;modal-close&quot; data-target=&quot;modal-demo-param&quot;&gt;Cancelar&lt;/a&gt;
+            &lt;a href=&quot;&quot; class=&quot;btn btn-success&quot;&gt;Aceptar&lt;/a&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-<pre><code class="language-js">
-function abrirModalParams() {
+&lt;/div&gt;</code></pre>
+<pre><code class="language-js">function abrirModalParams() {
     var nombre = document.getElementById(&#39;nombre&#39;).value;
     Modal.open(&#39;modal-demo-param&#39;, { nombre });
-}
-</code></pre>
+}</code></pre>
 <h3 id="modal-parametrizada-con-callback">Modal parametrizada con callback</h3>
 <div class="container">
 <div class="row">
@@ -899,17 +877,13 @@ function abrirModalParams() {
 </div>
 </div>
 
-<pre><code class="language-html">
-&lt;a onclick=&quot;abrirModalParamsCallback()&quot; class=&quot;btn btn-outlined-secondary btn-md btn-block&quot;&gt;Abrir modal parametrizada con callback&lt;/a&gt;
-</code></pre>
-<pre><code class="language-js">
-function abrirModalParamsCallback() {
+<pre><code class="language-html">&lt;a onclick=&quot;abrirModalParamsCallback()&quot; class=&quot;btn btn-outlined-secondary btn-md btn-block&quot;&gt;Abrir modal parametrizada con callback&lt;/a&gt;</code></pre>
+<pre><code class="language-js">function abrirModalParamsCallback() {
     var nombre = document.getElementById(&#39;nombre&#39;).value;
     Modal.open(&#39;modal-demo-param&#39;, { nombre: nombre }, function(data) {
         alert(nombre);
     });
-}
-</code></pre>
+}</code></pre>
 <h3 id="modal-fluid">Modal fluid</h3>
 <p>Añadiendo la clase <code>modal-fluid</code>, la modal ocupará el 80% de la ventana.</p>
 <div class="container">
@@ -989,8 +963,7 @@ function abrirModalParamsCallback() {
 </div>
 </div>
 
-<pre><code class="language-html">
-&lt;a class=&quot;btn btn-outlined-secondary btn-md btn-block mb-md&quot; data-action=&quot;modal-open&quot; data-target=&quot;modal-demo-fluid&quot;&gt;Modal center&lt;/a&gt;
+<pre><code class="language-html">&lt;a class=&quot;btn btn-outlined-secondary btn-md btn-block mb-md&quot; data-action=&quot;modal-open&quot; data-target=&quot;modal-demo-fluid&quot;&gt;Modal center&lt;/a&gt;
 
 &lt;div class=&quot;modal modal-center modal-fluid&quot; id=&quot;modal-demo-fluid&quot;&gt;
     &lt;div class=&quot;modal-content&quot;&gt;
@@ -1007,16 +980,13 @@ function abrirModalParamsCallback() {
             &lt;a href=&quot;&quot; class=&quot;btn btn-success btn-xs-block btn-sm-block&quot;&gt;Aceptar&lt;/a&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
 <h3 id="tamaños">Tamaños</h3>
 <p>Podemos cambiar el tamaño de la modal aplicándole las clases <code>modal-sm</code>, <code>modal-md</code> y <code>modal-lg</code>.</p>
 <p>El ancho de estas tres clases puede modificarse fácilmente en el archivo <code>variables.scss</code>.</p>
-<pre><code class="language-sass">
-$modal-sm-content-width: 480px;
+<pre><code class="language-sass">$modal-sm-content-width: 480px;
 $modal-md-content-width: 780px;
-$modal-lg-content-width: 900px;
-</code></pre>
+$modal-lg-content-width: 900px;</code></pre>
 
 <script>
 

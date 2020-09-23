@@ -9,7 +9,11 @@
 	width: 5rem;
 	height: 5rem;
 	background-color: #EEE;
-	margin: 0.4em;
+	margin-right: 0.5em;
+}
+
+.utilities-border span:last-child {
+	margin-right: 0;
 }
 
 .utilities-border-remove span {
@@ -20,7 +24,8 @@
 
 {% markdown %}
 
-# Bordes
+Bordes
+======
 
 Una serie de clases para añadir o eliminar bordes a un elemento de forma fácil y rápida.
 
@@ -37,13 +42,11 @@ Una serie de clases para añadir o eliminar bordes a un elemento de forma fácil
 </div>
 
 ```html
-
 		<span class="border"></span>
 		<span class="border-top"></span>
 		<span class="border-right"></span>
 		<span class="border-bottom"></span>
 		<span class="border-left"></span>
-
 ```
 
 ### Eliminar bordes
@@ -59,13 +62,11 @@ Una serie de clases para añadir o eliminar bordes a un elemento de forma fácil
 </div>
 
 ```html
-
 		<span class="border-none"></span>
 		<span class="border-top-none"></span>
 		<span class="border-right-none"></span>
 		<span class="border-bottom-none"></span>
 		<span class="border-left-none"></span>
-
 ```
 
 ### Bordes redondeados
@@ -83,7 +84,6 @@ Una serie de clases para añadir o eliminar bordes a un elemento de forma fácil
 </div>
 
 ```html
-
 		<span class="border-rounded"></span>
 		<span class="border-rounded-none"></span>
 		<span class="border-rounded-top"></span>
@@ -91,12 +91,11 @@ Una serie de clases para añadir o eliminar bordes a un elemento de forma fácil
 		<span class="border-rounded-bottom"></span>
 		<span class="border-rounded-left"></span>
 		<span class="border-circle"></span>
-
 ```
 
 ### Colores aplicados a bordes
 
-En este caso también podemos usar los <a href="/colors.html">colores</a> que tenemos definido en nuestro archivo `variable.scss`.
+En este caso también podemos usar los [colores](/colores.html) que tenemos definido en nuestro archivo `variable.scss`.
 
 <div class="demo">
 	<div class="utilities-border">
@@ -109,15 +108,12 @@ En este caso también podemos usar los <a href="/colors.html">colores</a> que te
 </div>
 
 ```html
-
 		<span class="border border-primary-md"></span>
 		<span class="border-top border-secondary"></span>
 		<span class="border-right border-custom-3"></span>
 		<span class="border-bottom border-gray"></span>
 		<span class="border-left border-success"></span>
-
 ```
-
 
 {% endmarkdown %}
 

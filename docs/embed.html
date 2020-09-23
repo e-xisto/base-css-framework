@@ -421,7 +421,7 @@
 					<div class="content-container">
 
 <h1 id="embeds">Embeds</h1>
-<p>Crea vídeos responsive basados en el en el ancho del contenedor padre.</p>
+<p>Crea vídeos responsive y modifica su formato.</p>
 <p>Para aplicar dichos estilos, simplemente crear un contenedor con la clase <code>embed-responsive</code></p>
 <p>Los estilos se aplicarán directamente a <code>&lt;iframe&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;object&gt;</code> y <code>&lt;video&gt;</code>, aunque también se puede usar
 la clase <code>embed-responsive-time</code>.</p>
@@ -431,11 +431,9 @@ la clase <code>embed-responsive-time</code>.</p>
 </div>
 </div>
 
-<pre><code class="language-html">
-&lt;div class=&quot;embed-responsive&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;embed-responsive&quot;&gt;
     &lt;iframe src=&quot;https://www.youtube.com/embed/3vBwRfQbXkg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
 <p>Podemos modificar el formato de nuestro vídeo, es decir, si lo deseamos en 16:9 o 4:3.</p>
 <p>Para que el vídeo sea tenga un relación de aspecto de 4:3, aplicamos la clase <code>embed-responsive-4by3</code> al contenedor.</p>
 <div class="demo">
@@ -444,17 +442,14 @@ la clase <code>embed-responsive-time</code>.</p>
 </div>
 </div>
 
-<pre><code class="language-html">
-&lt;div class=&quot;embed-responsive embed-responsive-4by3&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;embed-responsive embed-responsive-4by3&quot;&gt;
     &lt;iframe class=&quot;&quot; src=&quot;https://www.youtube.com/embed/3vBwRfQbXkg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-</code></pre>
-<p>Mientras que si lo deseamos a 16:9, cambiaremos la clase anterior por <code>embed-responsive-16by9</code>.</p>
-<pre><code class="language-html">
-&lt;div class=&quot;embed-responsive embed-responsive-16by9&quot;&gt;
+&lt;/div&gt;</code></pre>
+<p>Mientras que si lo deseamos a 16:9, cambiaremos la clase anterior por <code>embed-responsive-16by9</code> (mostrándose así como el
+primer vídeo).</p>
+<pre><code class="language-html">&lt;div class=&quot;embed-responsive embed-responsive-16by9&quot;&gt;
     &lt;iframe class=&quot;&quot; src=&quot;https://www.youtube.com/embed/3vBwRfQbXkg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
 
 						</div>			
 					</div>

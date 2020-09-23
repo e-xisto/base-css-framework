@@ -422,7 +422,7 @@
 
 <h1 id="carousel">Carousel</h1>
 <p>Al igual que con los <a href="/slider.html">sliders</a>,
-volveremos a usar <a href="https://swiperjs.com/" target="_blank">Swiperjs</a>.</p>
+usaremos <a href="https://swiperjs.com/" target="_blank">Swiperjs</a>.</p>
 <h3 id="carousel-con-navegación">Carousel con navegación</h3>
 <div class="demo">
 <div class="swiper-container swiper-carousel">
@@ -439,8 +439,7 @@ volveremos a usar <a href="https://swiperjs.com/" target="_blank">Swiperjs</a>.<
 </div>
 </div>
 
-<pre><code class="language-html">
-&lt;div class=&quot;swiper-container swiper-carousel&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;swiper-container swiper-carousel&quot;&gt;
     &lt;div class=&quot;swiper-wrapper&quot;&gt;
         &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 1&lt;/h4&gt;&lt;/div&gt;
         &lt;div class=&quot;swiper-slide bg-light&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 2&lt;/h4&gt;&lt;/div&gt;
@@ -452,10 +451,8 @@ volveremos a usar <a href="https://swiperjs.com/" target="_blank">Swiperjs</a>.<
     &lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-<pre><code class="language-js">
-var mySwiper = new Swiper(&#39;.swiper-carousel&#39;, {
+&lt;/div&gt;</code></pre>
+<pre><code class="language-js">var mySwiper = new Swiper(&#39;.swiper-carousel&#39;, {
     slidesPerView: 3,
     spaceBetween: 30,
     centeredSlides: true,
@@ -467,8 +464,7 @@ var mySwiper = new Swiper(&#39;.swiper-carousel&#39;, {
         nextEl: &#39;.swiper-button-next&#39;,
         prevEl: &#39;.swiper-button-prev&#39;,
     },
-});
-</code></pre>
+});</code></pre>
 <h3 id="carousel-breakpoints">Carousel breakpoints</h3>
 <p>Con este tipo de carousel decidimos el número de slides a mostrar por resolución.</p>
 <p>(Es necesario comprobar en responsive para ver la diferencia.)</p>
@@ -488,23 +484,19 @@ var mySwiper = new Swiper(&#39;.swiper-carousel&#39;, {
 </div>
 </div>
 
-<pre><code class="language-html">
-&lt;div class=&quot;demo&quot;&gt;
-    &lt;div class=&quot;swiper-container swiper-carousel-breakpoints&quot;&gt;
-        &lt;div class=&quot;swiper-wrapper&quot;&gt;
-            &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 1&lt;/h4&gt;&lt;/div&gt;
-            &lt;div class=&quot;swiper-slide bg-light&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 2&lt;/h4&gt;&lt;/div&gt;
-            &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 3&lt;/h4&gt;&lt;/div&gt;
-            &lt;div class=&quot;swiper-slide bg-light&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 4&lt;/h4&gt;&lt;/div&gt;
-            &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 5&lt;/h4&gt;&lt;/div&gt;
-            &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 6&lt;/h4&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;
+<pre><code class="language-html">&lt;div class=&quot;swiper-container swiper-carousel-breakpoints&quot;&gt;
+    &lt;div class=&quot;swiper-wrapper&quot;&gt;
+        &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 1&lt;/h4&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide bg-light&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 2&lt;/h4&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 3&lt;/h4&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide bg-light&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 4&lt;/h4&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 5&lt;/h4&gt;&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 6&lt;/h4&gt;&lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+    &lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 <pre><code class="language-js">
 var mySwiper = new Swiper(&#39;.swiper-carousel-breakpoints&#39;, {
     slidesPerView: 2,
@@ -535,20 +527,21 @@ var mySwiper = new Swiper(&#39;.swiper-carousel-breakpoints&#39;, {
 });
 </code></pre>
 <h3 id="carousel-freemode">Carousel freemode</h3>
+<div class="demo">
 <div class="swiper-container swiper-freemode">
 <div class="swiper-wrapper">
-<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
-<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
-<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
-<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
-<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
-<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 6</h4></div>
+    <div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+    <div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+    <div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
+    <div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
+    <div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
+    <div class="swiper-slide bg-bright"><h4 class="m-none">Slider 6</h4></div>
 </div>
 <div class="swiper-pagination"></div>
 </div>
+</div>
 
-<pre><code class="language-html">
-&lt;div class=&quot;swiper-container swiper-freemode&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;swiper-container swiper-freemode&quot;&gt;
     &lt;div class=&quot;swiper-wrapper&quot;&gt;
         &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 1&lt;/h4&gt;&lt;/div&gt;
         &lt;div class=&quot;swiper-slide bg-light&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 2&lt;/h4&gt;&lt;/div&gt;
@@ -558,8 +551,7 @@ var mySwiper = new Swiper(&#39;.swiper-carousel-breakpoints&#39;, {
         &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 6&lt;/h4&gt;&lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
 <pre><code class="language-js">
 var mySwiper = new Swiper(&#39;.swiper-freemode&#39;, {
     slidesPerView: 3,
@@ -573,6 +565,7 @@ var mySwiper = new Swiper(&#39;.swiper-freemode&#39;, {
 });
 </code></pre>
 <h3 id="carousel-coverflow">Carousel Coverflow</h3>
+<div class="demo">
 <div class="swiper-container swiper-coverflow">
 <div class="swiper-wrapper">
     <div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
@@ -584,9 +577,9 @@ var mySwiper = new Swiper(&#39;.swiper-freemode&#39;, {
 </div>
 <div class="swiper-pagination"></div>
 </div>
+</div>
 
-<pre><code class="language-html">
-&lt;div class=&quot;swiper-container swiper-coverflow&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;swiper-container swiper-coverflow&quot;&gt;
     &lt;div class=&quot;swiper-wrapper&quot;&gt;
         &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 1&lt;/h4&gt;&lt;/div&gt;
         &lt;div class=&quot;swiper-slide bg-light&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 2&lt;/h4&gt;&lt;/div&gt;
@@ -596,8 +589,7 @@ var mySwiper = new Swiper(&#39;.swiper-freemode&#39;, {
         &lt;div class=&quot;swiper-slide bg-bright&quot;&gt;&lt;h4 class=&quot;m-none&quot;&gt;Slider 6&lt;/h4&gt;&lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
 <pre><code class="language-js">
 var mySwiper = new Swiper(&#39;.swiper-coverflow&#39;, {
     effect: &#39;coverflow&#39;,

@@ -5,20 +5,19 @@
 
 {% markdown %}
 
-# Grid
+Grid
+======
+Una cuadrícula responsive basada en <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>.
 
-Una cuadrícula responsive basada en <a href="https://getbootstrap.com/">Bootstrap</a>.
-
-## Contenedores (.container)
+Contenedores (.container)
+------
 
 Los elementos `container` son obligatorios si deseamos que nuestra estructura sea responsive.
 
 ```html
-
 		<div class="container">
 			...
 		</div>
-
 ```
 
 ### Tabla tamaños
@@ -59,17 +58,15 @@ Si en lugar de utilizar la clase `container` utilizamos la clase `container-flui
 contenedor con un ancho máximo fijado, sino que este ocupará el ancho al 100%.
 
 ```html
-
 		<div class="container-fluid">
 			...
 		</div>
-
 ```
 
 ### Ver opción de meter clase nuevas BS 4 container-md
 
 Actualmente nos encontramos desarrollando la opción de añadir un contenedor al ancho 100% hasta una resolución
-específica, añadiendo así dicha función de <a href="https://getbootstrap.com/docs/4.5/layout/overview/#containers">Bootstrap 4</a>.
+específica, añadiendo así dicha función de <a href="https://getbootstrap.com/docs/4.5/layout/overview/#containers" target="_blank">Bootstrap 4</a>.
 
 ### No anidar dos contenedores
 
@@ -86,55 +83,45 @@ Estos media queries se pueden modificar en el archivo `variables.scss`.
 Dichos media queries son:
 
 ```sass
-
 		@media (max-width: 767px) {...}
 		@media (min-width: 768px) and (max-width: 992px) {...}
 		@media (min-width: 992px) and (max-width: 1200px) {...}
 		@media (min-width: 1200px) {...}
-
 ```
 
 Estos media queries los usamos a través de los siguientes `mixins`:
 
 ```sass
-
 		@include breakpoint(xs) {...}
 		@include breakpoint(sm) {...}
 		@include breakpoint(md) {...}
 		@include breakpoint(lg) {...}
-
 ```
 
 También podemos usar los anteriores breakpoints para indicar que parten de dicha resolución hacia delante:
 
 ```sass
-
 		@include breakpoint-up(xs) {...}
 		@include breakpoint-up(sm) {...}
 		@include breakpoint-up(md) {...}
 		@include breakpoint-up(lg) {...}
-
 ```
 
 Al igual que lo realizamos de una resolución hacia delante, también podemos partir de una resolución hacia atrás:
 
 ```sass
-
 		@include breakpoint-down(xs) {...}
 		@include breakpoint-down(sm) {...}
 		@include breakpoint-down(md) {...}
 		@include breakpoint-down(lg) {...}
-
 ```
 
 Y por último, entre dos resoluciones:
 
 ```sass
-
 		@include breakpoint-between(xs,sm) {...}
 		@include breakpoint-between(sm,md) {...}
 		@include breakpoint-between(md,lg) {...}
-
 ```
 
 
@@ -144,12 +131,10 @@ El ancho del contenedor puede modificarse fácilmente en cualquier resolución d
 variables se encuentran definidas mediante la semántica `$grid-container-width-#{$breakpoint}`.
 
 ```sass
-
 		$grid-container-width-lg: 1140px;
 		$grid-container-width-md: 940px;
 		$grid-container-width-sm: 720px;
 		$grid-container-width-xs: 100%;
-
 ```
 
 Aunque el valor final que determina el ancho del contenedor no es ese, sino la suma de su ancho + el espacio fijado
@@ -160,27 +145,24 @@ ajustar el tamaño en resoluciones móviles.
 
 
 ```sass
-
 		$grid-column-gutter: 30px;
 		$grid-column-gutter-xs: 15px;
-
 ```
 
 En resumen, el verdadero ancho de nuestro contenedor, como hemos nombrado anteriormente, sería
 `$grid-container-width-#{$breakpoint}` + `grid-column-gutter`.
 
 ```sass
-
 		@media (max-width: $media-xs) { max-width: $grid-container-width-xs; }
 		@media (min-width: $media-sm) and (max-width: $media-md) { max-width: $grid-container-width-sm + $grid-column-gutter; }
 		@media (min-width: $media-md) and (max-width: $media-lg) { max-width: $grid-container-width-md + $grid-column-gutter; }
 		@media (min-width: $media-lg) { max-width: $grid-container-width-lg + $grid-column-gutter; }
-
 ```
 
 Representando así el ancho del contenedor reflejado en la tabla anterior.
 
-## Filas (.row)
+Filas (.row)
+------
 
 Una vez contamos con nuestro elemento padre `container`, el siguiente paso es añadir un elemento `row`
 
@@ -199,7 +181,6 @@ Una vez contamos con nuestro elemento padre `container`, el siguiente paso es a�
 		</div>
 	</div>
 </div>
-
 
 ```html
 
@@ -238,7 +219,6 @@ Para que se alineen partiendo desde arriba, usamos la clase `align-top`:
 </div>
 
 ```html
-
 		<div class="container">
 			<div class="row align-top">
 				<div class="col-4">.align-top</div>
@@ -248,7 +228,6 @@ Para que se alineen partiendo desde arriba, usamos la clase `align-top`:
 				<div class="col-4">.align-top</div>
 			</div>
 		</div>
-
 ```
 
 Para que se alineen al centro, `align-middle`:
@@ -274,7 +253,6 @@ Para que se alineen al centro, `align-middle`:
 </div>
 
 ```html
-
 		<div class="container">
 			<div class="row align-middle">
 				<div class="col-4">.align-middle</div>
@@ -284,7 +262,6 @@ Para que se alineen al centro, `align-middle`:
 				<div class="col-4">.align-middle</div>
 			</div>
 		</div>
-
 ```
 
 Y por último, para alinearlo partiendo desde abajo, `align-bottom`:
@@ -310,7 +287,6 @@ Y por último, para alinearlo partiendo desde abajo, `align-bottom`:
 </div>
 
 ```html
-
 		<div class="container">
 			<div class="row align-bottom">
 				<div class="col-4">.align-bottom</div>
@@ -320,7 +296,6 @@ Y por último, para alinearlo partiendo desde abajo, `align-bottom`:
 				<div class="col-4">.align-bottom</div>
 			</div>
 		</div>
-
 ```
 
 ### Distribución horizontal
@@ -344,17 +319,15 @@ Para alinearlas a la izquierda, usamos `justify-start`:
 </div>
 
 ```html
-
 		<div class="container">
 			<div class="row justify-start">
 				<div class="col-2">.col-2</div>
 				<div class="col-2">.col-2</div>
 			</div>
 		</div>
-
 ```
 
-Para alinearlas al centro, usamos `justify-center`:
+Para alinearlas al centro, `justify-center`:
 
 <div class="demo">
 	<div class="container">
@@ -370,17 +343,15 @@ Para alinearlas al centro, usamos `justify-center`:
 </div>
 
 ```html
-
 		<div class="container">
 			<div class="row justify-center">
 				<div class="col-2">.col-2</div>
 				<div class="col-2">.col-2</div>
 			</div>
 		</div>
-
 ```
 
-Para alinearlas a la derecha, usamos `justify-end`:
+Para alinearlas a la derecha, `justify-end`:
 
 <div class="demo">
 	<div class="container">
@@ -396,14 +367,12 @@ Para alinearlas a la derecha, usamos `justify-end`:
 </div>
 
 ```html
-
 		<div class="container">
 			<div class="row justify-end">
 				<div class="col-2">.col-2</div>
 				<div class="col-2">.col-2</div>
 			</div>
 		</div>
-
 ```
 
 Los elementos se distribuyen uniformemente en la línea con igual espacio a su alrededor usando `justify-arround`:
@@ -422,14 +391,12 @@ Los elementos se distribuyen uniformemente en la línea con igual espacio a su a
 </div>
 
 ```html
-
 		<div class="container">
 			<div class="row justify-arround">
 				<div class="col-2">.col-2</div>
 				<div class="col-2">.col-2</div>
 			</div>
 		</div>
-
 ```
 
 Por último, con `justify-between`, empujaremos cada elemento a los extremos dejando todo el máximo espacio posible
@@ -449,17 +416,13 @@ entre ellos:
 </div>
 
 ```html
-
 		<div class="container">
 			<div class="row justify-between">
 				<div class="col-2">.col-2</div>
 				<div class="col-2">.col-2</div>
 			</div>
 		</div>
-
 ```
-
-
 
 ### No gutters
 
@@ -482,7 +445,6 @@ Para evitar que las columnas tengan espacio entre ellas usamos `no-gutters`.
 </div>
 
 ```html
-
 		<div class="container">
 			<div class="row no-gutters">
 				<div class="col-4">.col-4</div>
@@ -490,7 +452,6 @@ Para evitar que las columnas tengan espacio entre ellas usamos `no-gutters`.
 				<div class="col-4">.col-4</div>
 			</div>
 		</div>
-
 ```
 
 ### Reverse
@@ -516,7 +477,6 @@ clase `reverse`.
 </div>
 
 ```html
-
 		<div class="container">
 			<div class="row reverse">
 				<div class="col-4">Primera col-4</div>
@@ -524,7 +484,6 @@ clase `reverse`.
 				<div class="col-4">Tercera col-4</div>
 			</div>
 		</div>
-
 ```
 
 ### No wrap
@@ -549,7 +508,6 @@ Para evitar que las columnas salten de fila automáticamente al superar las doce
 </div>
 
 ```html
-
 		<div class="container">
 			<div class="row no-wrap">
 				<div class="col-6">
@@ -563,7 +521,6 @@ Para evitar que las columnas salten de fila automáticamente al superar las doce
 				</div>
 			</div>
 		</div>
-
 ```
 
 ### Anidamiento de filas
@@ -587,7 +544,6 @@ Si una fila va a superar las doce columnas, el último bloque que exceda las doc
 </div>
 
 ```html
-
 		<div class="container">
 			<div class="row">
 				<div class="col-6">.col-6</div>
@@ -596,7 +552,6 @@ Si una fila va a superar las doce columnas, el último bloque que exceda las doc
 				</div>
 			</div>
 		</div>
-
 ```
 
 Si deseamos forzar que el elemento salte a una nueva línea aunque no se hayan superado las doce columnas, debemos crear un
@@ -621,7 +576,6 @@ nuevo `row`.
 </div>
 
 ```html
-
 		<div class="container">
 			<div class="row">
 				<div class="col-3">.col-3</div>
@@ -631,10 +585,10 @@ nuevo `row`.
 				<div class="col-3">.col-3 (salta a una nueva línea porque está en un row distinto)</div>
 			</div>
 		</div>
-
 ```
 
-## Columnas (.col)
+Columnas (.col)
+------
 
 Las columnas siempre deben ir inmediatamente después del `row` y su semántica es `col-{número}` o
 `col-#{$breakpoint}-{número}`.
@@ -658,11 +612,9 @@ El número que se añade, equivale al número de columnas que ocupa el contenedo
 </div>
 
 ```html
-
 		<div class="col-2"></div>
 		<div class="col-md-4"></div>
 		<div class="col-xs-6"></div>
-
 ```
 
 ### Responsive
@@ -683,7 +635,6 @@ Si definimos el contenedor usando `col-{número}`, este contenedor siempre ocupa
 </div>
 
 ```html
-
 		<div class="container">
 			<div class="row">
 				<div class="col-6">
@@ -694,7 +645,6 @@ Si definimos el contenedor usando `col-{número}`, este contenedor siempre ocupa
 				</div>
 			</div>
 		</div>
-
 ```
 
 Si definimos el espacio de columnas que ocupará según la resolución, debemos escribirlo como
@@ -714,7 +664,6 @@ Si definimos el espacio de columnas que ocupará según la resolución, debemos 
 </div>
 
 ```html
-
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3">
@@ -725,7 +674,6 @@ Si definimos el espacio de columnas que ocupará según la resolución, debemos 
 				</div>
 			</div>
 		</div>
-
 ```
 
 Hay que tener en cuenta que si representamos el contenedor utilizando un breakpoint, toda columna inferior a dicha
@@ -750,7 +698,6 @@ estuviese a 12 columnas.
 </div>
 
 ```html
-
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
@@ -758,7 +705,6 @@ estuviese a 12 columnas.
 				</div>
 			</div>
 		</div>
-
 ```
 
 ### Tamaños
@@ -767,10 +713,8 @@ El espacio entre columnas se calcula mediante `padding-left` y `padding-right`, 
 la cual vimos anteriormente, `$grid-column-gutter / 2`
 
 ```sass
-
 		padding-left: ($grid-column-gutter / 2);
 		padding-right: ($grid-column-gutter / 2);
-
 ```
 
 El ancho de las columnas está indicado en %, así siempre mantienen un tamaño relativo a su contenedor padre. Dicho %
@@ -778,12 +722,10 @@ tendrá un ancho máximo u otro dependiendo del número de columnas que queremos
 condicionará el ancho máximo del contenedor.
 
 ```sass
-
 		.col-#{$breakpoint}-#{$i} {
 			flex-basis: 100%/($columns / $i);
 			max-width: 100%/($columns / $i);
 		}
-
 ```
 
 ### Alineamiento vertical
@@ -813,7 +755,6 @@ vez aplicándolas en el contenedor de las columnas.
 </div>
 
 ```html
-
 		<div class="container">
 			<div class="row">
 				<div class="col-4 align-bottom">
@@ -829,7 +770,6 @@ vez aplicándolas en el contenedor de las columnas.
 				</div>
 			</div>
 		</div>
-
 ```
 
 ### Offset
@@ -854,7 +794,6 @@ espacio}`.
 </div>
 
 ```html
-
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 col-md-offset-2">.col-md-4 .col-md-offset-2</div>
@@ -868,7 +807,6 @@ espacio}`.
 				<div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
 			</div>
 		</div>
-
 ```
 
 ### Order
@@ -893,7 +831,6 @@ Otras clases que podemos usar son `order-#{$breakpoint}-last` para indicar que e
 
 
 ```html
-
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3 order-md-last"><div>.order-md-last</div></div>
@@ -902,7 +839,6 @@ Otras clases que podemos usar son `order-#{$breakpoint}-last` para indicar que e
 				<div class="col-md-3 order-md-first"><div>.order-md-first</div></div>
 			</div>
 		</div>
-
 ```
 
 {% endmarkdown %}

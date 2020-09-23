@@ -5,16 +5,15 @@
 
 {% markdown %}
 
-# Inputs
+Inputs
+======
 
 Siempre que vayamos a añadir un elemento `input`, debemos añadirlo dentro de un contenedor `form-input`.
 
 ```html
-
 		<div class="form-input">
 			...
 		</div>
-
 ```
 
 Dentro de este contenedor, añadiremos tanto el `label`como el `input`.
@@ -29,16 +28,10 @@ Dentro de este contenedor, añadiremos tanto el `label`como el `input`.
 </div>
 
 ```html
-
-		<div class="row">
-			<div class="col-md-6">
-				<div class="form-input">
-					<label for="">Demo input</label>
-					<input type="text" placeholder="Escriba aquí un texto...">
-				</div>
-			</div>
+		<div class="form-input">
+			<label for="">Demo input</label>
+			<input type="text" placeholder="Escriba aquí un texto...">
 		</div>
-
 ```
 
 ### Readonly input
@@ -56,13 +49,11 @@ Al aplicar el atributo `readonly` o la clase `readonly` al `input`, pasará a ve
 </div>
 
 ```html
-
 		<div class="form-input">
 			<label for="test">Readonly input</label>
 			<input type="text" id="test" value="Lorem ipsum dolor sit amet" readonly>
 			<small>Texto ayuda para el usuario</small>
 		</div>
-
 ```
 
 ### Disabled input
@@ -80,13 +71,11 @@ Al igual que con el ejemplo anterior, podemos aplicar el atributo `disabled` o c
 </div>
 
 ```html
-
 		<div class="form-input">
 			<label for="test">Disabled input</label>
 			<input type="text" id="test" placeholder="Escribe aquí un texto..." disabled>
 			<small>Texto ayuda para el usuario</small>
 		</div>
-
 ```
 
 ### Tamaños input
@@ -122,7 +111,6 @@ El tamaño es modificable usando las clases `form-sm` o `form-size-sm`, `form-md
 </div>
 
 ```html
-
 		<div class="form-input form-sm">
 			<label for="">Demo input</label>
 			<input type="text" placeholder="Escriba aquí un texto...">
@@ -137,10 +125,8 @@ El tamaño es modificable usando las clases `form-sm` o `form-size-sm`, `form-md
 			<label for="">Demo input</label>
 			<input type="text" placeholder="Escriba aquí un texto...">
 		</div>
-
 ```
 
 {% endmarkdown %}
 
 {% endblock %}
-

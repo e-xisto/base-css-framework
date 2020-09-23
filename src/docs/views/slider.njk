@@ -5,7 +5,16 @@
 
 {% markdown %}
 
-# Slider
+<style>
+
+.swiper-slide-lg {
+	height: 500px !important;
+}
+
+</style>
+
+Slider
+======
 
 Diferentes tipos de slider personalizables para mostrar imágenes o texto. (Créditos a <a href="https://swiperjs.com/" target="_blank">Swiperjs</a>.)
 
@@ -22,7 +31,6 @@ Slider básico, sin navegación.
 </div>
 
 ```html
-
 		<div class="swiper-container swiper-simple">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
@@ -30,13 +38,10 @@ Slider básico, sin navegación.
 				<div class="swiper-slide bg-gray"><h4 class="m-none">Slider 3</h4></div>
 			</div>
 		</div>
-
 ```
 
 ```js
-
 		var mySwiper = new Swiper('.swiper-simple')
-
 ```
 
 ### Slider con navegación y loop
@@ -57,7 +62,6 @@ Slider tanto con puntos como con flechas de navegación y transición en bucle y
 </div>
 
 ```html
-
 		<div class="swiper-container swiper-navigation">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
@@ -70,11 +74,9 @@ Slider tanto con puntos como con flechas de navegación y transición en bucle y
 			<div class="swiper-button-prev"></div>
 			<div class="swiper-pagination"></div>
 		</div>
-
 ```
 
 ```js
-
 		var mySwiper = new Swiper('.swiper-navigation', {
 			autoHeight: true,
 			loop: true,
@@ -92,7 +94,6 @@ Slider tanto con puntos como con flechas de navegación y transición en bucle y
 				prevEl: '.swiper-button-prev',
 			},
 		});
-
 ```
 
 ### Slider con imágenes autoheight
@@ -101,11 +102,11 @@ Con este tipo de slider el contenedor ajustará su alto automáticamente según 
 
 <div class="swiper-container swiper-autoheight">
 	<div class="swiper-wrapper">
-		<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
-		<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x400" alt=""></div>
-		<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
-		<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
-		<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x700" alt=""></div>
+		<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+		<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+		<div class="swiper-slide swiper-slide-lg bg-bright"><h4 class="m-none">Slider 3</h4></div>
+		<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
+		<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
 	</div>
 	<div class="swiper-button-next"></div>
 	<div class="swiper-button-prev"></div>
@@ -113,24 +114,21 @@ Con este tipo de slider el contenedor ajustará su alto automáticamente según 
 </div>
 
 ``` html
-
 		<div class="swiper-container swiper-autoheight">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
-				<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x400" alt=""></div>
-				<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
-				<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x600" alt=""></div>
-				<div class="swiper-slide bg-bright"><img src="//ximg.es/1200x700" alt=""></div>
+				<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
+				<div class="swiper-slide bg-light"><h4 class="m-none">Slider 2</h4></div>
+				<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 3</h4></div>
+				<div class="swiper-slide bg-light"><h4 class="m-none">Slider 4</h4></div>
+				<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 5</h4></div>
 			</div>
 			<div class="swiper-button-next"></div>
 			<div class="swiper-button-prev"></div>
 			<div class="swiper-pagination"></div>
 		</div>
-
 ```
 
 ```js
-
 		var mySwiper = new Swiper('.swiper-autoheight', {
 			autoHeight: true,
 			pagination: {
@@ -143,7 +141,6 @@ Con este tipo de slider el contenedor ajustará su alto automáticamente según 
 				prevEl: '.swiper-button-prev',
 			},
 		});
-
 ```
 
 ### Slider con paginación
@@ -164,7 +161,6 @@ Slider con paginación y flechas de navegación.
 </div>
 
 ```html
-
 		<div class="swiper-container swiper-pages">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
@@ -177,11 +173,9 @@ Slider con paginación y flechas de navegación.
 			<div class="swiper-button-prev"></div>
 			<div class="swiper-pagination"></div>
 		</div>
-
 ```
 
 ```js
-
 		var mySwiper = new Swiper('.swiper-pages', {
 			autoHeight: true,
 			pagination: {
@@ -193,7 +187,6 @@ Slider con paginación y flechas de navegación.
 				prevEl: '.swiper-button-prev',
 			},
 		});
-
 ```
 
 ### Slider con fade
@@ -213,7 +206,6 @@ Slider con animación fade al cambiar de imagen.
 </div>
 
 ```html
-
 		<div class="swiper-container swiper-fade">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
@@ -225,11 +217,9 @@ Slider con animación fade al cambiar de imagen.
 			<div class="swiper-button-next"></div>
 			<div class="swiper-button-prev"></div>
 		</div>
-
 ```
 
 ```js
-
 		var mySwiper = new Swiper('.swiper-fade', {
 			autoHeight: true,
 			effect: 'fade',
@@ -238,7 +228,6 @@ Slider con animación fade al cambiar de imagen.
 				prevEl: '.swiper-button-prev',
 			},
 		});
-
 ```
 
 ### Slider vertical
@@ -256,7 +245,6 @@ Slider con navegación vertical tanto arrastrando como usando la rueda del rató
 </div>
 
 ```html
-
 		<div class="swiper-container swiper-vertical" style="height: 600px;">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide bg-bright"><h4 class="m-none">Slider 1</h4></div>
@@ -266,11 +254,9 @@ Slider con navegación vertical tanto arrastrando como usando la rueda del rató
 
 			<div class="swiper-pagination"></div>
 		</div>
-
 ```
 
 ```js
-
 		var mySwiper = new Swiper('.swiper-vertical', {
 			direction: 'vertical',
 			mousewheel: true,
@@ -279,16 +265,14 @@ Slider con navegación vertical tanto arrastrando como usando la rueda del rató
 				clickable: true,
 			},
 		});
-
 ```
 
 {% endmarkdown %}
 
-<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <script>
-
 	document.addEventListener("DOMContentLoaded", function() {
 
 		var mySwiper = new Swiper('.swiper-simple')

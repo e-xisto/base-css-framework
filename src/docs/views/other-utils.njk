@@ -15,14 +15,15 @@
 
 {% markdown %}
 
-# Other utils
+Other utils
+======
 
 Una lista de otras utilidades
 
 ### Texto ellipsis
 
-Para que nuestro texto muestre una ellipsis (...), añadiremos a dicho elemento que contiene el texto la clase `ellipsis`
-seguido del atributo `data-ellipsis` o `data-ellipsis-height`.
+Para que nuestro texto muestre una ellipsis (...), añadiremos a dicho elemento que contiene el texto la clase
+`ellipsis` seguido del atributo `data-ellipsis` o `data-ellipsis-height`.
 
 Si usamos `data-ellipsis`, indicaremos cuantas líneas queremos que ocupe el texto, mientras que si usamos
 `data-ellipsis-height`, definiremos el alto máximo que ocupará.
@@ -40,7 +41,6 @@ Si usamos `data-ellipsis`, indicaremos cuantas líneas queremos que ocupe el tex
 </div>
 
 ```html
-
 		<p class="ellipsis" data-ellipsis-height="120">
 			Anim amet ullamco cillum minim proident esse. Reprehenderit commodo ut eu non fugiat consectetur mollit
 			excepteur in id proident est dolor elit. Qui laborum veniam nostrud nisi dolore consectetur in reprehenderit
@@ -48,7 +48,6 @@ Si usamos `data-ellipsis`, indicaremos cuantas líneas queremos que ocupe el tex
 			minim ad consequat exercitation pariatur. Aliquip nostrud ad veniam officia. Magna ad ullamco aliquip amet
 			ad sunt dolore nulla
 		</p>
-
 ```
 
 <div class="demo">
@@ -64,7 +63,6 @@ Si usamos `data-ellipsis`, indicaremos cuantas líneas queremos que ocupe el tex
 </div>
 
 ```html
-
 		<p class="ellipsis" data-ellipsis="3">
 			Anim amet ullamco cillum minim proident esse. Reprehenderit commodo ut eu non fugiat consectetur mollit
 			excepteur in id proident est dolor elit. Qui laborum veniam nostrud nisi dolore consectetur in reprehenderit
@@ -72,7 +70,6 @@ Si usamos `data-ellipsis`, indicaremos cuantas líneas queremos que ocupe el tex
 			minim ad consequat exercitation pariatur. Aliquip nostrud ad veniam officia. Magna ad ullamco aliquip amet
 			ad sunt dolore nulla
 		</p>
-
 ```
 
 ### Clearfix
@@ -88,9 +85,11 @@ Borra fácilmente los floats de un elemento padre usando la clase `clearfix`.
 </div>
 
 ```html
-
-<div class="float-left">float-left</div>
-
+		<div class="clearfix">
+			<p class="float-right">.float-right</p>
+			<p class="float-left">.float-left</p>
+		</div>
+		<p>no float</p>
 ```
 
 ### Readers
@@ -98,11 +97,9 @@ Borra fácilmente los floats de un elemento padre usando la clase `clearfix`.
 Oculta un elemento para todos los servicios excepto a los lectores de pantalla
 
 ```html
-
 		<div class="sr-only">
 			...
 		</div>
-
 ```
 
 ### No select
@@ -117,12 +114,10 @@ Evita que el usuario pueda seleccionar el texto
 </div>
 
 ```html
-
 		<p class="noselect">
 			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam cupiditate sit accusantium voluptates dolorum
 			ducimus commodi veniam fugiat quod quis inventore voluptatem beatae quae amet in, dolor animi sapiente fugit.
 		</p>
-
 ```
 
 ### No scroll
@@ -132,23 +127,27 @@ Evita el scroll de un elemento usando `noscroll`.
 <div class="utilities-scroll demo">
 	<div>
 		<p class="mr-md">
-			<span class="tag token">Scroll</span> lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus voluptatem dignissimos quo corrupti minima, dolorem inventore, earum, harum alias iste similique odio aut consectetur. Accusamus quam alias totam atque cum.
+			<span class="tag token">Scroll</span> lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus voluptatem
+			dignissimos quo corrupti minima, dolorem inventore, earum, harum alias iste similique odio aut consectetur. Accusamus
+			quam alias totam atque cum.
 		</p>
 		<p class="noscroll">
-			<span class="tag token">Noscroll</span> lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus voluptatem dignissimos quo corrupti minima, dolorem inventore, earum, harum alias iste similique odio aut consectetur. Accusamus quam alias totam atque cum.
+			<span class="tag token">Noscroll</span> lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus voluptatem
+			dignissimos quo corrupti minima, dolorem inventore, earum, harum alias iste similique odio aut consectetur. Accusamus
+			quam alias totam atque cum.
 		</p>
 	</div>
 </div>
 
 ```html
-
 		<p>
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus voluptatem dignissimos quo corrupti minima, dolorem inventore, earum, harum alias iste similique odio aut consectetur. Accusamus quam alias totam atque cum.
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus voluptatem dignissimos quo corrupti minima, dolorem
+			inventore, earum, harum alias iste similique odio aut consectetur. Accusamus quam alias totam atque cum.
 		</p>
 		<p class="noscroll">
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus voluptatem dignissimos quo corrupti minima, dolorem inventore, earum, harum alias iste similique odio aut consectetur. Accusamus quam alias totam atque cum.
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus voluptatem dignissimos quo corrupti minima, dolorem
+			inventore, earum, harum alias iste similique odio aut consectetur. Accusamus quam alias totam atque cum.
 		</p>
-
 ```
 
 ### Separador horizontal
@@ -158,42 +157,21 @@ Tres estilos predefinidos para los `hr`
 <hr>
 
 ```html
-
 		<hr>
-
 ```
 
 <hr class="alt1">
 
 ```html
-
 		<hr class="alt1">
-
 ```
 
 <hr class="alt2">
 
 ```html
-
 		<hr class="alt2">
-
 ```
 
 {% endmarkdown %}
-
-
-	<!-- <button type="button" onclick="addBlock()" class="btn">Añadir bloque</button>
-
-<script>
-
-	function addBlock() {
-		document.getElementById('cols').innerHTML += `<div class="col-md-3"><p class="ellipsis" data-ellipsis-height="70">Anim amet ullamco cillum minim proident esse. Reprehenderit commodo ut eu non fugiat consectetur mollit
-				excepteur in id proident est dolor elit. Qui laborum veniam nostrud nisi dolore consectetur in reprehenderit
-				nostrud sit elit ad laboris pariatur. Sunt dolore voluptate ut reprehenderit. Tempor laborum minim aliqua
-				minim ad consequat exercitation pariatur. Aliquip nostrud ad veniam officia. Magna ad ullamco aliquip amet
-				ad sunt dolore nulla <span>mollit sunt proident id</span> voluptate.</p></div>`;
-	}
-
-</script> -->
 
 {% endblock %}

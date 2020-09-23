@@ -1,11 +1,13 @@
-{% extends "../layouts/default.njk" %}
 
+
+{% extends "../layouts/default.njk" %}
 
 {% block content %}
 
 {% markdown %}
 
-# Textarea
+Textarea
+======
 
 Dentro de un contenedor `form-textarea`, debemos añadir los elementos `label` y `textarea`.
 
@@ -20,13 +22,11 @@ Dentro de un contenedor `form-textarea`, debemos añadir los elementos `label` y
 </div>
 
 ```html
-
 		<div class="form-textarea">
 			<label for="">Demo textarea</label>
 			<textarea name="" id="" rows="5">Contenido textarea</textarea>
 			<small>Texto ayuda para el usuario</small>
 		</div>
-
 ```
 
 ### Disabled textarea
@@ -44,11 +44,9 @@ Aplicando el atributo `disabled` o la clase `disabled` al `textarea`.
 </div>
 
 ```html
-
 		<label for="">Disabled textarea</label>
 		<textarea name="" id="" rows="5" disabled>Contenido textarea</textarea>
 		<small>Texto ayuda para el usuario</small>
-
 ```
 
 ### Readonly textarea
@@ -58,17 +56,21 @@ Al aplicar el atributo `readonly` o la clase `readonly` al `textarea`, pasará a
 <div class="col-md-6">
 	<div class="form-textarea form-size-md">
 		<label for="">Disabled textarea</label>
-		<textarea name="" id="" rows="5" readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsa tempore natus fuga dicta quas molestias quibusdam! Magni, cum minus culpa possimus assumenda beatae ratione repellendus blanditiis quibusdam voluptate tempora?</textarea>
+		<textarea name="" id="" rows="5" readonly>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsa tempore natus fuga dicta quas molestias
+			quibusdam! Magni, cum minus culpa possimus assumenda beatae ratione repellendus blanditiis quibusdam voluptate tempora?
+		</textarea>
 		<small>Texto ayuda para el usuario</small>
 	</div>
 </div>
 
 ```html
-
 		<label for="">Disabled textarea</label>
-		<textarea name="" id="" rows="5" readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsa tempore natus fuga dicta quas molestias quibusdam! Magni, cum minus culpa possimus assumenda beatae ratione repellendus blanditiis quibusdam voluptate tempora?</textarea>
+		<textarea name="" id="" rows="5" readonly>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsa tempore natus fuga dicta quas molestias
+			quibusdam! Magni, cum minus culpa possimus assumenda beatae ratione repellendus blanditiis quibusdam voluptate tempora?
+		</textarea>
 		<small>Texto ayuda para el usuario</small>
-
 ```
 
 ### Tamaño textarea
@@ -79,7 +81,9 @@ El tamaño es modificable usando las clases `form-sm` o `form-size-sm`, `form-md
 <div class="col-md-6">
 	<div class="form-textarea form-sm">
 		<label for="">Disabled textarea</label>
-		<textarea name="" id="" rows="5" readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsa tempore natus fuga dicta quas molestias quibusdam! Magni, cum minus culpa possimus assumenda beatae ratione repellendus blanditiis quibusdam voluptate tempora?
+		<textarea name="" id="" rows="5" readonly>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsa tempore natus fuga dicta quas molestias
+			quibusdam! Magni, cum minus culpa possimus assumenda beatae ratione repellendus blanditiis quibusdam voluptate tempora?
 		</textarea>
 		<small>Texto ayuda para el usuario</small>
 	</div>
@@ -87,7 +91,9 @@ El tamaño es modificable usando las clases `form-sm` o `form-size-sm`, `form-md
 <div class="col-md-6">
 	<div class="form-textarea form-md">
 		<label for="">Disabled textarea</label>
-		<textarea name="" id="" rows="5" readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsa tempore natus fuga dicta quas molestias quibusdam! Magni, cum minus culpa possimus assumenda beatae ratione repellendus blanditiis quibusdam voluptate tempora?
+		<textarea name="" id="" rows="5" readonly>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsa tempore natus fuga dicta quas molestias
+			quibusdam! Magni, cum minus culpa possimus assumenda beatae ratione repellendus blanditiis quibusdam voluptate tempora?
 		</textarea>
 		<small>Texto ayuda para el usuario</small>
 	</div>
@@ -95,34 +101,41 @@ El tamaño es modificable usando las clases `form-sm` o `form-size-sm`, `form-md
 <div class="col-md-6">
 	<div class="form-textarea form-lg">
 		<label for="">Disabled textarea</label>
-		<textarea name="" id="" rows="5" readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsa tempore natus fuga dicta quas molestias quibusdam! Magni, cum minus culpa possimus assumenda beatae ratione repellendus blanditiis quibusdam voluptate tempora?
+		<textarea name="" id="" rows="5" readonly>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsa tempore natus fuga dicta quas molestias
+			quibusdam! Magni, cum minus culpa possimus assumenda beatae ratione repellendus blanditiis quibusdam voluptate tempora?
 		</textarea>
 		<small>Texto ayuda para el usuario</small>
 	</div>
 </div>
 
 ```html
-
 		<div class="form-textarea form-sm">
 			<label for="">Disabled textarea</label>
-			<textarea name="" id="" rows="5" readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsa tempore natus fuga dicta quas molestias quibusdam! Magni, cum minus culpa possimus assumenda beatae ratione repellendus blanditiis quibusdam voluptate tempora?</textarea>
+			<textarea name="" id="" rows="5" readonly>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsa tempore natus fuga dicta quas molestias
+				quibusdam! Magni, cum minus culpa possimus assumenda beatae ratione repellendus blanditiis quibusdam voluptate tempora?
+			</textarea>
 			<small>Texto ayuda para el usuario</small>
 		</div>
-
 
 		<div class="form-textarea form-md">
 			<label for="">Disabled textarea</label>
-			<textarea name="" id="" rows="5" readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsa tempore natus fuga dicta quas molestias quibusdam! Magni, cum minus culpa possimus assumenda beatae ratione repellendus blanditiis quibusdam voluptate tempora?</textarea>
+			<textarea name="" id="" rows="5" readonly>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsa tempore natus fuga dicta quas molestias
+				quibusdam! Magni, cum minus culpa possimus assumenda beatae ratione repellendus blanditiis quibusdam voluptate tempora?
+			</textarea>
 			<small>Texto ayuda para el usuario</small>
 		</div>
-
 
 		<div class="form-textarea form-lg">
 			<label for="">Disabled textarea</label>
-			<textarea name="" id="" rows="5" readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsa tempore natus fuga dicta quas molestias quibusdam! Magni, cum minus culpa possimus assumenda beatae ratione repellendus blanditiis quibusdam voluptate tempora?</textarea>
+			<textarea name="" id="" rows="5" readonly>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsa tempore natus fuga dicta quas molestias
+				quibusdam! Magni, cum minus culpa possimus assumenda beatae ratione repellendus blanditiis quibusdam voluptate tempora?
+			</textarea>
 			<small>Texto ayuda para el usuario</small>
 		</div>
-
 ```
 
 {% endmarkdown %}

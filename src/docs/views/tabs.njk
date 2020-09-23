@@ -5,18 +5,17 @@
 
 {% markdown %}
 
-# Tabs
+Tabs
+======
 
 Crea una navegación mediante pestañas fácilmente.
 
 Para empezar, debemos crear un contenedor con las clases `tabs` y `tabs-responsive`.
 
 ```html
-
 		<div class="tabs tabs-responsive">
 			...
 		</div>
-
 ```
 
 Este contenedor dispondrá de una serie de enlaces (`a`), los cuales cada uno de ellos representará el título de cada
@@ -25,8 +24,8 @@ pestaña con la que contará la navegación.
 Dichos `a`, deben llevar la clase `tabs-item` y, uno de ellos, la clase `active` la cual diferenciará que esa pestaña
 es la que se encuentra abierta actualmente.
 
-Estos elementos `a` deben llevar su atributo `href`, indicando el `id` de las pestañas que veremos unos
-pasos más adelante.
+Estos elementos `a` deben llevar su atributo `href`, indicando el `id` de las pestañas que veremos unos pasos más
+adelante.
 
 <div class="demo">
 	<div class="tabs tabs-reponsive">
@@ -37,20 +36,17 @@ pasos más adelante.
 </div>
 
 ```html
-
 		<div class="tabs tabs-reponsive">
 			<a href="#uno" class="tabs-item">Tab Uno</a>
 			<a href="#dos" class="tabs-item active">Tab dos</a>
 			<a href="#tres" class="tabs-item">Tab tres</a>
 		</div>
-
 ```
 
 El siguiente paso será abrir un nuevo contenedor usando la clase `tabs-content`. Este contenedor será el padre de
 nuestro bloque de contenido.
 
 ```html
-
 		<div class="tabs tabs-reponsive">
 			<a href="#uno" class="tabs-item">Tab Uno</a>
 			<a href="#dos" class="tabs-item active">Tab dos</a>
@@ -60,7 +56,6 @@ nuestro bloque de contenido.
 		<div class="tabs-content">
 			...
 		</div>
-
 ```
 
 Dentro del contenedor `tabs-content`, debemos incluir un nuevo contenedor llamado `tabs-panel` el cual aparecerá
@@ -103,7 +98,6 @@ Estos `tabs-panel`, deben llevar un `id` el cual debemos enlazar con los `a` (`t
 </div>
 
 ```html
-
 		<div class="tabs tabs-reponsive">
 			<a href="#uno" class="tabs-item">Tab Uno</a>
 			<a href="#dos" class="tabs-item active">Tab dos</a>
@@ -133,7 +127,6 @@ Estos `tabs-panel`, deben llevar un `id` el cual debemos enlazar con los `a` (`t
 				</p>
 			</div>
 		</div>
-
 ```
 
 En responsive, todos los elementos `tabs-item` pasarán a formar parte de un menú dropdown pero siempre manteniendo una

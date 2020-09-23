@@ -423,16 +423,13 @@
 <h1 id="collapse">Collapse</h1>
 <p>Oculta o muestra el contenido de un contenedor con un click.</p>
 <p>Para que este componente funcione, debemos tener un elemento <code>a</code> que cuente con los atributos <code>data-action=&quot;collapse&quot;</code> y
-<code>data-target=&quot;{id}&quot;</code> donde <code>id</code> equivaldrá al <code>id</code> del siguiente contenedor.</p>
-<p>A continuación, creamos un contenedor que debe contar con los siguientes requisitos:</p>
+<code>data-target=&quot;{id}&quot;</code> donde <code>{id}</code> equivaldrá al <code>id</code> del contenedor que debemos crear a continuación con los siguientes requisitos:</p>
 <ul>
-<li>Un <code>id</code> el cual debe ser el mismo que el <code>data-target</code> del <code>a</code></li>
-<li>Una clase <code>collapse</code></li>
+<li>Un <code>id</code> el cual debe ser el mismo que el <code>data-target</code> del <code>a</code>.</li>
+<li>Una clase <code>collapse</code>.</li>
 </ul>
-
 <div class="demo">
 <a class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento">Collapse independiente</a>
-
 <div id="id-elemento" class="collapse">
 <p>
     Collapse independiente: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe
@@ -441,21 +438,19 @@
 </div>
 </div>
 
-<pre><code class="language-html">
-&lt;a class=&quot;btn btn-block btn-primary mb-md&quot; data-action=&quot;collapse&quot; data-target=&quot;id-elemento&quot;&gt;Collapse 1&lt;/a&gt;
+<pre><code class="language-html">&lt;a class=&quot;btn btn-block btn-primary mb-md&quot; data-action=&quot;collapse&quot; data-target=&quot;id-elemento&quot;&gt;Collapse 1&lt;/a&gt;
 
 &lt;div id=&quot;id-elemento&quot; class=&quot;collapse&quot;&gt;
     &lt;p&gt;
         Collapse independiente: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe
         molestias aliquam. Reprehenderit nulla veniam magnam delectus?
     &lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
 <p>El tipo de collapse anterior se podría considerar que es un &quot;collapse independiente&quot;, ya que sólo se abrirá y cerrará
 cuando se haga click sobre él sin importar si hay más collapses.</p>
 <p>Para que nuestro collapse se cierre automáticamente al abrir otro elemento, debemos agrupar todo el código anterior en
-un nuevo contenedor proporcionándole un <code>id</code>. Este nuevo contenedor debe contar con al menos dos collapses en su interior
-donde cada uno de ellos llevará el atributo <code>data-parent=&quot;{id}&quot;</code>, sustituyendo este <code>id</code> por el del nuevo contenedor.</p>
+un nuevo contenedor proporcionándole a este un <code>id</code>. Este nuevo contenedor debe contar con al menos dos collapses en su interior
+donde cada uno de ellos llevará el atributo <code>data-parent=&quot;{id}&quot;</code>, sustituyendo este <code>{id}</code> por el del nuevo contenedor.</p>
 <div class="demo">
 <div id="parent">
 <a class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento-1">Collapse 1</a>
@@ -475,8 +470,7 @@ donde cada uno de ellos llevará el atributo <code>data-parent=&quot;{id}&quot;<
 </div>
 </div>
 
-<pre><code class="language-html">
-&lt;div id=&quot;parent&quot;&gt;
+<pre><code class="language-html">&lt;div id=&quot;parent&quot;&gt;
 
     &lt;a class=&quot;btn btn-block btn-primary mb-md&quot; data-action=&quot;collapse&quot; data-target=&quot;id-elemento-1&quot;&gt;Collapse 1&lt;/a&gt;
     &lt;div id=&quot;id-elemento-1&quot; class=&quot;collapse&quot; data-parent=&quot;parent&quot;&gt;
@@ -494,8 +488,7 @@ donde cada uno de ellos llevará el atributo <code>data-parent=&quot;{id}&quot;<
         &lt;/p&gt;
     &lt;/div&gt;
 
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
 
 						</div>			
 					</div>

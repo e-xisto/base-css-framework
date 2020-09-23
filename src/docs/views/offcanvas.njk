@@ -79,7 +79,8 @@
 
 {% markdown %}
 
-# Off-canvas
+Off-canvas
+======
 
 Diferentes tipos de menús off-canvas que se muestran al hacer click.
 
@@ -87,9 +88,7 @@ Para activar dicho menú, debemos añadir, por ejemplo, un `a` que debe llevar u
 `data-target="{id del contenedor offcanvas}"`.
 
 ```html
-
 		<a class="btn btn-block" data-action="offcanvas" data-target="test"></a>
-
 ```
 
 El siguiente paso sería crear un contenedor, obligatoriamente, con la clase `offcanvas`. No sólo debe contar con esta
@@ -97,22 +96,18 @@ clase, contará con otra clase más dependiendo del tipo de menú `off-canvas` q
 con un `id`.
 
 ```html
-
 		<div class="offcanvas offcanvas-slide-left" id="test">
 			...
 		</div>
-
 ```
 
 Dentro del contenedor `offcanvas`, debemos añadir un elemento para cerrarlo. Este elemento debe llevar
 `data-action="offcanvas"` y el `id` del contenedor.
 
 ```html
-
 		<div class="offcanvas offcanvas-slide-left" id="test">
 			<a class="btn btn-rounded btn-block" data-action="offcanvas" data-target="test">Cerrar</a>
 		</div>
-
 ```
 
 Todo esto pasaría a verse así:
@@ -133,7 +128,6 @@ Todo esto pasaría a verse así:
 </div>
 
 ```html
-
 		<a class="btn btn-block" data-action="offcanvas" data-target="test">Abrir menú</a>
 
 		<div class="offcanvas offcanvas-slide-left bg-success" id="test">
@@ -142,7 +136,6 @@ Todo esto pasaría a verse así:
 			</p>
 			<a class="btn btn-rounded btn-block" data-action="offcanvas" data-target="test">Cerrar</a>
 		</div>
-
 ```
 
 ### Off-canvas slide
@@ -163,7 +156,6 @@ Dicho `{posicion}` puede ser `left`, `right`, `top` y `bottom`.
 </div>
 
 ```html
-
 		<a class="btn btn-block" data-action="offcanvas" data-target="slide-left">Canvas slide LEFT</a>
 
 		<div class="offcanvas offcanvas-slide-left" id="slide-left">
@@ -173,7 +165,6 @@ Dicho `{posicion}` puede ser `left`, `right`, `top` y `bottom`.
 			</p>
 			<a class="btn btn-rounded btn-block" data-action="offcanvas" data-target="slide-left">Cerrar</a>
 		</div>
-
 ```
 
 #### Off-canvas slide right
@@ -185,14 +176,12 @@ Dicho `{posicion}` puede ser `left`, `right`, `top` y `bottom`.
 </div>
 
 ```html
-
 		<a class="btn btn-block" data-action="offcanvas" data-target="slide-right">Canvas slide RIGHT</a>
 
 		<div class="offcanvas offcanvas-slide-right bg-primary" id="slide-right">
 			<h3 class="text-white">Canvas Slide RIGHT</h3>
 			<a class="btn btn-rounded btn-block" data-action="offcanvas" data-target="slide-right">cerrar</a>
 		</div>
-
 ```
 
 #### Off-canvas slide top
@@ -204,14 +193,12 @@ Dicho `{posicion}` puede ser `left`, `right`, `top` y `bottom`.
 </div>
 
 ```html
-
 		<a class="btn btn-block" data-action="offcanvas" data-target="slide-top">Canvas slide TOP</a>
 
 		<div class="offcanvas offcanvas-slide-top bg-primary" id="slide-top">
 			<h3 class="text-white">Canvas Slide TOP</h3>
 			<a class="btn btn-rounded btn-block" data-action="offcanvas" data-target="slide-top">cerrar</a>
 		</div>
-
 ```
 
 #### Off-canvas slide bottom
@@ -223,14 +210,12 @@ Dicho `{posicion}` puede ser `left`, `right`, `top` y `bottom`.
 </div>
 
 ```html
-
 		<a class="btn btn-block" data-action="offcanvas" data-target="slide-bottom">Canvas slide BOTTOM</a>
 
 		<div class="offcanvas offcanvas-slide-bottom bg-primary" id="slide-bottom">
 			<h3 class="text-white">Canvas Slide BOTTOM</h3>
 			<a class="btn btn-rounded btn-block" data-action="offcanvas" data-target="slide-bottom">cerrar</a>
 		</div>
-
 ```
 
 ### Off-canvas push
@@ -249,14 +234,12 @@ En este caso, sustituimos el `offcanvas-slide-{posicion}` por `offcanvas-push-{p
 </div>
 
 ```html
-
 		<a class="btn btn-block" data-action="offcanvas" data-target="push-left">Canvas push LEFT</a>
 
 		<div class="offcanvas offcanvas-push-left offcanvas-noclick bg-primary" id="push-left">
 			<h3 class="text-white">Canvas Push LEFT noclick</h3>
-			<a class="btn btn-rounded btn-block mt-lg" data-action="offcanvas" data-target="push-left">cerrar</a>
+			<a class="btn btn-rounded btn-block" data-action="offcanvas" data-target="push-left">cerrar</a>
 		</div>
-
 ```
 
 #### Offcanvas push right
@@ -268,14 +251,12 @@ En este caso, sustituimos el `offcanvas-slide-{posicion}` por `offcanvas-push-{p
 </div>
 
 ```html
-
 		<a class="btn btn-block" data-action="offcanvas" data-target="push-right">Canvas push RIGHT</a>
 
 		<div class="offcanvas offcanvas-push-right bg-primary" id="push-right">
 			<h3 class="text-white">Canvas Push RIGHT</h3>
-			<a class="btn btn-rounded btn-block mt-lg" data-action="offcanvas" data-target="push-right">cerrar</a>
+			<a class="btn btn-rounded btn-block" data-action="offcanvas" data-target="push-right">cerrar</a>
 		</div>
-
 ```
 
 #### Offcanvas push top
@@ -287,14 +268,12 @@ En este caso, sustituimos el `offcanvas-slide-{posicion}` por `offcanvas-push-{p
 </div>
 
 ```html
-
 		<a class="btn btn-block btn-primary" data-action="offcanvas" data-target="push-top">Canvas push TOP</a>
 
 		<div class="offcanvas offcanvas-push-top bg-primary" id="push-top">
 			<h3 class="text-white">Canvas Push TOP</h3>
-			<a class="btn btn-rounded btn-block mt-lg" data-action="offcanvas" data-target="push-top">cerrar</a>
+			<a class="btn btn-rounded btn-block" data-action="offcanvas" data-target="push-top">cerrar</a>
 		</div>
-
 ```
 
 #### Offcanvas push bottom
@@ -306,14 +285,12 @@ En este caso, sustituimos el `offcanvas-slide-{posicion}` por `offcanvas-push-{p
 </div>
 
 ```html
-
 		<a class="btn btn-block btn-primary" data-action="offcanvas" data-target="push-bottom">Canvas push BOTTOM</a>
 
 		<div class="offcanvas offcanvas-push-bottom bg-primary" id="push-bottom">
 			<h3 class="text-white">Canvas Push BOTTOM</h3>
-			<a class="btn btn-rounded btn-block mt-lg" data-action="offcanvas" data-target="push-bottom">cerrar</a>
+			<a class="btn btn-rounded btn-block" data-action="offcanvas" data-target="push-bottom">cerrar</a>
 		</div>
-
 ```
 
 ### Off-canvas faded
@@ -328,14 +305,12 @@ pantalla completa realizando una pequeña transición.
 </div>
 
 ```html
-
 		<a class="btn btn-block btn-primary" data-action="offcanvas" data-target="modal-faded">Canvas modal FADED</a>
 
 		<div class="offcanvas offcanvas-modal-faded bg-danger" id="modal-faded">
 			<h3 class="text-white">Canvas Push LEFT</h3>
-			<a class="btn btn-rounded btn-block mt-lg" data-action="offcanvas" data-target="modal-faded">cerrar</a>
+			<a class="btn btn-rounded btn-block" data-action="offcanvas" data-target="modal-faded">cerrar</a>
 		</div>
-
 ```
 
 {% endmarkdown %}

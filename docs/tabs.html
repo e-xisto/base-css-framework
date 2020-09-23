@@ -423,17 +423,15 @@
 <h1 id="tabs">Tabs</h1>
 <p>Crea una navegación mediante pestañas fácilmente.</p>
 <p>Para empezar, debemos crear un contenedor con las clases <code>tabs</code> y <code>tabs-responsive</code>.</p>
-<pre><code class="language-html">
-&lt;div class=&quot;tabs tabs-responsive&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;tabs tabs-responsive&quot;&gt;
     ...
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
 <p>Este contenedor dispondrá de una serie de enlaces (<code>a</code>), los cuales cada uno de ellos representará el título de cada
 pestaña con la que contará la navegación.</p>
 <p>Dichos <code>a</code>, deben llevar la clase <code>tabs-item</code> y, uno de ellos, la clase <code>active</code> la cual diferenciará que esa pestaña
 es la que se encuentra abierta actualmente.</p>
-<p>Estos elementos <code>a</code> deben llevar su atributo <code>href</code>, indicando el <code>id</code> de las pestañas que veremos unos
-pasos más adelante.</p>
+<p>Estos elementos <code>a</code> deben llevar su atributo <code>href</code>, indicando el <code>id</code> de las pestañas que veremos unos pasos más
+adelante.</p>
 <div class="demo">
 <div class="tabs tabs-reponsive">
 <a href="#" class="tabs-item">Tab Uno</a>
@@ -442,17 +440,14 @@ pasos más adelante.</p>
 </div>
 </div>
 
-<pre><code class="language-html">
-&lt;div class=&quot;tabs tabs-reponsive&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;tabs tabs-reponsive&quot;&gt;
     &lt;a href=&quot;#uno&quot; class=&quot;tabs-item&quot;&gt;Tab Uno&lt;/a&gt;
     &lt;a href=&quot;#dos&quot; class=&quot;tabs-item active&quot;&gt;Tab dos&lt;/a&gt;
     &lt;a href=&quot;#tres&quot; class=&quot;tabs-item&quot;&gt;Tab tres&lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
 <p>El siguiente paso será abrir un nuevo contenedor usando la clase <code>tabs-content</code>. Este contenedor será el padre de
 nuestro bloque de contenido.</p>
-<pre><code class="language-html">
-&lt;div class=&quot;tabs tabs-reponsive&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;tabs tabs-reponsive&quot;&gt;
     &lt;a href=&quot;#uno&quot; class=&quot;tabs-item&quot;&gt;Tab Uno&lt;/a&gt;
     &lt;a href=&quot;#dos&quot; class=&quot;tabs-item active&quot;&gt;Tab dos&lt;/a&gt;
     &lt;a href=&quot;#tres&quot; class=&quot;tabs-item&quot;&gt;Tab tres&lt;/a&gt;
@@ -460,8 +455,7 @@ nuestro bloque de contenido.</p>
 
 &lt;div class=&quot;tabs-content&quot;&gt;
     ...
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
 <p>Dentro del contenedor <code>tabs-content</code>, debemos incluir un nuevo contenedor llamado <code>tabs-panel</code> el cual aparecerá
 representado el mismo número de veces según cuantos <code>tabs-item</code> tengamos.</p>
 <p>Uno de ellos, deberá llevar la clase <code>show</code> la cual debe coincidir con el elemento que contiene la clase <code>active</code>.</p>
@@ -498,8 +492,7 @@ representado el mismo número de veces según cuantos <code>tabs-item</code> ten
 </div>
 </div>
 
-<pre><code class="language-html">
-&lt;div class=&quot;tabs tabs-reponsive&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;tabs tabs-reponsive&quot;&gt;
     &lt;a href=&quot;#uno&quot; class=&quot;tabs-item&quot;&gt;Tab Uno&lt;/a&gt;
     &lt;a href=&quot;#dos&quot; class=&quot;tabs-item active&quot;&gt;Tab dos&lt;/a&gt;
     &lt;a href=&quot;#tres&quot; class=&quot;tabs-item&quot;&gt;Tab tres&lt;/a&gt;
@@ -527,8 +520,7 @@ representado el mismo número de veces según cuantos <code>tabs-item</code> ten
             reprehenderit beatae. Dolorum consectetur ullam voluptatem debitis nam dolor itaque sit corrupti possimus?
         &lt;/p&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
 <p>En responsive, todos los elementos <code>tabs-item</code> pasarán a formar parte de un menú dropdown pero siempre manteniendo una
 pestaña para poder visualizar su contenido, es decir, no usaremos una navegación por pestañas como en el resto de
 resoluciones, sino que nuestra navegación será mediante un menú el cual aparecerá a la derecha de la pestaña que esté

@@ -2,1161 +2,1161 @@
 {% extends "../layouts/default.njk" %}
 
 {% block content %}
+
 <style>
 
-	section {
+	.utilities-icons {
 		display: flex;
 		flex-wrap: wrap;
 	}
 
-	section div {
-		width: 25%;
-	}
+	.utilities-icons .item { width: 25%; }
 
 	@media (min-width: 768px) and (max-width: 992px) {
 
-		section div {
-			width: 33%;
-		}
+		.utilities-icons .item { width: 33%; }
 	}
 
 	@media (min-width: 320px) and (max-width: 767px) {
 
-		section div {
-			width: 50%;
-		}
+		.utilities-icons .item { width: 50%; }
 	}
 
 </style>
 {% markdown %}
 
-# Iconos
-Un listado de todos los iconos disponibles. Con el paso del tiempo, se irán añadiendo más nuevos iconos.
+Iconos
+======
 
-Para añadir el icono, simplemente usar la clase `icon-` y el nombre del icono que queremos añadir.
+Un listado de todos los iconos disponibles.
 
-<section class="demo">
-	<div class="mb-lg flex middle">
-		<i class="icon-airplay mr-xs"></i>
-		airplay
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-alert-circle mr-xs"></i>
-		alert-circle
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-alert-octagon mr-xs"></i>
-		alert-octagon
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-triangle mr-xs"></i>
-		alert-triangle
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-align-center mr-xs"></i>
-		align-center
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-align-justify mr-xs"></i>
-		align-justify
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-align-left mr-xs"></i>
-		align-left
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-align-right mr-xs"></i>
-		align-right
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-anchor mr-xs"></i>
-		anchor
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-aperture mr-xs"></i>
-		aperture
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-archive mr-xs"></i>
-		archive
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-arrow-down mr-xs"></i>
-		arrow-down
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-arrow-down-circle mr-xs"></i>
-		arrow-down-circle
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-arrow-down-left mr-xs"></i>
-		arrow-down-left
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-arrow-down-right mr-xs"></i>
-		arrow-down-right
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-arrow-left mr-xs"></i>
-		arrow-left
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-arrow-left-circle mr-xs"></i>
-		arrow-left-circle
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-arrow-right mr-xs"></i>
-		arrow-right
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-arrow-right-circle mr-xs"></i>
-		arrow-right-circle
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-arrow-up mr-xs"></i>
-		arrow-up
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-arrow-up-circle mr-xs"></i>
-		arrow-up-circle
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-arrow-up-left mr-xs"></i>
-		arrow-up-left
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-arrow-up-right mr-xs"></i>
-		arrow-up-right
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-at-sign mr-xs"></i>
-		at-sign
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-award mr-xs"></i>
-		award
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-bar-chart mr-xs"></i>
-		bar-chart
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-bar-chart-2 mr-xs"></i>
-		bar-chart-2
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-battery mr-xs"></i>
-		battery
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-battery-charging mr-xs"></i>
-		battery-charging
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-bell mr-xs"></i>
-		bell
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-bell-off mr-xs"></i>
-		bell-off
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-bluetooth mr-xs"></i>
-		bluetooth
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-bold mr-xs"></i>
-		bold
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-book mr-xs"></i>
-		book
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-book-open mr-xs"></i>
-		book-open
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-bookmark mr-xs"></i>
-		bookmark
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-box mr-xs"></i>
-		box
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-briefcase mr-xs"></i>
-		briefcase
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-calendar mr-xs"></i>
-		calendar
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-camera mr-xs"></i>
-		camera
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-camera-off mr-xs"></i>
-		camera-off
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-cast mr-xs"></i>
-		cast
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-check mr-xs"></i>
-		check
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-check-circle mr-xs"></i>
-		check-circle
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-check-square mr-xs"></i>
-		check-square
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-chevron-down mr-xs"></i>
-		chevron-down
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-chevron-left mr-xs"></i>
-		chevron-left
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-chevron-right mr-xs"></i>
-		chevron-right
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-chevron-up mr-xs"></i>
-		chevron-up
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-chevrons-down mr-xs"></i>
-		chevrons-down
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-chevrons-left mr-xs"></i>
-		chevrons-left
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-chevrons-right mr-xs"></i>
-		chevrons-right
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-chevrons-up mr-xs"></i>
-		chevrons-up
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-chrome mr-xs"></i>
-		chrome
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-circle mr-xs"></i>
-		circle
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-clipboard mr-xs"></i>
-		clipboard
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-clock mr-xs"></i>
-		clock
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-cloud-off mr-xs"></i>
-		cloud-off
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-cloud mr-xs"></i>
-		cloud
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-cloud-drizzle mr-xs"></i>
-		cloud-drizzle
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-cloud-lightning mr-xs"></i>
-		cloud-lightning
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-codepen mr-xs"></i>
-		codepen
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-cloud-rain mr-xs"></i>
-		cloud-rain
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-cloud-snow mr-xs"></i>
-		cloud-snow
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-code mr-xs"></i>
-		code
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-command mr-xs"></i>
-		command
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-codesandbox mr-xs"></i>
-		codesandbox
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-coffee mr-xs"></i>
-		coffee
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-columns mr-xs"></i>
-		columns
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-corner-down-right mr-xs"></i>
-		corner-down-right
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-compass mr-xs"></i>
-		compass
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-copy mr-xs"></i>
-		copy
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-corner-down-left mr-xs"></i>
-		corner-down-left
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-corner-right-up mr-xs"></i>
-		corner-right-up
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-corner-left-down mr-xs"></i>
-		corner-left-down
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-corner-left-up mr-xs"></i>
-		corner-left-up
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-corner-right-down mr-xs"></i>
-		corner-right-down
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-corner-up-left mr-xs"></i>
-		corner-up-left
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-corner-up-right mr-xs"></i>
-		corner-up-right
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-cpu mr-xs"></i>
-		cpu
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-credit-card mr-xs"></i>
-		credit-card
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-crop mr-xs"></i>
-		crop
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-crosshair mr-xs"></i>
-		crosshair
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-database mr-xs"></i>
-		database
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-delete mr-xs"></i>
-		delete
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-disc mr-xs"></i>
-		disc
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-dollar-sign mr-xs"></i>
-		dollar-sign
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-download mr-xs"></i>
-		download
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-download-cloud mr-xs"></i>
-		download-cloud
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-droplet mr-xs"></i>
-		droplet
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-edit mr-xs"></i>
-		edit
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-edit-2 mr-xs"></i>
-		edit-2
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-edit-3 mr-xs"></i>
-		edit-3
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-external-link mr-xs"></i>
-		external-link
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-eye mr-xs"></i>
-		eye
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-eye-off mr-xs"></i>
-		eye-off
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-facebook mr-xs"></i>
-		facebook
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-fast-forward mr-xs"></i>
-		fast-forward
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-feather mr-xs"></i>
-		feather
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-file mr-xs"></i>
-		file
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-file-minus mr-xs"></i>
-		file-minus
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-file-plus mr-xs"></i>
-		file-plus
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-file-text mr-xs"></i>
-		file-text
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-film mr-xs"></i>
-		film
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-filter mr-xs"></i>
-		filter
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-flag mr-xs"></i>
-		flag
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-folder mr-xs"></i>
-		folder
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-folder-minus mr-xs"></i>
-		folder-minus
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-folder-plus mr-xs"></i>
-		folder-plus
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-frown mr-xs"></i>
-		frown
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-gift mr-xs"></i>
-		gift
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-git-branch mr-xs"></i>
-		git-branch
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-git-commit mr-xs"></i>
-		git-commit
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-git-merge mr-xs"></i>
-		git-merge
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-git-pull-request mr-xs"></i>
-		git-pull-request
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-github mr-xs"></i>
-		github
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-grid mr-xs"></i>
-		grid
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-hash mr-xs"></i>
-		hash
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-headphones mr-xs"></i>
-		headphones
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-heart mr-xs"></i>
-		heart
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-help-circle mr-xs"></i>
-		help-circle
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-hexagon mr-xs"></i>
-		hexagon
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-home mr-xs"></i>
-		home
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-image mr-xs"></i>
-		image
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-inbox mr-xs"></i>
-		inbox
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-info mr-xs"></i>
-		info
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-instagram mr-xs"></i>
-		instagram
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-italic mr-xs"></i>
-		italic
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-key mr-xs"></i>
-		key
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-layers mr-xs"></i>
-		layers
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-layout mr-xs"></i>
-		layout
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-life-buoy mr-xs"></i>
-		life-buoy
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-link mr-xs"></i>
-		link
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-link-2 mr-xs"></i>
-		link-2
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-linkedin mr-xs"></i>
-		linkedin
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-list mr-xs"></i>
-		list
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-loader mr-xs"></i>
-		loader
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-lock mr-xs"></i>
-		lock
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-log-in mr-xs"></i>
-		log-in
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-log-out mr-xs"></i>
-		log-out
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-mail mr-xs"></i>
-		mail
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-map mr-xs"></i>
-		map
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-map-pin mr-xs"></i>
-		map-pin
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-maximize mr-xs"></i>
-		maximize
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-maximize-2 mr-xs"></i>
-		maximize-2
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-meh mr-xs"></i>
-		meh
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-menu mr-xs"></i>
-		menu
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-message-circle mr-xs"></i>
-		message-circle
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-message-square mr-xs"></i>
-		message-square
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-mic mr-xs"></i>
-		mic
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-mic-off mr-xs"></i>
-		mic-off
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-minimize mr-xs"></i>
-		minimize
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-minimize-2 mr-xs"></i>
-		minimize-2
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-minus mr-xs"></i>
-		minus
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-minus-circle mr-xs"></i>
-		minus-circle
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-minus-square mr-xs"></i>
-		minus-square
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-monitor mr-xs"></i>
-		monitor
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-moon mr-xs"></i>
-		moon
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-more-horizontal mr-xs"></i>
-		more-horizontal
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-more-vertical mr-xs"></i>
-		more-vertical
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-mouse-pointer mr-xs"></i>
-		mouse-pointer
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-move mr-xs"></i>
-		move
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-music mr-xs"></i>
-		music
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-navigation mr-xs"></i>
-		navigation
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-navigation-2 mr-xs"></i>
-		navigation-2
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-octagon mr-xs"></i>
-		octagon
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-package mr-xs"></i>
-		package
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-paperclip mr-xs"></i>
-		paperclip
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-path mr-xs"></i>
-		path
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-pause mr-xs"></i>
-		pause
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-pause-circle mr-xs"></i>
-		pause-circle
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-pen-tool mr-xs"></i>
-		pen-tool
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-percent mr-xs"></i>
-		percent
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-phone mr-xs"></i>
-		phone
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-phone-call mr-xs"></i>
-		phone-call
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-phone-forwarded mr-xs"></i>
-		phone-forwarded
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-phone-incoming mr-xs"></i>
-		phone-incoming
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-phone-missed mr-xs"></i>
-		phone-missed
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-phone-off mr-xs"></i>
-		phone-off
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-phone-outgoing mr-xs"></i>
-		phone-outgoing
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-pie-chart mr-xs"></i>
-		pie-chart
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-play mr-xs"></i>
-		play
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-play-circle mr-xs"></i>
-		play-circle
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-plus mr-xs"></i>
-		plus
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-plus-circle mr-xs"></i>
-		plus-circle
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-plus-square mr-xs"></i>
-		plus-square
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-pocket mr-xs"></i>
-		pocket
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-power mr-xs"></i>
-		power
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-printer mr-xs"></i>
-		printer
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-radio mr-xs"></i>
-		radio
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-refresh-ccw mr-xs"></i>
-		refresh-ccw
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-refresh-cw mr-xs"></i>
-		refresh-cw
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-repeat mr-xs"></i>
-		repeat
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-rewind mr-xs"></i>
-		rewind
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-rotate-ccw mr-xs"></i>
-		rotate-ccw
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-rotate-cw mr-xs"></i>
-		rotate-cw
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-rss mr-xs"></i>
-		rss
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-save mr-xs"></i>
-		save
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-scissors mr-xs"></i>
-		scissors
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-search mr-xs"></i>
-		search
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-send mr-xs"></i>
-		send
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-server mr-xs"></i>
-		server
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-settings mr-xs"></i>
-		settings
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-share mr-xs"></i>
-		share
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-share-2 mr-xs"></i>
-		share-2
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-shield mr-xs"></i>
-		shield
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-shield-off mr-xs"></i>
-		shield-off
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-shopping-bag mr-xs"></i>
-		shopping-bag
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-shopping-cart mr-xs"></i>
-		shopping-cart
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-shuffle mr-xs"></i>
-		shuffle
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-sidebar mr-xs"></i>
-		sidebar
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-skip-back mr-xs"></i>
-		skip-back
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-skip-forward mr-xs"></i>
-		skip-forward
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-sidebar mr-xs"></i>
-		sidebar
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-skip-back mr-xs"></i>
-		skip-back
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-skip-forward mr-xs"></i>
-		skip-forward
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-slack mr-xs"></i>
-		slack
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-slash mr-xs"></i>
-		slash
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-sliders mr-xs"></i>
-		sliders
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-smartphone mr-xs"></i>
-		smartphone
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-smile mr-xs"></i>
-		smile
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-speaker mr-xs"></i>
-		speaker
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-square mr-xs"></i>
-		square
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-star mr-xs"></i>
-		star
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-stop-circle mr-xs"></i>
-		stop-circle
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-sun mr-xs"></i>
-		sun
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-sunrise mr-xs"></i>
-		sunrise
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-sunset mr-xs"></i>
-		sunset
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-tablet mr-xs"></i>
-		tablet
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-tag mr-xs"></i>
-		tag
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-target mr-xs"></i>
-		target
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-terminal mr-xs"></i>
-		terminal
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-thermometer mr-xs"></i>
-		thermometer
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-thumbs-down mr-xs"></i>
-		thumbs-down
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-thumbs-up mr-xs"></i>
-		thumbs-up
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-toggle-left mr-xs"></i>
-		toggle-left
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-toggle-right mr-xs"></i>
-		toggle-right
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-tool mr-xs"></i>
-		tool
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-trash mr-xs"></i>
-		trash
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-trash-2 mr-xs"></i>
-		trash-2
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-trello mr-xs"></i>
-		trello
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-trending-down mr-xs"></i>
-		trending-down
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-trending-up mr-xs"></i>
-		trending-up
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-triangle mr-xs"></i>
-		triangle
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-truck mr-xs"></i>
-		truck
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-tv mr-xs"></i>
-		tv
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-twitch mr-xs"></i>
-		twitch
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-twitter mr-xs"></i>
-		twitter
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-type mr-xs"></i>
-		type
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-umbrella mr-xs"></i>
-		umbrella
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-underline mr-xs"></i>
-		underline
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-unlock mr-xs"></i>
-		unlock
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-upload mr-xs"></i>
-		upload
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-upload-cloud mr-xs"></i>
-		upload-cloud
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-user mr-xs"></i>
-		user
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-user-check mr-xs"></i>
-		user-check
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-user-minus mr-xs"></i>
-		user-minus
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-user-plus mr-xs"></i>
-		user-plus
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-user-x mr-xs"></i>
-		user-x
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-users mr-xs"></i>
-		users
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-video mr-xs"></i>
-		video
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-video-off mr-xs"></i>
-		video-off
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-voicemail mr-xs"></i>
-		voicemail
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-volume mr-xs"></i>
-		volume
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-volume-1 mr-xs"></i>
-		volume-1
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-volume-2 mr-xs"></i>
-		volume-2
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-volume-x mr-xs"></i>
-		volume-x
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-watch mr-xs"></i>
-		watch
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-wifi mr-xs"></i>
-		wifi
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-wifi-off mr-xs"></i>
-		wifi-off
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-wind mr-xs"></i>
-		wind
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-x mr-xs"></i>
-		x
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-x-circle mr-xs"></i>
-		x-circle
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-x-octagon mr-xs"></i>
-		x-octagon
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-x-square mr-xs"></i>
-		x-square
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-youtube mr-xs"></i>
-		youtube
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-zap mr-xs"></i>
-		zap
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-zap-off mr-xs"></i>
-		zap-off
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-zoom-in mr-xs"></i>
-		zoom-in
-	</div>
-	<div class="mb-lg flex middle">
-		<i class="icon-zoom-out mr-xs"></i>
-		zoom-out
-	</div>
-</section>
+Para añadir el icono, simplemente usar la clase `icon-{name}`.
+
+<div class="demo">
+	<div class="utilities-icons">
+		<div class="mb-lg item flex middle">
+			<i class="icon-airplay mr-xs"></i>
+			airplay
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-alert-circle mr-xs"></i>
+			alert-circle
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-alert-octagon mr-xs"></i>
+			alert-octagon
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-triangle mr-xs"></i>
+			alert-triangle
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-align-center mr-xs"></i>
+			align-center
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-align-justify mr-xs"></i>
+			align-justify
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-align-left mr-xs"></i>
+			align-left
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-align-right mr-xs"></i>
+			align-right
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-anchor mr-xs"></i>
+			anchor
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-aperture mr-xs"></i>
+			aperture
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-archive mr-xs"></i>
+			archive
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-arrow-down mr-xs"></i>
+			arrow-down
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-arrow-down-circle mr-xs"></i>
+			arrow-down-circle
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-arrow-down-left mr-xs"></i>
+			arrow-down-left
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-arrow-down-right mr-xs"></i>
+			arrow-down-right
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-arrow-left mr-xs"></i>
+			arrow-left
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-arrow-left-circle mr-xs"></i>
+			arrow-left-circle
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-arrow-right mr-xs"></i>
+			arrow-right
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-arrow-right-circle mr-xs"></i>
+			arrow-right-circle
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-arrow-up mr-xs"></i>
+			arrow-up
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-arrow-up-circle mr-xs"></i>
+			arrow-up-circle
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-arrow-up-left mr-xs"></i>
+			arrow-up-left
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-arrow-up-right mr-xs"></i>
+			arrow-up-right
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-at-sign mr-xs"></i>
+			at-sign
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-award mr-xs"></i>
+			award
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-bar-chart mr-xs"></i>
+			bar-chart
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-bar-chart-2 mr-xs"></i>
+			bar-chart-2
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-battery mr-xs"></i>
+			battery
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-battery-charging mr-xs"></i>
+			battery-charging
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-bell mr-xs"></i>
+			bell
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-bell-off mr-xs"></i>
+			bell-off
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-bluetooth mr-xs"></i>
+			bluetooth
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-bold mr-xs"></i>
+			bold
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-book mr-xs"></i>
+			book
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-book-open mr-xs"></i>
+			book-open
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-bookmark mr-xs"></i>
+			bookmark
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-box mr-xs"></i>
+			box
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-briefcase mr-xs"></i>
+			briefcase
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-calendar mr-xs"></i>
+			calendar
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-camera mr-xs"></i>
+			camera
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-camera-off mr-xs"></i>
+			camera-off
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-cast mr-xs"></i>
+			cast
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-check mr-xs"></i>
+			check
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-check-circle mr-xs"></i>
+			check-circle
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-check-square mr-xs"></i>
+			check-square
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-chevron-down mr-xs"></i>
+			chevron-down
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-chevron-left mr-xs"></i>
+			chevron-left
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-chevron-right mr-xs"></i>
+			chevron-right
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-chevron-up mr-xs"></i>
+			chevron-up
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-chevrons-down mr-xs"></i>
+			chevrons-down
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-chevrons-left mr-xs"></i>
+			chevrons-left
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-chevrons-right mr-xs"></i>
+			chevrons-right
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-chevrons-up mr-xs"></i>
+			chevrons-up
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-chrome mr-xs"></i>
+			chrome
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-circle mr-xs"></i>
+			circle
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-clipboard mr-xs"></i>
+			clipboard
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-clock mr-xs"></i>
+			clock
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-cloud-off mr-xs"></i>
+			cloud-off
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-cloud mr-xs"></i>
+			cloud
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-cloud-drizzle mr-xs"></i>
+			cloud-drizzle
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-cloud-lightning mr-xs"></i>
+			cloud-lightning
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-codepen mr-xs"></i>
+			codepen
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-cloud-rain mr-xs"></i>
+			cloud-rain
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-cloud-snow mr-xs"></i>
+			cloud-snow
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-code mr-xs"></i>
+			code
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-command mr-xs"></i>
+			command
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-codesandbox mr-xs"></i>
+			codesandbox
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-coffee mr-xs"></i>
+			coffee
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-columns mr-xs"></i>
+			columns
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-corner-down-right mr-xs"></i>
+			corner-down-right
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-compass mr-xs"></i>
+			compass
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-copy mr-xs"></i>
+			copy
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-corner-down-left mr-xs"></i>
+			corner-down-left
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-corner-right-up mr-xs"></i>
+			corner-right-up
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-corner-left-down mr-xs"></i>
+			corner-left-down
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-corner-left-up mr-xs"></i>
+			corner-left-up
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-corner-right-down mr-xs"></i>
+			corner-right-down
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-corner-up-left mr-xs"></i>
+			corner-up-left
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-corner-up-right mr-xs"></i>
+			corner-up-right
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-cpu mr-xs"></i>
+			cpu
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-credit-card mr-xs"></i>
+			credit-card
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-crop mr-xs"></i>
+			crop
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-crosshair mr-xs"></i>
+			crosshair
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-database mr-xs"></i>
+			database
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-delete mr-xs"></i>
+			delete
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-disc mr-xs"></i>
+			disc
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-dollar-sign mr-xs"></i>
+			dollar-sign
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-download mr-xs"></i>
+			download
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-download-cloud mr-xs"></i>
+			download-cloud
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-droplet mr-xs"></i>
+			droplet
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-edit mr-xs"></i>
+			edit
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-edit-2 mr-xs"></i>
+			edit-2
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-edit-3 mr-xs"></i>
+			edit-3
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-external-link mr-xs"></i>
+			external-link
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-eye mr-xs"></i>
+			eye
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-eye-off mr-xs"></i>
+			eye-off
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-facebook mr-xs"></i>
+			facebook
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-fast-forward mr-xs"></i>
+			fast-forward
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-feather mr-xs"></i>
+			feather
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-file mr-xs"></i>
+			file
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-file-minus mr-xs"></i>
+			file-minus
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-file-plus mr-xs"></i>
+			file-plus
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-file-text mr-xs"></i>
+			file-text
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-film mr-xs"></i>
+			film
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-filter mr-xs"></i>
+			filter
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-flag mr-xs"></i>
+			flag
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-folder mr-xs"></i>
+			folder
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-folder-minus mr-xs"></i>
+			folder-minus
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-folder-plus mr-xs"></i>
+			folder-plus
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-frown mr-xs"></i>
+			frown
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-gift mr-xs"></i>
+			gift
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-git-branch mr-xs"></i>
+			git-branch
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-git-commit mr-xs"></i>
+			git-commit
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-git-merge mr-xs"></i>
+			git-merge
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-git-pull-request mr-xs"></i>
+			git-pull-request
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-github mr-xs"></i>
+			github
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-grid mr-xs"></i>
+			grid
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-hash mr-xs"></i>
+			hash
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-headphones mr-xs"></i>
+			headphones
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-heart mr-xs"></i>
+			heart
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-help-circle mr-xs"></i>
+			help-circle
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-hexagon mr-xs"></i>
+			hexagon
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-home mr-xs"></i>
+			home
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-image mr-xs"></i>
+			image
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-inbox mr-xs"></i>
+			inbox
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-info mr-xs"></i>
+			info
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-instagram mr-xs"></i>
+			instagram
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-italic mr-xs"></i>
+			italic
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-key mr-xs"></i>
+			key
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-layers mr-xs"></i>
+			layers
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-layout mr-xs"></i>
+			layout
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-life-buoy mr-xs"></i>
+			life-buoy
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-link mr-xs"></i>
+			link
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-link-2 mr-xs"></i>
+			link-2
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-linkedin mr-xs"></i>
+			linkedin
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-list mr-xs"></i>
+			list
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-loader mr-xs"></i>
+			loader
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-lock mr-xs"></i>
+			lock
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-log-in mr-xs"></i>
+			log-in
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-log-out mr-xs"></i>
+			log-out
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-mail mr-xs"></i>
+			mail
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-map mr-xs"></i>
+			map
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-map-pin mr-xs"></i>
+			map-pin
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-maximize mr-xs"></i>
+			maximize
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-maximize-2 mr-xs"></i>
+			maximize-2
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-meh mr-xs"></i>
+			meh
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-menu mr-xs"></i>
+			menu
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-message-circle mr-xs"></i>
+			message-circle
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-message-square mr-xs"></i>
+			message-square
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-mic mr-xs"></i>
+			mic
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-mic-off mr-xs"></i>
+			mic-off
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-minimize mr-xs"></i>
+			minimize
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-minimize-2 mr-xs"></i>
+			minimize-2
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-minus mr-xs"></i>
+			minus
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-minus-circle mr-xs"></i>
+			minus-circle
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-minus-square mr-xs"></i>
+			minus-square
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-monitor mr-xs"></i>
+			monitor
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-moon mr-xs"></i>
+			moon
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-more-horizontal mr-xs"></i>
+			more-horizontal
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-more-vertical mr-xs"></i>
+			more-vertical
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-mouse-pointer mr-xs"></i>
+			mouse-pointer
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-move mr-xs"></i>
+			move
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-music mr-xs"></i>
+			music
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-navigation mr-xs"></i>
+			navigation
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-navigation-2 mr-xs"></i>
+			navigation-2
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-octagon mr-xs"></i>
+			octagon
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-package mr-xs"></i>
+			package
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-paperclip mr-xs"></i>
+			paperclip
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-path mr-xs"></i>
+			path
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-pause mr-xs"></i>
+			pause
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-pause-circle mr-xs"></i>
+			pause-circle
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-pen-tool mr-xs"></i>
+			pen-tool
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-percent mr-xs"></i>
+			percent
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-phone mr-xs"></i>
+			phone
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-phone-call mr-xs"></i>
+			phone-call
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-phone-forwarded mr-xs"></i>
+			phone-forwarded
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-phone-incoming mr-xs"></i>
+			phone-incoming
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-phone-missed mr-xs"></i>
+			phone-missed
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-phone-off mr-xs"></i>
+			phone-off
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-phone-outgoing mr-xs"></i>
+			phone-outgoing
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-pie-chart mr-xs"></i>
+			pie-chart
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-play mr-xs"></i>
+			play
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-play-circle mr-xs"></i>
+			play-circle
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-plus mr-xs"></i>
+			plus
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-plus-circle mr-xs"></i>
+			plus-circle
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-plus-square mr-xs"></i>
+			plus-square
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-pocket mr-xs"></i>
+			pocket
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-power mr-xs"></i>
+			power
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-printer mr-xs"></i>
+			printer
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-radio mr-xs"></i>
+			radio
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-refresh-ccw mr-xs"></i>
+			refresh-ccw
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-refresh-cw mr-xs"></i>
+			refresh-cw
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-repeat mr-xs"></i>
+			repeat
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-rewind mr-xs"></i>
+			rewind
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-rotate-ccw mr-xs"></i>
+			rotate-ccw
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-rotate-cw mr-xs"></i>
+			rotate-cw
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-rss mr-xs"></i>
+			rss
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-save mr-xs"></i>
+			save
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-scissors mr-xs"></i>
+			scissors
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-search mr-xs"></i>
+			search
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-send mr-xs"></i>
+			send
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-server mr-xs"></i>
+			server
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-settings mr-xs"></i>
+			settings
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-share mr-xs"></i>
+			share
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-share-2 mr-xs"></i>
+			share-2
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-shield mr-xs"></i>
+			shield
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-shield-off mr-xs"></i>
+			shield-off
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-shopping-bag mr-xs"></i>
+			shopping-bag
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-shopping-cart mr-xs"></i>
+			shopping-cart
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-shuffle mr-xs"></i>
+			shuffle
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-sidebar mr-xs"></i>
+			sidebar
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-skip-back mr-xs"></i>
+			skip-back
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-skip-forward mr-xs"></i>
+			skip-forward
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-sidebar mr-xs"></i>
+			sidebar
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-skip-back mr-xs"></i>
+			skip-back
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-skip-forward mr-xs"></i>
+			skip-forward
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-slack mr-xs"></i>
+			slack
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-slash mr-xs"></i>
+			slash
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-sliders mr-xs"></i>
+			sliders
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-smartphone mr-xs"></i>
+			smartphone
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-smile mr-xs"></i>
+			smile
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-speaker mr-xs"></i>
+			speaker
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-square mr-xs"></i>
+			square
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-star mr-xs"></i>
+			star
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-stop-circle mr-xs"></i>
+			stop-circle
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-sun mr-xs"></i>
+			sun
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-sunrise mr-xs"></i>
+			sunrise
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-sunset mr-xs"></i>
+			sunset
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-tablet mr-xs"></i>
+			tablet
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-tag mr-xs"></i>
+			tag
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-target mr-xs"></i>
+			target
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-terminal mr-xs"></i>
+			terminal
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-thermometer mr-xs"></i>
+			thermometer
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-thumbs-down mr-xs"></i>
+			thumbs-down
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-thumbs-up mr-xs"></i>
+			thumbs-up
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-toggle-left mr-xs"></i>
+			toggle-left
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-toggle-right mr-xs"></i>
+			toggle-right
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-tool mr-xs"></i>
+			tool
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-trash mr-xs"></i>
+			trash
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-trash-2 mr-xs"></i>
+			trash-2
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-trello mr-xs"></i>
+			trello
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-trending-down mr-xs"></i>
+			trending-down
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-trending-up mr-xs"></i>
+			trending-up
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-triangle mr-xs"></i>
+			triangle
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-truck mr-xs"></i>
+			truck
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-tv mr-xs"></i>
+			tv
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-twitch mr-xs"></i>
+			twitch
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-twitter mr-xs"></i>
+			twitter
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-type mr-xs"></i>
+			type
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-umbrella mr-xs"></i>
+			umbrella
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-underline mr-xs"></i>
+			underline
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-unlock mr-xs"></i>
+			unlock
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-upload mr-xs"></i>
+			upload
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-upload-cloud mr-xs"></i>
+			upload-cloud
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-user mr-xs"></i>
+			user
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-user-check mr-xs"></i>
+			user-check
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-user-minus mr-xs"></i>
+			user-minus
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-user-plus mr-xs"></i>
+			user-plus
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-user-x mr-xs"></i>
+			user-x
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-users mr-xs"></i>
+			users
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-video mr-xs"></i>
+			video
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-video-off mr-xs"></i>
+			video-off
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-voicemail mr-xs"></i>
+			voicemail
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-volume mr-xs"></i>
+			volume
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-volume-1 mr-xs"></i>
+			volume-1
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-volume-2 mr-xs"></i>
+			volume-2
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-volume-x mr-xs"></i>
+			volume-x
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-watch mr-xs"></i>
+			watch
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-wifi mr-xs"></i>
+			wifi
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-wifi-off mr-xs"></i>
+			wifi-off
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-wind mr-xs"></i>
+			wind
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-x mr-xs"></i>
+			x
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-x-circle mr-xs"></i>
+			x-circle
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-x-octagon mr-xs"></i>
+			x-octagon
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-x-square mr-xs"></i>
+			x-square
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-youtube mr-xs"></i>
+			youtube
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-zap mr-xs"></i>
+			zap
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-zap-off mr-xs"></i>
+			zap-off
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-zoom-in mr-xs"></i>
+			zoom-in
+		</div>
+		<div class="mb-lg item flex middle">
+			<i class="icon-zoom-out mr-xs"></i>
+			zoom-out
+		</div>
+	</div>
+</div>
+
 
 ### Ejemplos de uso
 
@@ -1180,13 +1180,13 @@ Para añadir el icono, simplemente usar la clase `icon-` y el nombre del icono q
 </div>
 
 ```html
-		<div class="mb-lg">
+		<div>
 			<i class="icon-video mr-xs"></i>video
 		</div>
-		<div class="mb-lg">
+		<div>
 			<i class="icon-map mr-xs"></i>map
 		</div>
-		<div class="mb-lg">
+		<div>
 			<i class="icon-award mr-xs"></i>award
 		</div>
 ```

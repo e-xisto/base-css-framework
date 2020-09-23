@@ -10,18 +10,13 @@
 Oculta o muestra el contenido de un contenedor con un click.
 
 Para que este componente funcione, debemos tener un elemento `a` que cuente con los atributos `data-action="collapse"` y
-`data-target="{id}"` donde `id` equivaldrá al `id` del siguiente contenedor.
+`data-target="{id}"` donde `{id}` equivaldrá al `id` del contenedor que debemos crear a continuación con los siguientes requisitos:
 
-A continuación, creamos un contenedor que debe contar con los siguientes requisitos:
-
-<ul>
-	<li>Un <code>id</code> el cual debe ser el mismo que el <code>data-target</code> del <code>a</code></li>
-	<li>Una clase <code>collapse</code></li>
-</ul>
+* Un `id` el cual debe ser el mismo que el `data-target` del `a`.
+* Una clase `collapse`.
 
 <div class="demo">
 	<a class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento">Collapse independiente</a>
-
 	<div id="id-elemento" class="collapse">
 		<p>
 			Collapse independiente: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, provident aut ratione saepe
@@ -31,7 +26,6 @@ A continuación, creamos un contenedor que debe contar con los siguientes requis
 </div>
 
 ```html
-
 		<a class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento">Collapse 1</a>
 
 		<div id="id-elemento" class="collapse">
@@ -40,17 +34,14 @@ A continuación, creamos un contenedor que debe contar con los siguientes requis
 				molestias aliquam. Reprehenderit nulla veniam magnam delectus?
 			</p>
 		</div>
-
 ```
 
 El tipo de collapse anterior se podría considerar que es un "collapse independiente", ya que sólo se abrirá y cerrará
 cuando se haga click sobre él sin importar si hay más collapses.
 
 Para que nuestro collapse se cierre automáticamente al abrir otro elemento, debemos agrupar todo el código anterior en
-un nuevo contenedor proporcionándole un `id`. Este nuevo contenedor debe contar con al menos dos collapses en su interior
-donde cada uno de ellos llevará el atributo `data-parent="{id}"`, sustituyendo este `id` por el del nuevo contenedor.
-
-
+un nuevo contenedor proporcionándole a este un `id`. Este nuevo contenedor debe contar con al menos dos collapses en su interior
+donde cada uno de ellos llevará el atributo `data-parent="{id}"`, sustituyendo este `{id}` por el del nuevo contenedor.
 
 <div class="demo">
 	<div id="parent">
@@ -72,7 +63,6 @@ donde cada uno de ellos llevará el atributo `data-parent="{id}"`, sustituyendo 
 </div>
 
 ```html
-
 		<div id="parent">
 
 			<a class="btn btn-block btn-primary mb-md" data-action="collapse" data-target="id-elemento-1">Collapse 1</a>
@@ -92,9 +82,7 @@ donde cada uno de ellos llevará el atributo `data-parent="{id}"`, sustituyendo 
 			</div>
 
 		</div>
-
 ```
-
 
 {% endmarkdown %}
 

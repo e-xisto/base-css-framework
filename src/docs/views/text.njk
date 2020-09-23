@@ -27,17 +27,17 @@
 
 {% markdown %}
 
+Textos
+======
 
-# Textos
-
-Modifica tamaños, alineación, interlineado... También, podemos modificar su <a href="colors.html">color</a> mediante
-otras clases.
+Modifica tamaños, alineación, interlineado... También, se puede modificar su [color](/colors.html) mediante otras
+clases.
 
 Mediante el archivo `variable.scss` podemos modificar todos los estilos de los encabezados, párrafos, citas...
 
 ### Encabezados
 
-Estilos para todos los encabezados. También se puede usar como clase desde `.h1` a `.h6`.
+Estilos para todos los encabezados. También se pueden usar como clases desde `.h1` a `.h6`.
 
 <div class="demo utilities-heading">
 	<h1>Encabezado 1</h1>
@@ -49,14 +49,12 @@ Estilos para todos los encabezados. También se puede usar como clase desde `.h1
 </div>
 
 ```html
-
 		<h1>Encabezado 1</h1>
 		<h2>Encabezado 2</h2>
 		<h3>Encabezado 3</h3>
 		<h4>Encabezado 4</h4>
 		<h5>Encabezado 5</h5>
 		<h6>Encabezado 6</h6>
-
 ```
 
 <div class="demo utilities-heading">
@@ -69,14 +67,12 @@ Estilos para todos los encabezados. También se puede usar como clase desde `.h1
 </div>
 
 ```html
-
 		<p class="h1">Párrafo como encabezado 1</p>
 		<p class="h2">Párrafo como encabezado 2</p>
 		<p class="h3">Párrafo como encabezado 3</p>
 		<p class="h4">Párrafo como encabezado 4</p>
 		<p class="h5">Párrafo como encabezado 5</p>
 		<p class="h6">Párrafo como encabezado 6</p>
-
 ```
 
 ### Display
@@ -88,9 +84,7 @@ Si necesitamos resaltar un título con mayor enfásis que un `h1` utilizamos la 
 </div>
 
 ```html
-
-	<p class="display">Párrafo como display</p>
-
+		<p class="display">Párrafo como display</p>
 ```
 
 ### Tamaños
@@ -119,7 +113,6 @@ Modifica el interlineado y el tamaño del elemento (desde resolución sm hasta x
 </div>
 
 ```html
-
 		<p class="text-xxl">.text-xxl</p>
 		<p class="text-size-xxl">.text-size-xxl</p>
 		<p class="text-xl">.text-xl</p>
@@ -133,11 +126,10 @@ Modifica el interlineado y el tamaño del elemento (desde resolución sm hasta x
 		<p class="text-size-sm">.text-size-sm</p>
 		<p class="text-xxs">.text-xxs</p>
 		<p class="text-size-xxs">.text-size-xxs</p>
-
 ```
 ### Peso de la fuente
 
-Modifica el grosor o el peso de la fuente.
+Modifica el grosor de la fuente.
 
 <div class="demo">
 	<p class="text-bolder">.text-bolder</p>
@@ -145,10 +137,8 @@ Modifica el grosor o el peso de la fuente.
 </div>
 
 ```html
-
 		<p class="text-bolder">text-bolder</p>
 		<p class="bolder">bolder</p>
-
 ```
 
 <div class="demo">
@@ -159,12 +149,10 @@ Modifica el grosor o el peso de la fuente.
 </div>
 
 ```html
-
 		<p class="text-bold">.text-bold</p>
 		<p class="strong">.strong</p>
 		<p class="bold">.bold</p>
 		<strong>bold</strong>
-
 ```
 
 <div class="demo">
@@ -173,10 +161,8 @@ Modifica el grosor o el peso de la fuente.
 </div>
 
 ```html
-
 		<p class="text-normal">.text-normal</p>
 		<p class="normal">.normal</p>
-
 ```
 
 <div class="demo">
@@ -185,10 +171,8 @@ Modifica el grosor o el peso de la fuente.
 </div>
 
 ```html
-
 		<p class="text-lighter">.text-lighter</p>
 		<p class="light">.light</p>
-
 ```
 
 <div class="demo">
@@ -197,16 +181,15 @@ Modifica el grosor o el peso de la fuente.
 </div>
 
 ```html
-
-	<p class="text-thin">.text-thin</p>
-	<p class="thin">.thin</p>
-
+		<p class="text-thin">.text-thin</p>
+		<p class="thin">.thin</p>
 ```
 
 ### Alineación
 
-Ajusta la dirección a la que se alinea el contenido. Se puede ajustar según la resolución de la pantalla mediante la
-clase `text-#{$breakpoint}-*`.
+Ajusta la dirección a la que se alinea el contenido.
+
+Se puede ajustar según la resolución de la pantalla mediante la clase `text-#{$breakpoint}-*`.
 
 <div class="demo">
 	<p class="text-right">.text-right</p>
@@ -217,13 +200,11 @@ clase `text-#{$breakpoint}-*`.
 </div>
 
 ```html
-
 		<p class="text-right">.text-right</p>
 		<p class="text-lg-right">.text-lg-right</p>
 		<p class="text-md-right">.text-md-right</p>
 		<p class="text-sm-right">.text-sm-right</p>
 		<p class="text-xs-right">.text-xs-right</p>
-
 ```
 
 <div class="demo">
@@ -235,13 +216,11 @@ clase `text-#{$breakpoint}-*`.
 </div>
 
 ```html
-
 		<p class="text-left">.text-left</p>
 		<p class="text-lg-left">.text-lg-left</p>
 		<p class="text-md-left">.text-md-left</p>
 		<p class="text-sm-left">.text-sm-left</p>
 		<p class="text-xs-left">.text-xs-left</p>
-
 ```
 
 <div class="demo">
@@ -253,13 +232,11 @@ clase `text-#{$breakpoint}-*`.
 </div>
 
 ```html
-
 		<p class="text-justify">.text-justify</p>
 		<p class="text-lg-justify">.text-lg-justify</p>
 		<p class="text-md-justify">.text-md-justify</p>
 		<p class="text-sm-justify">.text-sm-justify</p>
 		<p class="text-xs-justify">.text-xs-justify</p>
-
 ```
 
 <div class="demo">
@@ -271,35 +248,31 @@ clase `text-#{$breakpoint}-*`.
 </div>
 
 ```html
-
 		<p class="text-center">.text-center</p>
 		<p class="text-lg-center">.text-lg-center</p>
 		<p class="text-md-center">.text-md-center</p>
 		<p class="text-sm-center">.text-sm-center</p>
 		<p class="text-xs-center">.text-xs-center</p>
-
 ```
 
 ### Máyusculas y minúsculas
 
-Para modificar el texto a minúsculas usamos la clase `.text-lowercase`, mientras que si lo deseamos en mayúsculas
+Para modificar el texto a minúsculas usamos la clase `text-lowercase`, mientras que si lo deseamos en mayúsculas
 usamos `text-uppercase`.
 
 <div class="demo">
 	<p class="text-lowercase">TEXTO MINÚSCULA</p>
-	<p class="text-uppercase">texto mayúsculas</p>
+	<p class="text-uppercase">texto mayúscula</p>
 </div>
 
 ```html
-
 		<p class="text-lowercase">TEXTO MINÚSCULA</p>
-		<p class="text-uppercase">texto mayúsculas</p>
-
+		<p class="text-uppercase">texto mayúscula</p>
 ```
 
 ### Nowrap
 
-Para que el texto no salte de línea, usamos la clase `text-nowrap`
+Para que el texto no salte de línea, usamos `text-nowrap`
 
 <div class="demo">
 	<div class="utilities-text">
@@ -308,9 +281,7 @@ Para que el texto no salte de línea, usamos la clase `text-nowrap`
 </div>
 
 ```html
-
-	<p class="text-nowrap">.text-nowrap</p>
-
+		<p class="text-nowrap">.text-nowrap</p>
 ```
 
 ### Subrayado
@@ -331,14 +302,14 @@ Subraya un elemento usando `text-decoration-underline` o, por el contrario, elim
 
 ### Citas
 
-Un estilo personalizado para las citas sin necesidad de usar ninguna clase.
+Estilo personalizado para las citas, sin necesidad de aplicar alguna clase.
 
-<blockquote>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque corrupti earum non.</blockquote>
+> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque corrupti earum non.
 
 ```html
-
-		<blockquote>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque corrupti earum non.</blockquote>
-
+		<blockquote>
+			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque corrupti earum non.</p>
+		</blockquote>
 ```
 
 {% endmarkdown %}

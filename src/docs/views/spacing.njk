@@ -30,33 +30,27 @@
 
 {% markdown %}
 
-# Espacios
+Espacios
+======
 
-Una serie de clases ya sea aplicando `margin` o `padding` las cuales cuentan con una versión `xxs` hasta `xxxxl` para aplicar menor o mayor espacio.
+Una serie de clases ya sea aplicando `margin` o `padding` las cuales cuentan con una versión `xxs` hasta `xxxxl` para
+aplicar menor o mayor espacio.
 
 La semántica de dichas clases es la siguiente:
 
-<ul>
-	<li>
-		Si queremos aplicar <code>margin</code> a nuestro elemento, empezariamos la clase por <code>m-</code>, mientras que si es padding la empezaríamos por <code>p-</code>.
-	</li>
-	<li>
-		Indistintamente de si es <code>margin</code> o <code>padding</code>, a continuación escribiriamos el lado al que queremos que se aplique, donde:
-		<ul>
-			<li><code>t-</code> es para <code>margin-top</code> o <code>padding-top</code></li>
-			<li><code>b-</code> es para <code>margin-bottom</code> o <code>padding-bottom</code></li>
-			<li><code>l-</code> es para <code>margin-left</code> o <code>padding-left</code></li>
-			<li><code>r-</code> es para <code>margin-right</code> o <code>padding-right</code></li>
-			<li><code>x-</code> es para <code>margin-right</code> o <code>padding-right</code> y <code>margin-left</code> o <code>padding-left</code></li>
-			<li><code>y-</code> es para <code>margin-top</code> o <code>padding-top</code> y <code>margin-bottom</code> o <code>padding-bottom</code></li>
-		</ul>
-	</li>
-	<li>
-		A continuación añadiriamos el breakpoint (desde<code>xs</code> hasta <code>lg</code>), aunque no es necesario a no ser que busquemos darle ese <code>margin</code> o <code>padding</code>
-		en una resolución específica.
-	</li>
-	<li>Por último, añadimos el tamaño partiendo desde <code>xss</code> hasta <code>xxxxl</code>, donde también encontramos <code>none</code>.</li>
-</ul>
+	* Si queremos aplicar `margin` a nuestro elemento, empezariamos la clase por `m-`, mientras que si es padding la
+	empezaríamos por `p-`.
+	* Indistintamente de si es `margin` o `padding`, a continuación escribiríamos el lado al que queremos que se aplique,
+	donde:
+			* `t-` es para `margin-top` o `padding-top`.
+			* `b-` es para `margin-bottom` o `padding-bottom`.
+			* `l-` es para `margin-left` o `padding-left`.
+			* `r-` es para `margin-right` o `padding-right`.
+			* `x-` es para `margin-right` o `padding-right` y `margin-left` o `padding-left`.
+			* `y-` es para `margin-top` o `padding-top` y `margin-bottom` o `padding-bottom`.
+	* A continuación añadiriamos el breakpoint (desde `xs` hasta `lg`). Esto no es necesario a no ser que busquemos
+	aplicarle ese `margin` o `padding` en una resolución específica.
+	* Por último, añadimos el tamaño partiendo desde `xss` hasta `xxxxl`, donde también encontramos `none`.
 
 Los valores que encontramos desde `xxs` hasta `xxxxl` equivale al siguiente tamaño en píxeles que se muestra en la
 siguiente tabla:
@@ -112,30 +106,28 @@ siguiente tabla:
 
 <div class="demo spacing-demo">
 	<div class="spacing-utilities">
-		<span class="mt-lg-md pt-lg-sm">.mt-lg-md .pt-lg-sm</span>
+		<span class="mr-md">.mr-md</span>
 	</div>
 	<div class="spacing-utilities">
-		<span class="my-sm pb-xs">.my-sm .pb-xs</span>
+		<span class="p-sm">.p-xl</span>
 	</div>
 	<div class="spacing-utilities">
-		<span class="mb-xs-xs">.mb-xs-xs</span>
+		<span class="my-lg">.my-lg</span>
 	</div>
 	<div class="spacing-utilities">
-		<span class="mx-xxxl p-md">.mx-xxxl .p-md</span>
+		<span class="mx-xl pt-md">.mx-xl .pt-md</span>
 	</div>
 	<div class="spacing-utilities">
-		<span class="my-xl pb-md-xl">.my-xl .pb-md-xl</span>
+		<span class="mr-md-xl pb-md-sm">.mr-md-xl .pb-md-sm</span>
 	</div>
 </div>
 
 ```html
-
-		<span class="mt-lg-md pt-lg-sm">.mt-lg-md .pt-lg-sm</span>
-		<span class="my-sm pb-xs">.my-sm .pb-xs</span>
-		<span class="mb-xs-xs">.mb-xs-xs</span>
-		<span class="mx-xxxl p-md">.mx-xxxl .p-md</span>
-		<span class="my-xl pb-md-xl">.my-xl .pb-md-xl</span>
-
+		<span class="mr-md">.mr-md</span>
+		<span class="p-sm">.p-xl</span>
+		<span class="my-lg">.my-lg</span>
+		<span class="mx-xl pt-md">.mx-xl .pt-md</span>
+		<span class="mr-md-xl pb-md-sm">.mr-md-xl .pb-md-sm</span>
 ```
 
 {% endmarkdown %}

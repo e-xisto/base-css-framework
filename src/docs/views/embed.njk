@@ -5,9 +5,10 @@
 
 {% markdown %}
 
-# Embeds
+Embeds
+======
 
-Crea vídeos responsive basados en el en el ancho del contenedor padre.
+Crea vídeos responsive y modifica su formato.
 
 Para aplicar dichos estilos, simplemente crear un contenedor con la clase `embed-responsive`
 
@@ -21,11 +22,9 @@ la clase `embed-responsive-time`.
 </div>
 
 ```html
-
 		<div class="embed-responsive">
 			<iframe src="https://www.youtube.com/embed/3vBwRfQbXkg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
-
 ```
 
 Podemos modificar el formato de nuestro vídeo, es decir, si lo deseamos en 16:9 o 4:3.
@@ -39,21 +38,18 @@ Para que el vídeo sea tenga un relación de aspecto de 4:3, aplicamos la clase 
 </div>
 
 ```html
-
 		<div class="embed-responsive embed-responsive-4by3">
 			<iframe class="" src="https://www.youtube.com/embed/3vBwRfQbXkg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
-
 ```
 
-Mientras que si lo deseamos a 16:9, cambiaremos la clase anterior por `embed-responsive-16by9`.
+Mientras que si lo deseamos a 16:9, cambiaremos la clase anterior por `embed-responsive-16by9` (mostrándose así como el
+primer vídeo).
 
 ```html
-
 		<div class="embed-responsive embed-responsive-16by9">
 			<iframe class="" src="https://www.youtube.com/embed/3vBwRfQbXkg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
-
 ```
 
 {% endmarkdown %}

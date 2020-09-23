@@ -5,7 +5,8 @@
 
 {% markdown %}
 
-# Contenidos
+Contenidos
+======
 
 Base CSS incluye, dentro de su estructura en carpetas, los archivos finales ya precompilados listos para su uso y distribución y el código fuente.
 
@@ -69,7 +70,7 @@ El archivo `base.scss` es el encargado de importar todas las dependencias CSS de
 
 A su vez, cada carpeta contine un archivo `_all.scss` donde se declaran todas las importaciones de los elementos o componenetes que contiene.
 
-La carpeta `/theme` contiene únicamente un archivo de variables donde se puede modificar el aspecto de elementos y componentes actuando sobre tipografías, colores, espaciado y tamaños. Dentro de la carpeta `/theme` se deben incluir los documentos CSS que redefinan o sobreescriben los componentes originales. 
+La carpeta `/theme` contiene únicamente un archivo de variables donde se puede modificar el aspecto de elementos y componentes actuando sobre tipografías, colores, espaciado y tamaños. Dentro de la carpeta `/theme` se deben incluir los documentos CSS que redefinan o sobreescriben los componentes originales.
 
 De esta forma, el código fuente del framework siempre permanecerán sin cambios y solo los documentos dentro de `/theme` serán los que se modifiquen según las necesidades de personalización de nuestro proyecto.
 
@@ -97,7 +98,7 @@ Dentro de `/views` se almacenan las diferentes plantillas que generan los docume
 
 El archivo `menu.js` exporta una variable donde se definen las opciones de menú y sus enlaces.
 
-Con `templates.js` se automatiza la lectura y renderizado de todas las plantillas incluidas en `/views`. 
+Con `templates.js` se automatiza la lectura y renderizado de todas las plantillas incluidas en `/views`.
 Básicamente lee todos los archivos que contiene la carpeta y definie un archivo de configuración que importa el plugin `nunjucks-webpack-plugin` para renderizar las plantillas.
 
 

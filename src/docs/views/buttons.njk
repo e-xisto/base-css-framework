@@ -5,47 +5,44 @@
 
 {% markdown %}
 
-# Botones
+Botones
+======
 
-Para aplicar estos estilos a los elementos, neceitamos usar la clase `btn`o `button` por defecto.
+Para aplicar estos estilos a un elemento, necesitamos usar la clase `btn`o `button` por defecto.
 
-Para modificar el color de los botones, debemos cambiar los <a href="/colors.html">colores</a> en el archivo `variables.scss`.
+Para modificar el color de los botones, debemos cambiar los [colores](/colors.html) en el archivo `variables.scss`.
 
 <div class="demo">
 	<div class="row">
 		<div class="col-sm-3 col-xs-6">
 			<a href="" class="btn btn-block mb-md">Default</a>
-			<a href="" class="btn btn-primary btn-block mb-xs-md">Primary</a>
+			<button class="btn btn-success btn-block mb-xs-md">Success</button>
+		</div>
+		<div class="col-sm-3 col-xs-6">
+			<a href="" class="btn btn-primary btn-block mb-md">Primary</a>
+			<a href="" class="btn btn-danger btn-block mb-xs-md">Danger</a>
 		</div>
 		<div class="col-sm-3 col-xs-6">
 			<button class="btn btn-secondary btn-block mb-md">Secondary</button>
-			<button class="btn btn-link btn-block mb-xs-md">link</button>
-		</div>
-		<div class="col-sm-3 col-xs-6">
-			<a href="" class="btn btn-danger btn-block mb-md">Danger</a>
 			<a href="" class="btn btn-warning btn-block mb-xs-md">Warning</a>
 		</div>
 		<div class="col-sm-3 col-xs-6">
-			<button class="btn btn-success btn-block mb-md">Success</button>
+				<button class="btn btn-link btn-block mb-md">Link</button>
 			<button class="btn btn-info btn-block mb-xs-md">Info</button>
 		</div>
 	</div>
 </div>
 
-	```html
-
+```html
 		<a href="" class="btn">Default</a>
 		<a href="" class="btn btn-primary">Primary</a>
-
 		<button class="btn btn-secondary">Secondary</button>
-		<button class="btn btn-link">link</button>
-
-		<a href="" class="btn btn-danger">Danger</a>
-		<a href="" class="btn btn-warning">Warning</a>
+		<button class="btn btn-link">Link</button>
 
 		<button class="btn btn-success">Success</button>
+		<a href="" class="btn btn-danger">Danger</a>
+		<a href="" class="btn btn-warning">Warning</a>
 		<button class="btn btn-info">Info</button>
-
 ```
 
 ### Botones outline
@@ -56,35 +53,32 @@ Clases `btn-outlined` o `btn-outline` para eliminar el color de fondo de los bot
 	<div class="row">
 		<div class="col-sm-3 col-xs-6">
 			<a href="" class="btn btn-outlined btn-block mb-md">Default</a>
-			<a href="" class="btn btn-primary btn-outlined btn-block mb-xs-md">Primary</a>
+			<button class="btn btn-success btn-outline btn-block mb-xs-md">Success</button>
 		</div>
 		<div class="col-sm-3 col-xs-6">
-			<button class="btn btn-secondary btn-outline btn-block mb-md">Secondary</button>
-			<button class="btn btn-link btn-outline btn-block mb-xs-md">link</button>
-		</div>
-		<div class="col-sm-3 col-xs-6">
-			<a href="" class="btn btn-danger btn-outlined btn-block mb-md">Danger</a>
-			<a href="" class="btn btn-warning btn-outlined btn-block mb-xs-md">Warning</a>
-		</div>
-		<div class="col-sm-3 col-xs-6">
-			<button class="btn btn-success btn-outline btn-block mb-md">Success</button>
+				<a href="" class="btn btn-primary btn-outlined btn-block mb-md">Primary</a>
+				<a href="" class="btn btn-danger btn-outlined btn-block mb-xs-md">Danger</a>
+			</div>
+			<div class="col-sm-3 col-xs-6">
+				<button class="btn btn-secondary btn-outline btn-block mb-md">Secondary</button>
+				<a href="" class="btn btn-warning btn-outlined btn-block mb-xs-md">Warning</a>
+			</div>
+			<div class="col-sm-3 col-xs-6">
+					<button class="btn btn-link btn-outline btn-block mb-md">Link</button>
 			<button class="btn btn-info btn-outline btn-block mb-xs-md">Info</button>
 		</div>
 	</div>
 </div>
 
 ```html
-
 		<a href="" class="btn btn-outlined">Default</a>
 		<a href="" class="btn btn-primary btn-outlined">Primary</a>
-
 		<button class="btn btn-secondary btn-outline">Secondary</button>
-		<button class="btn btn-link btn-outline">link</button>
-
-		<a href="" class="btn btn-danger btn-outlined">Danger</a>
-		<a href="" class="btn btn-warning btn-outlined">Warning</a>
+		<button class="btn btn-link btn-outline">Link</button>
 
 		<button class="btn btn-success btn-outline">Success</button>
+		<a href="" class="btn btn-danger btn-outlined">Danger</a>
+		<a href="" class="btn btn-warning btn-outlined">Warning</a>
 		<button class="btn btn-info btn-outline">Info</button>
 ```
 
@@ -100,12 +94,10 @@ Modifica el tamaño de los botones usando las clases `btn-lg`, `btn-md` y `btn-s
 </div>
 
 ```html
-
 		<button class="btn btn-primary btn-lg">Botón LG</button>
 		<button class="btn btn-primary btn-md">Botón MD</button>
 		<button class="btn btn-primary">Default</button>
 		<button class="btn btn-primary btn-sm">Botón SM</button>
-
 ```
 
 ### Desactivado
@@ -118,15 +110,13 @@ Modifica el estado de un botón a desactivado mediante la clase `disabled` o bie
 </div>
 
 ```html
-
 		<a class="btn" disabled>Botón atributo disabled</a>
 		<a class="btn disabled">Botón clase disabled</a>
-
 ```
 
 ### Botón redondeado
 
-Redondea los botones usando `btn-round` o `btn-rounded`.
+Redondea botones usando `btn-round` o `btn-rounded`.
 
 <div class="demo">
 	<a class="btn btn-success mr-md btn-rounded mb-xs-md">Botón rounded</a>
@@ -140,16 +130,14 @@ Redondea los botones usando `btn-round` o `btn-rounded`.
 
 ### Botón como bloque
 
-Usando la clase `btn-block`, el botón ocupará ancho completo del padre.
+El botón ocupará ancho completo del padre al usar `btn-block`
 
 <div class="demo">
 	<button class="btn btn-block btn-primary">Botón block</button>
 </div>
 
 ```html
-
 		<button class="btn btn-block btn-primary">Botón block</button>
-
 ```
 
 También podemos usar esta clase para responsive, es decir, utilizando la clase `btn-#{breakpoint}-block` (donde #{breakpoint} equivale a `lg`, `md`, `sm` y `xs`) decidimos para
@@ -163,15 +151,12 @@ que resolución el botón ocuparía el ancho completo.
 </div>
 
 ```html
-
 		<a class="btn btn-primary btn-lg-block">Botón lg block</a>
 		<a class="btn btn-primary btn-md-block">Botón md block</a>
 		<a class="btn btn-primary btn-sm-block">Botón sm block</a>
 		<a class="btn btn-primary btn-xs-block">Botón xs block</a>
-
 ```
 
 {% endmarkdown %}
-
 
 {% endblock %}

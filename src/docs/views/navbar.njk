@@ -5,7 +5,8 @@
 
 {% markdown %}
 
-# Navbar
+Navbar
+======
 
 Barra de navegación responsive.
 
@@ -13,23 +14,19 @@ Para empezar a usar el componente `navbar`, debemos crear un contenedor que engl
 la clase `navbar`.
 
 ```html
-
 		<nav class="navbar">
 			...
 		</nav>
-
 ```
 
 El segundo paso, será añadir un nuevo contenedor llamado `navbar-content`.
 
 ```html
-
 		<nav class="navbar">
 			<div class="navbar-content">
 				...
 			</div>
 		</nav>
-
 ```
 
 Dentro de `navbar-content`, encontramos las clases `navbar-left`, `navbar-right` y `navbar-center`. Estas clases nos
@@ -67,26 +64,17 @@ permitirán situar el contenido en la posición del contenedor que queramos.
 </div>
 
 ```html
-
 		<nav class="navbar">
 			<div class="navbar-content">
-				<div class="navbar-left">
-					.navbar-left
-				</div>
-				<div class="navbar-center">
-					.navbar-center
-				</div>
-				<div class="navbar-right">
-					.navbar-right
-				</div>
+				<div class="navbar-left">.navbar-left</div>
+				<div class="navbar-center">.navbar-center</div>
+				<div class="navbar-right">.navbar-right</div>
 			</div>
 		</nav>
-
 ```
 
 En nuestro `navbar`, lo más probable es que se encuentre el logo de nuestra página web. Por lo tanto, podemos usar la
 clase `navbar-logo` la cual hará que nuestra imagen funcione como un elemento de `bloque`.
-
 
 <div class="demo">
 	<nav class="navbar">
@@ -122,7 +110,6 @@ clase `navbar-logo` la cual hará que nuestra imagen funcione como un elemento d
 </div>
 
 ```html
-
 		<nav class="navbar">
 			<div class="navbar-content">
 				<div class="navbar-left">
@@ -130,15 +117,10 @@ clase `navbar-logo` la cual hará que nuestra imagen funcione como un elemento d
 						<img src="//ximg.es/150x40/dedede/aaa&text=LOGO" alt="">
 					</div>
 				</div>
-				<div class="navbar-center">
-					.navbar-center
-				</div>
-				<div class="navbar-right">
-					.navbar-right
-				</div>
+				<div class="navbar-center">.navbar-center</div>
+				<div class="navbar-right">.navbar-right</div>
 			</div>
 		</nav>
-
 ```
 
 Lo mismo sucede con los botones. Si contamos con un botón en el `navbar`, podemos añadir a un contenedor con la clase
@@ -146,30 +128,28 @@ Lo mismo sucede con los botones. Si contamos con un botón en el `navbar`, podem
 
 <div class="demo">
 	<nav class="navbar">
-			<div class="navbar-responsive">
-					<div class="navbar-left">
-						<div class="navbar-logo">
-							<img src="//ximg.es/150x30/dedede/aaa&text=LOGO" alt="">
-						</div>
-					</div>
-					<div class="navbar-center"></div>
-					<div class="navbar-right">
-						<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content').classList.toggle('open')">
-							<div class="navbar-burger-bar"></div>
-							<div class="navbar-burger-bar"></div>
-							<div class="navbar-burger-bar"></div>
-						</div>
-					</div>
+		<div class="navbar-responsive">
+			<div class="navbar-left">
+				<div class="navbar-logo">
+					<img src="//ximg.es/150x30/dedede/aaa&text=LOGO" alt="">
 				</div>
+			</div>
+			<div class="navbar-center"></div>
+			<div class="navbar-right">
+				<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content').classList.toggle('open')">
+					<div class="navbar-burger-bar"></div>
+					<div class="navbar-burger-bar"></div>
+					<div class="navbar-burger-bar"></div>
+				</div>
+			</div>
+		</div>
 		<div class="navbar-content">
 			<div class="navbar-left">
 				<div class="navbar-logo">
 					<img src="//ximg.es/150x40/dedede/aaa&text=LOGO" alt="">
 				</div>
 			</div>
-			<div class="navbar-center">
-				.navbar-center
-			</div>
+			<div class="navbar-center">.navbar-center</div>
 			<div class="navbar-right">
 				<div class="navbar-button">
 					<a href="" class="btn btn-primary">.navbar-button</a>
@@ -180,7 +160,6 @@ Lo mismo sucede con los botones. Si contamos con un botón en el `navbar`, podem
 </div>
 
 ```html
-
 		<nav class="navbar">
 			<div class="navbar-content">
 				<div class="navbar-left">
@@ -188,9 +167,7 @@ Lo mismo sucede con los botones. Si contamos con un botón en el `navbar`, podem
 						<img src="//ximg.es/150x40/dedede/aaa&text=LOGO" alt="">
 					</div>
 				</div>
-				<div class="navbar-center">
-					.navbar-center
-				</div>
+				<div class="navbar-center">.navbar-center</div>
 				<div class="navbar-right">
 					<div class="navbar-button">
 						<a href="" class="btn btn-primary">.navbar-button</a>
@@ -198,7 +175,6 @@ Lo mismo sucede con los botones. Si contamos con un botón en el `navbar`, podem
 				</div>
 			</div>
 		</nav>
-
 ```
 
 Si contamos con enlaces, usaremos la clase `navbar-link`.
@@ -226,9 +202,7 @@ Si contamos con enlaces, usaremos la clase `navbar-link`.
 					<img src="//ximg.es/150x40/dedede/aaa&text=LOGO" alt="">
 				</div>
 			</div>
-			<div class="navbar-center">
-				.navbar-center
-			</div>
+			<div class="navbar-center">.navbar-center</div>
 			<div class="navbar-right">
 				<div class="navbar-link"><a href="javascript: void(0)">.navbar-link</a></div>
 				<div class="navbar-link"><a href="javascript: void(0)">.navbar-link</a></div>
@@ -238,7 +212,6 @@ Si contamos con enlaces, usaremos la clase `navbar-link`.
 </div>
 
 ```html
-
 		<nav class="navbar">
 			<div class="navbar-content">
 				<div class="navbar-left">
@@ -246,16 +219,13 @@ Si contamos con enlaces, usaremos la clase `navbar-link`.
 						<img src="//ximg.es/150x40/dedede/aaa&text=LOGO" alt="">
 					</div>
 				</div>
-				<div class="navbar-center">
-					.navbar-center
-				</div>
+				<div class="navbar-center">.navbar-center</div>
 				<div class="navbar-right">
 					<div class="navbar-link"><a href="">.navbar-link</a></div>
 					<div class="navbar-link"><a href="">.navbar-link</a></div>
 				</div>
 			</div>
 		</nav>
-
 ```
 
 Dentro del `navbar`, podemos añadir un elemento `dropdown` para que nos depsliegue un menú. Dicho elemento `dropdown`
@@ -270,21 +240,21 @@ Por último, el elemento que accione este menú debe ser un enlace `a` que lleve
 
 <div class="demo">
 	<nav class="navbar">
-			<div class="navbar-responsive">
-					<div class="navbar-left">
-						<div class="navbar-logo">
-							<img src="//ximg.es/150x30/dedede/aaa&text=LOGO" alt="">
-						</div>
-					</div>
-					<div class="navbar-center"></div>
-					<div class="navbar-right">
-						<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content').classList.toggle('open')">
-							<div class="navbar-burger-bar"></div>
-							<div class="navbar-burger-bar"></div>
-							<div class="navbar-burger-bar"></div>
-						</div>
-					</div>
+		<div class="navbar-responsive">
+			<div class="navbar-left">
+				<div class="navbar-logo">
+					<img src="//ximg.es/150x30/dedede/aaa&text=LOGO" alt="">
 				</div>
+			</div>
+			<div class="navbar-center"></div>
+			<div class="navbar-right">
+				<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content').classList.toggle('open')">
+					<div class="navbar-burger-bar"></div>
+					<div class="navbar-burger-bar"></div>
+					<div class="navbar-burger-bar"></div>
+				</div>
+			</div>
+		</div>
 		<div class="navbar-content">
 			<div class="navbar-left">
 				<div class="navbar-logo">
@@ -310,7 +280,6 @@ Por último, el elemento que accione este menú debe ser un enlace `a` que lleve
 </div>
 
 ```html
-
 		<nav class="navbar">
 			<div class="navbar-content">
 				<div class="navbar-left">
@@ -334,7 +303,6 @@ Por último, el elemento que accione este menú debe ser un enlace `a` que lleve
 				</div>
 			</div>
 		</nav>
-
 ```
 
 Podemos modificar la posición en la que se muestra el menú dropdown mediante la clase `navbar-dropdown-menu-right`,
@@ -342,21 +310,21 @@ añadiéndosela al elemento `navbar-dropdown-menu`.
 
 <div class="demo">
 	<nav class="navbar">
-			<div class="navbar-responsive">
-					<div class="navbar-left">
-						<div class="navbar-logo">
-							<img src="//ximg.es/150x30/dedede/aaa&text=LOGO" alt="">
-						</div>
-					</div>
-					<div class="navbar-center"></div>
-					<div class="navbar-right">
-						<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content').classList.toggle('open')">
-							<div class="navbar-burger-bar"></div>
-							<div class="navbar-burger-bar"></div>
-							<div class="navbar-burger-bar"></div>
-						</div>
-					</div>
+		<div class="navbar-responsive">
+			<div class="navbar-left">
+				<div class="navbar-logo">
+					<img src="//ximg.es/150x30/dedede/aaa&text=LOGO" alt="">
 				</div>
+			</div>
+			<div class="navbar-center"></div>
+			<div class="navbar-right">
+				<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content').classList.toggle('open')">
+					<div class="navbar-burger-bar"></div>
+					<div class="navbar-burger-bar"></div>
+					<div class="navbar-burger-bar"></div>
+				</div>
+			</div>
+		</div>
 		<div class="navbar-content">
 			<div class="navbar-left">
 				<div class="navbar-logo">
@@ -382,7 +350,6 @@ añadiéndosela al elemento `navbar-dropdown-menu`.
 </div>
 
 ```html
-
 		<nav class="navbar">
 			<div class="navbar-content">
 				<div class="navbar-left">
@@ -406,28 +373,27 @@ añadiéndosela al elemento `navbar-dropdown-menu`.
 				</div>
 			</div>
 		</nav>
-
 ```
 
 Si uno de los elementos que añadimos al `navbar` no es un enlace, podemos aplicar la clase `navbar-item`.
 
 <div class="demo">
 	<nav class="navbar">
-			<div class="navbar-responsive">
-					<div class="navbar-left">
-						<div class="navbar-logo">
-							<img src="//ximg.es/150x30/dedede/aaa&text=LOGO" alt="">
-						</div>
-					</div>
-					<div class="navbar-center"></div>
-					<div class="navbar-right">
-						<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content').classList.toggle('open')">
-							<div class="navbar-burger-bar"></div>
-							<div class="navbar-burger-bar"></div>
-							<div class="navbar-burger-bar"></div>
-						</div>
-					</div>
+		<div class="navbar-responsive">
+			<div class="navbar-left">
+				<div class="navbar-logo">
+					<img src="//ximg.es/150x30/dedede/aaa&text=LOGO" alt="">
 				</div>
+			</div>
+			<div class="navbar-center"></div>
+			<div class="navbar-right">
+				<div class="navbar-burger" onclick="this.classList.toggle('open'); document.querySelector('.navbar-content').classList.toggle('open')">
+					<div class="navbar-burger-bar"></div>
+					<div class="navbar-burger-bar"></div>
+					<div class="navbar-burger-bar"></div>
+				</div>
+			</div>
+		</div>
 		<div class="navbar-content">
 			<div class="navbar-left">
 				<div class="navbar-logo">
@@ -453,7 +419,6 @@ Si uno de los elementos que añadimos al `navbar` no es un enlace, podemos aplic
 </div>
 
 ```html
-
 		<nav class="navbar">
 			<div class="navbar-content">
 				<div class="navbar-left">
@@ -477,12 +442,11 @@ Si uno de los elementos que añadimos al `navbar` no es un enlace, podemos aplic
 				</div>
 			</div>
 		</nav>
-
 ```
 
 Para terminar, encontramos la clase `navbar-responsive`. En el contenedor que apliquemos esta clase volveremos a usar
-las mismas clases usadas anteriormente en `navbar-content`, es decir, `navbar-left`, `navbar-right` y `navbar-center` para
-estructurar nuestro menú responsive.
+las mismas clases usadas anteriormente en `navbar-content`, es decir, `navbar-left`, `navbar-right` y `navbar-center`
+para estructurar nuestro menú responsive.
 
 Dentro `navbar-responsive` encontramos `navbar-burger` conteniendo tres elementos con la clase `navbar-burger-bar`, los
 cuales representan el icono del menú y sus líneas. Esto se realiza así y no mediante un icono por el simple hecho de
@@ -530,7 +494,6 @@ que así podemos animar el menú desplegable cuando este se abra y cierre.
 </div>
 
 ```html
-
 		<nav class="navbar">
 			<div class="navbar-content">
 				<div class="navbar-left">
@@ -570,7 +533,6 @@ que así podemos animar el menú desplegable cuando este se abra y cierre.
 				</div>
 			</div>
 		</nav>
-
 ```
 
 {% endmarkdown %}

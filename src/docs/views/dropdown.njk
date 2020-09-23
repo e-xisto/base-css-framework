@@ -5,18 +5,17 @@
 
 {% markdown %}
 
-# Dropdown
+Dropdown
+======
 
 Crea un elemento interactivo que muestra un menú, una lista de enlaces...
 
-Lo primero que debemos crear es un contenedor que contenga la clase `dropdown`.
+Para empezar, necesitamos un contenedor que contenga la clase `dropdown`.
 
 ```html
-
 		<div class="dropdown">
 			...
 		</div>
-
 ```
 
 Una vez tenemos nuestro contenedor creado, debemos añadir un elemento con la clase `dropdown-toggle`. Este elemento
@@ -27,17 +26,15 @@ Para ello, necesitamos crear otro contenedor dentro de `dropdown` que contenga l
 En este caso, nuestro elemento `dropdown-menu` será una lista.
 
 ```html
-
 		<div class="dropdown">
 			<a class="dropdown-toggle"></a>
 			<ul class="dropdown-menu">
 				...
 			</ul>
 		</div>
-
 ```
 
-Una vez creado, todo los elementos que añadamos dentro de él deberán llevar la clase `dropdown-item`.
+Una vez creado, todo los elementos que añadamos dentro del `dropdown-menu` deberán llevar la clase `dropdown-item`.
 
 <div class="demo">
 	<div class="dropdown">
@@ -51,7 +48,6 @@ Una vez creado, todo los elementos que añadamos dentro de él deberán llevar l
 </div>
 
 ```html
-
 		<div class="dropdown">
 			<a class="btn btn-primary dropdown-toggle">.dropdown-toggle</a>
 			<ul class="dropdown-menu">
@@ -60,7 +56,6 @@ Una vez creado, todo los elementos que añadamos dentro de él deberán llevar l
 				<li class="dropdown-item"><a href="">.dropdown-item</a></li>
 			</ul>
 		</div>
-
 ```
 
 ### Dropdown-divider
@@ -82,7 +77,6 @@ Dentro de `dropdown-menu`, podemos añadir una línea divisoria usando la clase 
 </div>
 
 ```html
-
 		<div class="dropdown">
 			<a class="btn btn-primary dropdown-toggle">.dropdown-toggle</a>
 			<ul class="dropdown-menu">
@@ -94,7 +88,6 @@ Dentro de `dropdown-menu`, podemos añadir una línea divisoria usando la clase 
 				<li class="dropdown-item"><a href="">.dropdown-item</a></li>
 			</ul>
 		</div>
-
 ```
 
 ### Active
@@ -141,7 +134,6 @@ Si queremos marcar un elemento como desactivado, usamos `disabled`.
 </div>
 
 ```html
-
 		<div class="dropdown">
 			<a class="btn btn-primary dropdown-toggle">.dropdown-toggle</a>
 			<ul class="dropdown-menu">
@@ -150,7 +142,6 @@ Si queremos marcar un elemento como desactivado, usamos `disabled`.
 				<li class="dropdown-item"><a href="">.dropdown-item</a></li>
 			</ul>
 		</div>
-
 ```
 
 ### Dropdown-menu posición
@@ -172,7 +163,6 @@ Podemos modificar la posición en la que se muestra `dropdown-menu` con las clas
 </div>
 
 ```html
-
 		<div class="dropdown">
 			<a class="btn btn-primary dropdown-toggle">.dropdown-toggle</a>
 			<ul class="dropdown-menu dropdown-menu-left">
@@ -181,7 +171,6 @@ Podemos modificar la posición en la que se muestra `dropdown-menu` con las clas
 				<li class="dropdown-item"><a href="">.dropdown-item</a></li>
 			</ul>
 		</div>
-
 ```
 
 <div class="demo">
@@ -198,7 +187,6 @@ Podemos modificar la posición en la que se muestra `dropdown-menu` con las clas
 </div>
 
 ```html
-
 		<div class="dropdown">
 			<a class="btn btn-primary dropdown-toggle">.dropdown-toggle</a>
 			<ul class="dropdown-menu dropdown-menu-right">
@@ -207,7 +195,6 @@ Podemos modificar la posición en la que se muestra `dropdown-menu` con las clas
 				<li class="dropdown-item"><a href="">.dropdown-item</a></li>
 			</ul>
 		</div>
-
 ```
 
 {% endmarkdown %}
