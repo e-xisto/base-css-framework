@@ -2,6 +2,7 @@
 
 .margin-none { margin: 0 !important; }
 .padding-none { padding: 0 !important; }
+.margin-auto { margin: 0 auto !important; }
 
 @include margins();
 @include margins('x');
