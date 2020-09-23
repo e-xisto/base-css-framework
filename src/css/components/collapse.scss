@@ -26,6 +26,8 @@
 	background: $collapse-action-background-color;
 	border: $collapse-action-border-width solid $collapse-action-border-color;
 	border-radius: $collapse-action-border-radius;
+	font-size: $collapse-action-font-size;
+	font-weight: $collapse-action-font-weight;
 
 	&.active {
 		border-bottom-left-radius: 0;
