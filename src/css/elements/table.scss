@@ -24,7 +24,8 @@ table {
 		text-align: center;
 		background-color: $table-cell-background-color;
 		border-bottom: 1px solid $table-border-color;
-		padding: $table-cell-padding;		
+		padding: $table-cell-padding;
+		color: $table-cell-color;
 	}
 
 	&.table-striped {
@@ -45,24 +46,24 @@ table {
 
 	.table-responsive-list {
 		thead { display: none; }
-		
+
 		tr {
 			margin-bottom: 10px;
 			display: block;
 			border-bottom: 2px solid $table-border-color;
 		}
-	
+
 		td {
 			border: none;
 			display: block;
 			text-align: right !important;
 			background-color: $table-cell-background-color !important;
 		}
-	
+
 		td::before {
 			content: attr(data-label);
 			float: left;
-		}	
+		}
 	}
 }
 
@@ -86,7 +87,7 @@ table {
             bottom: 0;
             z-index: 1;
         }
-        
+
         thead {
             display: flex;
             flex-shrink: 0;
@@ -104,7 +105,7 @@ table {
                 z-index: 1;
             }
         }
-        
+
         tbody {
             display: flex;
             position: relative;
@@ -112,7 +113,7 @@ table {
             overflow-y: hidden;
             -webkit-overflow-scrolling: touch;
         }
-        
+
         tr {
             display: flex;
             flex-direction: column;
@@ -120,23 +121,23 @@ table {
             position: relative;
             z-index: -1;
         }
-        
+
         td {
             border-right: none;
         }
-        
+
         th {
             text-align: left;
         }
-        
+
         th,
         th:last-child {
             border-right: 1px solid $table-border-color;
         }
-        
+
         td, th {
             border-bottom: 1px solid $table-border-color;
-            
+
             &:first-child {
                 width: auto;
             }
