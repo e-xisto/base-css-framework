@@ -131,6 +131,7 @@ function storeHtml(element: HTMLElement) {
 		}
 	}
 
-	(<any>window).Modal = new Modal();
+	(<any>window).Base = (<any>window).Base || {};
+	(<any>window).Base.Modal = new Modal();
 
 export default { init };
